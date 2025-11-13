@@ -1,0 +1,25 @@
+.input {
+  padding: px2rem(13) px2rem(16);
+  border: px2rem(1) solid #5C5C5C;
+  background-color: transparent;
+  font-size: px2rem(16);
+  line-height: px2rem(24);
+  font-weight: 300;
+  color: $color-text;
+  transition: border-color $transition-default;
+
+  @include desktop {
+    font-size: px2rem(18);
+    padding: px2rem(18);
+  }
+
+  &::placeholder {
+    color: #C1C1C1;
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-text;
+  }
+}

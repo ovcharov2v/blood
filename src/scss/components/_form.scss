@@ -1,0 +1,11 @@
+.form {
+  &__input {
+    display: block;
+    width: 100%;
+    margin-bottom: px2rem(24);
+  }
+  &__submit {
+    width: 100%;
+    margin-bottom: px2rem(16);
+  }
+}

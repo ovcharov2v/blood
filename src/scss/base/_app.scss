@@ -1,0 +1,72 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	overflow-x: hidden;
+	color: $color-text;
+	-webkit-font-smoothing: antialiased;
+	background-color: $color-bg;
+}
+
+.main, .page {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.page {
+}
+
+button {
+	cursor: pointer;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Для вебкит-браузеров (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #FC1A2F;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #d81629;
+}
+
+/* Для Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #FC1A2F transparent;
+}
+
+/* Для старых версий Firefox (если нужно) */
+* {
+	scrollbar-face-color: #FC1A2F;
+	scrollbar-track-color: transparent;
+	scrollbar-width: thin;
+}
+
+.swiper-wrapper {
+	height: unset;
+}
