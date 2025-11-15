@@ -1,0 +1,157 @@
+mixin menu(content)
+    // Menu
+    .menu.container.header__menu(class=(content==='donor'?'menu--cols-4':'menu--cols-3'))
+        .menu__box
+            if content === 'donor'
+                .menu__group
+                    a.menu__title-link(href="#") Стать донором
+                    ul.menu__list
+                        li.menu__list-elem
+                            a.menu__link(href="#") Противопоказания,  требования
+                        li.menu__list-elem
+                            a.menu__link(href="#") Где сдать кровь
+                        li.menu__list-elem
+                            a.menu__link(href="#") Безопасность донорства
+                        li.menu__list-elem
+                            a.menu__link(href="#") Сдать кровь вместе
+                        li.menu__list-elem
+                            a.menu__link(href="#") Процесс прохождения донации
+                        li.menu__list-elem
+                            a.menu__link(href="#") Как подготовиться к сдаче  крови? (Рекомендации до и после)
+                        li.menu__list-elem
+                            a.menu__link(href="#") Здоровое питание донора
+                        li.menu__list-elem
+                            a.menu__link(href="#") https://будьдонором.рф/
+                .menu__group
+                    a.menu__title-link(href="#") О донорстве
+                    ul.menu__list
+                        li.menu__list-elem
+                            a.menu__link(href="#") История донорства
+                        li.menu__list-elem
+                            a.menu__link(href="#") Донорство в мире
+                        li.menu__list-elem
+                            a.menu__link(href="#") Кодекс донора
+                        li.menu__list-elem
+                            a.menu__link(href="#") Детям о донорстве организации
+                        li.menu__list-elem
+                            a.menu__link(href="#") Мифы о донорстве
+                        li.menu__list-elem
+                            a.menu__link(href="#") Факты о донорстве
+                        li.menu__list-elem
+                            a.menu__link(href="#") Добровольность и  безвозмездность в донорстве
+                        li.menu__list-elem
+                            a.menu__link(href="#") Донорство плазмы  (Ковид + иммунная)
+                        li.menu__list-elem
+                            a.menu__link(href="#") https://koddonora.ru/
+                .menu__group
+                    a.menu__title-link(href="#") Бонусы и привилегии
+                    ul.menu__list
+                        li.menu__list-elem
+                            a.menu__link(href="#") Почетный донор
+                        li.menu__list-elem
+                            a.menu__link(href="#") Льготы для доноров
+                        li.menu__list-elem
+                            a.menu__link(href="#") Программа лояльности  “Донор сапиенс”
+                .menu__group
+                    a.menu__title-link(href="#") О службе крови
+                    ul.menu__list
+                        li.menu__list-elem
+                            a.menu__link(href="#") Программа развития
+                        li.menu__list-elem
+                            a.menu__link(href="#") Новости
+                        li.menu__list-elem
+                            a.menu__link(href="#") Медиагалерея событий
+                        li.menu__list-elem
+                            a.menu__link(href="#") Виртуальный музей
+                        li.menu__list-elem
+                            a.menu__link(href="#") Интервью
+                .menu__group
+                    a.menu__title-link(href="#") Часто задаваемые вопросы FAQ
+                .menu__group
+                    a.menu__title-link(href="#") Донорство костного мозга
+            if content === 'doctor'
+                .menu__group
+                    a.menu__title-link(href="#") Стать доктором
+                    ul.menu__list
+                        li.menu__list-elem
+                            a.menu__link(href="#") Противопоказания,  требования
+                        li.menu__list-elem
+                            a.menu__link(href="#") Где сдать кровь
+                        li.menu__list-elem
+                            a.menu__link(href="#") Безопасность донорства
+                        li.menu__list-elem
+                            a.menu__link(href="#") Сдать кровь вместе
+                        li.menu__list-elem
+                            a.menu__link(href="#") Процесс прохождения донации
+                        li.menu__list-elem
+                            a.menu__link(href="#") Как подготовиться к сдаче  крови? (Рекомендации до и после)
+                .menu__group
+                    a.menu__title-link(href="#") О докторах
+                    ul.menu__list
+                        li.menu__list-elem
+                            a.menu__link(href="#") История донорства
+                        li.menu__list-elem
+                            a.menu__link(href="#") Донорство в мире
+                        li.menu__list-elem
+                            a.menu__link(href="#") Кодекс донора
+                        li.menu__list-elem
+                            a.menu__link(href="#") Детям о донорстве организации
+                        li.menu__list-elem
+                            a.menu__link(href="#") Мифы о донорстве
+                .menu__group
+                    a.menu__title-link(href="#") Бонусы и привилегии
+                    ul.menu__list
+                        li.menu__list-elem
+                            a.menu__link(href="#") Почетный донор
+                        li.menu__list-elem
+                            a.menu__link(href="#") Льготы для доноров
+                        li.menu__list-elem
+                            a.menu__link(href="#") Программа лояльности  “Донор сапиенс”
+                .menu__group
+                    a.menu__title-link(href="#") Часто задаваемые вопросы FAQ
+                .menu__group
+                    a.menu__title-link(href="#") Донорство костного мозга
+            if content === 'partner'
+                .menu__group
+                    a.menu__title-link(href="#") Стать партнёром
+                    ul.menu__list
+                        li.menu__list-elem
+                            a.menu__link(href="#") Противопоказания,  требования
+                        li.menu__list-elem
+                            a.menu__link(href="#") Где сдать кровь
+                        li.menu__list-elem
+                            a.menu__link(href="#") Безопасность донорства
+                        li.menu__list-elem
+                            a.menu__link(href="#") Сдать кровь вместе
+                        li.menu__list-elem
+                            a.menu__link(href="#") Процесс прохождения донации
+                        li.menu__list-elem
+                            a.menu__link(href="#") Как подготовиться к сдаче  крови? (Рекомендации до и после)
+                .menu__group
+                    a.menu__title-link(href="#") О партнёрах
+                    ul.menu__list
+                        li.menu__list-elem
+                            a.menu__link(href="#") История донорства
+                        li.menu__list-elem
+                            a.menu__link(href="#") Донорство в мире
+                        li.menu__list-elem
+                            a.menu__link(href="#") Кодекс донора
+                        li.menu__list-elem
+                            a.menu__link(href="#") Детям о донорстве организации
+                        li.menu__list-elem
+                            a.menu__link(href="#") Мифы о донорстве
+                .menu__group
+                    a.menu__title-link(href="#") Бонусы и привилегии
+                    ul.menu__list
+                        li.menu__list-elem
+                            a.menu__link(href="#") Почетный донор
+                        li.menu__list-elem
+                            a.menu__link(href="#") Льготы для доноров
+                        li.menu__list-elem
+                            a.menu__link(href="#") Программа лояльности  “Донор сапиенс”
+                        li.menu__list-elem
+                            a.menu__link(href="#") Почетный донор
+                        li.menu__list-elem
+                            a.menu__link(href="#") Льготы для доноров
+                        li.menu__list-elem
+                            a.menu__link(href="#") Программа лояльности  “Донор сапиенс”

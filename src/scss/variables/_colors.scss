@@ -1,9 +1,7 @@
-$color-black: #1E1E1E;
-$color-white: #fff;
-$color-bg: $color-black;
-$color-text: $color-white;
-$color-blue: #1F2329;
-$color-orange: #1F2329;
-$color-red: #FC1A2F;
+$color-bg: var(--color-bg);
+$color-text: var(--color-text);
 
-$gradient-red: linear-gradient(to right, #FC1A2F, #FF1A5F);
+$color-primary: var(--color-primary);
+$color-primary-dark: var(--color-primary-dark);
+$color-primary-light: var(--color-primary-light);
+$color-secondary: var(--color-secondary);

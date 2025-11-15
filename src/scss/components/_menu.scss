@@ -1,0 +1,86 @@
+.menu {
+  position: absolute;
+  top: calc(100% - 44px);
+  left: 0;
+  width: 100%;
+  padding-top: 42px;
+
+  &__box {
+    display: inline-block;
+    width: 100%;
+    padding: 25px;
+    background-color: $color-bg;
+    border: 1px solid $color-secondary;
+    border-radius: 24px;
+    column-gap: 48px;
+    row-gap: 0;
+
+    .menu--cols-4 & {
+      columns: 4;
+    }
+
+    .menu--cols-3 & {
+      columns: 3;
+    }
+  }
+
+  &__group {
+    margin-bottom: 25px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+  }
+
+  &__title-link {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    color: $color-primary;
+    transition: color $transition-default;
+
+    &:only-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      color: $color-primary;
+      text-decoration: underline;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__list-elem {
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding-left: 22px;
+    transition: color $transition-default;
+
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      display: block;
+      width: 12px;
+      height: 12px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none'%3E%3Cg opacity='0.7' clip-path='url(%23clip0_540_1861)'%3E%3Cpath d='M3.5 1L7.79289 5.29289C8.12623 5.62623 8.29289 5.79289 8.29289 6C8.29289 6.20711 8.12623 6.37377 7.79289 6.70711L3.5 11' stroke='%23F1633F' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_540_1861'%3E%3Crect width='12' height='12' fill='white' transform='translate(5.24537e-07 12) rotate(-90)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: "";
+    }
+
+    &:hover {
+      color: $color-primary;
+      text-decoration: underline;
+    }
+  }
+}

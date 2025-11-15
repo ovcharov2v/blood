@@ -1,172 +1,255 @@
 .footer {
-  position: relative;
-  padding-top: px2rem(60);
-  overflow: hidden;
-
-  @include tablet {
-    margin-top: px2rem(90);
-    padding-top: px2rem(100);
-  }
-
-  &::after {
-    display: block;
-    width: 100%;
-    aspect-ratio: 3.5;
-    background-image: url("../images/common/footer-bg.svg");
-    background-size: auto 100%;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    content: "";
-  }
-
-  @include tablet {
-    padding-bottom: px2rem(57);
-
-    &::after {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%) translateX(-4%);
-      width: 109%;
-      height: 100%;
-      aspect-ratio: unset;
-    }
-  }
+  background-color: var(--color-bg);
 
   &__container {
-    position: relative;
-    z-index: 1;
-
-    text-align: center;
-
-    @include tablet {
-      text-align: left;
-    }
   }
 
-  &__grid {
+  &__top {
+    display: grid;
+    grid-template: auto / minmax(0,3fr) minmax(0, 9fr);
+    grid-gap: 10px;
+    padding-top: 36px;
+    padding-bottom: 30px;
+  }
+
+  &__logo-col {
+  }
+
+  &__logo-link {
+    display: block;
+    width: 160px;
+    margin-bottom: 30px;
+  }
+
+  &__logo {
+    display: block;
+    width: 100%;
+  }
+
+  &__btn-box {
     display: flex;
     flex-direction: column;
-    gap: px2rem(36);
-    margin-bottom: px2rem(36);
+    gap: 12px;
+    max-width: 220px;
+  }
 
-    @include tablet {
-      flex-direction: row;
-      justify-content: space-between;
-      gap: px2rem(24);
-      margin-bottom: px2rem(164);
+  &__nav {
+    display: grid;
+    grid-template: auto / repeat(4 ,minmax(0, 1fr));
+    grid-gap: 22px;
+  }
+
+  &__nav-col {
+  }
+
+  &__nav-title {
+    margin-bottom: 18px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    color: $color-primary;
+    text-transform: uppercase;
+  }
+
+  &__nav-subtitle {
+    margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    color: $color-secondary;
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__nav-elem {
+  }
+
+  &__nav-link {
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-text;
+    opacity: .5;
+    transition: opacity $transition-default;
+
+    &:hover {
+      opacity: 1;
     }
   }
 
-  &__text-col {
-  }
-
-  &__title {
-    margin-bottom: px2rem(16);
-  }
-
-  &__text {
-    margin-bottom: px2rem(40);
-    font-size: px2rem(20);
-    line-height: 1.4;
-
-    @include tablet {
-      margin-bottom: px2rem(30);
-      font-size: px2rem(16);
-    }
-  }
-
-  &__action-btn {
-    width: 100%;
-
-    @include tablet {
-      max-width: px2rem(264);
-    }
+  // Center section
+  &__center {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 30px;
+    padding-bottom: 36px;
   }
 
   &__contacts-col {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
+  }
+
+  &__phone-box {
+  }
+
+  &__phone-description {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 14px;
+    line-height: 18px;
   }
 
   &__phone-link {
-    margin-bottom: 10px;
+    font-size: 25px;
+    line-height: 28px;
+    font-weight: 600;
+    color: $color-primary;
     white-space: nowrap;
     transition: color $transition-default;
 
-    @include tablet {
-      margin-bottom: 32px;
-    }
-
     &:hover {
-      color: $color-red;
+      color: $color-primary-dark;
+      text-decoration: underline;
     }
   }
 
   &__social-list {
-    display: flex;
-    justify-content: center;
-    gap: px2rem(7);
-
-    @include desktop {
-      gap: px2rem(12);
-    }
+    margin-top: 14px;
   }
 
-  &__social-el {
+  &__apps-col {
+  }
+
+  &__apps {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 665px;
+    background-color: $color-primary;
+    border-radius: 24px;
+    background-image: url('../images/apps-logo.svg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 40% -140%;
+    overflow: hidden;
+    max-height: 282px;
+  }
+
+  &__apps-content-box {
+    padding: 36px 36px 24px 36px;
+  }
+
+  &__apps-title {
+    margin-bottom: 30px;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  &__apps-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 220px;
+  }
+
+  &__apps-img {
+    position: absolute;
+    top: -90px;
+    right: 35px;
+    display: block;
+    width: 58%;
+  }
+
+  // Bottom section
+  &__bottom {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border-top: 1px solid;
+  }
+
+  &__copyright-box {
+    display: flex;
+    align-items: center;
+    gap: 74px;
+    margin-bottom: 22px;
+  }
+
+  &__link-list {
+    flex-shrink: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__link-elem {
     flex-shrink: 0;
   }
 
-  &__social-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: px2rem(32);
-    height: px2rem(32);
-    transition: color $transition-default;
-
-    &:hover {
-      color: $color-red;
-    }
-
-    @include tablet {
-      width: px2rem(60);
-      height: px2rem(60);
-    }
+  &__link {
+    display: block;
   }
 
-  &__social-icon {
+  &__link-img {
     display: block;
     width: 100%;
-    height: 100%;
   }
 
-  &__bottom {
+  &__copyright {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__terms-list {
     display: flex;
-    flex-direction: column;
-    gap: px2rem(16);
-    margin-bottom: px2rem(20);
-
-    @include tablet {
-      flex-direction: row;
-      gap: px2rem(60);
-      margin-bottom: 0;
-    }
+    gap: 20px;
   }
 
-  &__link {
-    font-size: px2rem(12);
-    line-height: 1.24;
-    transition: color $transition-default;
-    color: rgba($color-text, .5);
+  &__terms-el {
+  }
 
-    @include tablet {
-      font-size: px2rem(16);
-    }
+  &__terms-link {
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-primary;
+    text-decoration: underline;
 
     &:hover {
-      color: $color-red;
+      color: $color-primary-dark;
+      text-decoration: none;
+    }
+  }
+}
+
+// theme
+.theme-light {
+  .footer {
+    &__bottom {
+      border-color: #EAEAEF;
+    }
+
+    &__copyright {
+      opacity: .5;
+    }
+  }
+}
+
+.theme-dark {
+  .footer {
+    &__bottom {
+      border-color: #9DA2A8;
+    }
+
+    &__copyright {
+      opacity: 1;
     }
   }
 }

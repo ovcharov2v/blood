@@ -1,0 +1,70 @@
+.social-list {
+  display: inline-flex;
+  gap: 8px;
+
+  &__el {
+    flex-shrink: 0;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    transition: background-color $transition-default, color $transition-default;
+
+    &:hover {
+      background-color: $color-primary;
+      color: #fff;
+    }
+
+    &--max {
+      &:hover {
+        background-color: #8f3fff !important;
+      }
+    }
+
+    &--telegram {
+      &:hover {
+        background-color: #0088CC !important;
+      }
+    }
+
+    &--vk {
+      &:hover {
+        background-color: #4A76A8 !important;
+      }
+    }
+
+    &--ok {
+      &:hover {
+        background-color: #EE820C !important;
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// theme
+.theme-light {
+  .social-list {
+    &__link {
+      background-color: #F6F6F9;
+    }
+  }
+}
+
+.theme-dark {
+  .social-list {
+    &__link {
+      background-color: #26262B;
+    }
+  }
+}

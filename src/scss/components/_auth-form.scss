@@ -1,0 +1,87 @@
+.auth-form {
+  position: relative;
+  width: 100%;
+  max-width: 524px;
+  padding: 36px 20px 46px;
+  background-color: $color-bg;
+  border-radius: 28px;
+  border: 1px solid #EDEEF1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    aspect-ratio: 1;
+    background-color: rgba($color-primary, .35);
+    border-radius: 50%;
+    content:"";
+    filter: blur(300px);
+  }
+
+  &__header {
+    margin-bottom: 36px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 600;
+  }
+
+  &__field-box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px 12px;
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    font-weight: 600;
+    color: $color-primary;
+    text-decoration: none;
+    transition: color $transition-default;
+
+    &:hover {
+      color: $color-primary-dark;
+      text-decoration: underline;
+    }
+  }
+
+  &__forgot {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #9da2a8;
+  }
+
+  &__submit {
+    width: 100%;
+    margin-bottom: 36px;
+  }
+
+  &__register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #9da2a8;
+  }
+}

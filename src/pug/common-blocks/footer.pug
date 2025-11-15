@@ -1,7 +1,142 @@
 mixin footer()
+	// Footer
 	footer.footer
 		.footer__container.container
+			// Footer top
+			.footer__top
+				.footer__logo-col
+					a.footer__logo-link(href="./main.html", title="На главную")
+						picture
+							img.footer__logo.img-theme-light(src="./images/common/logo-theme-light.svg", alt="Служба Крови")
+							img.footer__logo.img-theme-dark(src="./images/common/logo-theme-dark.svg", alt="Служба Крови")
+					.footer__btn-box
+						a.button.button--with-icon.button--round-corner.button--red(href="./lk.html")
+							+svg("user").button__icon
+							| Кабинет донора
+						a.button.button--with-icon.button--round-corner.button--outline-red(href="./lk.html")
+							+svg("bold-plus").button__icon.button__icon--color-red
+							| Кабинет врача
+				.footer__nav
+					// Col
+					.footer__nav-col
+						p.footer__nav-title Я донор
+						p.footer__nav-subtitle Как стать донором
+						ul.footer__nav-list
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Как стать донором
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Бонусы для доноров
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Донорская диета
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Противопоказания
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Безопасность донора
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Почетный донор России
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Почетный донор Москвы
+					// Col
+					.footer__nav-col
+						p.footer__nav-title Я волонтёр
+						p.footer__nav-subtitle Как стать волонтером
+						ul.footer__nav-list
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Как стать волонтером
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Бонусы для доноров
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Донорская диета
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Противопоказания
+					// Col
+					.footer__nav-col
+						p.footer__nav-title Я врач
+						p.footer__nav-subtitle Подзаголовок
+						ul.footer__nav-list
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Тема для врачей
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Тема для врачей другая
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Тема для врачей новая
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Тема для врачей другая
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Тема для врачей иная
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Тема для врачей интересная
+					// Col
+					.footer__nav-col
+						p.footer__nav-title Я партнёр
+						p.footer__nav-subtitle Как стать донором
+						ul.footer__nav-list
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Как стать донором
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Бонусы для доноров
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Донорская диета
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Противопоказания
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Безопасность донора
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Почетный донор России
+							li.footer__nav-elem
+								a.footer__nav-link(href="#") Почетный донор Москвы
+			// Footer center
+			.footer__center
+				// Footer contacts
+				.footer__contacts-col
+					.footer__phone-box
+						span.footer__phone-description Горячая линия (бесплатно по РФ)
+						a.footer__phone-link(href="tel:88003333343") 8 (800) 333-33-43
+					.footer__phone-box
+						span.footer__phone-description Техническая поддержка ЕИБД
+						a.footer__phone-link(href="tel:88007007606") 8 (800) 700-76-06
+					ul.footer__social-list.social-list
+						li.social-list__el
+							a.social-list__link.social-list__link--max(href="#", target="_blank", title="Max")
+								+svg("social-max").social-list__icon
+						li.social-list__el
+							a.social-list__link.social-list__link--telegram(href="#", target="_blank", title="Telegram")
+								+svg("social-telegram").social-list__icon
+						li.social-list__el
+							a.social-list__link.social-list__link--vk(href="#", target="_blank", title="Вконтакте")
+								+svg("social-vk").social-list__icon
+						li.social-list__el
+							a.social-list__link.social-list__link--ok(href="#", target="_blank", title="Одноклассники")
+								+svg("social-ok").social-list__icon
+				// Footer apps
+				.footer__apps
+					.footer__apps-content-box
+						p.footer__apps-title Скачайте наше
+							br
+							|приложение
+						.footer__apps-links
+							a.button.button--outline-white.button--round-corner(href="#", target="_blank") Скачать на Android
+							a.button.button--outline-white.button--round-corner(href="#", target="_blank") Скачать на iOS
+					.footer__apps-img-box
+						picture
+							img.footer__apps-img.img-theme-light(src="./images/common/phone-theme-light.svg", alt="")
+							img.footer__apps-img.img-theme-dark(src="./images/common/phone-theme-dark.svg", alt="")
 
-
-
-
+			// Footer bottom
+			.footer__bottom
+				.footer__copyright-box
+					ul.footer__link-list
+						li.footer__link-elem
+							a.footer__link(href="#", target="_blank", title="Служба крови")
+								img.footer__link-img(src="./images/common/logo-blood.svg", alt="Служба крови")
+						li.footer__link-elem
+							a.footer__link(href="#", target="_blank", title="ФМБА")
+								img.footer__link-img(src="./images/common/logo-fmba.svg", alt="ФМБА")
+					p.footer__copyright © 2025 ФМБА России. Все права на материалы, находящиеся на сайте, охраняются в соответствии с законодательством РФ, в том числе об авторском праве и смежных правах.
+				ul.footer__terms-list
+					li.footer__terms-el
+						a.footer__terms-link(href="#", target="_blank") Политика в отношении обработки персональных данных
+					li.footer__terms-el
+						a.footer__terms-link(href="#", target="_blank") Политика использования сookie-файлов
+					li.footer__terms-el
+						a.footer__terms-link(href="#", target="_blank") Согласие на обработку персональных данных

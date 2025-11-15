@@ -1,3 +1,53 @@
 mixin header()
+	// Header
 	header.header
 		.container.header__container
+			// Header top
+			.header__top
+				button.header__city(type="button")
+					+svg("navigation").header__city-icon
+					| Москва
+				.header__phone-box
+					a.header__phone-link(href="tel:88003333343") 8 (800) 333-33-43
+					.header__phone-text-box
+						span.header__phone-name Горячая линия
+						span.header__phone-note Бесплатно по РФ
+				.theme-switcher.header__theme-swither
+					button.theme-switcher__btn.js-set-theme(type="button", aria-label="Светлая тема", data-theme="light")
+						+svg("brightness").theme-switcher__btn-icon
+					button.theme-switcher__btn.js-set-theme(type="button", aria-label="Темная тема", data-theme="dark")
+						+svg("moon").theme-switcher__btn-icon
+				.header__lang-swither
+					span.header__lang.header__lang--active РУ
+					a.header__lang(href="#") EN
+			// Header main
+			.header__main
+				a.header__logo-link(href="./main.html", title="На главную")
+					picture
+						img.header__logo.img-theme-light(src="./images/common/logo-theme-light.svg", alt="Служба Крови")
+						img.header__logo.img-theme-dark(src="./images/common/logo-theme-dark.svg", alt="Служба Крови")
+				nav.header__nav
+					ul.header__nav-list
+						li.header__nav-elem
+							a.header__nav-link(href="#", data-menu="donor") Я донор
+								+svg("chevron-down").header__nav-link-arrow
+							+menu('donor')
+						li.header__nav-elem
+							a.header__nav-link(href="#", data-menu="donor") Я врач
+								+svg("chevron-down").header__nav-link-arrow
+							+menu('doctor')
+						li.header__nav-elem
+							a.header__nav-link(href="#", data-menu="donor") Я партнёр
+								+svg("chevron-down").header__nav-link-arrow
+							+menu('partner')
+				.header__action-box
+					button.button.button--round-corner.button--outline-gray.button--icon-only(type="button", aria-label="Поиск")
+						+svg("search").button__icon
+					button.button.button--round-corner.button--outline-gray.button--icon-only(type="button", aria-label="Версия для слабовидящих")
+						+svg("circle-glasses").button__icon
+					a.button.button--with-icon.button--round-corner.button--outline-red(href="./lk.html")
+						+svg("bold-plus").button__icon.button__icon--color-red
+						| Кабинет врача
+					a.button.button--with-icon.button--round-corner.button--red(href="./lk.html")
+						+svg("user").button__icon
+						| Кабинет донора

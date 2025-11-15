@@ -1,25 +1,26 @@
 .input {
-  padding: px2rem(13) px2rem(16);
-  border: px2rem(1) solid #5C5C5C;
-  background-color: transparent;
-  font-size: px2rem(16);
-  line-height: px2rem(24);
-  font-weight: 300;
+  display: block;
+  width: 100%;
+  min-width: unset;
+  padding: 16px;
+  border: 1px solid #EDEEF1;
+  border-radius: 12px;
+  background-color: $color-bg;
+  font-size: 16px;
+  line-height: 24px;
   color: $color-text;
   transition: border-color $transition-default;
 
-  @include desktop {
-    font-size: px2rem(18);
-    padding: px2rem(18);
+  &::placeholder {
+    color: #9DA2A8;
   }
 
-  &::placeholder {
-    color: #C1C1C1;
-    opacity: 1;
+  &:hover {
+    border-color: $color-primary-light;
   }
 
   &:focus {
+    border-color: $color-primary;
     outline: none;
-    border-color: $color-text;
   }
 }

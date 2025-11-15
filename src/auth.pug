@@ -1,4 +1,49 @@
 extends pug/base
 
 block content
-    .container
+	// Section Auth
+	.section-auth.container
+		form.auth-form.section-auth__form(action="#" method="post")
+			.auth-form__header
+				h1.auth-form__title Авторизация
+			.auth-form__field-box
+				.form-group
+					label.form-group__label(for="auth-email") Ваш e-mail
+					.form-group__input-box
+						input.input.form-group__input(
+							type="email"
+							id="auth-email"
+							name="email"
+							placeholder="Введите ваш почтовый ящик"
+							required
+						)
+				.form-group
+					label.form-group__label(for="auth-password") Пароль
+					.form-group__input-box
+						input.input.form-group__input(
+							type="password"
+							id="auth-password"
+							name="password"
+							placeholder="Введите пароль"
+							required
+						)
+						button.form-group__btn.form-group__btn--password-toggle(
+							type="button"
+							aria-label="Показать текст пароля"
+							title="Показать текст пароля"
+							)
+							+svg("eye-normal").form-group__btn-icon.form-group__btn-icon--normal
+							+svg("eye-crossed").form-group__btn-icon.form-group__btn-icon--active
+
+			.auth-form__actions
+				label.checkbox.auth-form__checkbox
+					input.checkbox__input(type="checkbox" name="remember")
+					span.checkbox__text Запомнить меня
+
+				span.auth-form__forgot Забыли пароль?
+					a.auth-form__link(href="#") Восстановить
+
+			button.button.button--red.button--xl.auth-form__submit(type="submit") Войти
+
+			span.auth-form__register Ещё нет аккаунта?
+				a.auth-form__link(href="#") Регистрация

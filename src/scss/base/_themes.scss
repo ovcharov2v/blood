@@ -1,0 +1,32 @@
+:root {
+  &.theme-light {
+    --color-bg: #fff;
+    --color-text: #0C0C0C;
+    --color-primary: #EE2E22;
+    --color-secondary: #F1633F;
+    --color-primary-dark: #{darken(#EE2E22, 10%)};
+    --color-primary-light: #{lighten(#EE2E22, 10%)};
+
+    .img-theme-light {
+      display: block;
+    }
+  }
+
+  &.theme-dark {
+    --color-bg: #18181A;
+    --color-text: #fff;
+    --color-primary: #007DAD;
+    --color-secondary: #217291;
+    --color-primary-dark: #{darken(#007DAD, 10%)};
+    --color-primary-light: #{lighten(#007DAD, 10%)};
+
+    .img-theme-dark {
+      display: block;
+    }
+  }
+}
+
+img[class*="img-theme-"] {
+  display: none;
+}
+
