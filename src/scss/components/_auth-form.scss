@@ -3,9 +3,8 @@
   width: 100%;
   max-width: 524px;
   padding: 36px 20px 46px;
-  background-color: $color-bg;
   border-radius: 28px;
-  border: 1px solid #EDEEF1;
+  border: 1px solid;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
 
   &::before {
@@ -16,9 +15,10 @@
     transform: translate(-50%, -50%);
     width: 55%;
     aspect-ratio: 1;
-    background-color: rgba($color-primary, .35);
+    background-color: $color-primary;
+    opacity: .35;
     border-radius: 50%;
-    content:"";
+    content: "";
     filter: blur(300px);
   }
 
@@ -83,5 +83,20 @@
     line-height: 24px;
     text-align: center;
     color: #9da2a8;
+  }
+}
+
+// theme
+.theme-light {
+  .auth-form {
+    background-color: $color-bg;
+    border-color: #EDEEF1;
+  }
+}
+
+.theme-dark {
+  .auth-form {
+    background-color: #26262B;
+    border-color: #26262B;
   }
 }
