@@ -3,9 +3,9 @@
   width: 100%;
   min-width: unset;
   padding: 16px;
-  border: 1px solid #EDEEF1;
+  border: 1px solid;
   border-radius: 12px;
-  background-color: $color-bg;
+  background-color: transparent;
   font-size: 16px;
   line-height: 24px;
   color: $color-text;
@@ -22,5 +22,19 @@
   &:focus {
     border-color: $color-primary;
     outline: none;
+  }
+}
+
+
+// theme
+.theme-light {
+  .input {
+    border-color: #EDEEF1;
+  }
+}
+
+.theme-dark {
+  .input {
+    border-color: #9DA2A8;
   }
 }
