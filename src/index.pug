@@ -1,17 +1,36 @@
 extends pug/base
 
+append vars
+  - var isListPage = 'true'
+    
+append styles 
+    style.
+        .list-page {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--color-primary);
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .list-page ul {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
 block content
-    .container
-        ol
-            li
+    .list-page.container
+        ul
+            //-li
                 a(href="./main.html", target="_blank") Главная
             li
                 a(href="./auth.html", target="_blank") Авторизация
             li
                 a(href="./404.html", target="_blank") 404
-            li
+            //-li
                 a(href="./blog.html", target="_blank") Блог
-            li
+            //-li
                 a(href="./article.html", target="_blank") Статья
-            li
+            //-li
                 a(href="./lk.html", target="_blank") ЛК

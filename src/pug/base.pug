@@ -1,9 +1,8 @@
 include mixins
 
 block vars
-	-
-		var baseDir = './'
-
+	- var baseDir = './'
+	- var isListPage = 'false'
 
 doctype html(lang="ru")
 html.theme-light
@@ -22,13 +21,15 @@ html.theme-light
 		block head-end
 	body
 		block body-start
-		+header()
-		+mobileMenu()
+		if isListPage != 'true'
+			+header()
+			+mobileMenu()
 		main.main
 			block content
-		+footer()
-		block scripts
-			//-script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
-			script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
-		include ../images/sprite/sprite.svg
+		if isListPage != 'true'
+			+footer()
+			block scripts
+				//-script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
+				script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
+			include ../images/sprite/sprite.svg
 		block body-end
