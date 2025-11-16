@@ -1,0 +1,454 @@
+<!DOCTYPE html(lang="ru")>
+<html class="theme-light">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta name="description" content="Служба Крови"/>
+		<title>Служба Крови</title>
+		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
+		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
+		<link rel="stylesheet" href="./css/main.css?v=1763310308452"/>
+	</head>
+	<body>
+		<!-- Header-->
+		<header class="header">
+			<div class="container header__container">
+				<!-- Header top-->
+				<div class="header__top">
+					<button class="header__city" type="button">
+						<svg class="header__city-icon">
+							<use xlink:href="#navigation"></use>
+						</svg>Москва
+					</button>
+					<div class="header__phone-box"><a class="header__phone-link" href="tel:88003333343">8 (800) 333-33-43</a>
+						<div class="header__phone-text-box"><span class="header__phone-name">Горячая линия</span><span class="header__phone-note">Бесплатно по РФ</span></div>
+					</div>
+					<div class="theme-switcher header__theme-swither">
+						<button class="theme-switcher__btn js-set-theme" type="button" aria-label="Светлая тема" data-theme="light">
+							<svg class="theme-switcher__btn-icon">
+								<use xlink:href="#brightness"></use>
+							</svg>
+						</button>
+						<button class="theme-switcher__btn js-set-theme" type="button" aria-label="Темная тема" data-theme="dark">
+							<svg class="theme-switcher__btn-icon">
+								<use xlink:href="#moon"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="header__lang-swither"><span class="header__lang header__lang--active">РУ</span><a class="header__lang" href="#">EN</a></div>
+				</div>
+				<!-- Header main-->
+				<div class="header__main"><a class="header__logo-link" href="./main.html" title="На главную">
+						<picture><img class="header__logo img-theme-light" src="./images/common/logo-theme-light.svg" alt="Служба Крови"/><img class="header__logo img-theme-dark" src="./images/common/logo-theme-dark.svg" alt="Служба Крови"/></picture></a>
+					<nav class="header__nav">
+						<ul class="header__nav-list">
+							<li class="header__nav-elem"><a class="header__nav-link" href="#" data-menu="donor">Я донор
+									<svg class="header__nav-link-arrow">
+										<use xlink:href="#chevron-down"></use>
+									</svg></a>
+								<!-- Menu-->
+								<div class="menu container header__menu menu--cols-4">
+									<div class="menu__box">
+										<div class="menu__group"><a class="menu__title-link" href="#">Стать донором</a>
+											<ul class="menu__list">
+												<li class="menu__list-elem"><a class="menu__link" href="#">Противопоказания,  требования</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Где сдать кровь</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Безопасность донорства</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Сдать кровь вместе</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Процесс прохождения донации</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Как подготовиться к сдаче  крови? (Рекомендации до и после)</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Здоровое питание донора</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">https://будьдонором.рф/</a></li>
+											</ul>
+										</div>
+										<div class="menu__group"><a class="menu__title-link" href="#">О донорстве</a>
+											<ul class="menu__list">
+												<li class="menu__list-elem"><a class="menu__link" href="#">История донорства</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Донорство в мире</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Кодекс донора</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Детям о донорстве организации</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Мифы о донорстве</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Факты о донорстве</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Добровольность и  безвозмездность в донорстве</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Донорство плазмы  (Ковид + иммунная)</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">https://koddonora.ru/</a></li>
+											</ul>
+										</div>
+										<div class="menu__group"><a class="menu__title-link" href="#">Бонусы и привилегии</a>
+											<ul class="menu__list">
+												<li class="menu__list-elem"><a class="menu__link" href="#">Почетный донор</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Льготы для доноров</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Программа лояльности  “Донор сапиенс”</a></li>
+											</ul>
+										</div>
+										<div class="menu__group"><a class="menu__title-link" href="#">О службе крови</a>
+											<ul class="menu__list">
+												<li class="menu__list-elem"><a class="menu__link" href="#">Программа развития</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Новости</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Медиагалерея событий</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Виртуальный музей</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Интервью</a></li>
+											</ul>
+										</div>
+										<div class="menu__group"><a class="menu__title-link" href="#">Часто задаваемые вопросы FAQ</a></div>
+										<div class="menu__group"><a class="menu__title-link" href="#">Донорство костного мозга</a></div>
+									</div>
+								</div>
+							</li>
+							<li class="header__nav-elem"><a class="header__nav-link" href="#" data-menu="donor">Я врач
+									<svg class="header__nav-link-arrow">
+										<use xlink:href="#chevron-down"></use>
+									</svg></a>
+								<!-- Menu-->
+								<div class="menu container header__menu menu--cols-3">
+									<div class="menu__box">
+										<div class="menu__group"><a class="menu__title-link" href="#">Стать доктором</a>
+											<ul class="menu__list">
+												<li class="menu__list-elem"><a class="menu__link" href="#">Противопоказания,  требования</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Где сдать кровь</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Безопасность донорства</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Сдать кровь вместе</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Процесс прохождения донации</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Как подготовиться к сдаче  крови? (Рекомендации до и после)</a></li>
+											</ul>
+										</div>
+										<div class="menu__group"><a class="menu__title-link" href="#">О докторах</a>
+											<ul class="menu__list">
+												<li class="menu__list-elem"><a class="menu__link" href="#">История донорства</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Донорство в мире</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Кодекс донора</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Детям о донорстве организации</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Мифы о донорстве</a></li>
+											</ul>
+										</div>
+										<div class="menu__group"><a class="menu__title-link" href="#">Бонусы и привилегии</a>
+											<ul class="menu__list">
+												<li class="menu__list-elem"><a class="menu__link" href="#">Почетный донор</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Льготы для доноров</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Программа лояльности  “Донор сапиенс”</a></li>
+											</ul>
+										</div>
+										<div class="menu__group"><a class="menu__title-link" href="#">Часто задаваемые вопросы FAQ</a></div>
+										<div class="menu__group"><a class="menu__title-link" href="#">Донорство костного мозга</a></div>
+									</div>
+								</div>
+							</li>
+							<li class="header__nav-elem"><a class="header__nav-link" href="#" data-menu="donor">Я партнёр
+									<svg class="header__nav-link-arrow">
+										<use xlink:href="#chevron-down"></use>
+									</svg></a>
+								<!-- Menu-->
+								<div class="menu container header__menu menu--cols-3">
+									<div class="menu__box">
+										<div class="menu__group"><a class="menu__title-link" href="#">Стать партнёром</a>
+											<ul class="menu__list">
+												<li class="menu__list-elem"><a class="menu__link" href="#">Противопоказания,  требования</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Где сдать кровь</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Безопасность донорства</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Сдать кровь вместе</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Процесс прохождения донации</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Как подготовиться к сдаче  крови? (Рекомендации до и после)</a></li>
+											</ul>
+										</div>
+										<div class="menu__group"><a class="menu__title-link" href="#">О партнёрах</a>
+											<ul class="menu__list">
+												<li class="menu__list-elem"><a class="menu__link" href="#">История донорства</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Донорство в мире</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Кодекс донора</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Детям о донорстве организации</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Мифы о донорстве</a></li>
+											</ul>
+										</div>
+										<div class="menu__group"><a class="menu__title-link" href="#">Бонусы и привилегии</a>
+											<ul class="menu__list">
+												<li class="menu__list-elem"><a class="menu__link" href="#">Почетный донор</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Льготы для доноров</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Программа лояльности  “Донор сапиенс”</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Почетный донор</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Льготы для доноров</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">Программа лояльности  “Донор сапиенс”</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__action-box">
+						<button class="button button--round-corner button--outline-gray button--icon-only" type="button" aria-label="Поиск">
+							<svg class="button__icon">
+								<use xlink:href="#search"></use>
+							</svg>
+						</button>
+						<button class="button button--round-corner button--outline-gray button--icon-only" type="button" aria-label="Версия для слабовидящих">
+							<svg class="button__icon">
+								<use xlink:href="#circle-glasses"></use>
+							</svg>
+						</button><a class="button button--with-icon button--round-corner button--outline-red" href="./lk.html">
+							<svg class="button__icon button__icon--color-red">
+								<use xlink:href="#bold-plus"></use>
+							</svg>Кабинет врача</a><a class="button button--with-icon button--round-corner button--red" href="./lk.html">
+							<svg class="button__icon">
+								<use xlink:href="#user"></use>
+							</svg>Кабинет донора</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Mobile menu-->
+		<div class="mobile-menu">
+			<div class="mobile-menu__container container">
+				<ul class="mobile-menu__nav">
+					<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#"></a></li>
+				</ul>
+			</div>
+		</div>
+		<main class="main">
+			<!-- Section Auth-->
+			<div class="section-auth container">
+				<form class="auth-form section-auth__form" action="#" method="post">
+					<div class="auth-form__header">
+						<h1 class="auth-form__title">Авторизация</h1>
+					</div>
+					<div class="auth-form__field-box">
+						<div class="form-group">
+							<label class="form-group__label" for="auth-email">Ваш e-mail</label>
+							<div class="form-group__input-box">
+								<input class="input form-group__input" type="email" id="auth-email" name="email" placeholder="Введите ваш почтовый ящик" required="required"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="form-group__label" for="auth-password">Пароль</label>
+							<div class="form-group__input-box">
+								<input class="input form-group__input" type="password" id="auth-password" name="password" placeholder="Введите пароль" required="required"/>
+								<button class="form-group__btn form-group__btn--password-toggle" type="button" aria-label="Показать текст пароля" title="Показать текст пароля">
+									<svg class="form-group__btn-icon form-group__btn-icon--normal">
+										<use xlink:href="#eye-normal"></use>
+									</svg>
+									<svg class="form-group__btn-icon form-group__btn-icon--active">
+										<use xlink:href="#eye-crossed"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="auth-form__actions">
+						<label class="checkbox auth-form__checkbox">
+							<input class="checkbox__input" type="checkbox" name="remember"/><span class="checkbox__text">Запомнить меня</span>
+						</label><span class="auth-form__forgot">Забыли пароль?<a class="auth-form__link" href="#">Восстановить</a></span>
+					</div>
+					<button class="button button--red button--xl auth-form__submit" type="submit">Войти</button><span class="auth-form__register">Ещё нет аккаунта?<a class="auth-form__link" href="#">Регистрация</a></span>
+				</form>
+			</div>
+		</main>
+		<!-- Footer-->
+		<footer class="footer">
+			<div class="footer__container container">
+				<!-- Footer top-->
+				<div class="footer__top">
+					<div class="footer__logo-col"><a class="footer__logo-link" href="./main.html" title="На главную">
+							<picture><img class="footer__logo img-theme-light" src="./images/common/logo-theme-light.svg" alt="Служба Крови"/><img class="footer__logo img-theme-dark" src="./images/common/logo-theme-dark.svg" alt="Служба Крови"/></picture></a>
+						<div class="footer__btn-box"><a class="button button--with-icon button--round-corner button--red" href="./lk.html">
+								<svg class="button__icon">
+									<use xlink:href="#user"></use>
+								</svg>Кабинет донора</a><a class="button button--with-icon button--round-corner button--outline-red" href="./lk.html">
+								<svg class="button__icon button__icon--color-red">
+									<use xlink:href="#bold-plus"></use>
+								</svg>Кабинет врача</a></div>
+					</div>
+					<div class="footer__nav">
+						<!-- Col-->
+						<div class="footer__nav-col">
+							<p class="footer__nav-title">Я донор</p>
+							<p class="footer__nav-subtitle">Как стать донором</p>
+							<ul class="footer__nav-list">
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Как стать донором</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Бонусы для доноров</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Донорская диета</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Противопоказания</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Безопасность донора</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Почетный донор России</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Почетный донор Москвы</a></li>
+							</ul>
+						</div>
+						<!-- Col-->
+						<div class="footer__nav-col">
+							<p class="footer__nav-title">Я волонтёр</p>
+							<p class="footer__nav-subtitle">Как стать волонтером</p>
+							<ul class="footer__nav-list">
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Как стать волонтером</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Бонусы для доноров</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Донорская диета</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Противопоказания</a></li>
+							</ul>
+						</div>
+						<!-- Col-->
+						<div class="footer__nav-col">
+							<p class="footer__nav-title">Я врач</p>
+							<p class="footer__nav-subtitle">Подзаголовок</p>
+							<ul class="footer__nav-list">
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Тема для врачей</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Тема для врачей другая</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Тема для врачей новая</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Тема для врачей другая</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Тема для врачей иная</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Тема для врачей интересная</a></li>
+							</ul>
+						</div>
+						<!-- Col-->
+						<div class="footer__nav-col">
+							<p class="footer__nav-title">Я партнёр</p>
+							<p class="footer__nav-subtitle">Как стать донором</p>
+							<ul class="footer__nav-list">
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Как стать донором</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Бонусы для доноров</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Донорская диета</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Противопоказания</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Безопасность донора</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Почетный донор России</a></li>
+								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Почетный донор Москвы</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Footer center-->
+				<div class="footer__center">
+					<!-- Footer contacts-->
+					<div class="footer__contacts-col">
+						<div class="footer__phone-box"><span class="footer__phone-description">Горячая линия (бесплатно по РФ)</span><a class="footer__phone-link" href="tel:88003333343">8 (800) 333-33-43</a></div>
+						<div class="footer__phone-box"><span class="footer__phone-description">Техническая поддержка ЕИБД</span><a class="footer__phone-link" href="tel:88007007606">8 (800) 700-76-06</a></div>
+						<ul class="footer__social-list social-list">
+							<li class="social-list__el"><a class="social-list__link social-list__link--max" href="#" target="_blank" title="Max">
+									<svg class="social-list__icon">
+										<use xlink:href="#social-max"></use>
+									</svg></a></li>
+							<li class="social-list__el"><a class="social-list__link social-list__link--telegram" href="#" target="_blank" title="Telegram">
+									<svg class="social-list__icon">
+										<use xlink:href="#social-telegram"></use>
+									</svg></a></li>
+							<li class="social-list__el"><a class="social-list__link social-list__link--vk" href="#" target="_blank" title="Вконтакте">
+									<svg class="social-list__icon">
+										<use xlink:href="#social-vk"></use>
+									</svg></a></li>
+							<li class="social-list__el"><a class="social-list__link social-list__link--ok" href="#" target="_blank" title="Одноклассники">
+									<svg class="social-list__icon">
+										<use xlink:href="#social-ok"></use>
+									</svg></a></li>
+						</ul>
+					</div>
+					<!-- Footer apps-->
+					<div class="footer__apps">
+						<div class="footer__apps-content-box">
+							<p class="footer__apps-title">Скачайте наше<br/>приложение</p>
+							<div class="footer__apps-links"><a class="button button--outline-white button--round-corner" href="#" target="_blank">Скачать на Android</a><a class="button button--outline-white button--round-corner" href="#" target="_blank">Скачать на iOS</a></div>
+						</div>
+						<div class="footer__apps-img-box">
+							<picture><img class="footer__apps-img img-theme-light" src="./images/common/phone-theme-light.svg" alt=""/><img class="footer__apps-img img-theme-dark" src="./images/common/phone-theme-dark.svg" alt=""/></picture>
+						</div>
+					</div>
+				</div>
+				<!-- Footer bottom-->
+				<div class="footer__bottom">
+					<div class="footer__copyright-box">
+						<ul class="footer__link-list">
+							<li class="footer__link-elem"><a class="footer__link" href="#" target="_blank" title="Служба крови"><img class="footer__link-img" src="./images/common/logo-blood.svg" alt="Служба крови"/></a></li>
+							<li class="footer__link-elem"><a class="footer__link" href="#" target="_blank" title="ФМБА"><img class="footer__link-img" src="./images/common/logo-fmba.svg" alt="ФМБА"/></a></li>
+						</ul>
+						<p class="footer__copyright">© 2025 ФМБА России. Все права на материалы, находящиеся на сайте, охраняются в соответствии с законодательством РФ, в том числе об авторском праве и смежных правах.</p>
+					</div>
+					<ul class="footer__terms-list">
+						<li class="footer__terms-el"><a class="footer__terms-link" href="#" target="_blank">Политика в отношении обработки персональных данных</a></li>
+						<li class="footer__terms-el"><a class="footer__terms-link" href="#" target="_blank">Политика использования сookie-файлов</a></li>
+						<li class="footer__terms-el"><a class="footer__terms-link" href="#" target="_blank">Согласие на обработку персональных данных</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<script src="./js/main.js?v=1763310308455"></script><svg width="0" height="0" class="hidden">
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" id="chevron-down">
+        <path d="M11 3.49994L6.70711 7.79283C6.37377 8.12617 6.20711 8.29283 6 8.29283C5.79289 8.29283 5.62623 8.12617 5.29289 7.79283L1 3.49994" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="circle-glasses">
+        <path d="M8.33366 11.25L8.57774 11.0059C8.95503 10.6286 9.46675 10.4167 10.0003 10.4167C10.5339 10.4167 11.0456 10.6286 11.4229 11.0059L11.667 11.25M18.3337 12.9167V5.83333C18.3337 4.68274 17.4009 3.75 16.2503 3.75H15.8337M18.3337 12.9167C18.3337 14.7576 16.8413 16.25 15.0003 16.25C13.1594 16.25 11.667 14.7576 11.667 12.9167C11.667 11.0757 13.1594 9.58333 15.0003 9.58333C16.8413 9.58333 18.3337 11.0757 18.3337 12.9167ZM1.66699 12.9167V5.83333C1.66699 4.68274 2.59973 3.75 3.75033 3.75H4.16699M1.66699 12.9167C1.66699 14.7576 3.15938 16.25 5.00033 16.25C6.84127 16.25 8.33366 14.7576 8.33366 12.9167C8.33366 11.0757 6.84127 9.58333 5.00033 9.58333C3.15938 9.58333 1.66699 11.0757 1.66699 12.9167Z" stroke="currentColor" stroke-width="1.6"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="eye-crossed">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7071 5.70711C20.0976 5.31658 20.0976 4.68342 19.7071 4.29289C19.3166 3.90237 18.6834 3.90237 18.2929 4.29289L14.032 8.55382C13.4365 8.20193 12.7418 8 12 8C9.79086 8 8 9.79086 8 12C8 12.7418 8.20193 13.4365 8.55382 14.032L4.29289 18.2929C3.90237 18.6834 3.90237 19.3166 4.29289 19.7071C4.68342 20.0976 5.31658 20.0976 5.70711 19.7071L9.96803 15.4462C10.5635 15.7981 11.2582 16 12 16C14.2091 16 16 14.2091 16 12C16 11.2582 15.7981 10.5635 15.4462 9.96803L19.7071 5.70711ZM12.518 10.0677C12.3528 10.0236 12.1792 10 12 10C10.8954 10 10 10.8954 10 12C10 12.1792 10.0236 12.3528 10.0677 12.518L12.518 10.0677ZM11.482 13.9323L13.9323 11.482C13.9764 11.6472 14 11.8208 14 12C14 13.1046 13.1046 14 12 14C11.8208 14 11.6472 13.9764 11.482 13.9323ZM15.7651 4.8207C14.6287 4.32049 13.3675 4 12 4C9.14754 4 6.75717 5.39462 4.99812 6.90595C3.23268 8.42276 2.00757 10.1376 1.46387 10.9698C1.05306 11.5985 1.05306 12.4015 1.46387 13.0302C1.92276 13.7326 2.86706 15.0637 4.21194 16.3739L5.62626 14.9596C4.4555 13.8229 3.61144 12.6531 3.18002 12C3.6904 11.2274 4.77832 9.73158 6.30147 8.42294C7.87402 7.07185 9.81574 6 12 6C12.7719 6 13.5135 6.13385 14.2193 6.36658L15.7651 4.8207ZM12 18C11.2282 18 10.4866 17.8661 9.78083 17.6334L8.23496 19.1793C9.37136 19.6795 10.6326 20 12 20C14.8525 20 17.2429 18.6054 19.002 17.0941C20.7674 15.5772 21.9925 13.8624 22.5362 13.0302C22.947 12.4015 22.947 11.5985 22.5362 10.9698C22.0773 10.2674 21.133 8.93627 19.7881 7.62611L18.3738 9.04043C19.5446 10.1771 20.3887 11.3469 20.8201 12C20.3097 12.7726 19.2218 14.2684 17.6986 15.5771C16.1261 16.9282 14.1843 18 12 18Z" fill="currentColor"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="eye-normal">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.30147 15.5771C4.77832 14.2684 3.6904 12.7726 3.18002 12C3.6904 11.2274 4.77832 9.73158 6.30147 8.42294C7.87402 7.07185 9.81574 6 12 6C14.1843 6 16.1261 7.07185 17.6986 8.42294C19.2218 9.73158 20.3097 11.2274 20.8201 12C20.3097 12.7726 19.2218 14.2684 17.6986 15.5771C16.1261 16.9282 14.1843 18 12 18C9.81574 18 7.87402 16.9282 6.30147 15.5771ZM12 4C9.14754 4 6.75717 5.39462 4.99812 6.90595C3.23268 8.42276 2.00757 10.1376 1.46387 10.9698C1.05306 11.5985 1.05306 12.4015 1.46387 13.0302C2.00757 13.8624 3.23268 15.5772 4.99812 17.0941C6.75717 18.6054 9.14754 20 12 20C14.8525 20 17.2429 18.6054 19.002 17.0941C20.7674 15.5772 21.9925 13.8624 22.5362 13.0302C22.947 12.4015 22.947 11.5985 22.5362 10.9698C21.9925 10.1376 20.7674 8.42276 19.002 6.90595C17.2429 5.39462 14.8525 4 12 4ZM10 12C10 10.8954 10.8955 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8955 14 10 13.1046 10 12ZM12 8C9.7909 8 8.00004 9.79086 8.00004 12C8.00004 14.2091 9.7909 16 12 16C14.2092 16 16 14.2091 16 12C16 9.79086 14.2092 8 12 8Z" fill="currentColor"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="moon">
+        <g clip-path="url(#clip0_333_1680)">
+            <path d="M1.33301 8.00004C1.33301 11.6819 4.43161 14.6667 8.25394 14.6667C11.1533 14.6667 13.6363 12.9493 14.6663 10.513C13.8119 11.0326 12.7996 11.3334 11.7144 11.3334C8.65654 11.3334 6.17766 8.94556 6.17766 6.00004C6.17766 4.01747 7.30068 2.28756 8.9674 1.36837C8.73285 1.34523 8.49483 1.33337 8.25394 1.33337C4.43161 1.33337 1.33301 4.31814 1.33301 8.00004Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_333_1680">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="navigation">
+        <path d="M1.62351 6.30224L11.8873 2.39222C13.0828 1.9368 13.6805 1.70909 13.9858 2.01438C14.2911 2.31966 14.0634 2.91739 13.608 4.11286L9.69795 14.3767C9.63142 14.5513 9.46398 14.6667 9.27712 14.6667C9.08329 14.6667 8.9112 14.5427 8.8499 14.3588L8.10187 12.1147C7.58462 10.5629 7.32599 9.78703 6.76957 9.23062C6.21316 8.6742 5.43727 8.41557 3.8855 7.89832L1.64142 7.15029C1.45753 7.08899 1.3335 6.9169 1.3335 6.72307C1.3335 6.53621 1.44889 6.36876 1.62351 6.30224Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="search">
+        <path d="M18.3337 18.3334L14.167 14.1667M15.8337 8.75002C15.8337 12.662 12.6623 15.8334 8.75033 15.8334C4.83831 15.8334 1.66699 12.662 1.66699 8.75002C1.66699 4.838 4.83831 1.66669 8.75033 1.66669C12.6623 1.66669 15.8337 4.838 15.8337 8.75002Z" stroke="currentColor" stroke-width="1.6"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="social-max">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1934 20.9486C10.4269 20.9486 9.606 20.6896 8.17907 19.6536C7.27649 20.8191 4.41833 21.7299 4.29369 20.1716C4.29369 19.0018 4.03581 18.0133 3.74355 16.9342C3.39541 15.6046 3 14.124 3 11.9786C3 6.85477 7.18623 3 12.1461 3C17.1103 3 20.9999 7.0447 20.9999 12.0261C21.0079 14.3815 20.0852 16.6439 18.4341 18.3167C16.783 19.9895 14.5386 20.9361 12.1934 20.9486ZM12.2664 7.42888C9.85098 7.3037 7.96847 8.98288 7.55156 11.616C7.20772 13.7959 7.81804 16.4507 8.33809 16.5888C8.58738 16.6493 9.21488 16.1399 9.606 15.7471C10.2527 16.1958 11.0058 16.4653 11.7894 16.5284C12.9925 16.5865 14.1703 16.1682 15.0696 15.3635C15.969 14.5587 16.518 13.4317 16.5988 12.2247C16.6458 11.0152 16.2182 9.83544 15.408 8.93935C14.5978 8.04326 13.4697 7.50242 12.2664 7.4332V7.42888Z" fill="currentColor"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="social-ok">
+        <path d="M15.3984 10.5173C14.5321 11.3836 13.3326 11.9167 11.9999 11.9167C10.6672 11.9167 9.46775 11.3836 8.60147 10.5173C7.73519 9.65098 7.20204 8.45149 7.20204 7.11881C7.20204 5.78613 7.73514 4.58663 8.60147 3.72035C9.46776 2.85407 10.6672 2.32092 11.9999 2.32092C13.3326 2.32092 14.5321 2.85402 15.3984 3.72035C16.2647 4.58669 16.7978 5.78613 16.7978 7.11881C16.7978 8.45149 16.2647 9.65099 15.3984 10.5173ZM11.9999 4.95307C11.4002 4.95307 10.8505 5.20296 10.4673 5.58612C10.0675 5.98595 9.83425 6.51904 9.83425 7.11874C9.83425 7.71844 10.0841 8.2682 10.4673 8.65136C10.8671 9.05118 11.4002 9.28441 11.9999 9.28441C12.5996 9.28441 13.1494 9.03452 13.5325 8.65136C13.9324 8.25153 14.1656 7.71844 14.1656 7.11874C14.1656 6.51904 13.9157 5.96928 13.5325 5.58612C13.1494 5.1863 12.5996 4.95307 11.9999 4.95307ZM17.0477 11.95L18.4471 13.8659C18.5138 13.9659 18.4971 14.0991 18.4138 14.1658C17.231 15.132 15.8483 15.7817 14.4155 16.1149L17.131 21.3459C17.2143 21.4959 17.0977 21.6791 16.9311 21.6791H14.0324C13.9491 21.6791 13.8658 21.6291 13.8325 21.5458L12 17.2311L10.1675 21.5458C10.1341 21.6291 10.0508 21.6791 9.96755 21.6791H7.05221C6.88562 21.6791 6.769 21.4959 6.8523 21.3459L9.58441 16.1149C8.15166 15.7817 6.76894 15.132 5.58616 14.1658C5.50286 14.0991 5.4862 13.9659 5.55284 13.8659L6.96888 11.95C7.05217 11.8501 7.20211 11.8334 7.30207 11.9167C8.63486 13.0496 10.2674 13.7825 12.0167 13.7825C13.766 13.7825 15.3986 13.0495 16.7313 11.9167C16.8146 11.8167 16.9646 11.8334 17.0479 11.95H17.0477Z" fill="currentColor"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="social-telegram">
+        <path d="M4.60988 10.7935C8.9261 8.8491 11.8036 7.56708 13.2423 6.94772C17.355 5.17911 18.2085 4.87195 18.766 4.86154C18.8886 4.85951 19.1615 4.89085 19.3396 5.03976C19.4877 5.16536 19.5293 5.33521 19.5501 5.45447C19.5686 5.5736 19.5941 5.84512 19.5733 6.05708C19.3512 8.47806 18.3866 14.353 17.8963 17.0646C17.6904 18.212 17.281 18.5966 16.8854 18.6342C16.025 18.716 15.3727 18.0467 14.54 17.4823C13.2377 16.5989 12.5021 16.0491 11.2369 15.1872C9.77501 14.191 10.7234 13.6434 11.5561 12.7487C11.7735 12.5145 15.5624 8.95125 15.6341 8.62805C15.6433 8.58762 15.6526 8.43691 15.5647 8.35748C15.4791 8.27782 15.3519 8.30509 15.2593 8.32662C15.1275 8.35725 13.048 9.78017 9.014 12.5952C8.42416 13.0148 7.88984 13.2193 7.40872 13.2085C6.88133 13.1968 5.86357 12.8994 5.10719 12.6454C4.18195 12.3337 3.44408 12.1688 3.50884 11.6394C3.54123 11.3639 3.90901 11.0818 4.60988 10.7935Z" fill="currentColor"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="social-vk">
+        <path d="M12.8577 17.7867C6.29358 17.7867 2.54956 13.5365 2.39355 6.46411H5.68162C5.78963 11.6551 8.21362 13.8538 10.1337 14.3072V6.46411H13.2298V10.941C15.1259 10.7483 17.1177 8.70823 17.7897 6.46411L20.8858 6.46411C20.3698 9.22959 18.2098 11.2697 16.6737 12.1084C18.2098 12.7884 20.6699 14.5679 21.606 17.7867H18.1978C17.4658 15.6333 15.6419 13.9672 13.2298 13.7405V17.7867H12.8577Z" fill="currentColor"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="user">
+        <g clip-path="url(#clip0_333_1643)">
+            <path d="M13.3337 5.41669C13.3337 7.48775 11.8413 9.16669 10.0003 9.16669C8.15938 9.16669 6.66699 7.48775 6.66699 5.41669C6.66699 3.34562 8.15938 1.66669 10.0003 1.66669C11.8413 1.66669 13.3337 3.34562 13.3337 5.41669Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+            <path d="M2.08366 15.2778C3.39515 13.5291 5.4534 12.5 7.63921 12.5H12.3614C14.5473 12.5 16.6055 13.5291 17.917 15.2778L17.9587 15.3334C18.2021 15.6579 18.3337 16.0527 18.3337 16.4584C18.3337 17.4939 17.4942 18.3334 16.4587 18.3334H3.54199C2.50646 18.3334 1.66699 17.4939 1.66699 16.4584C1.66699 16.0527 1.79858 15.6579 2.04199 15.3334L2.08366 15.2778Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_333_1643">
+                <rect width="20" height="20" fill="currentColor"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="arrow-right">
+        <path d="M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="bold-plus">
+        <g clip-path="url(#clip0_339_4655)">
+            <path d="M5.00033 12.5C6.17884 12.5 6.76809 12.5 7.13421 12.8661C7.50033 13.2322 7.50033 13.8215 7.50033 15V15.8333C7.50033 17.0118 7.50033 17.6011 7.86644 17.9672C8.23256 18.3333 8.82181 18.3333 10.0003 18.3333C11.1788 18.3333 11.7681 18.3333 12.1342 17.9672C12.5003 17.6011 12.5003 17.0118 12.5003 15.8333V15C12.5003 13.8215 12.5003 13.2322 12.8664 12.8661C13.2326 12.5 13.8218 12.5 15.0003 12.5H15.8337C17.0122 12.5 17.6014 12.5 17.9675 12.1339C18.3337 11.7678 18.3337 11.1785 18.3337 10C18.3337 8.82149 18.3337 8.23223 17.9675 7.86611C17.6014 7.5 17.0122 7.5 15.8337 7.5H15.0003C13.8218 7.5 13.2326 7.5 12.8664 7.13388C12.5003 6.76776 12.5003 6.17851 12.5003 5V4.16666C12.5003 2.98815 12.5003 2.3989 12.1342 2.03278C11.7681 1.66666 11.1788 1.66666 10.0003 1.66666C8.82181 1.66666 8.23256 1.66666 7.86644 2.03278C7.50033 2.3989 7.50033 2.98815 7.50033 4.16666V5C7.50033 6.17851 7.50033 6.76776 7.13421 7.13388C6.76809 7.5 6.17884 7.5 5.00033 7.5H4.16699C2.98848 7.5 2.39923 7.5 2.03311 7.86611C1.66699 8.23223 1.66699 8.82149 1.66699 10C1.66699 11.1785 1.66699 11.7678 2.03311 12.1339C2.39923 12.5 2.98848 12.5 4.16699 12.5H5.00033Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_339_4655">
+                <rect width="20" height="20" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="brightness">
+        <g clip-path="url(#clip0_333_1679)">
+            <circle cx="8" cy="8" r="4" stroke="currentColor" stroke-width="1.6"></circle>
+            <path d="M8 0.666626V2.66663" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+            <path d="M13.1855 2.81458L11.7713 4.22879" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+            <path d="M15.334 8L13.334 8" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+            <path d="M13.1855 13.1854L11.7713 11.7712" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+            <path d="M8 13.3333V15.3333" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+            <path d="M4.22949 11.7712L2.81528 13.1855" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+            <path d="M2.66699 8L0.666992 8" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+            <path d="M4.22949 4.22876L2.81528 2.81455" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_333_1679">
+                <rect width="16" height="16" fill="currentColor"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+</svg>
+	</body>
+</html>
