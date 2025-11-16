@@ -1,20 +1,6 @@
 .header {
-  position: fixed;
+  position: relative;
   z-index: 888;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--color-bg);
-  //transition: background-color $transition-default, padding $transition-default, box-shadow $transition-default;
-
-  /*&--bg {
-    background-color: rgba($color-bg, .9);
-    backdrop-filter: blur(3px);
-  }*/
-
-  /*.menu-opened & {
-    background-color: $color-bg;
-  }*/
 
   &__container {
     position: relative;
