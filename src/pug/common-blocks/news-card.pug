@@ -1,0 +1,13 @@
+mixin newsCard()
+    // News card
+    a.news-card(href="./article.html")
+        .news-card__img-box
+            img.news-card__img(src="./images/news/news-card.jpg", alt="")
+        .news-card__content-box
+            .news-card__top
+                span.news-card__tag.tag Федеральная новость
+                time.news-card__date 29 апреля 2025 г.
+            p.news-card__title В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год
+            .news-card__bottom-box
+                span.button.button--red.button--icon-only
+                    +svg("arrow-right").button__icon

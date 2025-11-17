@@ -1,0 +1,35 @@
+.breadcrumb {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #9DA2A8;
+  white-space: nowrap;
+  overflow-y: auto;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      &::after {
+        display: inline-block;
+        margin: 0 6px 0 8px;
+        content: "/";
+      }
+    }
+  }
+
+  &__link {
+    transition: color $transition-default;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__current {
+    color: $color-primary;
+  }
+}

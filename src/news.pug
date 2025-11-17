@@ -1,0 +1,57 @@
+extends pug/base
+
+block content
+	+breadcrumb(["Главная"], "Новости")
+	// Section news
+	.section-news.container
+		h1.section-news__title Новости
+		.section-news__filter-box
+			.section-news__select-box
+				// Select
+				.select.section-news__filter
+					.select__current-box
+						input.select__input(type="hidden", value="")
+						p.select__current Выберите тег
+						+svg("chevron-down").select__drop-icon
+					ul.select__list
+						li.select__list-item Федеральная новость
+						li.select__list-item Региональная новость
+						li.select__list-item Городская новость
+				// Select
+				.select.section-news__filter
+					.select__current-box
+						input.select__input(type="hidden", value="")
+						p.select__current Выберите гор
+						+svg("chevron-down").select__drop-icon
+					ul.select__list
+						li.select__list-item 2023
+						li.select__list-item 2024
+						li.select__list-item 2025
+			button.button.button--red.section-news__reset(type="button") Сбросить
+		.section-news__content-grid
+			- let i = 0
+			while i < 12
+				+newsCard()
+				- i++
+		.section-news__navigation
+			button.button.button--red.section-news__more-btn(type="button") Показать ещё
+			.pagination
+				a.pagination__btn.pagination__btn--prev(href="#", title="Назад")
+					+svg("chevron-down").pagination__btn-icon
+				ul.pagination__list
+					li.pagination__el
+						span.pagination__link.pagination__link--active 1
+					li.pagination__el
+						a.pagination__link(href="#", title="Страница 2") 2
+					li.pagination__el
+						a.pagination__link(href="#", title="Страница 3") 3
+					li.pagination__el
+						a.pagination__link(href="#", title="Страница 4") 4
+					li.pagination__el
+						span.pagination__link.pagination__link--dots ...
+					li.pagination__el
+						a.pagination__link(href="#", title="Страница 12") 12
+				a.pagination__btn.pagination__btn--next(href="#", title="Вперед")
+					+svg("chevron-down").pagination__btn-icon
+
+

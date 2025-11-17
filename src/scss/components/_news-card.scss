@@ -1,0 +1,80 @@
+.news-card {
+  display: inline-block;
+  border-radius: 28px;
+  box-shadow: 0 2px 8px rgba(#000, .08);
+  overflow: hidden;
+
+  &__img-box {
+    height: 300px;
+    border-radius: 28px;
+    overflow: hidden;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform $transition-default;
+
+    .news-card:hover & {
+      transform: scale(1.05);
+    }
+  }
+
+  &__content-box {
+    padding: 15px 20px 35px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__tag {
+  }
+
+  &__date {
+    flex-shrink: 0;
+    font-size: 16px;
+    line-height: 1.1;
+    font-weight: 500;
+    letter-spacing: -.01em;
+    color: $color-primary;
+    white-space: nowrap;
+    opacity: .5;
+  }
+
+  &__title {
+    margin-bottom: 64px;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 600;
+  }
+
+  &__bottom-box {
+  }
+}
+
+
+// theme
+.theme-light {
+  .news-card {
+    &__img-box {
+      border: 1px solid #EBEBEB;
+    }
+  }
+}
+
+.theme-dark {
+  .news-card {
+    background-color: #26262B;
+
+    &__img-box {
+      border: 1px solid #4A5560;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.tag {
+  display: inline-block;
+  padding: 6px 8px;
+  border: 1px solid;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color $transition-default;
+}
+
+// theme
+.theme-light {
+  .tag {
+    border-color: rgba(#272727, .25);
+    color: #272727;
+  }
+
+  a.tag:hover {
+    border-color: #272727;
+  }
+}
+
+.theme-dark {
+  .tag {
+    border-color: rgba(#fff, .25);
+    color: #fff;
+  }
+
+  a.tag:hover {
+    border-color: #fff;
+  }
+}

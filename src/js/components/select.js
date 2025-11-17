@@ -1,0 +1,36 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const selectList = document.querySelectorAll('.select')
+  if(!selectList.length) return
+
+  selectList.forEach((select) => {
+    select.addEventListener('click', (evt) => {
+      evt.stopPropagation()
+      if(!evt.target.closest('.select__list-box')) {
+        select.classList.toggle('select--active')
+      }
+    })
+
+    const current = select.querySelector('.select__current')
+    const input = select.querySelector('.select__input')
+    const selectItems = select.querySelectorAll('.select__list-item')
+
+    selectItems.forEach((item)=>{
+      item.addEventListener('click', () => {
+        current.innerHTML = item.innerHTML
+        input.value = item.querySelector('.select__title').innerText
+        const oldSelected = select.querySelector('.select__list-item--selected')
+        oldSelected.classList.remove('select__list-item--selected')
+        item.classList.add('select__list-item--selected')
+        closeAllSelect()
+      })
+    })
+  })
+
+  document.addEventListener('click', closeAllSelect)
+
+  function closeAllSelect() {
+    selectList.forEach((select) => {
+      select.classList.remove('select--active')
+    })
+  }
+})
