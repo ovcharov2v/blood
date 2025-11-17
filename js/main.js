@@ -120,6 +120,47 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/components/select.js":
+/*!*************************************!*\
+  !*** ./src/js/components/select.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var selectList = document.querySelectorAll('.select');
+  if (!selectList.length) return;
+  selectList.forEach(function (select) {
+    select.addEventListener('click', function (evt) {
+      evt.stopPropagation();
+      if (!evt.target.closest('.select__list-box')) {
+        select.classList.toggle('select--active');
+      }
+    });
+    var current = select.querySelector('.select__current');
+    var input = select.querySelector('.select__input');
+    var selectItems = select.querySelectorAll('.select__list-item');
+    selectItems.forEach(function (item) {
+      item.addEventListener('click', function () {
+        current.innerHTML = item.innerHTML;
+        input.value = item.querySelector('.select__title').innerText;
+        var oldSelected = select.querySelector('.select__list-item--selected');
+        oldSelected.classList.remove('select__list-item--selected');
+        item.classList.add('select__list-item--selected');
+        closeAllSelect();
+      });
+    });
+  });
+  document.addEventListener('click', closeAllSelect);
+  function closeAllSelect() {
+    selectList.forEach(function (select) {
+      select.classList.remove('select--active');
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/components/theme-switcher.js":
 /*!*********************************************!*\
   !*** ./src/js/components/theme-switcher.js ***!
@@ -164,6 +205,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_theme_switcher__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_theme_switcher__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_password_toggle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/password-toggle */ "./src/js/components/password-toggle.js");
 /* harmony import */ var _components_password_toggle__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_password_toggle__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/select */ "./src/js/components/select.js");
+/* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_select__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 

@@ -8,7 +8,7 @@
 		<title>Служба Крови</title>
 		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
-		<link rel="stylesheet" href="./css/main.css?v=1763386469665"/>
+		<link rel="stylesheet" href="./css/main.css?v=1763386470092"/>
 	</head>
 	<body>
 		<!-- Header-->
@@ -205,41 +205,217 @@
 			</div>
 		</div>
 		<main class="main">
-			<!-- Section Auth-->
-			<div class="section-auth container">
-				<form class="auth-form section-auth__form" action="#" method="post">
-					<div class="auth-form__header">
-						<h1 class="auth-form__title">Авторизация</h1>
-					</div>
-					<div class="auth-form__field-box">
-						<div class="form-group">
-							<label class="form-group__label" for="auth-email">Ваш e-mail</label>
-							<div class="form-group__input-box">
-								<input class="input form-group__input" type="email" id="auth-email" name="email" placeholder="Введите ваш почтовый ящик" required="required"/>
+			<!-- Breadcrumbs-->
+			<div class="container breadcrumb">
+				<ul class="breadcrumb__list">
+					<li class="breadcrumb__item"><a class="breadcrumb__link" href="#" title="Главная">Главная</a>
+					</li>
+					<li class="breadcrumb__item"><span class="breadcrumb__current">Новости</span></li>
+				</ul>
+			</div>
+			<!-- Section news-->
+			<div class="section-news container">
+				<h1 class="section-news__title">Новости</h1>
+				<div class="section-news__filter-box">
+					<div class="section-news__select-box">
+						<!-- Select-->
+						<div class="select section-news__filter">
+							<div class="select__current-box">
+								<input class="select__input" type="hidden" value=""/>
+								<p class="select__current">Выберите тег</p>
+								<svg class="select__drop-icon">
+									<use xlink:href="#chevron-down"></use>
+								</svg>
 							</div>
+							<ul class="select__list">
+								<li class="select__list-item">Федеральная новость</li>
+								<li class="select__list-item">Региональная новость</li>
+								<li class="select__list-item">Городская новость</li>
+							</ul>
 						</div>
-						<div class="form-group">
-							<label class="form-group__label" for="auth-password">Пароль</label>
-							<div class="form-group__input-box">
-								<input class="input form-group__input" type="password" id="auth-password" name="password" placeholder="Введите пароль" required="required"/>
-								<button class="form-group__btn form-group__btn--password-toggle" type="button" aria-label="Показать текст пароля" title="Показать текст пароля">
-									<svg class="form-group__btn-icon form-group__btn-icon--normal">
-										<use xlink:href="#eye-normal"></use>
-									</svg>
-									<svg class="form-group__btn-icon form-group__btn-icon--active">
-										<use xlink:href="#eye-crossed"></use>
-									</svg>
-								</button>
+						<!-- Select-->
+						<div class="select section-news__filter">
+							<div class="select__current-box">
+								<input class="select__input" type="hidden" value=""/>
+								<p class="select__current">Выберите гор</p>
+								<svg class="select__drop-icon">
+									<use xlink:href="#chevron-down"></use>
+								</svg>
 							</div>
+							<ul class="select__list">
+								<li class="select__list-item">2023</li>
+								<li class="select__list-item">2024</li>
+								<li class="select__list-item">2025</li>
+							</ul>
 						</div>
 					</div>
-					<div class="auth-form__actions">
-						<label class="checkbox auth-form__checkbox">
-							<input class="checkbox__input" type="checkbox" name="remember"/><span class="checkbox__text">Запомнить меня</span>
-						</label><span class="auth-form__forgot">Забыли пароль?<a class="auth-form__link" href="#">Восстановить</a></span>
+					<button class="button button--red section-news__reset" type="button">Сбросить</button>
+				</div>
+				<div class="section-news__content-grid">
+					<!-- News card--><a class="news-card" href="./article.html">
+						<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+						<div class="news-card__content-box">
+							<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+								<time class="news-card__date">29 апреля 2025 г.</time>
+							</div>
+							<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+							<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+									<svg class="button__icon">
+										<use xlink:href="#arrow-right"></use>
+									</svg></span></div>
+						</div></a>
+					<!-- News card--><a class="news-card" href="./article.html">
+						<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+						<div class="news-card__content-box">
+							<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+								<time class="news-card__date">29 апреля 2025 г.</time>
+							</div>
+							<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+							<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+									<svg class="button__icon">
+										<use xlink:href="#arrow-right"></use>
+									</svg></span></div>
+						</div></a>
+					<!-- News card--><a class="news-card" href="./article.html">
+						<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+						<div class="news-card__content-box">
+							<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+								<time class="news-card__date">29 апреля 2025 г.</time>
+							</div>
+							<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+							<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+									<svg class="button__icon">
+										<use xlink:href="#arrow-right"></use>
+									</svg></span></div>
+						</div></a>
+					<!-- News card--><a class="news-card" href="./article.html">
+						<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+						<div class="news-card__content-box">
+							<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+								<time class="news-card__date">29 апреля 2025 г.</time>
+							</div>
+							<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+							<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+									<svg class="button__icon">
+										<use xlink:href="#arrow-right"></use>
+									</svg></span></div>
+						</div></a>
+					<!-- News card--><a class="news-card" href="./article.html">
+						<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+						<div class="news-card__content-box">
+							<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+								<time class="news-card__date">29 апреля 2025 г.</time>
+							</div>
+							<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+							<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+									<svg class="button__icon">
+										<use xlink:href="#arrow-right"></use>
+									</svg></span></div>
+						</div></a>
+					<!-- News card--><a class="news-card" href="./article.html">
+						<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+						<div class="news-card__content-box">
+							<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+								<time class="news-card__date">29 апреля 2025 г.</time>
+							</div>
+							<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+							<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+									<svg class="button__icon">
+										<use xlink:href="#arrow-right"></use>
+									</svg></span></div>
+						</div></a>
+					<!-- News card--><a class="news-card" href="./article.html">
+						<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+						<div class="news-card__content-box">
+							<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+								<time class="news-card__date">29 апреля 2025 г.</time>
+							</div>
+							<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+							<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+									<svg class="button__icon">
+										<use xlink:href="#arrow-right"></use>
+									</svg></span></div>
+						</div></a>
+					<!-- News card--><a class="news-card" href="./article.html">
+						<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+						<div class="news-card__content-box">
+							<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+								<time class="news-card__date">29 апреля 2025 г.</time>
+							</div>
+							<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+							<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+									<svg class="button__icon">
+										<use xlink:href="#arrow-right"></use>
+									</svg></span></div>
+						</div></a>
+					<!-- News card--><a class="news-card" href="./article.html">
+						<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+						<div class="news-card__content-box">
+							<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+								<time class="news-card__date">29 апреля 2025 г.</time>
+							</div>
+							<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+							<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+									<svg class="button__icon">
+										<use xlink:href="#arrow-right"></use>
+									</svg></span></div>
+						</div></a>
+					<!-- News card--><a class="news-card" href="./article.html">
+						<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+						<div class="news-card__content-box">
+							<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+								<time class="news-card__date">29 апреля 2025 г.</time>
+							</div>
+							<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+							<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+									<svg class="button__icon">
+										<use xlink:href="#arrow-right"></use>
+									</svg></span></div>
+						</div></a>
+					<!-- News card--><a class="news-card" href="./article.html">
+						<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+						<div class="news-card__content-box">
+							<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+								<time class="news-card__date">29 апреля 2025 г.</time>
+							</div>
+							<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+							<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+									<svg class="button__icon">
+										<use xlink:href="#arrow-right"></use>
+									</svg></span></div>
+						</div></a>
+					<!-- News card--><a class="news-card" href="./article.html">
+						<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+						<div class="news-card__content-box">
+							<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+								<time class="news-card__date">29 апреля 2025 г.</time>
+							</div>
+							<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+							<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+									<svg class="button__icon">
+										<use xlink:href="#arrow-right"></use>
+									</svg></span></div>
+						</div></a>
+				</div>
+				<div class="section-news__navigation">
+					<button class="button button--red section-news__more-btn" type="button">Показать ещё</button>
+					<div class="pagination"><a class="pagination__btn pagination__btn--prev" href="#" title="Назад">
+							<svg class="pagination__btn-icon">
+								<use xlink:href="#chevron-down"></use>
+							</svg></a>
+						<ul class="pagination__list">
+							<li class="pagination__el"><span class="pagination__link pagination__link--active">1</span></li>
+							<li class="pagination__el"><a class="pagination__link" href="#" title="Страница 2">2</a></li>
+							<li class="pagination__el"><a class="pagination__link" href="#" title="Страница 3">3</a></li>
+							<li class="pagination__el"><a class="pagination__link" href="#" title="Страница 4">4</a></li>
+							<li class="pagination__el"><span class="pagination__link pagination__link--dots">...</span></li>
+							<li class="pagination__el"><a class="pagination__link" href="#" title="Страница 12">12</a></li>
+						</ul><a class="pagination__btn pagination__btn--next" href="#" title="Вперед">
+							<svg class="pagination__btn-icon">
+								<use xlink:href="#chevron-down"></use>
+							</svg></a>
 					</div>
-					<button class="button button--red button--xl auth-form__submit" type="submit">Войти</button><span class="auth-form__register">Ещё нет аккаунта?<a class="auth-form__link" href="#">Регистрация</a></span>
-				</form>
+				</div>
 			</div>
 		</main>
 		<!-- Footer-->
@@ -365,7 +541,7 @@
 				</div>
 			</div>
 		</footer>
-		<script src="./js/main.js?v=1763386469668"></script><svg width="0" height="0" class="hidden">
+		<script src="./js/main.js?v=1763386470097"></script><svg width="0" height="0" class="hidden">
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" id="chevron-down">
         <path d="M11 3.49994L6.70711 7.79283C6.37377 8.12617 6.20711 8.29283 6 8.29283C5.79289 8.29283 5.62623 8.12617 5.29289 7.79283L1 3.49994" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
     </symbol>
