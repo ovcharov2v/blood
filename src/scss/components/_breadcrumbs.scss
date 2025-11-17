@@ -15,7 +15,7 @@
     &:not(:last-child) {
       &::after {
         display: inline-block;
-        margin: 0 6px 0 8px;
+        margin: 0 8px 0 6px;
         content: "/";
       }
     }
@@ -30,6 +30,7 @@
   }
 
   &__current {
+    font-weight: 500;
     color: $color-primary;
   }
 }

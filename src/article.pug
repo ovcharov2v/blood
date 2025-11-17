@@ -1,0 +1,77 @@
+extends pug/base
+
+prepend styles
+	link(rel="stylesheet" href=`./lib/swiper/swiper-bundle.css`)
+prepend scripts
+	script(src=`./lib/swiper/swiper-bundle.min.js`)
+
+block content
+	+breadcrumb(["Главная", "О Службе крови", "Новости"], "Прием заявок на Всероссийский конкурс профессионального мастерства продлен до 10 ноября")
+	// Section article
+	.section-article.container
+		h1.section-article__title Прием заявок на Всероссийский конкурс профессионального мастерства продлен до 10 ноября
+		.section-article__info
+			time.section-article__date 29 апреля 2025 г.
+			a.section-article__tag.tag(href="#") Федеральная новость
+		figure.section-article__intro
+			.section-article__intro-img-box
+				img.section-article__intro-img(src="./images/article/img.jpg", alt="")
+			figcaption.section-article__intro-text «Для нас крайне важны системные партнерства с большими компаниями. Мы постоянно развиваем систему корпоративного донорства. Вместе с X5 мы создаем экосистему взаимопомощи, где бизнес активно включается в социально значимую повестку» — прокомментировала Ольга Эйхлер, начальник Управления Службы крови и экстремальной медицины ФМБА России.
+		.section-article__content
+			p Конкурс проходит ежегодно и направлен на поощрение лучших практик, достижений и инициатив в сфере донорства. Участие в конкурсе — это возможность представить свои проекты на федеральном уровне, получить признание профессионального сообщества, обменяться опытом и внести вклад в развитие донорского движения в России.
+
+			p В 2025 году, посвященном защитникам Отечества, организаторы конкурса отмечают: каждый донор и специалист Службы крови — это защитник жизни. Их усилия — не просто работа, а вклад в безопасность страны, здоровье ее граждан и будущее поколений.
+				br
+				|Подведение итогов конкурса, определение и награждение победителей состоится в рамках проведения XVII Всероссийского форума Службы крови 26 ноября в Национальном центре «Россия» в Москве.
+
+			p Конкурс проходит ежегодно и направлен на поощрение лучших практик, достижений и инициатив в сфере донорства. Участие в конкурсе — это возможность представить свои проекты на федеральном уровне, получить признание профессионального сообщества, обменяться опытом и внести вклад в развитие донорского движения в России.
+
+			p В 2025 году, посвященном защитникам Отечества, организаторы конкурса отмечают: каждый донор и специалист Службы крови — это защитник жизни. Их усилия — не просто работа, а вклад в безопасность страны, здоровье ее граждан и будущее поколений.
+				br
+				|Подведение итогов конкурса, определение и награждение победителей состоится в рамках проведения XVII Всероссийского форума Службы крови 26 ноября в Национальном центре «Россия» в Москве.
+
+			blockquote «Для нас крайне важны системные партнерства с большими компаниями. Мы постоянно развиваем систему корпоративного донорства. Вместе с X5 мы создаем экосистему взаимопомощи, где бизнес активно включается в социально значимую повестку» — прокомментировала Ольга Эйхлер, начальник Управления Службы крови и экстремальной медицины ФМБА России.
+
+			.section-article__how-to
+				p
+					strong Как подать заявку:
+					br
+					|Для участия необходимо подать заявку на сайте 
+					a(href="mailto:forum2025.yadonor.ru") forum2025.yadonor.ru.
+					br
+					|В состав заявки должен входить заполненный шаблон презентации в соответствии с заявленной номинацией.
+
+		.section-article__bottom
+			a.section-article__source-link(href="#") Источник новости и фото: ФМБА России (Москва)
+			ul.section-article__tag-list
+				li.section-article__tag-el
+					a.tag.section-article__tag-link(href="#") Федеральная новость
+				li.section-article__tag-el
+					a.tag.section-article__tag-link(href="#") ФМБА России
+				li.section-article__tag-el
+					a.tag.section-article__tag-link(href="#") Акция
+				li.section-article__tag-el
+					a.tag.section-article__tag-link(href="#") Анонс
+				li.section-article__tag-el
+					a.tag.section-article__tag-link(href="#") Партнеры Программы развития добровольного донорства крови
+			.section-article__share-box
+				p.section-article__share-title Поделиться:
+				.section-article__share-list
+					img(src="./images/article/share-vk.png", alt="")
+					img(src="./images/article/share-ok.png", alt="")
+					img(src="./images/article/share-telegram.png", alt="")
+
+	// Section Slider
+	.section-slider.container
+		.section-slider__slider-box
+			.swiper.section-slider__slider
+				.swiper-wrapper
+					- let i = 0
+					while i < 7
+						+newsCard().swiper-slide
+						- i++
+			.section-slider__slider-nav
+				button.section-slider__slider-btn.section-slider__slider-btn--prev(type="button", aria-label="Назад")
+					+svg("chevron-down").section-slider__slider-btn-icon
+				button.section-slider__slider-btn.section-slider__slider-btn--next(type="button", aria-label="Вперед")
+					+svg("chevron-down").section-slider__slider-btn-icon

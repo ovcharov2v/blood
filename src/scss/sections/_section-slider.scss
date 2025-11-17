@@ -1,0 +1,78 @@
+.section-slider {
+  padding-top: 36px;
+  padding-bottom: 44px;
+
+  &__slider-box {
+    position: relative;
+  }
+
+  &__slider {
+    padding: 8px 2px;
+    overflow: hidden;
+
+    .swiper-wrapper {
+      align-items: stretch;
+      overflow: visible;
+    }
+  }
+
+  &__slider-nav {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-75%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
+  &__slider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: $color-bg;
+    color: $color-text;
+    box-shadow: 2px 4px 4px rgba(#9C9C9C, .25);
+    pointer-events: all;
+    transition: background-color $transition-default, color $transition-default, opacity $transition-default;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-bg;
+    }
+
+    &:disabled {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &--prev {
+      transform: translateX(-50%);
+    }
+
+    &--next {
+      transform: translateX(50%);
+    }
+  }
+
+  &__slider-btn-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    .section-slider__slider-btn--prev & {
+      transform: translateX(-1px) rotate(90deg);
+    }
+
+    .section-slider__slider-btn--next & {
+      transform: translateX(1px) rotate(-90deg);
+    }
+  }
+}
