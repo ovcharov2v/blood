@@ -1,52 +1,119 @@
 .mobile-menu {
-    position: fixed;
-    z-index: 887;
-    top: 0;
-    left: 0;
+  position: fixed;
+  z-index: 887;
+  top: 0;
+  left: 0;
+  //display: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  background-color: $color-bg;
+  overflow-y: auto;
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity $transition-default, transform $transition-default, visibility 0.3s ease;
+
+  .menu-open & {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .menu-opened & {
+    opacity: 1;
+  }
+
+  &__container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__box {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid color-mix(in srgb, #{$color-primary} 20%, transparent);
+    border-radius: 28px;
+    padding: 30px 40px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  &__nav-group {
+  }
+
+  &__nav-group-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    color: $color-primary-light;
+  }
+
+  &__nav-group-icon {
+    display: block;
+    width: 12px;
+    height: 12px;
+    transition: transform $transition-default;
+
+    .mobile-menu__nav-group--open & {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__nav-list {
     display: none;
     flex-direction: column;
+    gap: 16px;
+    margin-top: 15px;
+
+    .mobile-menu__nav-group--open & {
+      display: flex;
+    }
+  }
+
+  &__nav-el {
+  }
+
+  &__nav-link {
+    display: inline-flex;
+    gap: 8px;
+    font-size: 16px;
+    line-height: 20px;
+    color: color-mix(in srgb, #{$color-text} 70%, transparent);
+
+    &--active {
+      color: $color-text;
+    }
+  }
+
+  &__nav-link-icon {
+    width: 12px;
+    height: 12px;
+    transform: translateY(4px) rotate(-90deg);
+    color: $color-primary-light;
+  }
+
+  &__btn-box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 60px;
+  }
+
+  &__btn {
     width: 100%;
-    height: 100%;
-    padding: px2rem(120) px2rem(25);
-    background-color: $color-bg;
-    overflow-y: auto;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: opacity $transition-default, transform $transition-default;
-
-    .menu-opened & {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    &__container {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    &__nav {
-        display: flex;
-        flex-direction: column;
-        gap: px2rem(24);
-    }
-
-    &__nav-el {
-        display: block;
-    }
-
-    &__nav-link {
-        display: block;
-        width: 100%;
-    }
-
-    &__bottom {
-        margin-top: auto;
-    }
-
-    &__action-btn {
-        margin-top: px2rem(24);
-        width: 100%;
-    }
+  }
 }

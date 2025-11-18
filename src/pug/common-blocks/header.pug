@@ -4,9 +4,10 @@ mixin header()
 		.container.header__container
 			// Header top
 			.header__top
-				button.header__city(type="button")
-					+svg("navigation").header__city-icon
-					| Москва
+				.header__city-box
+					button.header__city(type="button")
+						+svg("navigation").header__city-icon
+						| Москва
 				.header__phone-box
 					a.header__phone-link(href="tel:88003333343") 8 (800) 333-33-43
 					.header__phone-text-box
@@ -40,14 +41,21 @@ mixin header()
 							a.header__nav-link(href="#", data-menu="donor") Я партнёр
 								+svg("chevron-down").header__nav-link-arrow
 							+menu('partner')
+				.header__phone-box-mobile
+					a.header__phone-link(href="tel:88003333343") 8 (800) 333-33-43
+					button.header__city(type="button", aria-label="Выберите город")
+						+svg("navigation").header__city-icon
 				.header__action-box
 					button.button.button--round-corner.button--outline-gray.button--icon-only(type="button", aria-label="Поиск")
 						+svg("search").button__icon
-					button.button.button--round-corner.button--outline-gray.button--icon-only(type="button", aria-label="Версия для слабовидящих")
+					button.button.button--round-corner.button--outline-gray.button--icon-only.header__action-mobile.header__burger-btn(type="button", aria-label="Меню")
+						+svg("burger").button__icon.header__burger-icon.header__burger-icon--normal
+						+svg("close").button__icon.header__burger-icon.header__burger-icon--active
+					button.button.button--round-corner.button--outline-gray.button--icon-only.header__action-desktop(type="button", aria-label="Версия для слабовидящих")
 						+svg("circle-glasses").button__icon
-					a.button.button--with-icon.button--round-corner.button--outline-red(href="./lk.html")
+					a.button.button--with-icon.button--round-corner.button--outline-red.header__action-desktop(href="./lk.html")
 						+svg("bold-plus").button__icon.button__icon--color-red
 						| Кабинет врача
-					a.button.button--with-icon.button--round-corner.button--red(href="./lk.html")
+					a.button.button--with-icon.button--round-corner.button--red.header__action-desktop(href="./lk.html")
 						+svg("user").button__icon
 						| Кабинет донора

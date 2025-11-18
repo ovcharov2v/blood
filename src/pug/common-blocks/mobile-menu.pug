@@ -2,12 +2,84 @@ mixin mobileMenu()
     // Mobile menu
     .mobile-menu
         .mobile-menu__container.container
-            ul.mobile-menu__nav
-                li.mobile-menu__nav-el
-                    a.mobile-menu__nav-link(href="#")
-
-
-
-
-
-
+            .mobile-menu__box
+                ul.mobile-menu__nav
+                    li.mobile-menu__nav-group.mobile-menu__nav-group--open
+                        span.mobile-menu__nav-group-link Стать донором
+                            +svg("chevron-down").mobile-menu__nav-group-icon
+                        ul.mobile-menu__nav-list
+                            li.mobile-menu__nav-el
+                                a.mobile-menu__nav-link.mobile-menu__nav-link--active(href="#")
+                                    +svg("chevron-down").mobile-menu__nav-link-icon
+                                    |Противопоказания,требования
+                            li.mobile-menu__nav-el
+                                a.mobile-menu__nav-link(href="#")
+                                    +svg("chevron-down").mobile-menu__nav-link-icon
+                                    |Где сдать кровь
+                            li.mobile-menu__nav-el
+                                a.mobile-menu__nav-link(href="#")
+                                    +svg("chevron-down").mobile-menu__nav-link-icon
+                                    |Безопасность донорства
+                            li.mobile-menu__nav-el
+                                a.mobile-menu__nav-link(href="#")
+                                    +svg("chevron-down").mobile-menu__nav-link-icon
+                                    |Сдать кровь вместе
+                            li.mobile-menu__nav-el
+                                a.mobile-menu__nav-link(href="#")
+                                    +svg("chevron-down").mobile-menu__nav-link-icon
+                                    |Процесс прохождения донации
+                    li.mobile-menu__nav-group
+                        span.mobile-menu__nav-group-link О донорстве
+                            +svg("chevron-down").mobile-menu__nav-group-icon
+                        ul.mobile-menu__nav-list
+                            li.mobile-menu__nav-el
+                                a.mobile-menu__nav-link(href="#")
+                                    +svg("chevron-down").mobile-menu__nav-link-icon
+                                    | Противопоказания,требования
+                            li.mobile-menu__nav-el
+                                a.mobile-menu__nav-link(href="#")
+                                    +svg("chevron-down").mobile-menu__nav-link-icon
+                                    | Где сдать кровь
+                            li.mobile-menu__nav-el
+                                a.mobile-menu__nav-link(href="#")
+                                    +svg("chevron-down").mobile-menu__nav-link-icon
+                                    | Безопасность донорства
+                    li.mobile-menu__nav-group
+                        span.mobile-menu__nav-group-link Бонусы и привилегии
+                            +svg("chevron-down").mobile-menu__nav-group-icon
+                        ul.mobile-menu__nav-list
+                            li.mobile-menu__nav-el
+                                a.mobile-menu__nav-link(href="#")
+                                    +svg("chevron-down").mobile-menu__nav-link-icon
+                                    | Противопоказания,требования
+                            li.mobile-menu__nav-el
+                                a.mobile-menu__nav-link(href="#")
+                                    +svg("chevron-down").mobile-menu__nav-link-icon
+                                    | Где сдать кровь
+                            li.mobile-menu__nav-el
+                                a.mobile-menu__nav-link(href="#")
+                                    +svg("chevron-down").mobile-menu__nav-link-icon
+                                    | Безопасность донорства
+                    li.mobile-menu__nav-group
+                        span.mobile-menu__nav-group-link О службе крови
+                            +svg("chevron-down").mobile-menu__nav-group-icon
+                        ul.mobile-menu__nav-list
+                            li.mobile-menu__nav-el
+                                a.mobile-menu__nav-link(href="#")
+                                    +svg("chevron-down").mobile-menu__nav-link-icon
+                                    | Противопоказания,требования
+                            li.mobile-menu__nav-el
+                                a.mobile-menu__nav-link(href="#")
+                                    +svg("chevron-down").mobile-menu__nav-link-icon
+                                    | Где сдать кровь
+                    li.mobile-menu__nav-group
+                        a.mobile-menu__nav-group-link(href="#") Часто задаваемые вопросы FAQ
+                    li.mobile-menu__nav-group
+                        a.mobile-menu__nav-group-link(href="#") Донорство костного мозга
+                .mobile-menu__btn-box
+                    a.button.button--with-icon.button--round-corner.button--outline-red.mobile-menu__btn(href="./lk.html")
+                        +svg("bold-plus").button__icon.button__icon--color-red
+                        | Кабинет врача
+                    a.button.button--with-icon.button--round-corner.button--red.mobile-menu__btn(href="./lk.html")
+                        +svg("user").button__icon
+                        | Кабинет донора

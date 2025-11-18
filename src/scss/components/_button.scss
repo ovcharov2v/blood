@@ -4,7 +4,7 @@
   justify-content: center;
   gap: 8px;
   border: 1px solid;
-  padding: 13px 24px;
+  padding: 13px 10px;
   border-radius: 12px;
   font-size: 16px;
   line-height: 20px;
@@ -13,6 +13,9 @@
   white-space: nowrap;
   overflow: hidden;
   transition: border-color $transition-default, background-color $transition-default, color $transition-default, box-shadow $transition-default;
+
+  @include desktop {
+    padding: 13px 24px;}
 
   &--red {
     border-color: transparent;
@@ -68,8 +71,13 @@
   }
 
   &--with-icon {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @include desktop {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
   }
 
   &--xl {

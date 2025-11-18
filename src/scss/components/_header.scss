@@ -1,6 +1,16 @@
 .header {
+  //position: fixed;
+  //top: 0;
+  //left: 0;
   position: relative;
   z-index: 888;
+  width: 100%;
+  //background-color: $color-bg;
+  //box-shadow: 0 0 18px color-mix(in srgb, var(--color-primary) 10%, transparent);
+
+  .menu-open & {
+    background-color: $color-bg;
+  }
 
   &__container {
     position: relative;
@@ -9,17 +19,24 @@
   }
 
   &__top {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     gap: 14px;
     margin-bottom: 18px;
+
+    @include desktop {
+      display: flex;
+    }
+  }
+
+  &__city-box {
+    position: relative;
   }
 
   &__city {
     display: inline-flex;
     gap: 8px;
-    margin-right: auto;
     border: none;
     background-color: transparent;
     padding: 0;
@@ -28,6 +45,10 @@
     font-weight: 600;
     text-decoration: underline;
     color: $color-primary;
+
+    @include desktop {
+      margin-right: auto;
+    }
   }
 
   &__city-icon {
@@ -40,12 +61,24 @@
   &__phone-box {
     display: inline-flex;
     gap: 12px;
+    margin-left: auto;
+  }
+
+  &__phone-box-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    @include desktop {
+      display: none;
+    }
   }
 
   &__phone-link {
-    font-size: 22px;
+    font-size: 12px;
     line-height: 26px;
-    font-weight: 600;
+    font-weight: 500;
     color: $color-primary;
     white-space: nowrap;
     transition: color $transition-default;
@@ -53,6 +86,12 @@
     &:hover {
       color: $color-primary-dark;
       text-decoration: underline;
+    }
+
+    @include desktop {
+      font-size: 22px;
+      line-height: 26px;
+      font-weight: 600;
     }
   }
 
@@ -104,8 +143,15 @@
   &__logo-link {
     flex-shrink: 0;
     display: block;
-    width: 148px;
-    margin-right: 22px;
+    width: 100px;
+
+    @include desktop {
+      width: 120px;
+      margin-right: 22px;
+    }
+    @include desktop-xl {
+      width: 148px;
+    }
   }
 
   &__logo {
@@ -114,7 +160,12 @@
   }
 
   &__nav {
+    display: none;
     flex-grow: 1;
+
+    @include desktop {
+      display: block;
+    }
   }
 
   &__nav-list {
@@ -164,5 +215,44 @@
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+
+  &__action-desktop {
+    display: none;
+    @include desktop {
+      display: inline-flex;
+    }
+  }
+
+  &__action-mobile {
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__burger-btn {
+    position: relative;
+  }
+
+  &__burger-icon {
+    transition: opacity $transition-default;
+
+    &--normal {
+      .menu-open & {
+        opacity: 0;
+      }
+    }
+
+    &--active {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+
+      .menu-open & {
+        opacity: 1;
+      }
+    }
   }
 }

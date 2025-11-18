@@ -23,9 +23,13 @@
     left: 0;
     right: 0;
     transform: translateY(-75%);
-    display: flex;
+    display: none;
     justify-content: space-between;
     pointer-events: none;
+
+    @include tablet {
+      display: flex;
+    }
   }
 
   &__slider-btn {

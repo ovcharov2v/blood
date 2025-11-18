@@ -1,0 +1,30 @@
+mixin citySearch()
+    // City search
+    .city-search
+        .city-search__window
+            .city-search__header
+                p.city-search__title Выбор региона
+                button.city-search__close(type="button", aria-label="Закрыть")
+                    +svg("close").city-search__close-icon
+            .city-search__input-box.form-group
+                .form-group__input-box
+                    input.input.form-group__input(
+                        type="text"
+                        placeholder="Регион или город"
+                    )
+                    button.form-group__btn(type="button", aria-label="Искать")
+                        +svg("search").form-group__btn-icon
+            ul.city-search__list
+                li.city-search__list-el Московская область
+                li.city-search__list-el Магаданская область
+                li.city-search__list-el Нижегородская область
+                li.city-search__list-el Новгородская область
+                li.city-search__list-el Новосибирская область
+                li.city-search__list-el Омская область
+                li.city-search__list-el Оренбургская область
+                li.city-search__list-el Орловская область
+                li.city-search__list-el Пензенская область
+                li.city-search__list-el Московская область
+                li.city-search__list-el Магаданская область
+                li.city-search__list-el Нижегородская область
+            button.button.button--red.button--round-corner.city-search__submit-btn(type="button") Выбрать

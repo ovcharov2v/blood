@@ -13,9 +13,10 @@
     position: absolute;
     z-index: -1;
     bottom: 0;
-    left: 0;
-    right: 0;
-    height: calc(100% + 148px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 1000px;
+    height: 88%;
     background-size: 100% 100%;
     background-position: top center;
     background-repeat: no-repeat;
@@ -30,6 +31,13 @@
     );
   }
 
+  @include desktop {
+    &::before {
+      min-width: 1500px;
+      height: calc(100% + 148px);
+    }
+  }
+
   &__title {
     margin-bottom: 12px;
     font-size: 161px;
@@ -39,10 +47,14 @@
   }
 
   &__text {
-    margin-bottom: 56px;
+    margin-bottom: 33px;
     font-size: 18px;
     line-height: 22px;
     color: #9DA2A8;
+
+    @include desktop {
+      margin-bottom: 56px;
+    }
   }
 
   &__link {

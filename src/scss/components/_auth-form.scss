@@ -2,10 +2,13 @@
   position: relative;
   width: 100%;
   max-width: 524px;
-  padding: 36px 20px 46px;
+  padding: 36px 12px 41px;
   border-radius: 28px;
   border: 1px solid;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+
+  @include desktop {
+    padding: 36px 20px 46px;}
 
   &::before {
     position: absolute;
@@ -42,10 +45,15 @@
 
   &__actions {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px 12px;
+    flex-direction: column;
+    gap: 16px;
     margin-bottom: 24px;
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   &__link {

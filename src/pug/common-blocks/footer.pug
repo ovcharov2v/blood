@@ -4,98 +4,26 @@ mixin footer()
 		.footer__container.container
 			// Footer top
 			.footer__top
-				.footer__logo-col
+				.footer__logo-box
 					a.footer__logo-link(href="./main.html", title="На главную")
 						picture
 							img.footer__logo.img-theme-light(src="./images/common/logo-theme-light.svg", alt="Служба Крови")
 							img.footer__logo.img-theme-dark(src="./images/common/logo-theme-dark.svg", alt="Служба Крови")
 					.footer__btn-box
-						a.button.button--with-icon.button--round-corner.button--red(href="./lk.html")
+						a.button.button--with-icon.button--round-corner.button--red.footer__btn(href="./lk.html")
 							+svg("user").button__icon
 							| Кабинет донора
-						a.button.button--with-icon.button--round-corner.button--outline-red(href="./lk.html")
+						a.button.button--with-icon.button--round-corner.button--outline-red.footer__btn(href="./lk.html")
 							+svg("bold-plus").button__icon.button__icon--color-red
 							| Кабинет врача
-				.footer__nav
-					// Col
-					.footer__nav-col
-						p.footer__nav-title Я донор
-						p.footer__nav-subtitle Как стать донором
-						ul.footer__nav-list
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Как стать донором
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Бонусы для доноров
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Донорская диета
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Противопоказания
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Безопасность донора
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Почетный донор России
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Почетный донор Москвы
-					// Col
-					.footer__nav-col
-						p.footer__nav-title Я волонтёр
-						p.footer__nav-subtitle Как стать волонтером
-						ul.footer__nav-list
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Как стать волонтером
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Бонусы для доноров
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Донорская диета
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Противопоказания
-					// Col
-					.footer__nav-col
-						p.footer__nav-title Я врач
-						p.footer__nav-subtitle Подзаголовок
-						ul.footer__nav-list
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Тема для врачей
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Тема для врачей другая
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Тема для врачей новая
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Тема для врачей другая
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Тема для врачей иная
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Тема для врачей интересная
-					// Col
-					.footer__nav-col
-						p.footer__nav-title Я партнёр
-						p.footer__nav-subtitle Как стать донором
-						ul.footer__nav-list
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Как стать донором
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Бонусы для доноров
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Донорская диета
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Противопоказания
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Безопасность донора
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Почетный донор России
-							li.footer__nav-elem
-								a.footer__nav-link(href="#") Почетный донор Москвы
-			// Footer center
-			.footer__center
-				// Footer contacts
-				.footer__contacts-col
-					.footer__phone-box
-						span.footer__phone-description Горячая линия (бесплатно по РФ)
-						a.footer__phone-link(href="tel:88003333343") 8 (800) 333-33-43
-					.footer__phone-box
-						span.footer__phone-description Техническая поддержка ЕИБД
-						a.footer__phone-link(href="tel:88007007606") 8 (800) 700-76-06
-					ul.footer__social-list.social-list
+					.footer__phone-wrap
+						.footer__phone-box
+							span.footer__phone-description Горячая линия (бесплатно по РФ)
+							a.footer__phone-link(href="tel:88003333343") 8 (800) 333-33-43
+						.footer__phone-box
+							span.footer__phone-description Техническая поддержка ЕИБД
+							a.footer__phone-link(href="tel:88007007606") 8 (800) 700-76-06
+					ul.footer__social-list.footer__social-list--desktop.social-list
 						li.social-list__el
 							a.social-list__link.social-list__link--max(href="#", target="_blank", title="Max")
 								+svg("social-max").social-list__icon
@@ -108,20 +36,80 @@ mixin footer()
 						li.social-list__el
 							a.social-list__link.social-list__link--ok(href="#", target="_blank", title="Одноклассники")
 								+svg("social-ok").social-list__icon
-				// Footer apps
-				.footer__apps
-					.footer__apps-content-box
-						p.footer__apps-title Скачайте наше
-							br
-							|приложение
-						.footer__apps-links
-							a.button.button--outline-white.button--round-corner(href="#", target="_blank") Скачать на Android
-							a.button.button--outline-white.button--round-corner(href="#", target="_blank") Скачать на iOS
-					.footer__apps-img-box
-						picture
-							img.footer__apps-img.img-theme-light(src="./images/common/phone-theme-light.svg", alt="")
-							img.footer__apps-img.img-theme-dark(src="./images/common/phone-theme-dark.svg", alt="")
-
+				.footer__nav-box
+					.footer__nav
+						// Col
+						.footer__nav-col
+							p.footer__nav-title Я донор
+								+svg("chevron-down").footer__nav-title-arrow
+							ul.footer__nav-list
+								li.footer__nav-elem
+									a.footer__nav-link(href="#") Стать донором
+								li.footer__nav-elem
+									a.footer__nav-link(href="#") О донорстве
+								li.footer__nav-elem
+									a.footer__nav-link(href="#") Бонусы и привилегии
+								li.footer__nav-elem
+									a.footer__nav-link(href="#") О службе крови
+								li.footer__nav-elem
+									a.footer__nav-link(href="#") Часто задаваемые вопросы FAQ
+								li.footer__nav-elem
+									a.footer__nav-link(href="#") Донорство костного мозга
+						// Col
+						.footer__nav-col
+							p.footer__nav-title Я врач
+								+svg("chevron-down").footer__nav-title-arrow
+							ul.footer__nav-list
+								li.footer__nav-elem
+									a.footer__nav-link(href="#") Портал единой информационной базы данных доноров
+						// Col
+						.footer__nav-col
+							p.footer__nav-title Я партнёр
+								+svg("chevron-down").footer__nav-title-arrow
+							ul.footer__nav-list
+								li.footer__nav-elem
+									a.footer__nav-link(href="#") Организация выездной акции
+								li.footer__nav-elem
+									a.footer__nav-link(href="#") Коммерческие организации
+								li.footer__nav-elem
+									a.footer__nav-link(href="#") Некоммерческие организации
+								li.footer__nav-elem
+									a.footer__nav-link(href="#") Студенты
+								li.footer__nav-elem
+									a.footer__nav-link(href="#") Экскурсии/Школьники
+								li.footer__nav-elem
+									a.footer__nav-link(href="#") СМИ
+								li.footer__nav-elem
+									a.footer__nav-link(href="#") Материалы для скачивания
+					// Footer apps
+					.footer__apps
+						.footer__apps-content-box
+							p.footer__apps-title Скачайте наше
+								br
+								|приложение
+							.footer__apps-links
+								a.button.button--outline-white.button--round-corner(href="#", target="_blank") Скачать на Android
+								a.button.button--outline-white.button--round-corner(href="#", target="_blank") Скачать на iOS
+						.footer__apps-img-box
+							picture
+								img.footer__apps-img.img-theme-light(src="./images/common/phone-theme-light.svg", alt="")
+								img.footer__apps-img.img-theme-dark(src="./images/common/phone-theme-dark.svg", alt="")
+					.footer__btn-box.footer__btn-box--mobile
+						a.button.button--round-corner.button--outline-red.footer__btn(href="#", target="_blank") Скачать на Android
+						a.button.button--round-corner.button--outline-red.footer__btn(href="#", target="_blank") Скачать на iOS
+				ul.footer__social-list.footer__social-list--mobile.social-list
+					li.social-list__el
+						a.social-list__link.social-list__link--max(href="#", target="_blank", title="Max")
+							+svg("social-max").social-list__icon
+					li.social-list__el
+						a.social-list__link.social-list__link--telegram(href="#", target="_blank", title="Telegram")
+							+svg("social-telegram").social-list__icon
+					li.social-list__el
+						a.social-list__link.social-list__link--vk(href="#", target="_blank", title="Вконтакте")
+							+svg("social-vk").social-list__icon
+					li.social-list__el
+						a.social-list__link.social-list__link--ok(href="#", target="_blank", title="Одноклассники")
+							+svg("social-ok").social-list__icon
 			// Footer bottom
 			.footer__bottom
 				.footer__copyright-box
