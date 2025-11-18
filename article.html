@@ -9,7 +9,7 @@
 		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
 		<link rel="stylesheet" href="./lib/swiper/swiper-bundle.css"/>
-		<link rel="stylesheet" href="./css/main.css?v=1763399549892"/>
+		<link rel="stylesheet" href="./css/main.css?v=1763493546312"/>
 	</head>
 	<body>
 		<!-- Header-->
@@ -17,11 +17,13 @@
 			<div class="container header__container">
 				<!-- Header top-->
 				<div class="header__top">
-					<button class="header__city" type="button">
-						<svg class="header__city-icon">
-							<use xlink:href="#navigation"></use>
-						</svg>Москва
-					</button>
+					<div class="header__city-box">
+						<button class="header__city" type="button">
+							<svg class="header__city-icon">
+								<use xlink:href="#navigation"></use>
+							</svg>Москва
+						</button>
+					</div>
 					<div class="header__phone-box"><a class="header__phone-link" href="tel:88003333343">8 (800) 333-33-43</a>
 						<div class="header__phone-text-box"><span class="header__phone-name">Горячая линия</span><span class="header__phone-note">Бесплатно по РФ</span></div>
 					</div>
@@ -53,43 +55,118 @@
 									<div class="menu__box">
 										<div class="menu__group"><a class="menu__title-link" href="#">Стать донором</a>
 											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">Противопоказания,  требования</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Где сдать кровь</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Безопасность донорства</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Сдать кровь вместе</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Процесс прохождения донации</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Как подготовиться к сдаче  крови? (Рекомендации до и после)</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Здоровое питание донора</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">https://будьдонором.рф/</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Противопоказания,  требования</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Где сдать кровь</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Безопасность донорства</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Сдать кровь вместе</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Процесс прохождения донации</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Как подготовиться к сдаче  крови? (Рекомендации до и после)</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Здоровое питание донора</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>https://будьдонором.рф/</a></li>
 											</ul>
 										</div>
 										<div class="menu__group"><a class="menu__title-link" href="#">О донорстве</a>
 											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">История донорства</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Донорство в мире</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Кодекс донора</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Детям о донорстве организации</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Мифы о донорстве</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Факты о донорстве</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Добровольность и  безвозмездность в донорстве</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Донорство плазмы  (Ковид + иммунная)</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">https://koddonora.ru/</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>История донорства</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Донорство в мире</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Кодекс донора</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Детям о донорстве организации</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Мифы о донорстве</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Факты о донорстве</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Добровольность и  безвозмездность в донорстве</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Донорство плазмы  (Ковид + иммунная)</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>https://koddonora.ru/</a></li>
 											</ul>
 										</div>
 										<div class="menu__group"><a class="menu__title-link" href="#">Бонусы и привилегии</a>
 											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">Почетный донор</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Льготы для доноров</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Программа лояльности  “Донор сапиенс”</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Почетный донор</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Льготы для доноров</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Программа лояльности  “Донор сапиенс”</a></li>
 											</ul>
 										</div>
 										<div class="menu__group"><a class="menu__title-link" href="#">О службе крови</a>
 											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">Программа развития</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Новости</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Медиагалерея событий</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Виртуальный музей</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Интервью</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Программа развития</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Новости</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Медиагалерея событий</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Виртуальный музей</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg></a></li>
 											</ul>
 										</div>
 										<div class="menu__group"><a class="menu__title-link" href="#">Часто задаваемые вопросы FAQ</a></div>
@@ -106,28 +183,70 @@
 									<div class="menu__box">
 										<div class="menu__group"><a class="menu__title-link" href="#">Стать доктором</a>
 											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">Противопоказания,  требования</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Где сдать кровь</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Безопасность донорства</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Сдать кровь вместе</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Процесс прохождения донации</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Как подготовиться к сдаче  крови? (Рекомендации до и после)</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Противопоказания,  требования</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Где сдать кровь</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Безопасность донорства</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Сдать кровь вместе</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Процесс прохождения донации</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Как подготовиться к сдаче  крови? (Рекомендации до и после)</a></li>
 											</ul>
 										</div>
 										<div class="menu__group"><a class="menu__title-link" href="#">О докторах</a>
 											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">История донорства</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Донорство в мире</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Кодекс донора</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Детям о донорстве организации</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Мифы о донорстве</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>История донорства</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Донорство в мире</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Кодекс донора</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Детям о донорстве организации</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Мифы о донорстве</a></li>
 											</ul>
 										</div>
 										<div class="menu__group"><a class="menu__title-link" href="#">Бонусы и привилегии</a>
 											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">Почетный донор</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Льготы для доноров</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Программа лояльности  “Донор сапиенс”</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Почетный донор</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Льготы для доноров</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Программа лояльности  “Донор сапиенс”</a></li>
 											</ul>
 										</div>
 										<div class="menu__group"><a class="menu__title-link" href="#">Часто задаваемые вопросы FAQ</a></div>
@@ -144,31 +263,82 @@
 									<div class="menu__box">
 										<div class="menu__group"><a class="menu__title-link" href="#">Стать партнёром</a>
 											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">Противопоказания,  требования</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Где сдать кровь</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Безопасность донорства</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Сдать кровь вместе</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Процесс прохождения донации</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Как подготовиться к сдаче  крови? (Рекомендации до и после)</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Противопоказания,  требования</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Где сдать кровь</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Безопасность донорства</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Сдать кровь вместе</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Процесс прохождения донации</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Как подготовиться к сдаче  крови? (Рекомендации до и после)</a></li>
 											</ul>
 										</div>
 										<div class="menu__group"><a class="menu__title-link" href="#">О партнёрах</a>
 											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">История донорства</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Донорство в мире</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Кодекс донора</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Детям о донорстве организации</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Мифы о донорстве</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>История донорства</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Донорство в мире</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Кодекс донора</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Детям о донорстве организации</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Мифы о донорстве</a></li>
 											</ul>
 										</div>
 										<div class="menu__group"><a class="menu__title-link" href="#">Бонусы и привилегии</a>
 											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">Почетный донор</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Льготы для доноров</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Программа лояльности  “Донор сапиенс”</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Почетный донор</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Льготы для доноров</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">Программа лояльности  “Донор сапиенс”</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Почетный донор</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Льготы для доноров</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Программа лояльности  “Донор сапиенс”</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Почетный донор</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Льготы для доноров</a></li>
+												<li class="menu__list-elem"><a class="menu__link" href="#">
+														<svg class="menu__link-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>Программа лояльности  “Донор сапиенс”</a></li>
 											</ul>
 										</div>
 									</div>
@@ -176,20 +346,35 @@
 							</li>
 						</ul>
 					</nav>
+					<div class="header__phone-box-mobile"><a class="header__phone-link" href="tel:88003333343">8 (800) 333-33-43</a>
+						<button class="header__city" type="button" aria-label="Выберите город">
+							<svg class="header__city-icon">
+								<use xlink:href="#navigation"></use>
+							</svg>
+						</button>
+					</div>
 					<div class="header__action-box">
 						<button class="button button--round-corner button--outline-gray button--icon-only" type="button" aria-label="Поиск">
 							<svg class="button__icon">
 								<use xlink:href="#search"></use>
 							</svg>
 						</button>
-						<button class="button button--round-corner button--outline-gray button--icon-only" type="button" aria-label="Версия для слабовидящих">
+						<button class="button button--round-corner button--outline-gray button--icon-only header__action-mobile header__burger-btn" type="button" aria-label="Меню">
+							<svg class="button__icon header__burger-icon header__burger-icon--normal">
+								<use xlink:href="#burger"></use>
+							</svg>
+							<svg class="button__icon header__burger-icon header__burger-icon--active">
+								<use xlink:href="#close"></use>
+							</svg>
+						</button>
+						<button class="button button--round-corner button--outline-gray button--icon-only header__action-desktop" type="button" aria-label="Версия для слабовидящих">
 							<svg class="button__icon">
 								<use xlink:href="#circle-glasses"></use>
 							</svg>
-						</button><a class="button button--with-icon button--round-corner button--outline-red" href="./lk.html">
+						</button><a class="button button--with-icon button--round-corner button--outline-red header__action-desktop" href="./lk.html">
 							<svg class="button__icon button__icon--color-red">
 								<use xlink:href="#bold-plus"></use>
-							</svg>Кабинет врача</a><a class="button button--with-icon button--round-corner button--red" href="./lk.html">
+							</svg>Кабинет врача</a><a class="button button--with-icon button--round-corner button--red header__action-desktop" href="./lk.html">
 							<svg class="button__icon">
 								<use xlink:href="#user"></use>
 							</svg>Кабинет донора</a>
@@ -200,9 +385,99 @@
 		<!-- Mobile menu-->
 		<div class="mobile-menu">
 			<div class="mobile-menu__container container">
-				<ul class="mobile-menu__nav">
-					<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#"></a></li>
-				</ul>
+				<div class="mobile-menu__box">
+					<ul class="mobile-menu__nav">
+						<li class="mobile-menu__nav-group mobile-menu__nav-group--open"><span class="mobile-menu__nav-group-link">Стать донором
+								<svg class="mobile-menu__nav-group-icon">
+									<use xlink:href="#chevron-down"></use>
+								</svg></span>
+							<ul class="mobile-menu__nav-list">
+								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link mobile-menu__nav-link--active" href="#">
+										<svg class="mobile-menu__nav-link-icon">
+											<use xlink:href="#chevron-down"></use>
+										</svg>Противопоказания,требования</a></li>
+								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
+										<svg class="mobile-menu__nav-link-icon">
+											<use xlink:href="#chevron-down"></use>
+										</svg>Где сдать кровь</a></li>
+								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
+										<svg class="mobile-menu__nav-link-icon">
+											<use xlink:href="#chevron-down"></use>
+										</svg>Безопасность донорства</a></li>
+								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
+										<svg class="mobile-menu__nav-link-icon">
+											<use xlink:href="#chevron-down"></use>
+										</svg>Сдать кровь вместе</a></li>
+								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
+										<svg class="mobile-menu__nav-link-icon">
+											<use xlink:href="#chevron-down"></use>
+										</svg>Процесс прохождения донации</a></li>
+							</ul>
+						</li>
+						<li class="mobile-menu__nav-group"><span class="mobile-menu__nav-group-link">О донорстве
+								<svg class="mobile-menu__nav-group-icon">
+									<use xlink:href="#chevron-down"></use>
+								</svg></span>
+							<ul class="mobile-menu__nav-list">
+								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
+										<svg class="mobile-menu__nav-link-icon">
+											<use xlink:href="#chevron-down"></use>
+										</svg>Противопоказания,требования</a></li>
+								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
+										<svg class="mobile-menu__nav-link-icon">
+											<use xlink:href="#chevron-down"></use>
+										</svg>Где сдать кровь</a></li>
+								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
+										<svg class="mobile-menu__nav-link-icon">
+											<use xlink:href="#chevron-down"></use>
+										</svg>Безопасность донорства</a></li>
+							</ul>
+						</li>
+						<li class="mobile-menu__nav-group"><span class="mobile-menu__nav-group-link">Бонусы и привилегии
+								<svg class="mobile-menu__nav-group-icon">
+									<use xlink:href="#chevron-down"></use>
+								</svg></span>
+							<ul class="mobile-menu__nav-list">
+								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
+										<svg class="mobile-menu__nav-link-icon">
+											<use xlink:href="#chevron-down"></use>
+										</svg>Противопоказания,требования</a></li>
+								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
+										<svg class="mobile-menu__nav-link-icon">
+											<use xlink:href="#chevron-down"></use>
+										</svg>Где сдать кровь</a></li>
+								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
+										<svg class="mobile-menu__nav-link-icon">
+											<use xlink:href="#chevron-down"></use>
+										</svg>Безопасность донорства</a></li>
+							</ul>
+						</li>
+						<li class="mobile-menu__nav-group"><span class="mobile-menu__nav-group-link">О службе крови
+								<svg class="mobile-menu__nav-group-icon">
+									<use xlink:href="#chevron-down"></use>
+								</svg></span>
+							<ul class="mobile-menu__nav-list">
+								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
+										<svg class="mobile-menu__nav-link-icon">
+											<use xlink:href="#chevron-down"></use>
+										</svg>Противопоказания,требования</a></li>
+								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
+										<svg class="mobile-menu__nav-link-icon">
+											<use xlink:href="#chevron-down"></use>
+										</svg>Где сдать кровь</a></li>
+							</ul>
+						</li>
+						<li class="mobile-menu__nav-group"><a class="mobile-menu__nav-group-link" href="#">Часто задаваемые вопросы FAQ</a></li>
+						<li class="mobile-menu__nav-group"><a class="mobile-menu__nav-group-link" href="#">Донорство костного мозга</a></li>
+					</ul>
+					<div class="mobile-menu__btn-box"><a class="button button--with-icon button--round-corner button--outline-red mobile-menu__btn" href="./lk.html">
+							<svg class="button__icon button__icon--color-red">
+								<use xlink:href="#bold-plus"></use>
+							</svg>Кабинет врача</a><a class="button button--with-icon button--round-corner button--red mobile-menu__btn" href="./lk.html">
+							<svg class="button__icon">
+								<use xlink:href="#user"></use>
+							</svg>Кабинет донора</a></div>
+				</div>
 			</div>
 		</div>
 		<main class="main">
@@ -210,8 +485,6 @@
 			<div class="container breadcrumb">
 				<ul class="breadcrumb__list">
 					<li class="breadcrumb__item"><a class="breadcrumb__link" href="#" title="Главная">Главная</a>
-					</li>
-					<li class="breadcrumb__item"><a class="breadcrumb__link" href="#" title="О Службе крови">О Службе крови</a>
 					</li>
 					<li class="breadcrumb__item"><a class="breadcrumb__link" href="#" title="Новости">Новости</a>
 					</li>
@@ -363,78 +636,20 @@
 			<div class="footer__container container">
 				<!-- Footer top-->
 				<div class="footer__top">
-					<div class="footer__logo-col"><a class="footer__logo-link" href="./main.html" title="На главную">
+					<div class="footer__logo-box"><a class="footer__logo-link" href="./main.html" title="На главную">
 							<picture><img class="footer__logo img-theme-light" src="./images/common/logo-theme-light.svg" alt="Служба Крови"/><img class="footer__logo img-theme-dark" src="./images/common/logo-theme-dark.svg" alt="Служба Крови"/></picture></a>
-						<div class="footer__btn-box"><a class="button button--with-icon button--round-corner button--red" href="./lk.html">
+						<div class="footer__btn-box"><a class="button button--with-icon button--round-corner button--red footer__btn" href="./lk.html">
 								<svg class="button__icon">
 									<use xlink:href="#user"></use>
-								</svg>Кабинет донора</a><a class="button button--with-icon button--round-corner button--outline-red" href="./lk.html">
+								</svg>Кабинет донора</a><a class="button button--with-icon button--round-corner button--outline-red footer__btn" href="./lk.html">
 								<svg class="button__icon button__icon--color-red">
 									<use xlink:href="#bold-plus"></use>
 								</svg>Кабинет врача</a></div>
-					</div>
-					<div class="footer__nav">
-						<!-- Col-->
-						<div class="footer__nav-col">
-							<p class="footer__nav-title">Я донор</p>
-							<p class="footer__nav-subtitle">Как стать донором</p>
-							<ul class="footer__nav-list">
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Как стать донором</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Бонусы для доноров</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Донорская диета</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Противопоказания</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Безопасность донора</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Почетный донор России</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Почетный донор Москвы</a></li>
-							</ul>
+						<div class="footer__phone-wrap">
+							<div class="footer__phone-box"><span class="footer__phone-description">Горячая линия (бесплатно по РФ)</span><a class="footer__phone-link" href="tel:88003333343">8 (800) 333-33-43</a></div>
+							<div class="footer__phone-box"><span class="footer__phone-description">Техническая поддержка ЕИБД</span><a class="footer__phone-link" href="tel:88007007606">8 (800) 700-76-06</a></div>
 						</div>
-						<!-- Col-->
-						<div class="footer__nav-col">
-							<p class="footer__nav-title">Я волонтёр</p>
-							<p class="footer__nav-subtitle">Как стать волонтером</p>
-							<ul class="footer__nav-list">
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Как стать волонтером</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Бонусы для доноров</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Донорская диета</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Противопоказания</a></li>
-							</ul>
-						</div>
-						<!-- Col-->
-						<div class="footer__nav-col">
-							<p class="footer__nav-title">Я врач</p>
-							<p class="footer__nav-subtitle">Подзаголовок</p>
-							<ul class="footer__nav-list">
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Тема для врачей</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Тема для врачей другая</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Тема для врачей новая</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Тема для врачей другая</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Тема для врачей иная</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Тема для врачей интересная</a></li>
-							</ul>
-						</div>
-						<!-- Col-->
-						<div class="footer__nav-col">
-							<p class="footer__nav-title">Я партнёр</p>
-							<p class="footer__nav-subtitle">Как стать донором</p>
-							<ul class="footer__nav-list">
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Как стать донором</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Бонусы для доноров</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Донорская диета</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Противопоказания</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Безопасность донора</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Почетный донор России</a></li>
-								<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Почетный донор Москвы</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- Footer center-->
-				<div class="footer__center">
-					<!-- Footer contacts-->
-					<div class="footer__contacts-col">
-						<div class="footer__phone-box"><span class="footer__phone-description">Горячая линия (бесплатно по РФ)</span><a class="footer__phone-link" href="tel:88003333343">8 (800) 333-33-43</a></div>
-						<div class="footer__phone-box"><span class="footer__phone-description">Техническая поддержка ЕИБД</span><a class="footer__phone-link" href="tel:88007007606">8 (800) 700-76-06</a></div>
-						<ul class="footer__social-list social-list">
+						<ul class="footer__social-list footer__social-list--desktop social-list">
 							<li class="social-list__el"><a class="social-list__link social-list__link--max" href="#" target="_blank" title="Max">
 									<svg class="social-list__icon">
 										<use xlink:href="#social-max"></use>
@@ -453,16 +668,83 @@
 									</svg></a></li>
 						</ul>
 					</div>
-					<!-- Footer apps-->
-					<div class="footer__apps">
-						<div class="footer__apps-content-box">
-							<p class="footer__apps-title">Скачайте наше<br/>приложение</p>
-							<div class="footer__apps-links"><a class="button button--outline-white button--round-corner" href="#" target="_blank">Скачать на Android</a><a class="button button--outline-white button--round-corner" href="#" target="_blank">Скачать на iOS</a></div>
+					<div class="footer__nav-box">
+						<div class="footer__nav">
+							<!-- Col-->
+							<div class="footer__nav-col">
+								<p class="footer__nav-title">Я донор
+									<svg class="footer__nav-title-arrow">
+										<use xlink:href="#chevron-down"></use>
+									</svg>
+								</p>
+								<ul class="footer__nav-list">
+									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Стать донором</a></li>
+									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">О донорстве</a></li>
+									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Бонусы и привилегии</a></li>
+									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">О службе крови</a></li>
+									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Часто задаваемые вопросы FAQ</a></li>
+									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Донорство костного мозга</a></li>
+								</ul>
+							</div>
+							<!-- Col-->
+							<div class="footer__nav-col">
+								<p class="footer__nav-title">Я врач
+									<svg class="footer__nav-title-arrow">
+										<use xlink:href="#chevron-down"></use>
+									</svg>
+								</p>
+								<ul class="footer__nav-list">
+									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Портал единой информационной базы данных доноров</a></li>
+								</ul>
+							</div>
+							<!-- Col-->
+							<div class="footer__nav-col">
+								<p class="footer__nav-title">Я партнёр
+									<svg class="footer__nav-title-arrow">
+										<use xlink:href="#chevron-down"></use>
+									</svg>
+								</p>
+								<ul class="footer__nav-list">
+									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Организация выездной акции</a></li>
+									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Коммерческие организации</a></li>
+									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Некоммерческие организации</a></li>
+									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Студенты</a></li>
+									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Экскурсии/Школьники</a></li>
+									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">СМИ</a></li>
+									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Материалы для скачивания</a></li>
+								</ul>
+							</div>
 						</div>
-						<div class="footer__apps-img-box">
-							<picture><img class="footer__apps-img img-theme-light" src="./images/common/phone-theme-light.svg" alt=""/><img class="footer__apps-img img-theme-dark" src="./images/common/phone-theme-dark.svg" alt=""/></picture>
+						<!-- Footer apps-->
+						<div class="footer__apps">
+							<div class="footer__apps-content-box">
+								<p class="footer__apps-title">Скачайте наше<br/>приложение</p>
+								<div class="footer__apps-links"><a class="button button--outline-white button--round-corner" href="#" target="_blank">Скачать на Android</a><a class="button button--outline-white button--round-corner" href="#" target="_blank">Скачать на iOS</a></div>
+							</div>
+							<div class="footer__apps-img-box">
+								<picture><img class="footer__apps-img img-theme-light" src="./images/common/phone-theme-light.svg" alt=""/><img class="footer__apps-img img-theme-dark" src="./images/common/phone-theme-dark.svg" alt=""/></picture>
+							</div>
 						</div>
+						<div class="footer__btn-box footer__btn-box--mobile"><a class="button button--round-corner button--outline-red footer__btn" href="#" target="_blank">Скачать на Android</a><a class="button button--round-corner button--outline-red footer__btn" href="#" target="_blank">Скачать на iOS</a></div>
 					</div>
+					<ul class="footer__social-list footer__social-list--mobile social-list">
+						<li class="social-list__el"><a class="social-list__link social-list__link--max" href="#" target="_blank" title="Max">
+								<svg class="social-list__icon">
+									<use xlink:href="#social-max"></use>
+								</svg></a></li>
+						<li class="social-list__el"><a class="social-list__link social-list__link--telegram" href="#" target="_blank" title="Telegram">
+								<svg class="social-list__icon">
+									<use xlink:href="#social-telegram"></use>
+								</svg></a></li>
+						<li class="social-list__el"><a class="social-list__link social-list__link--vk" href="#" target="_blank" title="Вконтакте">
+								<svg class="social-list__icon">
+									<use xlink:href="#social-vk"></use>
+								</svg></a></li>
+						<li class="social-list__el"><a class="social-list__link social-list__link--ok" href="#" target="_blank" title="Одноклассники">
+								<svg class="social-list__icon">
+									<use xlink:href="#social-ok"></use>
+								</svg></a></li>
+					</ul>
 				</div>
 				<!-- Footer bottom-->
 				<div class="footer__bottom">
@@ -481,19 +763,62 @@
 				</div>
 			</div>
 		</footer>
+		<!-- City search-->
+		<div class="city-search">
+			<div class="city-search__window">
+				<div class="city-search__header">
+					<p class="city-search__title">Выбор региона</p>
+					<button class="city-search__close" type="button" aria-label="Закрыть">
+						<svg class="city-search__close-icon">
+							<use xlink:href="#close"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="city-search__input-box form-group">
+					<div class="form-group__input-box">
+						<input class="input form-group__input" type="text" placeholder="Регион или город"/>
+						<button class="form-group__btn" type="button" aria-label="Искать">
+							<svg class="form-group__btn-icon">
+								<use xlink:href="#search"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<ul class="city-search__list">
+					<li class="city-search__list-el">Московская область</li>
+					<li class="city-search__list-el">Магаданская область</li>
+					<li class="city-search__list-el">Нижегородская область</li>
+					<li class="city-search__list-el">Новгородская область</li>
+					<li class="city-search__list-el">Новосибирская область</li>
+					<li class="city-search__list-el">Омская область</li>
+					<li class="city-search__list-el">Оренбургская область</li>
+					<li class="city-search__list-el">Орловская область</li>
+					<li class="city-search__list-el">Пензенская область</li>
+					<li class="city-search__list-el">Московская область</li>
+					<li class="city-search__list-el">Магаданская область</li>
+					<li class="city-search__list-el">Нижегородская область</li>
+				</ul>
+				<button class="button button--red button--round-corner city-search__submit-btn" type="button">Выбрать</button>
+			</div>
+		</div>
 		<script src="./lib/swiper/swiper-bundle.min.js"></script>
-		<script src="./js/main.js?v=1763399549899"></script><svg width="0" height="0" class="hidden">
+		<script src="./js/main.js?v=1763493546320"></script><svg width="0" height="0" class="hidden">
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="burger">
+        <path d="M4 18L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M4 6L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+    </symbol>
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" id="chevron-down">
         <path d="M11 3.49994L6.70711 7.79283C6.37377 8.12617 6.20711 8.29283 6 8.29283C5.79289 8.29283 5.62623 8.12617 5.29289 7.79283L1 3.49994" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
     </symbol>
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="circle-glasses">
         <path d="M8.33366 11.25L8.57774 11.0059C8.95503 10.6286 9.46675 10.4167 10.0003 10.4167C10.5339 10.4167 11.0456 10.6286 11.4229 11.0059L11.667 11.25M18.3337 12.9167V5.83333C18.3337 4.68274 17.4009 3.75 16.2503 3.75H15.8337M18.3337 12.9167C18.3337 14.7576 16.8413 16.25 15.0003 16.25C13.1594 16.25 11.667 14.7576 11.667 12.9167C11.667 11.0757 13.1594 9.58333 15.0003 9.58333C16.8413 9.58333 18.3337 11.0757 18.3337 12.9167ZM1.66699 12.9167V5.83333C1.66699 4.68274 2.59973 3.75 3.75033 3.75H4.16699M1.66699 12.9167C1.66699 14.7576 3.15938 16.25 5.00033 16.25C6.84127 16.25 8.33366 14.7576 8.33366 12.9167C8.33366 11.0757 6.84127 9.58333 5.00033 9.58333C3.15938 9.58333 1.66699 11.0757 1.66699 12.9167Z" stroke="currentColor" stroke-width="1.6"></path>
     </symbol>
-    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="eye-crossed">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7071 5.70711C20.0976 5.31658 20.0976 4.68342 19.7071 4.29289C19.3166 3.90237 18.6834 3.90237 18.2929 4.29289L14.032 8.55382C13.4365 8.20193 12.7418 8 12 8C9.79086 8 8 9.79086 8 12C8 12.7418 8.20193 13.4365 8.55382 14.032L4.29289 18.2929C3.90237 18.6834 3.90237 19.3166 4.29289 19.7071C4.68342 20.0976 5.31658 20.0976 5.70711 19.7071L9.96803 15.4462C10.5635 15.7981 11.2582 16 12 16C14.2091 16 16 14.2091 16 12C16 11.2582 15.7981 10.5635 15.4462 9.96803L19.7071 5.70711ZM12.518 10.0677C12.3528 10.0236 12.1792 10 12 10C10.8954 10 10 10.8954 10 12C10 12.1792 10.0236 12.3528 10.0677 12.518L12.518 10.0677ZM11.482 13.9323L13.9323 11.482C13.9764 11.6472 14 11.8208 14 12C14 13.1046 13.1046 14 12 14C11.8208 14 11.6472 13.9764 11.482 13.9323ZM15.7651 4.8207C14.6287 4.32049 13.3675 4 12 4C9.14754 4 6.75717 5.39462 4.99812 6.90595C3.23268 8.42276 2.00757 10.1376 1.46387 10.9698C1.05306 11.5985 1.05306 12.4015 1.46387 13.0302C1.92276 13.7326 2.86706 15.0637 4.21194 16.3739L5.62626 14.9596C4.4555 13.8229 3.61144 12.6531 3.18002 12C3.6904 11.2274 4.77832 9.73158 6.30147 8.42294C7.87402 7.07185 9.81574 6 12 6C12.7719 6 13.5135 6.13385 14.2193 6.36658L15.7651 4.8207ZM12 18C11.2282 18 10.4866 17.8661 9.78083 17.6334L8.23496 19.1793C9.37136 19.6795 10.6326 20 12 20C14.8525 20 17.2429 18.6054 19.002 17.0941C20.7674 15.5772 21.9925 13.8624 22.5362 13.0302C22.947 12.4015 22.947 11.5985 22.5362 10.9698C22.0773 10.2674 21.133 8.93627 19.7881 7.62611L18.3738 9.04043C19.5446 10.1771 20.3887 11.3469 20.8201 12C20.3097 12.7726 19.2218 14.2684 17.6986 15.5771C16.1261 16.9282 14.1843 18 12 18Z" fill="currentColor"></path>
-    </symbol>
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="eye-normal">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M6.30147 15.5771C4.77832 14.2684 3.6904 12.7726 3.18002 12C3.6904 11.2274 4.77832 9.73158 6.30147 8.42294C7.87402 7.07185 9.81574 6 12 6C14.1843 6 16.1261 7.07185 17.6986 8.42294C19.2218 9.73158 20.3097 11.2274 20.8201 12C20.3097 12.7726 19.2218 14.2684 17.6986 15.5771C16.1261 16.9282 14.1843 18 12 18C9.81574 18 7.87402 16.9282 6.30147 15.5771ZM12 4C9.14754 4 6.75717 5.39462 4.99812 6.90595C3.23268 8.42276 2.00757 10.1376 1.46387 10.9698C1.05306 11.5985 1.05306 12.4015 1.46387 13.0302C2.00757 13.8624 3.23268 15.5772 4.99812 17.0941C6.75717 18.6054 9.14754 20 12 20C14.8525 20 17.2429 18.6054 19.002 17.0941C20.7674 15.5772 21.9925 13.8624 22.5362 13.0302C22.947 12.4015 22.947 11.5985 22.5362 10.9698C21.9925 10.1376 20.7674 8.42276 19.002 6.90595C17.2429 5.39462 14.8525 4 12 4ZM10 12C10 10.8954 10.8955 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8955 14 10 13.1046 10 12ZM12 8C9.7909 8 8.00004 9.79086 8.00004 12C8.00004 14.2091 9.7909 16 12 16C14.2092 16 16 14.2091 16 12C16 9.79086 14.2092 8 12 8Z" fill="currentColor"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="eye-crossed">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7071 5.70711C20.0976 5.31658 20.0976 4.68342 19.7071 4.29289C19.3166 3.90237 18.6834 3.90237 18.2929 4.29289L14.032 8.55382C13.4365 8.20193 12.7418 8 12 8C9.79086 8 8 9.79086 8 12C8 12.7418 8.20193 13.4365 8.55382 14.032L4.29289 18.2929C3.90237 18.6834 3.90237 19.3166 4.29289 19.7071C4.68342 20.0976 5.31658 20.0976 5.70711 19.7071L9.96803 15.4462C10.5635 15.7981 11.2582 16 12 16C14.2091 16 16 14.2091 16 12C16 11.2582 15.7981 10.5635 15.4462 9.96803L19.7071 5.70711ZM12.518 10.0677C12.3528 10.0236 12.1792 10 12 10C10.8954 10 10 10.8954 10 12C10 12.1792 10.0236 12.3528 10.0677 12.518L12.518 10.0677ZM11.482 13.9323L13.9323 11.482C13.9764 11.6472 14 11.8208 14 12C14 13.1046 13.1046 14 12 14C11.8208 14 11.6472 13.9764 11.482 13.9323ZM15.7651 4.8207C14.6287 4.32049 13.3675 4 12 4C9.14754 4 6.75717 5.39462 4.99812 6.90595C3.23268 8.42276 2.00757 10.1376 1.46387 10.9698C1.05306 11.5985 1.05306 12.4015 1.46387 13.0302C1.92276 13.7326 2.86706 15.0637 4.21194 16.3739L5.62626 14.9596C4.4555 13.8229 3.61144 12.6531 3.18002 12C3.6904 11.2274 4.77832 9.73158 6.30147 8.42294C7.87402 7.07185 9.81574 6 12 6C12.7719 6 13.5135 6.13385 14.2193 6.36658L15.7651 4.8207ZM12 18C11.2282 18 10.4866 17.8661 9.78083 17.6334L8.23496 19.1793C9.37136 19.6795 10.6326 20 12 20C14.8525 20 17.2429 18.6054 19.002 17.0941C20.7674 15.5772 21.9925 13.8624 22.5362 13.0302C22.947 12.4015 22.947 11.5985 22.5362 10.9698C22.0773 10.2674 21.133 8.93627 19.7881 7.62611L18.3738 9.04043C19.5446 10.1771 20.3887 11.3469 20.8201 12C20.3097 12.7726 19.2218 14.2684 17.6986 15.5771C16.1261 16.9282 14.1843 18 12 18Z" fill="currentColor"></path>
     </symbol>
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="moon">
         <g clip-path="url(#clip0_333_1680)">
@@ -501,7 +826,7 @@
         </g>
         <defs>
             <clipPath id="clip0_333_1680">
-                <rect width="16" height="16" fill="white"></rect>
+                <rect width="16" height="16" fill="red"></rect>
             </clipPath>
         </defs>
     </symbol>
@@ -533,6 +858,11 @@
                 <rect width="20" height="20" fill="currentColor"></rect>
             </clipPath>
         </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="close">
+        <g id="Menu / Close_MD">
+            <path id="Vector" d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
     </symbol>
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="arrow-right">
         <path d="M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
