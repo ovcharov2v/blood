@@ -4,29 +4,11 @@
   font-size: 15px;
   line-height: 20px;
   color: #9DA2A8;
-  white-space: nowrap;
+  white-space: break-spaces;
 
   @include tablet {
     padding-top: 40px;
     padding-bottom: 30px;
-  }
-
-  &__list {
-    display: flex;
-  }
-
-  &__item {
-    &:not(:last-child) {
-      &::after {
-        display: inline-block;
-        margin: 0 8px 0 6px;
-        content: "/";
-      }
-    }
-
-    &:last-child {
-      white-space: break-spaces;
-    }
   }
 
   &__link {
@@ -35,6 +17,10 @@
     &:hover {
       color: $color-primary;
     }
+  }
+
+  &__separator {
+    margin: 0 6px 0 8px;
   }
 
   &__current {
