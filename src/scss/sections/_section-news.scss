@@ -32,10 +32,15 @@
   }
 
   &__select-box {
-    display: flex;
+    display: grid;
+    grid-template: auto / 100%;
+    grid-gap: 12px;
     gap: 12px;
     width: 100%;
-    flex-wrap: wrap;
+
+    &--cols-2 {
+      grid-template: auto / repeat(2, minmax(0, 1fr));
+    }
 
     @include tablet {
       width: auto;
@@ -43,34 +48,18 @@
   }
 
   &__filter {
-    flex: 1 0 calc(50% - 6px);
-
-    &:only-child {
-      flex-basis: 100%;
-    }
+    width: 100%;
 
     @include tablet {
-      flex-basis: 140px;
-
-      &:only-child {
-        flex-basis: 200px;
-      }
+      width: 200px;
     }
 
     @include desktop {
-      flex-basis: 230px;
-
-      &:only-child {
-        flex-basis: 230px;
-      }
+      width: 250px;
     }
 
     @include desktop-xl {
-      flex-basis: 290px;
-
-      &:only-child {
-        flex-basis: 290px;
-      }
+      width: 290px;
     }
   }
 
