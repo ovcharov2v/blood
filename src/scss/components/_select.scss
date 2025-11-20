@@ -1,6 +1,9 @@
 .select {
   position: relative;
-  z-index: 10;
+
+  &--active {
+    z-index: 10;
+  }
 
   &__current {
     position: relative;
@@ -74,6 +77,7 @@
   }
 
   &__list-item {
+    flex-shrink: 0;
     padding: 4px 12px;
     border-radius: 12px;
     white-space: nowrap;

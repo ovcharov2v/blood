@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   selectList.forEach((select) => {
     select.addEventListener('click', (evt) => {
       evt.stopPropagation()
+      closeAllSelect(select)
       if(!evt.target.closest('.select__list-box')) {
         select.classList.toggle('select--active')
       }
@@ -28,8 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('click', closeAllSelect)
 
-  function closeAllSelect() {
+  function closeAllSelect(exeptSelect) {
     selectList.forEach((select) => {
+      if(exeptSelect && exeptSelect === select) return
       select.classList.remove('select--active')
     })
   }

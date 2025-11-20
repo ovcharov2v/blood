@@ -4,7 +4,6 @@
   font-size: 15px;
   line-height: 20px;
   color: #9DA2A8;
-  white-space: break-spaces;
 
   @include tablet {
     padding-top: 40px;
@@ -12,6 +11,7 @@
   }
 
   &__link {
+    display: inline;
     transition: color $transition-default;
 
     &:hover {
@@ -20,10 +20,12 @@
   }
 
   &__separator {
+    display: inline;
     margin: 0 6px 0 8px;
   }
 
   &__current {
+    display: inline;
     font-weight: 500;
     color: $color-primary;
   }

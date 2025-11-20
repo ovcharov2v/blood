@@ -32,26 +32,50 @@
   }
 
   &__select-box {
-    display: grid;
-    grid-template: auto / repeat(2,minmax(0,1fr));
-    grid-gap: 12px;
+    display: flex;
+    gap: 12px;
     width: 100%;
+    flex-wrap: wrap;
 
     @include tablet {
-      width: unset;
+      width: auto;
     }
   }
 
   &__filter {
-    @include tablet {
-      width: 230px;
+    flex: 1 0 calc(50% - 6px);
+
+    &:only-child {
+      flex-basis: 100%;
     }
+
+    @include tablet {
+      flex-basis: 140px;
+
+      &:only-child {
+        flex-basis: 200px;
+      }
+    }
+
     @include desktop {
-      width: 290px;
+      flex-basis: 230px;
+
+      &:only-child {
+        flex-basis: 230px;
+      }
+    }
+
+    @include desktop-xl {
+      flex-basis: 290px;
+
+      &:only-child {
+        flex-basis: 290px;
+      }
     }
   }
 
   &__reset {
+    flex-shrink: 0;
     display: none;
     width: 186px;
 
