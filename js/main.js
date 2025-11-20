@@ -237,6 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
   selectList.forEach(function (select) {
     select.addEventListener('click', function (evt) {
       evt.stopPropagation();
+      closeAllSelect(select);
       if (!evt.target.closest('.select__list-box')) {
         select.classList.toggle('select--active');
       }
@@ -256,8 +257,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   document.addEventListener('click', closeAllSelect);
-  function closeAllSelect() {
+  function closeAllSelect(exeptSelect) {
     selectList.forEach(function (select) {
+      if (exeptSelect && exeptSelect === select) return;
       select.classList.remove('select--active');
     });
   }
