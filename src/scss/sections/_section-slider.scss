@@ -11,8 +11,12 @@
     overflow: hidden;
 
     .swiper-wrapper {
-      align-items: stretch;
+      height: unset;
       overflow: visible;
+    }
+
+    .swiper-slide {
+      height: auto;
     }
   }
 

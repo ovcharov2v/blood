@@ -1,0 +1,18 @@
+.section {
+  margin-bottom: 60px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+
+  &__title {
+  }
+
+  &__header-btn {
+    flex-shrink: 0;
+  }
+}

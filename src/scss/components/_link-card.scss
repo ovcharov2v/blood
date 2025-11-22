@@ -1,0 +1,96 @@
+.link-card {
+  display: grid;
+  grid-template: auto / minmax(0, 3fr) minmax(0, 2fr);
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(#000, .08);
+  border-radius: 28px;
+  background: radial-gradient(
+                  ellipse at right top,
+                  color-mix(in srgb, #{$color-primary} 60%, transparent) 15%,
+                  transparent 50%
+  ) no-repeat right top;
+  background-size: 85% 170%;
+  transition: box-shadow $transition-default;
+
+  @include desktop {
+    grid-template: auto / repeat(2, minmax(0, 1fr));
+    padding: 32px;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(#000, .16);
+  }
+
+  &__contend-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title-box {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+    transition: color $transition-default;
+
+    @include desktop {
+      margin-bottom: 16px;
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    .link-card:hover & {
+      color: $color-primary;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 22px;
+    color: #9DA2A8;
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+
+  &__icon-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  &__icon {
+    display: block;
+    width: 100%;
+    max-width: 110px;
+    aspect-ratio: 1;
+    transition: transform $transition-default;
+
+    @include desktop {
+      max-width: 150px;
+    }
+
+    .link-card:hover & {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// theme
+.theme-light {
+  .link-card {
+    background-color: $color-bg;
+  }
+}
+
+.theme-dark {
+  .link-card {
+    background-color: #26262B;
+  }
+}

@@ -1,0 +1,13 @@
+mixin linkCard(title, text, iconName)
+    // link card
+    a.section-about__card.link-card(href="#")&attributes(attributes)
+        .link-card__contend-box
+            .link-card__title-box
+                h2.link-card__title= title
+                p.link-card__text= text
+            span.button.button--red.button--icon-only.link-card__btn
+                +svg("arrow-right").button__icon
+        .link-card__icon-box
+            picture
+                img.link-card__icon.img-theme-light(src='./images/about/' + iconName + '-theme-light.png', alt="")
+                img.link-card__icon.img-theme-dark(src='./images/about/' + iconName + '-theme-dark.png', alt="")
