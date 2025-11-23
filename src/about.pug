@@ -16,15 +16,23 @@ block content
 			+linkCard("Виртуальный музей","Наша история","icon3").section-about__card
 			+linkCard("О программе развития","Службы крови","icon4").section-about__card
 
-	// Section Gallery
-	section.section.section-gallery.container
+	// Section Slider
+	section.section.section-slider.container
 		.section__header
 			h2.section__title.h2 Галерея
 			a.button.button--red.button--round-corner.section__header-btn(href="#") Показать все
-		.section-gallery__grid
-			+newsCard()
-			+newsCard()
-
+		.section-slider__slider-box
+			.swiper.section-slider__slider.section-slider__slider--cols-2
+				.swiper-wrapper
+					- let i = 0
+					while i < 7
+						+newsCard().swiper-slide
+						- i++
+			.section-slider__slider-nav
+				button.section-slider__slider-btn.section-slider__slider-btn--prev(type="button", aria-label="Назад")
+					+svg("chevron-down").section-slider__slider-btn-icon
+				button.section-slider__slider-btn.section-slider__slider-btn--next(type="button", aria-label="Вперед")
+					+svg("chevron-down").section-slider__slider-btn-icon
 
 	// Section Slider
 	section.section.section-slider.container
@@ -32,12 +40,12 @@ block content
 			h2.section__title.h2 Новости
 			a.button.button--red.button--round-corner.section__header-btn(href="#") Все новости
 		.section-slider__slider-box
-			.swiper.section-slider__slider
+			.swiper.section-slider__slider.section-slider__slider--cols-3
 				.swiper-wrapper
-					- let i = 0
-					while i < 7
+					- let j = 0
+					while j < 7
 						+newsCard().swiper-slide
-						- i++
+						- j++
 			.section-slider__slider-nav
 				button.section-slider__slider-btn.section-slider__slider-btn--prev(type="button", aria-label="Назад")
 					+svg("chevron-down").section-slider__slider-btn-icon
