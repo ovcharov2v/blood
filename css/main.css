@@ -2635,17 +2635,4 @@ a {
             grid-template: 260px/repeat(2, minmax(0, 1fr));
         grid-auto-rows: 260px; } }
 
-.section-gallery__grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto;
-  -ms-grid-columns: 100%;
-      grid-template: auto / 100%;
-  grid-gap: 20px; }
-  @media (min-width: 768px) {
-    .section-gallery__grid {
-      -ms-grid-rows: auto;
-      -ms-grid-columns: minmax(0, 1fr) 20px minmax(0, 1fr);
-          grid-template: auto/repeat(2, minmax(0, 1fr)); } }
-
 /*# sourceMappingURL=main.css.map */
