@@ -14,5 +14,9 @@
 
   &__header-btn {
     flex-shrink: 0;
+
+    @include desktop {
+      min-width: 180px;
+    }
   }
 }

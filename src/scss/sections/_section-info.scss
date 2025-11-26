@@ -1,0 +1,193 @@
+@function cardGradient($color, $corner: bottom) {
+  @return radial-gradient(
+                  circle at $corner right,
+                  $color,
+                  rgba($color, .6) 21%,
+                  rgba($color, .25) 43%,
+                  rgba($color, .1) 64%,
+                  transparent
+  )
+}
+
+.section-info {
+  &__grid {
+    display: grid;
+    grid-template-areas:
+      "left left center-top center-top right right"
+      "left left center-bottom center-bottom right right"
+      "bottom-left bottom-left bottom-left bottom-right bottom-right bottom-right";
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__card {
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border-radius: 20px;
+    transition: box-shadow $transition-default, background-color $transition-default;
+
+    &--red {
+      background-image: cardGradient(#E92C5B);
+    }
+
+    &--violet {
+      background-image: cardGradient(#A2B2F9);
+    }
+
+    &--yellow {
+      background-image: cardGradient(#FCB42F);
+    }
+
+    &--orange {
+      background-image: cardGradient(#FC8F2F);
+    }
+
+    &--green {
+      background-image: cardGradient(#8EDD11);
+    }
+
+    &:nth-child(6n-5) {
+      grid-area: left;
+    }
+
+    &:nth-child(6n-4) {
+      grid-area: center-top;
+    }
+
+    &:nth-child(6n-3) {
+      grid-area: center-bottom;
+    }
+
+    &:nth-child(6n-2) {
+      grid-area: right;
+    }
+
+    &:nth-child(6n-1) {
+      grid-area: bottom-left;
+    }
+
+    &:nth-child(6n) {
+      grid-area: bottom-right;
+    }
+  }
+
+  &__card-title {
+    min-height: 64px;
+    margin-bottom: 24px;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+
+  &__card-img-box {
+    max-width: 100%;
+    transition: transform $transition-default;
+
+    .section-info__card:nth-child(6n-5) & {
+      max-width: 238px;
+      margin: auto;
+    }
+
+    .section-info__card:nth-child(6n-4) & {
+      max-width: 142px;
+      margin-top: auto;
+    }
+
+    .section-info__card:nth-child(6n-3) & {
+      max-width: 159px;
+      margin-top: auto;
+    }
+
+    .section-info__card:nth-child(6n-2) & {
+      max-width: 256px;
+      margin: auto;
+    }
+
+    .section-info__card:nth-child(6n-1) & {
+      max-width: 126px;
+      margin-top: auto;
+    }
+
+    .section-info__card:nth-child(6n) & {
+      max-width: 133px;
+      margin-top: auto;
+    }
+
+    .section-info__card:hover & {
+      transform: scale(1.05);
+    }
+  }
+
+  &__card-img {
+    display: block;
+    max-width: 100%;
+  }
+
+  &__card-btn {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+  }
+
+  &__bottom-card {
+    padding: 32px 32px 40px 32px;
+    border-radius: 28px;
+    box-shadow: 0 2px 8px rgba(#000, .08);
+    background-image: url('../images/common/apps-bg.svg'), cardGradient(#E92C5B, top);
+    background-repeat: no-repeat no-repeat;
+    background-size: auto 100%, auto;
+    background-position: 80% center, top right;
+  }
+
+  &__bottom-card-box {
+    margin-bottom: 64px;
+  }
+
+  &__bottom-card-title {
+    margin-bottom: 16px;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 600;
+  }
+
+  &__bottom-card-text {
+    font-size: 18px;
+    line-height: 22px;
+    color: #9DA2A8;
+  }
+
+  &__bottom-card-btn {
+    min-width: 180px;
+  }
+}
+
+// theme
+.theme-light {
+  .section-info {
+    &__card {
+      background-color: #F3F4F6;
+
+      &:hover {
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(#000, .1);
+      }
+    }
+  }
+}
+
+.theme-dark {
+  .section-info {
+    &__card {
+      background-color: #26262B;
+
+      &:hover {
+        background-color: lighten(#26262B, 10%);
+        box-shadow: 0 2px 10px rgba(#fff, .1);
+      }
+    }
+  }
+}

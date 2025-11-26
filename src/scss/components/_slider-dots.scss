@@ -1,0 +1,26 @@
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  pointer-events: none;
+
+  &__el {
+    flex-shrink: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(#fff, .25);
+    cursor: pointer;
+    pointer-events: all;
+    transition: background-color $transition-default;
+
+    &:hover {
+      background-color: rgba(#fff, .50);
+    }
+
+    &--active {
+      background-color: #fff;
+    }
+  }
+}

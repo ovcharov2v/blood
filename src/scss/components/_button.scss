@@ -65,6 +65,28 @@
     }
   }
 
+  &--white {
+    border-color: #fff;
+    background-color: #fff;
+    color: #0C0C0C;
+
+    &:hover {
+      background-color: transparent;
+      border-color: #fff;
+      color: #fff;
+    }
+  }
+
+  &--transparent-white {
+    border-color: transparent;
+    background-color: rgba(#fff, .25);
+    color: #0C0C0C;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+
   &--icon-only {
     padding: 13px;
     aspect-ratio: 1;

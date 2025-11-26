@@ -1,0 +1,67 @@
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  border-radius: 28px;
+  box-shadow: 0 4px 24px rgba(#5C0000, .25);
+  background-image: radial-gradient(
+                  at top right,
+                  rgba(255, 255, 255, .5) 0%,
+                  transparent 100%
+  ), linear-gradient(30deg, #{$color-primary}, #{$color-secondary});
+
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #0C0C0C;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(#fff, .5);
+    transition: color $transition-default;
+
+    .hero-card:hover & {
+      color: #fff;
+    }
+  }
+
+  &__text-highlighted {
+    color: #fff;
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+}
+
+// theme
+.theme-light {
+  .hero-card {
+  }
+}
+
+.theme-dark {
+  .hero-card {
+  }
+}
