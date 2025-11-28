@@ -3,9 +3,10 @@ include mixins
 block vars
 	- var baseDir = './'
 	- var isListPage = 'false'
+	- var baseTheme = 'theme-light'
 
 doctype html(lang="ru")
-html.theme-light
+html(class=""+baseTheme)
 	head
 		block head-start
 		block meta
@@ -29,8 +30,8 @@ html.theme-light
 		if isListPage != 'true'
 			+footer()
 			+citySearch()
-			block scripts
-				//-script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
-				script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
-			include ../images/sprite/sprite.svg
+		block scripts
+			//-script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
+			script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
+		include ../images/sprite/sprite.svg
 		block body-end

@@ -1,0 +1,72 @@
+.tabs {
+  &__nav {
+    display: inline-flex;
+    background-color: #26262B;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &__nav-btn {
+    padding: 10px 16px;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-text;
+    transition: background-color $transition-default;
+
+    &:not(.tabs__nav-btn--active):hover {
+      background-color: color-mix(in srgb, #{$color-primary} 15%, transparent);;
+    }
+
+    &--active {
+      background-color: $color-primary;
+    }
+  }
+
+  &__content-box {
+    position: relative;
+    min-height: 200px;
+    overflow: hidden;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &--active {
+      visibility: visible;
+      position: relative;
+      opacity: 1;
+    }
+  }
+}
+
+// theme
+.theme-light {
+  .tabs {
+    &__nav {
+      background-color: #EDEEF1;
+    }
+    &__nav-btn {
+      &--active {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.theme-dark {
+  .tabs {
+    &__nav {
+      background-color: #26262B;
+    }
+  }
+}

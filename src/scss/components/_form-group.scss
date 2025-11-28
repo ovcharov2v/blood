@@ -60,4 +60,12 @@
       }
     }
   }
+
+  &__note {
+    display: block;
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 16px;
+    opacity: .5;
+  }
 }

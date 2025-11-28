@@ -1,0 +1,156 @@
+extends pug/base
+
+append vars
+  - var isListPage = 'true'
+  - var baseTheme = 'theme-dark'
+
+block content
+    .lk
+        // navbar
+        aside.lk__navbar
+            a.lk__logo-link(href="./main.html", title="На главную")
+                picture
+                    img.lk__logo.img-theme-light(src="./images/common/logo-theme-light.svg", alt="Служба Крови")
+                    img.lk__logo.img-theme-dark(src="./images/common/logo-theme-dark.svg", alt="Служба Крови")
+            p.lk__navbar-title Личный кабинет
+            .lk__navbar-panel-list
+                // panel
+                .lk__navbar-panel
+                    .lk__navbar-row-list
+                        .lk__navbar-row
+                            span.lk__navbar-row-key Код донора:
+                            span.lk__navbar-row-value 7701 3447 0536
+                        .lk__navbar-row
+                            span.lk__navbar-row-key Группа крови:
+                            span.lk__navbar-row-value 0 (I)
+                        .lk__navbar-row
+                            span.lk__navbar-row-key Резус-принадлежность:
+                            span.lk__navbar-row-value Rh+
+                        .lk__navbar-row
+                            span.lk__navbar-row-key Kell-принадлежность:
+                            span.lk__navbar-row-value kell-
+                // panel
+                .lk__navbar-panel
+                    .lk__navbar-row-list
+                        .lk__navbar-row
+                            span.lk__navbar-row-key Продвинутый
+                            span.lk__navbar-row-value 5 донаций
+                    p.lk__navbar-note 5 донаций до следующего уровня
+                // panel
+                .lk__navbar-panel
+                    p.lk__navbar-panel-text Даты следующих возможных донаций
+                    .lk__navbar-row-list
+                        .lk__navbar-row
+                            span.lk__navbar-row-key Цельная кровь:
+                            span.lk__navbar-row-value 26 апреля
+                        .lk__navbar-row
+                            span.lk__navbar-row-key Плазма:
+                            span.lk__navbar-row-value 26 апреля
+                        .lk__navbar-row
+                            span.lk__navbar-row-key Клетки крови:
+                            span.lk__navbar-row-value 27 апреля
+            .lk__navbar-bottom
+                a.lk__navbar-link(href="#")
+                    +svg("lk-support").lk__navbar-link-icon
+                    | Поддержка
+                a.lk__navbar-link(href="#")
+                    +svg("lk-exit").lk__navbar-link-icon
+                    | Выход
+
+        // content
+        section.lk__content
+            // menu
+            nav.lk__menu
+                ul.lk__menu-list
+                    li.lk__menu-elem
+                        a.lk__menu-link(href="#")
+                            img.lk__menu-icon(src="./images/lk/icon1.png", alt="")
+                            | Мой профиль
+                    li.lk__menu-elem
+                        a.lk__menu-link(href="#")
+                            img.lk__menu-icon(src="./images/lk/icon2.png", alt="")
+                            | Мои донации
+                    li.lk__menu-elem
+                        a.lk__menu-link(href="#")
+                            img.lk__menu-icon(src="./images/lk/icon3.png", alt="")
+                            | Мои анализы
+                    li.lk__menu-elem
+                        a.lk__menu-link(href="#")
+                            img.lk__menu-icon(src="./images/lk/icon4.png", alt="")
+                            | Почетный донер
+                    li.lk__menu-elem
+                        a.lk__menu-link(href="#")
+                            img.lk__menu-icon(src="./images/lk/icon5.png", alt="")
+                            | Сдадим кровь вместе
+                    li.lk__menu-elem
+                        a.lk__menu-link(href="#")
+                            img.lk__menu-icon(src="./images/lk/icon6.png", alt="")
+                            | Уведомления и новости
+                    li.lk__menu-elem
+                        a.lk__menu-link(href="#")
+                            img.lk__menu-icon(src="./images/lk/icon7.png", alt="")
+                            | Мои акции
+
+            +breadcrumb(["Главная"], "Личный кабинет донора").lk__breadcrumbs
+
+            h1.lk__title Настройки профиля
+
+            .tabs.lk__tabs
+                .tabs__nav
+                    button.tabs__nav-btn.tabs__nav-btn--active(type="button", data-content="content-1") Личные данные
+                    button.tabs__nav-btn(type="button", data-content="content-2") Привязка аккаунта
+                    button.tabs__nav-btn(type="button", data-content="content-3") Смена пароля
+                    button.tabs__nav-btn(type="button", data-content="content-4") Двухфакторная авторизация
+                .tabs__content-box
+                    #content-1.tabs__content.tabs__content--active
+                        form.lk__form
+                            .lk__form-grid
+                                .form-group
+                                    p.form-group__label Группа крови
+                                    .form-group__input-box
+                                        // Select
+                                        .select.form-group__select
+                                            .select__current-box
+                                                input.select__input(type="hidden", value="0 (I)")
+                                                p.select__current 0 (I)
+                                                +svg("chevron-down").select__drop-icon
+                                            ul.select__list
+                                                li.select__list-item.select__list-item--selected 0 (I)
+                                                li.select__list-item 0 (II)
+                                                li.select__list-item 0 (III)
+                                    span.form-group__note Выберите вашу группу крови
+                                .form-group
+                                    p.form-group__label Резус-принадлежность:
+                                    .form-group__input-box
+                                        // Select
+                                        .select.form-group__select
+                                            .select__current-box
+                                                input.select__input(type="hidden", value="Rh+")
+                                                p.select__current Rh+
+                                                +svg("chevron-down").select__drop-icon
+                                            ul.select__list
+                                                li.select__list-item.select__list-item--selected Rh+
+                                                li.select__list-item Rh-
+                                                li.select__list-item Rh+-
+                                    span.form-group__note Выберите ваш резус-принадлежность
+                                .form-group
+                                    p.form-group__label Kell-принадлежность:
+                                    .form-group__input-box
+                                        // Select
+                                        .select.form-group__select
+                                            .select__current-box
+                                                input.select__input(type="hidden", value="kell-")
+                                                p.select__current kell-
+                                                +svg("chevron-down").select__drop-icon
+                                            ul.select__list
+                                                li.select__list-item.select__list-item--selected kell-
+                                                li.select__list-item kell+
+                                                li.select__list-item kell++
+                                    span.form-group__note Ваш Kell-принадлежность
+                            button.button.button--red.button--round-corner(type="submit") Сохранить
+                    #content-2.tabs__content
+                        p таб 2
+                    #content-3.tabs__content
+                        p таб 3
+                    #content-4.tabs__content
+                        p таб 4
