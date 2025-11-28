@@ -655,6 +655,13 @@ a {
     .form-group__btn--active .form-group__btn-icon--active {
       opacity: 1; }
 
+.form-group__note {
+  display: block;
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 16px;
+  opacity: .5; }
+
 .theme-switcher {
   position: relative;
   z-index: 0;
@@ -1188,7 +1195,9 @@ a {
     margin-bottom: 25px; }
   .city-search__list {
     display: block;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    max-height: 300px;
+    overflow-y: auto; }
   .city-search__list-el {
     padding: 10px 16px;
     border-radius: 8px;
@@ -2287,6 +2296,58 @@ a {
   background-color: #26262B;
   border-color: #26262B; }
 
+.tabs__nav {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: #26262B;
+  border-radius: 8px;
+  overflow: hidden; }
+
+.tabs__nav-btn {
+  padding: 10px 16px;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-text);
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease; }
+  .tabs__nav-btn:not(.tabs__nav-btn--active):hover {
+    background-color: color-mix(in srgb, var(--color-primary) 15%, transparent); }
+  .tabs__nav-btn--active {
+    background-color: var(--color-primary); }
+
+.tabs__content-box {
+  position: relative;
+  min-height: 200px;
+  overflow: hidden; }
+
+.tabs__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease; }
+  .tabs__content--active {
+    visibility: visible;
+    position: relative;
+    opacity: 1; }
+
+.theme-light .tabs__nav {
+  background-color: #EDEEF1; }
+
+.theme-light .tabs__nav-btn--active {
+  color: #fff; }
+
+.theme-dark .tabs__nav {
+  background-color: #26262B; }
+
 .section-auth {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -3102,5 +3163,173 @@ a {
     height: 100%;
     -o-object-fit: contain;
        object-fit: contain; }
+
+.lk {
+  min-height: 100vh; }
+  .lk__navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 300px;
+    height: 100%;
+    padding: 15px 20px;
+    overflow-y: auto; }
+  .lk__logo-link {
+    display: inline-block;
+    margin-bottom: 50px; }
+  .lk__logo {
+    display: block;
+    max-width: 100%; }
+  .lk__navbar-title {
+    margin-bottom: 40px;
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 500;
+    text-align: center; }
+  .lk__navbar-panel-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+    margin-bottom: 60px; }
+  .lk__navbar-panel {
+    padding: 17px 15px;
+    border-radius: 15px;
+    background-color: var(--color-bg); }
+  .lk__navbar-row-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 21px; }
+  .lk__navbar-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 15px;
+    font-size: 16px;
+    line-height: 26px; }
+  .lk__navbar-row-value {
+    color: var(--color-primary); }
+  .lk__navbar-note {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 22px;
+    color: var(--color-primary);
+    text-align: center; }
+  .lk__navbar-panel-text {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 20px; }
+  .lk__navbar-bottom {
+    margin-top: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 16px; }
+  .lk__navbar-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease; }
+    .lk__navbar-link:hover {
+      color: var(--color-primary); }
+  .lk__navbar-link-icon {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    display: block;
+    width: 24px;
+    height: 24px; }
+  .lk__content {
+    padding: 20px 40px 60px 325px; }
+  .lk__menu {
+    margin-bottom: 60px; }
+  .lk__menu-list {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    gap: 14px;
+    padding: 20px 25px;
+    border-radius: 16px; }
+  .lk__menu-link {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    gap: 8px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 14px;
+    line-height: 24px;
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease; }
+    .lk__menu-link:hover {
+      color: var(--color-primary); }
+  .lk__menu-icon {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    display: block;
+    width: 24px;
+    height: 24px; }
+  .lk__breadcrumbs {
+    max-width: 100%;
+    margin-bottom: 60px;
+    padding: 0; }
+  .lk__title {
+    margin-bottom: 50px;
+    font-size: 30px;
+    line-height: 1; }
+  .lk__form {
+    max-width: 630px; }
+  .lk__form-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+    -ms-grid-columns: minmax(0, 1fr) 48px minmax(0, 1fr);
+        grid-template: auto/repeat(2, minmax(0, 1fr));
+    grid-gap: 22px 48px;
+    margin-bottom: 32px; }
+
+.theme-light .lk__navbar {
+  background-color: #EDEEF1; }
+
+.theme-light .lk__menu-list {
+  background-color: #EDEEF1; }
+
+.theme-dark .lk__navbar {
+  background-color: #26262B; }
+
+.theme-dark .lk__menu-list {
+  background-color: #26262B; }
 
 /*# sourceMappingURL=main.css.map */

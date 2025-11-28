@@ -1,5 +1,5 @@
 <!DOCTYPE html(lang="ru")>
-<html class="theme-light">
+<html class="theme-dark">
 	<head>
 		<meta charset="utf-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -8,39 +8,158 @@
 		<title>Служба Крови</title>
 		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
-		<link rel="stylesheet" href="./css/main.css?v=1764323641379"/>
-		<style>
-			.list-page {
-			    font-size: 20px;
-			    font-weight: 500;
-			    color: var(--color-primary);
-			    text-align: center;
-			    text-transform: uppercase;
-			}
-			
-			.list-page ul {
-			    display: flex;
-			    flex-direction: column;
-			    gap: 16px;
-			}
-			
-		</style>
+		<link rel="stylesheet" href="./css/main.css?v=1764323641842"/>
 	</head>
 	<body>
 		<main class="main">
-			<div class="list-page container">
-				<ul>
-					<li><a href="./main.html" target="_blank">Главная</a></li>
-					<li><a href="./auth.html" target="_blank">Авторизация</a></li>
-					<li><a href="./404.html" target="_blank">404</a></li>
-					<li><a href="./news.html" target="_blank">Блог</a></li>
-					<li><a href="./article.html" target="_blank">Статья</a></li>
-					<li><a href="./about.html" target="_blank">О компании</a></li>
-					<li><a href="./lk.html" target="_blank">ЛК</a></li>
-				</ul>
+			<div class="lk">
+				<!-- navbar-->
+				<aside class="lk__navbar"><a class="lk__logo-link" href="./main.html" title="На главную">
+						<picture><img class="lk__logo img-theme-light" src="./images/common/logo-theme-light.svg" alt="Служба Крови"/><img class="lk__logo img-theme-dark" src="./images/common/logo-theme-dark.svg" alt="Служба Крови"/></picture></a>
+					<p class="lk__navbar-title">Личный кабинет</p>
+					<div class="lk__navbar-panel-list">
+						<!-- panel-->
+						<div class="lk__navbar-panel">
+							<div class="lk__navbar-row-list">
+								<div class="lk__navbar-row"><span class="lk__navbar-row-key">Код донора:</span><span class="lk__navbar-row-value">7701 3447 0536</span></div>
+								<div class="lk__navbar-row"><span class="lk__navbar-row-key">Группа крови:</span><span class="lk__navbar-row-value">0 (I)</span></div>
+								<div class="lk__navbar-row"><span class="lk__navbar-row-key">Резус-принадлежность:</span><span class="lk__navbar-row-value">Rh+</span></div>
+								<div class="lk__navbar-row"><span class="lk__navbar-row-key">Kell-принадлежность:</span><span class="lk__navbar-row-value">kell-</span></div>
+							</div>
+						</div>
+						<!-- panel-->
+						<div class="lk__navbar-panel">
+							<div class="lk__navbar-row-list">
+								<div class="lk__navbar-row"><span class="lk__navbar-row-key">Продвинутый</span><span class="lk__navbar-row-value">5 донаций</span></div>
+							</div>
+							<p class="lk__navbar-note">5 донаций до следующего уровня</p>
+						</div>
+						<!-- panel-->
+						<div class="lk__navbar-panel">
+							<p class="lk__navbar-panel-text">Даты следующих возможных донаций</p>
+							<div class="lk__navbar-row-list">
+								<div class="lk__navbar-row"><span class="lk__navbar-row-key">Цельная кровь:</span><span class="lk__navbar-row-value">26 апреля</span></div>
+								<div class="lk__navbar-row"><span class="lk__navbar-row-key">Плазма:</span><span class="lk__navbar-row-value">26 апреля</span></div>
+								<div class="lk__navbar-row"><span class="lk__navbar-row-key">Клетки крови:</span><span class="lk__navbar-row-value">27 апреля</span></div>
+							</div>
+						</div>
+					</div>
+					<div class="lk__navbar-bottom"><a class="lk__navbar-link" href="#">
+							<svg class="lk__navbar-link-icon">
+								<use xlink:href="#lk-support"></use>
+							</svg>Поддержка</a><a class="lk__navbar-link" href="#">
+							<svg class="lk__navbar-link-icon">
+								<use xlink:href="#lk-exit"></use>
+							</svg>Выход</a></div>
+				</aside>
+				<!-- content-->
+				<section class="lk__content">
+					<!-- menu-->
+					<nav class="lk__menu">
+						<ul class="lk__menu-list">
+							<li class="lk__menu-elem"><a class="lk__menu-link" href="#"><img class="lk__menu-icon" src="./images/lk/icon1.png" alt=""/>Мой профиль</a></li>
+							<li class="lk__menu-elem"><a class="lk__menu-link" href="#"><img class="lk__menu-icon" src="./images/lk/icon2.png" alt=""/>Мои донации</a></li>
+							<li class="lk__menu-elem"><a class="lk__menu-link" href="#"><img class="lk__menu-icon" src="./images/lk/icon3.png" alt=""/>Мои анализы</a></li>
+							<li class="lk__menu-elem"><a class="lk__menu-link" href="#"><img class="lk__menu-icon" src="./images/lk/icon4.png" alt=""/>Почетный донер</a></li>
+							<li class="lk__menu-elem"><a class="lk__menu-link" href="#"><img class="lk__menu-icon" src="./images/lk/icon5.png" alt=""/>Сдадим кровь вместе</a></li>
+							<li class="lk__menu-elem"><a class="lk__menu-link" href="#"><img class="lk__menu-icon" src="./images/lk/icon6.png" alt=""/>Уведомления и новости</a></li>
+							<li class="lk__menu-elem"><a class="lk__menu-link" href="#"><img class="lk__menu-icon" src="./images/lk/icon7.png" alt=""/>Мои акции</a></li>
+						</ul>
+					</nav>
+					<!-- Breadcrumbs-->
+					<div class="container breadcrumb lk__breadcrumbs"><a class="breadcrumb__link" href="#" title="Главная">Главная</a><span class="breadcrumb__separator">/</span><span class="breadcrumb__current">Личный кабинет донора</span>
+					</div>
+					<h1 class="lk__title">Настройки профиля</h1>
+					<div class="tabs lk__tabs">
+						<div class="tabs__nav">
+							<button class="tabs__nav-btn tabs__nav-btn--active" type="button" data-content="content-1">Личные данные</button>
+							<button class="tabs__nav-btn" type="button" data-content="content-2">Привязка аккаунта</button>
+							<button class="tabs__nav-btn" type="button" data-content="content-3">Смена пароля</button>
+							<button class="tabs__nav-btn" type="button" data-content="content-4">Двухфакторная авторизация</button>
+						</div>
+						<div class="tabs__content-box">
+							<div class="tabs__content tabs__content--active" id="content-1">
+								<form class="lk__form">
+									<div class="lk__form-grid">
+										<div class="form-group">
+											<p class="form-group__label">Группа крови</p>
+											<div class="form-group__input-box">
+												<!-- Select-->
+												<div class="select form-group__select">
+													<div class="select__current-box">
+														<input class="select__input" type="hidden" value="0 (I)"/>
+														<p class="select__current">0 (I)</p>
+														<svg class="select__drop-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>
+													</div>
+													<ul class="select__list">
+														<li class="select__list-item select__list-item--selected">0 (I)</li>
+														<li class="select__list-item">0 (II)</li>
+														<li class="select__list-item">0 (III)</li>
+													</ul>
+												</div>
+											</div><span class="form-group__note">Выберите вашу группу крови</span>
+										</div>
+										<div class="form-group">
+											<p class="form-group__label">Резус-принадлежность:</p>
+											<div class="form-group__input-box">
+												<!-- Select-->
+												<div class="select form-group__select">
+													<div class="select__current-box">
+														<input class="select__input" type="hidden" value="Rh+"/>
+														<p class="select__current">Rh+</p>
+														<svg class="select__drop-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>
+													</div>
+													<ul class="select__list">
+														<li class="select__list-item select__list-item--selected">Rh+</li>
+														<li class="select__list-item">Rh-</li>
+														<li class="select__list-item">Rh+-</li>
+													</ul>
+												</div>
+											</div><span class="form-group__note">Выберите ваш резус-принадлежность</span>
+										</div>
+										<div class="form-group">
+											<p class="form-group__label">Kell-принадлежность:</p>
+											<div class="form-group__input-box">
+												<!-- Select-->
+												<div class="select form-group__select">
+													<div class="select__current-box">
+														<input class="select__input" type="hidden" value="kell-"/>
+														<p class="select__current">kell-</p>
+														<svg class="select__drop-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>
+													</div>
+													<ul class="select__list">
+														<li class="select__list-item select__list-item--selected">kell-</li>
+														<li class="select__list-item">kell+</li>
+														<li class="select__list-item">kell++</li>
+													</ul>
+												</div>
+											</div><span class="form-group__note">Ваш Kell-принадлежность</span>
+										</div>
+									</div>
+									<button class="button button--red button--round-corner" type="submit">Сохранить</button>
+								</form>
+							</div>
+							<div class="tabs__content" id="content-2">
+								<p>таб 2</p>
+							</div>
+							<div class="tabs__content" id="content-3">
+								<p>таб 3</p>
+							</div>
+							<div class="tabs__content" id="content-4">
+								<p>таб 4</p>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
 		</main>
-		<script src="./js/main.js?v=1764323641379"></script><svg width="0" height="0" class="hidden">
+		<script src="./js/main.js?v=1764323641842"></script><svg width="0" height="0" class="hidden">
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="navigation">
         <path d="M1.62351 6.30224L11.8873 2.39222C13.0828 1.9368 13.6805 1.70909 13.9858 2.01438C14.2911 2.31966 14.0634 2.91739 13.608 4.11286L9.69795 14.3767C9.63142 14.5513 9.46398 14.6667 9.27712 14.6667C9.08329 14.6667 8.9112 14.5427 8.8499 14.3588L8.10187 12.1147C7.58462 10.5629 7.32599 9.78703 6.76957 9.23062C6.21316 8.6742 5.43727 8.41557 3.8855 7.89832L1.64142 7.15029C1.45753 7.08899 1.3335 6.9169 1.3335 6.72307C1.3335 6.53621 1.44889 6.36876 1.62351 6.30224Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
     </symbol>

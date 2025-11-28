@@ -300,6 +300,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/components/tabs.js":
+/*!***********************************!*\
+  !*** ./src/js/components/tabs.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var tabsNavButtons = document.querySelectorAll('.tabs__nav-btn');
+  var tabsContent = document.querySelectorAll('.tabs__content');
+  tabsNavButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var targetContentId = button.getAttribute('data-content');
+      var targetContent = document.getElementById(targetContentId);
+
+      // Убираем активные классы
+      tabsNavButtons.forEach(function (btn) {
+        return btn.classList.remove('tabs__nav-btn--active');
+      });
+      tabsContent.forEach(function (content) {
+        content.classList.remove('tabs__content--active');
+      });
+
+      // Добавляем активный класс с задержкой для анимации
+      button.classList.add('tabs__nav-btn--active');
+
+      // Устанавливаем высоту перед показом
+      setTimeout(function () {
+        targetContent.classList.add('tabs__content--active');
+      }, 10);
+    });
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/components/theme-switcher.js":
 /*!*********************************************!*\
   !*** ./src/js/components/theme-switcher.js ***!
@@ -354,6 +390,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_header__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_section_donor_code__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/section-donor-code */ "./src/js/components/section-donor-code.js");
 /* harmony import */ var _components_section_donor_code__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_section_donor_code__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_7__);
+
 
 
 
