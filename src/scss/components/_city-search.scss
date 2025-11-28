@@ -88,6 +88,8 @@
   &__list {
     display: block;
     margin-bottom: 15px;
+    max-height: 300px;
+    overflow-y: auto;
   }
 
   &__list-el {
