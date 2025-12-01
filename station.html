@@ -9,7 +9,8 @@
 		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
 		<link rel="stylesheet" href="./lib/swiper/swiper-bundle.css"/>
-		<link rel="stylesheet" href="./css/main.css?v=1764586431929"/>
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=7d5e0e61-1da5-4f66-b0b1-ebb11b324bfe&amp;lang=ru_RU"></script>
+		<link rel="stylesheet" href="./css/main.css?v=1764586435291"/>
 	</head>
 	<body>
 		<!-- Header-->
@@ -482,73 +483,318 @@
 		</div>
 		<main class="main">
 			<!-- Breadcrumbs-->
-			<div class="container breadcrumb"><a class="breadcrumb__link" href="#" title="Главная">Главная</a><span class="breadcrumb__separator">/</span><span class="breadcrumb__current">О службе крови</span>
+			<div class="container breadcrumb"><a class="breadcrumb__link" href="#" title="Главная">Главная</a><span class="breadcrumb__separator">/</span><a class="breadcrumb__link" href="#" title="Учреждение службы крови">Учреждение службы крови</a><span class="breadcrumb__separator">/</span><span class="breadcrumb__current">Санкт-Петербургская городская станция переливания крови</span>
 			</div>
-			<!-- Section About-->
-			<section class="section-about container">
-				<h1 class="section-about__title h1">О службе крови</h1>
-				<div class="section-about__card-grid">
-					<!-- link card--><a class="section-about__card link-card section-about__card" href="#">
-						<div class="link-card__contend-box">
-							<div class="link-card__title-box">
-								<h2 class="link-card__title">Интервью</h2>
-								<p class="link-card__text">Делимся советами</p>
-							</div><span class="button button--red button--icon-only link-card__btn">
-								<svg class="button__icon">
-									<use xlink:href="#arrow-right"></use>
-								</svg></span>
+			<!-- Section station-->
+			<div class="section-station container">
+				<h1 class="section-station__title h1">Санкт-Петербургская городская станция переливания крови</h1>
+				<div class="section-station__content-box">
+					<div class="section-station__img-box"><img class="section-station__img" src="./images/station/img.jpg" alt=""/><a class="button button--round-corner button--outline-red" href="#">Вход для сотрудников УСК</a></div>
+					<div class="section-station__text-box">
+						<div class="section-station__social-box">
+							<p><strong>Соц. сети:</strong></p>
+							<ul class="section-station__social social-list">
+								<li class="social-list__el"><a class="social-list__link social-list__link--telegram" href="#" target="_blank" title="Telegram">
+										<svg class="social-list__icon">
+											<use xlink:href="#social-telegram"></use>
+										</svg></a></li>
+								<li class="social-list__el"><a class="social-list__link social-list__link--vk" href="#" target="_blank" title="Вконтакте">
+										<svg class="social-list__icon">
+											<use xlink:href="#social-vk"></use>
+										</svg></a></li>
+							</ul>
 						</div>
-						<div class="link-card__icon-box">
-							<picture><img class="link-card__icon img-theme-light" src="./images/about/icon1-theme-light.png" alt=""/><img class="link-card__icon img-theme-dark" src="./images/about/icon1-theme-dark.png" alt=""/></picture>
-						</div></a>
-					<!-- link card--><a class="section-about__card link-card section-about__card" href="#">
-						<div class="link-card__contend-box">
-							<div class="link-card__title-box">
-								<h2 class="link-card__title">Написать нам</h2>
-								<p class="link-card__text">Ответим на все вопросы</p>
-							</div><span class="button button--red button--icon-only link-card__btn">
-								<svg class="button__icon">
-									<use xlink:href="#arrow-right"></use>
-								</svg></span>
+						<p><strong>Официальный сайт:</strong>
+							<a class="link" href="https://guzgspk.kzdrav.gov.spb.ru/" target="_blank">https://guzgspk.kzdrav.gov.spb.ru/</a>
+						</p>
+						<p><strong>Адрес:</strong>
+							
+							г. Санкт-Петербург, Московский пр-т, д. 104Х
+						</p>
+						<p><strong>Телефон:</strong>
+							<a href="tel:8 812 635-68-85">8 812 635-68-85</a>,
+							<a href="tel:+7 905 225-55-50">+7 905 225-55-50</a>
+						</p>
+						<p><strong>Факс:</strong>
+							
+							388-12-55
+						</p>
+						<div class="section-station__gradien-box">
+							<p><strong>Время работы:</strong></p>
+							<p>Пн-пт 09:00-13:00 без записи согласно данным донорского светофора Каждая 1 суббота месяца с 09:00 до 13:00 по предварительной записи через Госуслуги</p>
 						</div>
-						<div class="link-card__icon-box">
-							<picture><img class="link-card__icon img-theme-light" src="./images/about/icon2-theme-light.png" alt=""/><img class="link-card__icon img-theme-dark" src="./images/about/icon2-theme-dark.png" alt=""/></picture>
-						</div></a>
-					<!-- link card--><a class="section-about__card link-card section-about__card" href="#">
-						<div class="link-card__contend-box">
-							<div class="link-card__title-box">
-								<h2 class="link-card__title">Виртуальный музей</h2>
-								<p class="link-card__text">Наша история</p>
-							</div><span class="button button--red button--icon-only link-card__btn">
-								<svg class="button__icon">
-									<use xlink:href="#arrow-right"></use>
-								</svg></span>
-						</div>
-						<div class="link-card__icon-box">
-							<picture><img class="link-card__icon img-theme-light" src="./images/about/icon3-theme-light.png" alt=""/><img class="link-card__icon img-theme-dark" src="./images/about/icon3-theme-dark.png" alt=""/></picture>
-						</div></a>
-					<!-- link card--><a class="section-about__card link-card section-about__card" href="#">
-						<div class="link-card__contend-box">
-							<div class="link-card__title-box">
-								<h2 class="link-card__title">О программе развития</h2>
-								<p class="link-card__text">Службы крови</p>
-							</div><span class="button button--red button--icon-only link-card__btn">
-								<svg class="button__icon">
-									<use xlink:href="#arrow-right"></use>
-								</svg></span>
-						</div>
-						<div class="link-card__icon-box">
-							<picture><img class="link-card__icon img-theme-light" src="./images/about/icon4-theme-light.png" alt=""/><img class="link-card__icon img-theme-dark" src="./images/about/icon4-theme-dark.png" alt=""/></picture>
-						</div></a>
+						<p><strong>Специалист по связям с общественностью:</strong><br/>Давыдов Станислав Вячеславович</p>
+						<p><strong>Телефон:</strong>
+							<a href="tel:8 812 635-68-85">8 812 635-68-85</a>
+						</p>
+						<p><strong>Специалист по взаимодействию со СМИ:</strong><br/>Давыдов Станислав Вячеславович</p>
+						<p><strong>Телефон:</strong>
+							<a href="tel:8 812 635-68-85">8 812 635-68-85</a>
+						</p>
+						<p><strong>E-mail:</strong>
+							<a href="mailto:gspk.pr@zdrav.spb.ru">gspk.pr@zdrav.spb.ru</a>
+						</p><a class="button button--red button--round-corner section-station__btn" href="mailto:gspk.pr@zdrav.spb.ru">Написать специалисту</a>
+					</div>
 				</div>
-			</section>
+				<div class="tabs section-station__tabs">
+					<div class="tabs__nav">
+						<button class="tabs__nav-btn tabs__nav-btn--active" type="button" data-content="content-1">Карта</button>
+						<button class="tabs__nav-btn" type="button" data-content="content-2">Донорский светофор</button>
+						<button class="tabs__nav-btn" type="button" data-content="content-3">Специалисты</button>
+						<button class="tabs__nav-btn" type="button" data-content="content-4">Медиа</button>
+						<button class="tabs__nav-btn" type="button" data-content="content-5">Рейтинг и отзывы</button>
+					</div>
+					<div class="tabs__content-box">
+						<div class="tabs__content tabs__content--active" id="content-1">
+							<div class="station-contacts">
+								<div class="station-contacts__map" id="map-station"></div>
+								<div class="station-contacts__text">
+									<div class="station-contacts__text-wrap section-station__text-box">
+										<p><strong>Официальный сайт:</strong>
+											<a class="link" href="https://guzgspk.kzdrav.gov.spb.ru/" target="_blank">https://guzgspk.kzdrav.gov.spb.ru/</a>
+										</p>
+										<p><strong>Адрес:</strong>
+											г. Санкт-Петербург, Московский пр-т, д. 104Х
+										</p>
+										<p><strong>Телефон:</strong>
+											<a href="tel:8 812 635-68-85">8 812 635-68-85</a>,
+											
+											<a href="tel:+7 905 225-55-50">+7 905 225-55-50</a>
+										</p>
+										<p><strong>Факс:</strong>
+											
+											388-12 - 55
+										</p>
+									</div>
+									<div class="station-contacts__bottom-box">
+										<div class="station-contacts__img-box"><img class="station-contacts__img" src="./images/station/img1.png" alt=""/></div><a class="button button--red button--round-corner station-contacts__btn" href="#">Записаться на донацию</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tabs__content" id="content-2"></div>
+						<div class="tabs__content" id="content-3">
+							<div class="station-slider">
+								<div class="section-slider station-slider__slider">
+									<div class="section-slider__slider-box">
+										<div class="swiper section-slider__slider section-slider__slider--cols-4">
+											<div class="swiper-wrapper">
+												<!-- Doc card-->
+												<div class="doc-card swiper-slide">
+													<div class="doc-card__img-box"><img class="doc-card__img" src="./images/station/photo.jpg" alt=""/></div>
+													<div class="doc-card__content-box">
+														<div class="doc-card__top"><span class="doc-card__tag tag">Менеджер по связям<br/>с общественностью</span></div>
+														<p class="doc-card__title">Засухина Татьяна Николаевна</p>
+													</div>
+												</div>
+												<!-- Doc card-->
+												<div class="doc-card swiper-slide">
+													<div class="doc-card__img-box"><img class="doc-card__img" src="./images/station/photo.jpg" alt=""/></div>
+													<div class="doc-card__content-box">
+														<div class="doc-card__top"><span class="doc-card__tag tag">Менеджер по связям<br/>с общественностью</span></div>
+														<p class="doc-card__title">Засухина Татьяна Николаевна</p>
+													</div>
+												</div>
+												<!-- Doc card-->
+												<div class="doc-card swiper-slide">
+													<div class="doc-card__img-box"><img class="doc-card__img" src="./images/station/photo.jpg" alt=""/></div>
+													<div class="doc-card__content-box">
+														<div class="doc-card__top"><span class="doc-card__tag tag">Менеджер по связям<br/>с общественностью</span></div>
+														<p class="doc-card__title">Засухина Татьяна Николаевна</p>
+													</div>
+												</div>
+												<!-- Doc card-->
+												<div class="doc-card swiper-slide">
+													<div class="doc-card__img-box"><img class="doc-card__img" src="./images/station/photo.jpg" alt=""/></div>
+													<div class="doc-card__content-box">
+														<div class="doc-card__top"><span class="doc-card__tag tag">Менеджер по связям<br/>с общественностью</span></div>
+														<p class="doc-card__title">Засухина Татьяна Николаевна</p>
+													</div>
+												</div>
+												<!-- Doc card-->
+												<div class="doc-card swiper-slide">
+													<div class="doc-card__img-box"><img class="doc-card__img" src="./images/station/photo.jpg" alt=""/></div>
+													<div class="doc-card__content-box">
+														<div class="doc-card__top"><span class="doc-card__tag tag">Менеджер по связям<br/>с общественностью</span></div>
+														<p class="doc-card__title">Засухина Татьяна Николаевна</p>
+													</div>
+												</div>
+												<!-- Doc card-->
+												<div class="doc-card swiper-slide">
+													<div class="doc-card__img-box"><img class="doc-card__img" src="./images/station/photo.jpg" alt=""/></div>
+													<div class="doc-card__content-box">
+														<div class="doc-card__top"><span class="doc-card__tag tag">Менеджер по связям<br/>с общественностью</span></div>
+														<p class="doc-card__title">Засухина Татьяна Николаевна</p>
+													</div>
+												</div>
+												<!-- Doc card-->
+												<div class="doc-card swiper-slide">
+													<div class="doc-card__img-box"><img class="doc-card__img" src="./images/station/photo.jpg" alt=""/></div>
+													<div class="doc-card__content-box">
+														<div class="doc-card__top"><span class="doc-card__tag tag">Менеджер по связям<br/>с общественностью</span></div>
+														<p class="doc-card__title">Засухина Татьяна Николаевна</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="section-slider__slider-nav station-slider__slider-nav">
+											<button class="section-slider__slider-btn section-slider__slider-btn--prev" type="button" aria-label="Назад">
+												<svg class="section-slider__slider-btn-icon">
+													<use xlink:href="#chevron-down"></use>
+												</svg>
+											</button>
+											<button class="section-slider__slider-btn section-slider__slider-btn--next" type="button" aria-label="Вперед">
+												<svg class="section-slider__slider-btn-icon">
+													<use xlink:href="#chevron-down"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="station-slider__bottom"><a class="button button--round-corner button--red" href="#">Записаться на донацию</a></div>
+							</div>
+						</div>
+						<div class="tabs__content" id="content-4"></div>
+						<div class="tabs__content" id="content-5">
+							<div class="station-rating">
+								<div class="station-rating__info-box">
+									<div class="station-rating__title-box">
+										<p class="station-rating__title">Рейтинг</p><span class="station-rating__counter">693 оценки</span>
+									</div>
+									<div class="station-rating__stars-box">
+										<p class="station-rating__stars-text">Открытость, доступность информации</p>
+										<div class="station-rating__start-row">
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="station-rating__stars-box">
+										<p class="station-rating__stars-text">Длительность пребывания</p>
+										<div class="station-rating__start-row">
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="station-rating__stars-box">
+										<p class="station-rating__stars-text">Комфортность пребывания</p>
+										<div class="station-rating__start-row">
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="station-rating__stars-box">
+										<p class="station-rating__stars-text">Доброжелательность, вежливость</p>
+										<div class="station-rating__start-row">
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+											<svg class="station-rating__star">
+												<use xlink:href="#star"></use>
+											</svg>
+										</div>
+									</div><a class="button button--red button--round-corner station-rating__btn" href="#">Оставить отзыв</a>
+								</div>
+								<div class="station-rating__review-box">
+									<div class="station-rating__review-title-box">
+										<p class="station-rating__title">Отзывы</p>
+									</div>
+									<div class="station-rating__review">
+										<div class="station-rating__review-top">
+											<div class="station-rating__review-stars-box"><span class="station-rating__review-stars-text">Оценка:</span>
+												<div class="station-rating__start-row">
+													<svg class="station-rating__star">
+														<use xlink:href="#star"></use>
+													</svg>
+													<svg class="station-rating__star">
+														<use xlink:href="#star"></use>
+													</svg>
+													<svg class="station-rating__star">
+														<use xlink:href="#star"></use>
+													</svg>
+													<svg class="station-rating__star">
+														<use xlink:href="#star"></use>
+													</svg>
+													<svg class="station-rating__star">
+														<use xlink:href="#star"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="station-rating__review-text">
+											<p>Последние 2 раза была донором в данном учреждение, даже несмотря на то, что сидишь в очереди 3-5 часов, сегодня 15.11.2025 приехала снова, но, к моему глубокому разочарованию- меня развернули назад, ссылаясь на то, что мне ни звонили и не приглашали на донацию, и тот факт, что я накануне (как и все в такой же ситуации как я увидели рабочую субботу с графиком работы с 8:30 -12:00) давились сухими печеньями и кашами без масла, это никого не смутило, еще ранний подъем в субботу, чтобы приехать на безвозмездное донорство тоже остался мимо внимания! Как я должна была понять, что вы сегодня не принимаете? Никакой информации о правилах приема я ни на госуслугах ни в приложении, НИГДЕ я не нашла! Я очень расстроена за себя, за потраченное время, за то, что ради того, чтобы прокатиться в ужасную погоду я встала с субботу в 7 утра в свой выходной! Не приду больше в данное учреждение!Вы меня очень расстроили!!!</p>
+										</div>
+									</div>
+									<div class="station-rating__review-nav pagination"><a class="pagination__btn pagination__btn--prev" href="#" title="Назад">
+											<svg class="pagination__btn-icon">
+												<use xlink:href="#chevron-down"></use>
+											</svg></a>
+										<ul class="pagination__list">
+											<li class="pagination__el"><span class="pagination__link pagination__link--active">1</span></li>
+											<li class="pagination__el"><a class="pagination__link" href="#" title="Страница 2">2</a></li>
+											<li class="pagination__el"><a class="pagination__link" href="#" title="Страница 3">3</a></li>
+											<li class="pagination__el"><a class="pagination__link" href="#" title="Страница 4">4</a></li>
+											<li class="pagination__el"><span class="pagination__link pagination__link--dots">...</span></li>
+											<li class="pagination__el"><a class="pagination__link" href="#" title="Страница 12">12</a></li>
+										</ul><a class="pagination__btn pagination__btn--next" href="#" title="Вперед">
+											<svg class="pagination__btn-icon">
+												<use xlink:href="#chevron-down"></use>
+											</svg></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<!-- Section Slider-->
-			<section class="section section-slider container">
-				<div class="section__header">
-					<h2 class="section__title h2">Галерея</h2><a class="button button--red button--round-corner section__header-btn" href="#">Показать все</a>
-				</div>
+			<div class="section-slider container">
 				<div class="section-slider__slider-box">
-					<div class="swiper section-slider__slider section-slider__slider--cols-2">
+					<div class="swiper section-slider__slider">
 						<div class="swiper-wrapper">
 							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
 								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
@@ -649,115 +895,7 @@
 						</button>
 					</div>
 				</div>
-			</section>
-			<!-- Section Slider-->
-			<section class="section section-slider container">
-				<div class="section__header">
-					<h2 class="section__title h2">Новости</h2><a class="button button--red button--round-corner section__header-btn" href="#">Все новости</a>
-				</div>
-				<div class="section-slider__slider-box">
-					<div class="swiper section-slider__slider section-slider__slider--cols-3">
-						<div class="swiper-wrapper">
-							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
-								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
-								<div class="news-card__content-box">
-									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
-										<time class="news-card__date">29 апреля 2025 г.</time>
-									</div>
-									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
-									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
-											<svg class="button__icon">
-												<use xlink:href="#arrow-right"></use>
-											</svg></span></div>
-								</div></a>
-							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
-								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
-								<div class="news-card__content-box">
-									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
-										<time class="news-card__date">29 апреля 2025 г.</time>
-									</div>
-									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
-									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
-											<svg class="button__icon">
-												<use xlink:href="#arrow-right"></use>
-											</svg></span></div>
-								</div></a>
-							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
-								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
-								<div class="news-card__content-box">
-									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
-										<time class="news-card__date">29 апреля 2025 г.</time>
-									</div>
-									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
-									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
-											<svg class="button__icon">
-												<use xlink:href="#arrow-right"></use>
-											</svg></span></div>
-								</div></a>
-							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
-								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
-								<div class="news-card__content-box">
-									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
-										<time class="news-card__date">29 апреля 2025 г.</time>
-									</div>
-									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
-									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
-											<svg class="button__icon">
-												<use xlink:href="#arrow-right"></use>
-											</svg></span></div>
-								</div></a>
-							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
-								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
-								<div class="news-card__content-box">
-									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
-										<time class="news-card__date">29 апреля 2025 г.</time>
-									</div>
-									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
-									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
-											<svg class="button__icon">
-												<use xlink:href="#arrow-right"></use>
-											</svg></span></div>
-								</div></a>
-							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
-								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
-								<div class="news-card__content-box">
-									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
-										<time class="news-card__date">29 апреля 2025 г.</time>
-									</div>
-									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
-									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
-											<svg class="button__icon">
-												<use xlink:href="#arrow-right"></use>
-											</svg></span></div>
-								</div></a>
-							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
-								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
-								<div class="news-card__content-box">
-									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
-										<time class="news-card__date">29 апреля 2025 г.</time>
-									</div>
-									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
-									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
-											<svg class="button__icon">
-												<use xlink:href="#arrow-right"></use>
-											</svg></span></div>
-								</div></a>
-						</div>
-					</div>
-					<div class="section-slider__slider-nav">
-						<button class="section-slider__slider-btn section-slider__slider-btn--prev" type="button" aria-label="Назад">
-							<svg class="section-slider__slider-btn-icon">
-								<use xlink:href="#chevron-down"></use>
-							</svg>
-						</button>
-						<button class="section-slider__slider-btn section-slider__slider-btn--next" type="button" aria-label="Вперед">
-							<svg class="section-slider__slider-btn-icon">
-								<use xlink:href="#chevron-down"></use>
-							</svg>
-						</button>
-					</div>
-				</div>
-			</section>
+			</div>
 		</main>
 		<!-- Footer-->
 		<footer class="footer">
@@ -930,7 +1068,7 @@
 			</div>
 		</div>
 		<script src="./lib/swiper/swiper-bundle.min.js"></script>
-		<script src="./js/main.js?v=1764586431939"></script><svg width="0" height="0" class="hidden">
+		<script src="./js/main.js?v=1764586435304"></script><svg width="0" height="0" class="hidden">
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="bold-plus">
         <g clip-path="url(#clip0_339_4655)">
             <path d="M5.00033 12.5C6.17884 12.5 6.76809 12.5 7.13421 12.8661C7.50033 13.2322 7.50033 13.8215 7.50033 15V15.8333C7.50033 17.0118 7.50033 17.6011 7.86644 17.9672C8.23256 18.3333 8.82181 18.3333 10.0003 18.3333C11.1788 18.3333 11.7681 18.3333 12.1342 17.9672C12.5003 17.6011 12.5003 17.0118 12.5003 15.8333V15C12.5003 13.8215 12.5003 13.2322 12.8664 12.8661C13.2326 12.5 13.8218 12.5 15.0003 12.5H15.8337C17.0122 12.5 17.6014 12.5 17.9675 12.1339C18.3337 11.7678 18.3337 11.1785 18.3337 10C18.3337 8.82149 18.3337 8.23223 17.9675 7.86611C17.6014 7.5 17.0122 7.5 15.8337 7.5H15.0003C13.8218 7.5 13.2326 7.5 12.8664 7.13388C12.5003 6.76776 12.5003 6.17851 12.5003 5V4.16666C12.5003 2.98815 12.5003 2.3989 12.1342 2.03278C11.7681 1.66666 11.1788 1.66666 10.0003 1.66666C8.82181 1.66666 8.23256 1.66666 7.86644 2.03278C7.50033 2.3989 7.50033 2.98815 7.50033 4.16666V5C7.50033 6.17851 7.50033 6.76776 7.13421 7.13388C6.76809 7.5 6.17884 7.5 5.00033 7.5H4.16699C2.98848 7.5 2.39923 7.5 2.03311 7.86611C1.66699 8.23223 1.66699 8.82149 1.66699 10C1.66699 11.1785 1.66699 11.7678 2.03311 12.1339C2.39923 12.5 2.98848 12.5 4.16699 12.5H5.00033Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>

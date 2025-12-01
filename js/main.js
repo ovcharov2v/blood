@@ -158,6 +158,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/components/map.js":
+/*!**********************************!*\
+  !*** ./src/js/components/map.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  ymaps.ready(init);
+  function init() {
+    var mapElement = document.querySelector("#map-station");
+    if (!mapElement) return;
+    var map = new ymaps.Map(mapElement, {
+      center: [59.895348, 30.322300],
+      zoom: 16,
+      controls: []
+    });
+    var iconPath = "/images/common/map-marker.png";
+    var placemark = new ymaps.Placemark([59.895348, 30.322300], {
+      balloonContent: "Санкт-Петербургская городская станция переливания крови",
+      hintContent: "Городская станция переливания крови"
+    }, {
+      iconLayout: "default#image",
+      iconImageHref: iconPath,
+      iconImageSize: [40, 40],
+      // Размер иконки (подберите под ваш SVG)
+      iconImageOffset: [-20, -40] // Центрирование по точке (x, y)
+    });
+    map.geoObjects.add(placemark);
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/components/password-toggle.js":
 /*!**********************************************!*\
   !*** ./src/js/components/password-toggle.js ***!
@@ -233,7 +267,12 @@ document.addEventListener('DOMContentLoaded', function () {
       var box = slider.closest('.section-slider__slider-box');
       var prevBtn = box.querySelector('.section-slider__slider-btn--prev');
       var nextBtn = box.querySelector('.section-slider__slider-btn--next');
-      var slidesInitial = slider.classList.contains('section-slider__slider--cols-2') ? 2 : 3;
+      var slidesInitial = 3;
+      if (slider.classList.contains('section-slider__slider--cols-2')) {
+        slidesInitial = 2;
+      } else if (slider.classList.contains('section-slider__slider--cols-4')) {
+        slidesInitial = 4;
+      }
       new Swiper(slider, {
         slidesPerView: 1,
         spaceBetween: 11,
@@ -392,6 +431,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_section_donor_code__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_section_donor_code__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/map */ "./src/js/components/map.js");
+/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_map__WEBPACK_IMPORTED_MODULE_8__);
+
 
 
 
