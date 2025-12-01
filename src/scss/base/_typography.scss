@@ -42,3 +42,12 @@ input, button, textarea {
   color: $color-primary;
 }
 
+.link {
+  color: $color-primary;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+

@@ -1,0 +1,60 @@
+.doc-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__img-box {
+    width: 100%;
+    aspect-ratio: .75;
+    border-radius: 28px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content-box {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top {
+    margin-bottom: 10px;
+  }
+
+  &__tag {
+    text-align: left;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 600;
+  }
+}
+
+
+// theme
+.theme-light {
+  .doc-card {
+    &__img-box {
+      border: 1px solid #EBEBEB;
+    }
+  }
+}
+
+.theme-dark {
+  .doc-card {
+    background-color: #26262B;
+
+    &__img-box {
+      border: 1px solid #4A5560;
+    }
+  }
+}

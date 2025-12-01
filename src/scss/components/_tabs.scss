@@ -2,8 +2,16 @@
   &__nav {
     display: inline-flex;
     background-color: #26262B;
-    border-radius: 8px;
-    overflow: hidden;
+    overflow-y: auto;
+
+    .tabs--full-width & {
+      display: flex;
+      width: 100%;
+    }
+
+    .tabs--with-border & {
+      background-color: $color-bg !important;
+    }
   }
 
   &__nav-btn {
@@ -15,12 +23,32 @@
     color: $color-text;
     transition: background-color $transition-default;
 
+    &:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+
+    &:last-child {
+      border-radius: 0 8px 8px 0;
+    }
+
     &:not(.tabs__nav-btn--active):hover {
-      background-color: color-mix(in srgb, #{$color-primary} 15%, transparent);;
+      background-color: color-mix(in srgb, #{$color-primary} 15%, transparent);
     }
 
     &--active {
       background-color: $color-primary;
+    }
+
+    .tabs--full-width & {
+      flex-grow: 1;
+    }
+
+    .tabs--with-border & {
+      border: 1px solid color-mix(in srgb, #{$color-text} 10%, transparent);
+
+      &:not(:last-child) {
+        border-right-width: 0;
+      }
     }
   }
 
@@ -55,6 +83,7 @@
     &__nav {
       background-color: #EDEEF1;
     }
+
     &__nav-btn {
       &--active {
         color: #fff;

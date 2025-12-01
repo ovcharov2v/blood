@@ -1,0 +1,21 @@
+.station-slider {
+
+  &__slider {
+    margin-bottom: 20px !important;
+    padding: 0 !important;
+  }
+
+  &__slider-nav {
+    top: 38% !important;
+    transform: none !important;
+    &.section-slider__slider-nav {
+      left: 8px;
+      right: 8px;}
+    .section-slider__slider-btn {
+      transform: none;
+    }
+  }
+
+  &__bottom {
+  }
+}

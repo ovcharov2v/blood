@@ -1,0 +1,321 @@
+extends pug/base
+
+prepend styles
+	link(rel="stylesheet" href=`./lib/swiper/swiper-bundle.css`)
+	script(src="https://api-maps.yandex.ru/2.1/?apikey=7d5e0e61-1da5-4f66-b0b1-ebb11b324bfe&lang=ru_RU")
+prepend scripts
+	script(src=`./lib/swiper/swiper-bundle.min.js`)
+
+block content
+	+breadcrumb(["Главная", "Учреждение службы крови"], "Санкт-Петербургская городская станция переливания крови")
+
+	// Section station
+	.section-station.container
+		h1.section-station__title.h1 Санкт-Петербургская городская станция переливания крови
+		.section-station__content-box
+			.section-station__img-box
+				img.section-station__img(src="./images/station/img.jpg", alt="")
+				a.button.button--round-corner.button--outline-red(href="#") Вход для сотрудников УСК
+			.section-station__text-box
+				.section-station__social-box
+					p
+						strong Соц. сети:
+					ul.section-station__social.social-list
+						li.social-list__el
+							a.social-list__link.social-list__link--telegram(href="#", target="_blank", title="Telegram")
+								+svg("social-telegram").social-list__icon
+						li.social-list__el
+							a.social-list__link.social-list__link--vk(href="#", target="_blank", title="Вконтакте")
+								+svg("social-vk").social-list__icon
+				p
+					strong Официальный сайт:
+					|
+					|
+					a.link(href="https://guzgspk.kzdrav.gov.spb.ru/", target="_blank") https://guzgspk.kzdrav.gov.spb.ru/
+				p
+					strong Адрес:
+					|
+					|
+					|г. Санкт-Петербург, Московский пр-т, д. 104Х
+				p
+					strong Телефон:
+					|
+					|
+					a(href="tel:8 812 635-68-85") 8 812 635-68-85
+					|,
+					|
+					a(href="tel:+7 905 225-55-50") +7 905 225-55-50
+				p
+					strong Факс:
+					|
+					|
+					|388-12-55
+
+				.section-station__gradien-box
+					p
+						strong Время работы:
+					p Пн-пт 09:00-13:00 без записи согласно данным донорского светофора Каждая 1 суббота месяца с 09:00 до 13:00 по предварительной записи через Госуслуги
+
+				p
+					strong Специалист по связям с общественностью:
+					br
+					|Давыдов Станислав Вячеславович
+
+				p
+					strong Телефон:
+					|
+					|
+					a(href="tel:8 812 635-68-85") 8 812 635-68-85
+
+				p
+					strong Специалист по взаимодействию со СМИ:
+					br
+					|Давыдов Станислав Вячеславович
+
+				p
+					strong Телефон:
+					|
+					|
+					a(href="tel:8 812 635-68-85") 8 812 635-68-85
+
+				p
+					strong E-mail:
+					|
+					|
+					a(href="mailto:gspk.pr@zdrav.spb.ru") gspk.pr@zdrav.spb.ru
+
+				a.button.button--red.button--round-corner.section-station__btn(href="mailto:gspk.pr@zdrav.spb.ru") Написать специалисту
+
+		.tabs.tabs--with-border.tabs--full-width.section-station__tabs
+			.tabs__nav
+				button.tabs__nav-btn.tabs__nav-btn--active(type="button", data-content="content-1") Карта
+				button.tabs__nav-btn(type="button", data-content="content-2") Донорский светофор
+				button.tabs__nav-btn(type="button", data-content="content-3") Специалисты
+				button.tabs__nav-btn(type="button", data-content="content-4") Медиа
+				button.tabs__nav-btn(type="button", data-content="content-5") Рейтинг и отзывы
+			.tabs__content-box
+				// Tabs content
+				#content-1.tabs__content.tabs__content--active
+					.station-contacts
+						#map-station.station-contacts__map
+						.station-contacts__text
+							.station-contacts__text-wrap.section-station__text-box
+								p
+									strong Официальный сайт:
+									|
+									|
+									a.link(href="https://guzgspk.kzdrav.gov.spb.ru/", target="_blank") https://guzgspk.kzdrav.gov.spb.ru/
+								p
+									strong Адрес:
+									|
+									|г. Санкт-Петербург, Московский пр-т, д. 104Х
+								p
+									strong Телефон:
+									|
+									|
+									a(href="tel:8 812 635-68-85") 8 812 635-68-85
+									|,
+									|
+									|
+									a(href="tel:+7 905 225-55-50") +7 905 225-55-50
+								p
+									strong Факс:
+									|
+									|
+									|388-12 - 55
+							.station-contacts__bottom-box
+								.station-contacts__img-box
+									img.station-contacts__img(src="./images/station/img1.png", alt="")
+								a.button.button--red.button--round-corner.station-contacts__btn(href="#") Записаться на донацию
+				// Tabs content
+				#content-2.tabs__content
+					.station-dashboard
+						.station-dashboard__data
+							.station-dashboard__data-col
+								span.station-dashboard__data-group 0 (I)
+								.station-dashboard__data-values
+									span.station-dashboard__data-value.station-dashboard__data-value--grey Rh+
+									span.station-dashboard__data-value.station-dashboard__data-value--red Rh-
+							.station-dashboard__data-col
+								span.station-dashboard__data-group A (II)
+								.station-dashboard__data-values
+									span.station-dashboard__data-value.station-dashboard__data-value--grey Rh+
+									span.station-dashboard__data-value.station-dashboard__data-value--green Rh-
+							.station-dashboard__data-col
+								span.station-dashboard__data-group B (III)
+								.station-dashboard__data-values
+									span.station-dashboard__data-value.station-dashboard__data-value--white Rh+
+									span.station-dashboard__data-value.station-dashboard__data-value--yellow Rh-
+							.station-dashboard__data-col
+								span.station-dashboard__data-group AB (IV)
+								.station-dashboard__data-values
+									span.station-dashboard__data-value.station-dashboard__data-value--grey Rh+
+									span.station-dashboard__data-value.station-dashboard__data-value--grey Rh-
+						.station-dashboard__text
+							.station-dashboard__img-box
+								img.station-dashboard__img(src="./images/station/img2.png", alt="")
+							.station-dashboard__desc
+								.station-dashboard__desc-row
+									.station-dashboard__desc-marker.station-dashboard__desc-marker--green
+									p.station-dashboard__desc-text - означает, что в учреждении
+										|
+										|
+										strong имеется достаточный запас
+										|
+										|
+										|крови данной группы и резус-принадлежности и с визитом в Службу крови можно повременить.
+								.station-dashboard__desc-row
+									.station-dashboard__desc-marker.station-dashboard__desc-marker--yellow
+									p.station-dashboard__desc-text - означает, что в учреждении
+										|
+										|
+										strong присутствует потребность
+										|
+										|
+										|в крови данной группы и резус-принадлежности, рекомендуем запланировать визит для плановой донации.
+								.station-dashboard__desc-row
+									.station-dashboard__desc-marker.station-dashboard__desc-marker--red
+									p.station-dashboard__desc-text - означает, что в учреждении
+										|
+										|
+										strong сложилась повышенная потребность
+										|
+										|
+										|в крови данной группы и резус-принадлежности, рекомендуем запланировать визит для плановой донации.
+								.station-dashboard__desc-row
+									.station-dashboard__desc-marker.station-dashboard__desc-marker--white
+									p.station-dashboard__desc-text - учреждение
+										|
+										|
+										strong не имеет экстренных потребностей
+										|
+										|
+										|ввиду заготовки исключительно донорской плазмы
+								.station-dashboard__desc-row
+									.station-dashboard__desc-marker.station-dashboard__desc-marker--grey
+									p.station-dashboard__desc-text - донорский светофор
+										|
+										|
+										strong не обновлялся более 3-х недель.
+						a.button.button--red.button--round-corner.station-dashboard__btn(href="#") Записаться на донацию
+				// Tabs content
+				#content-3.tabs__content
+					.station-slider
+						.section-slider.station-slider__slider
+							.section-slider__slider-box
+								.swiper.section-slider__slider.section-slider__slider--cols-4
+									.swiper-wrapper
+										- let j = 0
+										while j < 7
+											+docCard().swiper-slide
+											- j++
+								.section-slider__slider-nav.station-slider__slider-nav
+									button.section-slider__slider-btn.section-slider__slider-btn--prev(type="button", aria-label="Назад")
+										+svg("chevron-down").section-slider__slider-btn-icon
+									button.section-slider__slider-btn.section-slider__slider-btn--next(type="button", aria-label="Вперед")
+										+svg("chevron-down").section-slider__slider-btn-icon
+						.station-slider__bottom
+							a.button.button--round-corner.button--red(href="#") Записаться на донацию
+				// Tabs content
+				#content-4.tabs__content
+					.station-media
+						.station-media__video-box
+							video.station-media__video(controls="controls", poster="./images/station/cover.jpg")
+								source(src="https://yadonor.ru/common/upload/megiagallery/file/7490568653402.mp4")
+						.station-media__content-box
+							p.station-media__title Служба крови
+								br
+								|Санкт-Петербурга
+							.station-media__bottom
+								.station-media__img-box
+									img.station-media__img(src="./images/station/img3.png", alt="")
+								a.button.button--red.button--round-corner.station-media__btn(href="#") Запистаься на донацию
+
+				// Tabs content
+				#content-5.tabs__content
+					.station-rating
+						.station-rating__info-box
+							.station-rating__title-box
+								p.station-rating__title Рейтинг
+								span.station-rating__counter 693 оценки
+							.station-rating__stars-box
+								p.station-rating__stars-text Открытость, доступность информации
+								.station-rating__start-row
+									+svg("star").station-rating__star
+									+svg("star").station-rating__star
+									+svg("star").station-rating__star
+									+svg("star").station-rating__star
+									+svg("star").station-rating__star
+							.station-rating__stars-box
+								p.station-rating__stars-text Длительность пребывания
+								.station-rating__start-row
+									+svg("star").station-rating__star
+									+svg("star").station-rating__star
+									+svg("star").station-rating__star
+									+svg("star").station-rating__star
+									+svg("star").station-rating__star
+							.station-rating__stars-box
+								p.station-rating__stars-text Комфортность пребывания
+								.station-rating__start-row
+									+svg("star").station-rating__star
+									+svg("star").station-rating__star
+									+svg("star").station-rating__star
+									+svg("star").station-rating__star
+							.station-rating__stars-box
+								p.station-rating__stars-text Доброжелательность, вежливость
+								.station-rating__start-row
+									+svg("star").station-rating__star
+									+svg("star").station-rating__star
+									+svg("star").station-rating__star
+									+svg("star").station-rating__star
+									+svg("star").station-rating__star
+							a.button.button--red.button--round-corner.station-rating__btn(href="#") Оставить отзыв
+						.station-rating__review-box
+							.station-rating__review-title-box
+								p.station-rating__title Отзывы
+							.station-rating__review
+								.station-rating__review-top
+									.station-rating__review-stars-box
+										span.station-rating__review-stars-text Оценка:
+										.station-rating__start-row
+											+svg("star").station-rating__star
+											+svg("star").station-rating__star
+											+svg("star").station-rating__star
+											+svg("star").station-rating__star
+											+svg("star").station-rating__star
+								.station-rating__review-text
+									p Последние 2 раза была донором в данном учреждение, даже несмотря на то, что сидишь в очереди 3-5 часов, сегодня 15.11.2025 приехала снова, но, к моему глубокому разочарованию- меня развернули назад, ссылаясь на то, что мне ни звонили и не приглашали на донацию, и тот факт, что я накануне (как и все в такой же ситуации как я увидели рабочую субботу с графиком работы с 8:30 -12:00) давились сухими печеньями и кашами без масла, это никого не смутило, еще ранний подъем в субботу, чтобы приехать на безвозмездное донорство тоже остался мимо внимания! Как я должна была понять, что вы сегодня не принимаете? Никакой информации о правилах приема я ни на госуслугах ни в приложении, НИГДЕ я не нашла! Я очень расстроена за себя, за потраченное время, за то, что ради того, чтобы прокатиться в ужасную погоду я встала с субботу в 7 утра в свой выходной! Не приду больше в данное учреждение!Вы меня очень расстроили!!!
+							.station-rating__review-nav.pagination
+								a.pagination__btn.pagination__btn--prev(href="#", title="Назад")
+									+svg("chevron-down").pagination__btn-icon
+								ul.pagination__list
+									li.pagination__el
+										span.pagination__link.pagination__link--active 1
+									li.pagination__el
+										a.pagination__link(href="#", title="Страница 2") 2
+									li.pagination__el
+										a.pagination__link(href="#", title="Страница 3") 3
+									li.pagination__el
+										a.pagination__link(href="#", title="Страница 4") 4
+									li.pagination__el
+										span.pagination__link.pagination__link--dots ...
+									li.pagination__el
+										a.pagination__link(href="#", title="Страница 12") 12
+								a.pagination__btn.pagination__btn--next(href="#", title="Вперед")
+									+svg("chevron-down").pagination__btn-icon
+
+
+	// Section Slider
+	.section-slider.container
+		.section-slider__slider-box
+			.swiper.section-slider__slider
+				.swiper-wrapper
+					- let i = 0
+					while i < 7
+						+newsCard().swiper-slide
+						- i++
+			.section-slider__slider-nav
+				button.section-slider__slider-btn.section-slider__slider-btn--prev(type="button", aria-label="Назад")
+					+svg("chevron-down").section-slider__slider-btn-icon
+				button.section-slider__slider-btn.section-slider__slider-btn--next(type="button", aria-label="Вперед")
+					+svg("chevron-down").section-slider__slider-btn-icon

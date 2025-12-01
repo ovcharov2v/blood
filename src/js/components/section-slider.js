@@ -6,7 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
       const prevBtn = box.querySelector('.section-slider__slider-btn--prev');
       const nextBtn = box.querySelector('.section-slider__slider-btn--next');
 
-      const slidesInitial = slider.classList.contains('section-slider__slider--cols-2')? 2 : 3;
+      let slidesInitial =  3;
+
+      if(slider.classList.contains('section-slider__slider--cols-2')) {
+        slidesInitial = 2;
+      }
+      else if(slider.classList.contains('section-slider__slider--cols-4')) {
+        slidesInitial = 4;
+      }
 
       new Swiper(slider, {
         slidesPerView: 1,
