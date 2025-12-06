@@ -1,0 +1,83 @@
+extends pug/base
+
+prepend styles
+	link(rel="stylesheet" href=`./lib/swiper/swiper-bundle.css`)
+prepend scripts
+	script(src=`./lib/swiper/swiper-bundle.min.js`)
+
+block content
+	+breadcrumb(["Главная"], "Как стать донором")
+	// Section HowTo
+	.section-howto.container
+		h1.section-howto__title.h1 Как стать донором
+		.section-howto__grid
+			// card
+			a.color-card.color-card--yellow.section-howto__card(href="#")
+				p.color-card__title Добровольное и безвозмездное донорство
+				img.color-card__img(src="./images/howto/img1.png", alt="")
+				span.button.button--icon-only.button--transparent-white.color-card__btn
+					+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--green.section-howto__card(href="#")
+				p.color-card__title Рекомендации до и после донации
+				.color-card__bottom-box
+					img.color-card__img(src="./images/howto/img2.png", alt="")
+					span.button.button--icon-only.button--transparent-white.color-card__btn
+						+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--violet.section-howto__card(href="#")
+				p.color-card__title Как стать донором
+				.color-card__bottom-box
+					img.color-card__img(src="./images/howto/img3.png", alt="")
+					span.button.button--icon-only.button--transparent-white.color-card__btn
+						+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--orange.section-howto__card(href="#")
+				p.color-card__title Личный кабинет
+				img.color-card__img(src="./images/howto/img4.png", alt="")
+				span.button.button--icon-only.button--transparent-white.color-card__btn
+					+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--yellow.section-howto__card(href="#")
+				p.color-card__title Противопоказания
+					br
+					|к донорству
+				.color-card__bottom-box
+					img.color-card__img(src="./images/howto/img5.png", alt="")
+					span.button.button--icon-only.button--transparent-white.color-card__btn
+						+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--dark-red.section-howto__card(href="#")
+				p.color-card__title Сдадим кровь вместе
+				.color-card__bottom-box
+					img.color-card__img(src="./images/howto/img6.png", alt="")
+					span.button.button--icon-only.button--transparent-white.color-card__btn
+						+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--green.section-howto__card(href="#")
+				p.color-card__title Безопасность донора
+				img.color-card__img(src="./images/howto/img7.png", alt="")
+				span.button.button--icon-only.button--transparent-white.color-card__btn
+					+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--violet.section-howto__card(href="#")
+				p.color-card__title Льготы и привелегии
+				.color-card__bottom-box
+					img.color-card__img(src="./images/howto/img8.png", alt="")
+					span.button.button--icon-only.button--transparent-white.color-card__btn
+						+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--red.section-howto__card(href="#")
+				p.color-card__title Здоровое питание донора
+				.color-card__bottom-box
+					img.color-card__img(src="./images/howto/img9.png", alt="")
+					span.button.button--icon-only.button--transparent-white.color-card__btn 
+						+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--dark-red.section-howto__card(href="#")
+				p.color-card__title Как стать почетным донором России
+				img.color-card__img(src="./images/howto/img10.png", alt="")
+				span.button.button--icon-only.button--transparent-white.color-card__btn
+					+svg("arrow-right").button__icon
+
+	+sectionNews(true)

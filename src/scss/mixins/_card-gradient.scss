@@ -1,0 +1,10 @@
+@function cardGradient($color, $corner: bottom) {
+  @return radial-gradient(
+				  circle at $corner right,
+				  $color,
+				  rgba($color, .6) 21%,
+				  rgba($color, .25) 43%,
+				  rgba($color, .1) 64%,
+				  transparent
+  )
+}

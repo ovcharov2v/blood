@@ -1,0 +1,88 @@
+.color-card {
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 26px 32px;
+  border-radius: 20px;
+  transition: box-shadow $transition-default, background-color $transition-default;
+  
+  &--red {
+	background-image: cardGradient(#E92C5B);
+  }
+  
+  &--dark-red {
+	background-image: cardGradient(#990003);
+  }
+  
+  &--violet {
+	background-image: cardGradient(#A2B2F9);
+  }
+  
+  &--yellow {
+	background-image: cardGradient(#FCB42F);
+  }
+  
+  &--orange {
+	background-image: cardGradient(#FC8F2F);
+  }
+  
+  &--green {
+	background-image: cardGradient(#8EDD11);
+  }
+  
+  &__title {
+	font-size: 28px;
+	line-height: 32px;
+	font-weight: 600;
+  }
+  
+  &__img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	margin-top: auto;
+	transition: transform $transition-default;
+	
+	.color-card:hover & {
+	  transform: scale(1.05);
+	}
+  }
+  
+  &__bottom-box {
+	padding-top: 24px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: auto;
+  }
+  
+  &__btn {
+	margin-left: auto;
+  }
+}
+
+// theme
+.theme-light {
+  .color-card {
+	background-color: #F3F4F6;
+	
+	&:hover {
+	  background-color: #fff;
+	  box-shadow: 0 2px 10px rgba(#000, .1);
+	}
+  }
+}
+
+.theme-dark {
+  .color-card {
+	background-color: #26262B;
+	
+	&:hover {
+	  background-color: lighten(#26262B, 10%);
+	  box-shadow: 0 2px 10px rgba(#fff, .1);
+	}
+  }
+}
