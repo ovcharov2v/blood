@@ -1,0 +1,42 @@
+extends pug/base
+
+prepend styles
+	link(rel="stylesheet" href=`./lib/swiper/swiper-bundle.css`)
+prepend scripts
+	script(src=`./lib/swiper/swiper-bundle.min.js`)
+
+block content
+	+breadcrumb(["Главная"], "Библиотека")
+	// Section Library
+	.section-library.container
+		h1.section-library__title.h1 Библиотека
+		.section-library__grid
+			// card
+			a.color-card.color-card--green.section-library__card(href="#")
+				p.color-card__title Информационные материалы
+				img.color-card__img(src="./images/library/img1.png", alt="")
+				span.button.button--icon-only.button--transparent-white.color-card__btn
+					+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--violet.section-library__card(href="#")
+				p.color-card__title Инфографика
+				.color-card__bottom-box
+					img.color-card__img(src="./images/library/img2.png", alt="")
+					span.button.button--icon-only.button--transparent-white.color-card__btn
+						+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--yellow.section-library__card(href="#")
+				p.color-card__title Видеоролики
+				.color-card__bottom-box
+					img.color-card__img(src="./images/library/img3.png", alt="")
+					span.button.button--icon-only.button--transparent-white.color-card__btn
+						+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--red.section-library__card(href="#")
+				p.color-card__title Личный кабинет
+				img.color-card__img(src="./images/library/img4.png", alt="")
+				span.button.button--icon-only.button--transparent-white.color-card__btn
+					+svg("arrow-right").button__icon
+
+
+	+sectionNews(true)
