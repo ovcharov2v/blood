@@ -34,20 +34,4 @@ block content
 				button.section-slider__slider-btn.section-slider__slider-btn--next(type="button", aria-label="Вперед")
 					+svg("chevron-down").section-slider__slider-btn-icon
 
-	// Section Slider
-	section.section.section-slider.container
-		.section__header
-			h2.section__title.h2 Новости
-			a.button.button--red.button--round-corner.section__header-btn(href="#") Все новости
-		.section-slider__slider-box
-			.swiper.section-slider__slider.section-slider__slider--cols-3
-				.swiper-wrapper
-					- let j = 0
-					while j < 7
-						+newsCard().swiper-slide
-						- j++
-			.section-slider__slider-nav
-				button.section-slider__slider-btn.section-slider__slider-btn--prev(type="button", aria-label="Назад")
-					+svg("chevron-down").section-slider__slider-btn-icon
-				button.section-slider__slider-btn.section-slider__slider-btn--next(type="button", aria-label="Вперед")
-					+svg("chevron-down").section-slider__slider-btn-icon
+	+sectionNews()

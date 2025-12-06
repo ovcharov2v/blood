@@ -61,17 +61,4 @@ block content
 					img(src="./images/article/share-ok.png", alt="")
 					img(src="./images/article/share-telegram.png", alt="")
 
-	// Section Slider
-	.section-slider.container
-		.section-slider__slider-box
-			.swiper.section-slider__slider
-				.swiper-wrapper
-					- let i = 0
-					while i < 7
-						+newsCard().swiper-slide
-						- i++
-			.section-slider__slider-nav
-				button.section-slider__slider-btn.section-slider__slider-btn--prev(type="button", aria-label="Назад")
-					+svg("chevron-down").section-slider__slider-btn-icon
-				button.section-slider__slider-btn.section-slider__slider-btn--next(type="button", aria-label="Вперед")
-					+svg("chevron-down").section-slider__slider-btn-icon
+	+sectionNews(false)
