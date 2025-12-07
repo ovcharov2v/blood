@@ -8,7 +8,8 @@
 		<title>Служба Крови</title>
 		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
-		<link rel="stylesheet" href="./css/main.css?v=1765084496392"/>
+		<link rel="stylesheet" href="./lib/swiper/swiper-bundle.css"/>
+		<link rel="stylesheet" href="./css/main.css?v=1765084498540"/>
 	</head>
 	<body>
 		<!-- Header-->
@@ -480,11 +481,167 @@
 			</div>
 		</div>
 		<main class="main">
-			<!-- Section 404-->
-			<div class="section-404 container">
-				<h1 class="section-404__title">404</h1>
-				<p class="section-404__text">Похоже, что страница, которую вы ищите – не найдена.<br/>Попробуйте вернуться на главную.</p><a class="section-404__link button button--red button--round-corner" href="./main.html">На главную</a>
+			<!-- Breadcrumbs-->
+			<div class="container breadcrumb"><a class="breadcrumb__link" href="#" title="Главная">Главная</a><span class="breadcrumb__separator">/</span><span class="breadcrumb__current">Как стать донором</span>
 			</div>
+			<!-- Section HowTo-->
+			<div class="section-howto container">
+				<h1 class="section-howto__title h1">Как стать донором</h1>
+				<div class="section-howto__grid">
+					<!-- card--><a class="color-card color-card--yellow section-howto__card" href="#">
+						<p class="color-card__title">Добровольное и безвозмездное донорство</p><img class="color-card__img" src="./images/howto/img1.png" alt=""/><span class="button button--icon-only button--transparent-white color-card__btn">
+							<svg class="button__icon">
+								<use xlink:href="#arrow-right"></use>
+							</svg></span></a>
+					<!-- card--><a class="color-card color-card--green section-howto__card" href="#">
+						<p class="color-card__title">Рекомендации до и после донации</p>
+						<div class="color-card__bottom-box"><img class="color-card__img" src="./images/howto/img2.png" alt=""/><span class="button button--icon-only button--transparent-white color-card__btn">
+								<svg class="button__icon">
+									<use xlink:href="#arrow-right"></use>
+								</svg></span></div></a>
+					<!-- card--><a class="color-card color-card--violet section-howto__card" href="#">
+						<p class="color-card__title">Как стать донором</p>
+						<div class="color-card__bottom-box"><img class="color-card__img" src="./images/howto/img3.png" alt=""/><span class="button button--icon-only button--transparent-white color-card__btn">
+								<svg class="button__icon">
+									<use xlink:href="#arrow-right"></use>
+								</svg></span></div></a>
+					<!-- card--><a class="color-card color-card--orange section-howto__card" href="#">
+						<p class="color-card__title">Личный кабинет</p><img class="color-card__img" src="./images/howto/img4.png" alt=""/><span class="button button--icon-only button--transparent-white color-card__btn">
+							<svg class="button__icon">
+								<use xlink:href="#arrow-right"></use>
+							</svg></span></a>
+					<!-- card--><a class="color-card color-card--yellow section-howto__card" href="#">
+						<p class="color-card__title">Противопоказания<br/>к донорству</p>
+						<div class="color-card__bottom-box"><img class="color-card__img" src="./images/howto/img5.png" alt=""/><span class="button button--icon-only button--transparent-white color-card__btn">
+								<svg class="button__icon">
+									<use xlink:href="#arrow-right"></use>
+								</svg></span></div></a>
+					<!-- card--><a class="color-card color-card--dark-red section-howto__card" href="#">
+						<p class="color-card__title">Сдадим кровь вместе</p>
+						<div class="color-card__bottom-box"><img class="color-card__img" src="./images/howto/img6.png" alt=""/><span class="button button--icon-only button--transparent-white color-card__btn">
+								<svg class="button__icon">
+									<use xlink:href="#arrow-right"></use>
+								</svg></span></div></a>
+					<!-- card--><a class="color-card color-card--green section-howto__card" href="#">
+						<p class="color-card__title">Безопасность донора</p><img class="color-card__img" src="./images/howto/img7.png" alt=""/><span class="button button--icon-only button--transparent-white color-card__btn">
+							<svg class="button__icon">
+								<use xlink:href="#arrow-right"></use>
+							</svg></span></a>
+					<!-- card--><a class="color-card color-card--violet section-howto__card" href="#">
+						<p class="color-card__title">Льготы и привелегии</p>
+						<div class="color-card__bottom-box"><img class="color-card__img" src="./images/howto/img8.png" alt=""/><span class="button button--icon-only button--transparent-white color-card__btn">
+								<svg class="button__icon">
+									<use xlink:href="#arrow-right"></use>
+								</svg></span></div></a>
+					<!-- card--><a class="color-card color-card--red section-howto__card" href="#">
+						<p class="color-card__title">Здоровое питание донора</p>
+						<div class="color-card__bottom-box"><img class="color-card__img" src="./images/howto/img9.png" alt=""/><span class="button button--icon-only button--transparent-white color-card__btn"> 
+								<svg class="button__icon">
+									<use xlink:href="#arrow-right"></use>
+								</svg></span></div></a>
+					<!-- card--><a class="color-card color-card--dark-red section-howto__card" href="#">
+						<p class="color-card__title">Как стать почетным донором России</p><img class="color-card__img" src="./images/howto/img10.png" alt=""/><span class="button button--icon-only button--transparent-white color-card__btn">
+							<svg class="button__icon">
+								<use xlink:href="#arrow-right"></use>
+							</svg></span></a>
+				</div>
+			</div>
+			<!-- Section News-->
+			<section class="section section-slider container">
+				<div class="section__header">
+					<h2 class="section__title h2">Новости</h2><a class="button button--red button--round-corner section__header-btn" href="#">Все новости</a>
+				</div>
+				<div class="section-slider__slider-box">
+					<div class="swiper section-slider__slider section-slider__slider--cols-3">
+						<div class="swiper-wrapper">
+							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
+								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+								<div class="news-card__content-box">
+									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+										<time class="news-card__date">29 апреля 2025 г.</time>
+									</div>
+									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+											<svg class="button__icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg></span></div>
+								</div></a>
+							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
+								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+								<div class="news-card__content-box">
+									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+										<time class="news-card__date">29 апреля 2025 г.</time>
+									</div>
+									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+											<svg class="button__icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg></span></div>
+								</div></a>
+							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
+								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+								<div class="news-card__content-box">
+									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+										<time class="news-card__date">29 апреля 2025 г.</time>
+									</div>
+									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+											<svg class="button__icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg></span></div>
+								</div></a>
+							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
+								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+								<div class="news-card__content-box">
+									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+										<time class="news-card__date">29 апреля 2025 г.</time>
+									</div>
+									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+											<svg class="button__icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg></span></div>
+								</div></a>
+							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
+								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+								<div class="news-card__content-box">
+									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+										<time class="news-card__date">29 апреля 2025 г.</time>
+									</div>
+									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+											<svg class="button__icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg></span></div>
+								</div></a>
+							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
+								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
+								<div class="news-card__content-box">
+									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
+										<time class="news-card__date">29 апреля 2025 г.</time>
+									</div>
+									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
+									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
+											<svg class="button__icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg></span></div>
+								</div></a>
+						</div>
+					</div>
+					<div class="section-slider__slider-nav">
+						<button class="section-slider__slider-btn section-slider__slider-btn--prev" type="button" aria-label="Назад">
+							<svg class="section-slider__slider-btn-icon">
+								<use xlink:href="#chevron-down"></use>
+							</svg>
+						</button>
+						<button class="section-slider__slider-btn section-slider__slider-btn--next" type="button" aria-label="Вперед">
+							<svg class="section-slider__slider-btn-icon">
+								<use xlink:href="#chevron-down"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</section>
 		</main>
 		<!-- Footer-->
 		<footer class="footer">
@@ -656,7 +813,8 @@
 				<button class="button button--red button--round-corner city-search__submit-btn" type="button">Выбрать</button>
 			</div>
 		</div>
-		<script src="./js/main.js?v=1765084496405"></script><svg width="0" height="0" class="hidden">
+		<script src="./lib/swiper/swiper-bundle.min.js"></script>
+		<script src="./js/main.js?v=1765084498559"></script><svg width="0" height="0" class="hidden">
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="lk-blood">
         <path d="M12.3676 17.4702C11.474 18.2421 10.3685 18.7481 9.18406 18.9275C7.99964 19.1068 6.78679 18.9518 5.69146 18.4811C4.59614 18.0104 3.66499 17.244 3.01009 16.2742C2.35518 15.3044 2.00442 14.1725 2 13.0147C2 9.00983 4.07352 8.0086 8.22055 1C10.377 4.63446 11.9632 6.65694 13 8.30897" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
         <path d="M15 6C12.33 10.67 11 11.33 11 14C11 15.0609 11.4214 16.0783 12.1716 16.8284C12.9217 17.5786 13.9391 18 15 18C16.0609 18 17.0783 17.5786 17.8284 16.8284C18.5786 16.0783 19 15.0609 19 14C19 11.33 17.67 10.67 15 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
