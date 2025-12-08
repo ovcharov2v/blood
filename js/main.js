@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function () {
     slides.forEach(function (slide, index) {
       slide.addEventListener('click', function () {
         if (swiper) {
-          swiper.slideTo(index);
+          //swiper.slideTo(index);
         }
         slides.forEach(function (el) {
           if (el !== slide) {
