@@ -3477,7 +3477,7 @@ a {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto 20px auto 20px auto;
-      grid-template-areas: "left left center-top center-top right right" "left left center-bottom center-bottom right right" "bottom-left bottom-left bottom-left bottom-right bottom-right bottom-right";
+      grid-template-areas: "left left center-top center-top right right" "left left center-bottom center-bottom right right" "bottom-left bottom-left bottom-left bottom-right bottom-right bottom-right";
   -ms-grid-columns: minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr);
   grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-gap: 20px;
@@ -4097,8 +4097,32 @@ a {
         margin: auto; } }
 
 .section-myth {
+  position: relative;
   padding-top: 30px;
   padding-bottom: 30px; }
+  .section-myth::before {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 1440px;
+    height: 100%;
+    background-size: 100% 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    content: "";
+    -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(15%, white), color-stop(85%, white), to(transparent));
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, white 15%, white 85%, transparent 100%);
+            mask-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(15%, white), color-stop(85%, white), to(transparent));
+            mask-image: linear-gradient(to right, transparent 0%, white 15%, white 85%, transparent 100%); }
+  @media (min-width: 1024px) {
+    .section-myth::before {
+      min-width: 1500px;
+      height: calc(100% + 148px); } }
   @media (max-width: 1023px) {
     .section-myth {
       position: relative;
@@ -4197,18 +4221,18 @@ a {
     border-radius: 22px;
     width: 100%;
     min-height: 100%;
-    max-height: 200%;
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
     visibility: hidden;
+    pointer-events: visible;
     opacity: 0;
     -webkit-transition: opacity 0.2s ease, visibility 0.3s ease;
     transition: opacity 0.2s ease, visibility 0.3s ease; }
     @media (min-width: 1024px) {
       .section-myth__card-hidden {
         min-height: unset;
-        max-height: unset;
+        pointer-events: all;
         height: calc(200% + 20px); }
         .section-myth__card:nth-child(1) .section-myth__card-hidden {
           top: 0; }
@@ -4271,5 +4295,11 @@ a {
   .theme-dark .section-myth__card-hidden .section-myth__card-num {
     background-color: var(--color-primary);
     color: #0C0C0C; }
+
+.theme-light .section-myth::before {
+  background-image: url("../images/main/hero-bg-theme-light.png"); }
+
+.theme-dark .section-myth::before {
+  background-image: url("../images/main/hero-bg-theme-dark.png"); }
 
 /*# sourceMappingURL=main.css.map */
