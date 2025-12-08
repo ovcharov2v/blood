@@ -4184,7 +4184,7 @@ a {
     overflow-y: auto; }
   .section-myth__card-hidden {
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4197,7 +4197,7 @@ a {
     border-radius: 22px;
     width: 100%;
     min-height: 100%;
-    max-height: 200%;
+    pointer-events: none;
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
@@ -4227,7 +4227,8 @@ a {
     @media (min-width: 1024px) {
       .section-myth__card:hover .section-myth__card-hidden {
         visibility: visible;
-        opacity: 1; } }
+        opacity: 1;
+        z-index: 1; } }
     @media (max-width: 1023px) {
       .section-myth__card--active .section-myth__card-hidden {
         visibility: visible;
