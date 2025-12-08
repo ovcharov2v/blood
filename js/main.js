@@ -265,7 +265,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var initSwiper = function initSwiper() {
     if (window.innerWidth < 1024 && !swiper) {
       swiper = new Swiper('.section-myth__slider', {
-        freeMode: true,
         slidesPerView: 1.3,
         spaceBetween: 12,
         on: {
@@ -302,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function () {
     slides.forEach(function (slide, index) {
       slide.addEventListener('click', function () {
         if (swiper) {
-          //swiper.slideTo(index);
+          swiper.slideTo(index);
         }
         slides.forEach(function (el) {
           if (el !== slide) {

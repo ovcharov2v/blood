@@ -4179,12 +4179,15 @@ a {
     font-size: 20px;
     line-height: 24px; }
   .section-myth__card-text-box {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     font-size: 18px;
     line-height: 21px;
     overflow-y: auto; }
   .section-myth__card-hidden {
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4196,8 +4199,7 @@ a {
     padding: 20px;
     border-radius: 22px;
     width: 100%;
-    min-height: 100%;
-    pointer-events: none;
+    height: 100%;
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
@@ -4207,8 +4209,6 @@ a {
     transition: opacity 0.2s ease, visibility 0.3s ease; }
     @media (min-width: 1024px) {
       .section-myth__card-hidden {
-        min-height: unset;
-        max-height: unset;
         height: calc(200% + 20px); }
         .section-myth__card:nth-child(1) .section-myth__card-hidden {
           top: 0; }
