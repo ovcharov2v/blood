@@ -265,6 +265,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var initSwiper = function initSwiper() {
     if (window.innerWidth < 1024 && !swiper) {
       swiper = new Swiper('.section-myth__slider', {
+        freeMode: true,
         slidesPerView: 1.3,
         spaceBetween: 12,
         on: {
