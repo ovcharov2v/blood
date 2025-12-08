@@ -253,6 +253,69 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/components/section-myth.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/section-myth.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var swiper = null;
+  var initSwiper = function initSwiper() {
+    if (window.innerWidth < 1024 && !swiper) {
+      swiper = new Swiper('.section-myth__slider', {
+        slidesPerView: 1.3,
+        spaceBetween: 12,
+        on: {
+          transitionStart: function transitionStart() {
+            slides.forEach(function (el) {
+              el.classList.remove('section-myth__card--active');
+            });
+          }
+        }
+      });
+    }
+  };
+  var destroySwiper = function destroySwiper() {
+    if (swiper) {
+      swiper.destroy(true, true);
+      swiper = null;
+    }
+  };
+  var handleResize = function handleResize() {
+    if (window.innerWidth < 1024) {
+      initSwiper();
+    } else {
+      destroySwiper();
+    }
+  };
+
+  // Инициализация при загрузке
+  handleResize();
+
+  // Пересчёт при ресайзе
+  window.addEventListener('resize', handleResize);
+  var slides = document.querySelectorAll('.section-myth__card');
+  if (slides.length) {
+    slides.forEach(function (slide, index) {
+      slide.addEventListener('click', function () {
+        if (swiper) {
+          swiper.slideTo(index);
+        }
+        slides.forEach(function (el) {
+          if (el !== slide) {
+            el.classList.remove('section-myth__card--active');
+          }
+        });
+        slide.classList.toggle('section-myth__card--active');
+      });
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/components/section-slider.js":
 /*!*********************************************!*\
   !*** ./src/js/components/section-slider.js ***!
@@ -433,6 +496,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/map */ "./src/js/components/map.js");
 /* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_map__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _components_section_myth__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/section-myth */ "./src/js/components/section-myth.js");
+/* harmony import */ var _components_section_myth__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_section_myth__WEBPACK_IMPORTED_MODULE_9__);
+
 
 
 
