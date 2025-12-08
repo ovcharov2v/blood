@@ -1,6 +1,38 @@
 .section-myth {
+  position: relative;
   padding-top: 30px;
   padding-bottom: 30px;
+  
+  
+  
+  &::before {
+	position: absolute;
+	z-index: -1;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1440px;
+	height: 100%;
+	background-size: 100% 100%;
+	background-position: top center;
+	background-repeat: no-repeat;
+	pointer-events: none;
+	content: "";
+	mask-image: linear-gradient(
+					to right,
+					transparent 0%,
+					white 15%,
+					white 85%,
+					transparent 100%
+	);
+  }
+  
+  @include desktop {
+	&::before {
+	  min-width: 1500px;
+	  height: calc(100% + 148px);
+	}
+  }
   
   @media (max-width: 1023px) {
 	position: relative;
@@ -215,6 +247,23 @@
 		background-color: $color-primary;
 		color: #0C0C0C;
 	  }
+	}
+  }
+}
+
+// theme
+.theme-light {
+  .section-myth {
+	&::before {
+	  background-image: url("../images/main/hero-bg-theme-light.png");
+	}
+  }
+}
+
+.theme-dark {
+  .section-myth {
+	&::before {
+	  background-image: url("../images/main/hero-bg-theme-dark.png");
 	}
   }
 }
