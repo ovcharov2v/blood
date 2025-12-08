@@ -1,0 +1,220 @@
+.section-myth {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  
+  @media (max-width: 1023px) {
+	position: relative;
+	z-index: 5;
+  }
+  
+  &__title {
+	margin-bottom: 39px;
+  }
+  
+  &__slider {
+	overflow: visible;
+	
+	.swiper-wrapper {
+	  height: auto;
+	}
+  }
+  
+  &__grid {
+	@include desktop {
+	  display: grid;
+	  grid-template: 340px / repeat(4, minmax(0,1fr));
+	  grid-auto-rows: 340px;
+	  grid-gap: 20px 12px;
+	}
+  }
+  
+  &__card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	min-height: 340px;
+	
+	@include desktop {
+	  min-height: unset;
+	  transform: unset !important;
+	}
+	
+	&--wide {
+	  @include desktop {
+		grid-column: span 2;
+	  }
+	}
+  }
+  
+  &__card-visible {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	border-radius: 22px;
+	font-weight: 600;
+  }
+  
+  &__card-top {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 10px;
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 600;
+  }
+  
+  &__card-num {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	font-size: 20px;
+	line-height: 24px;
+  }
+  
+  &__card-text-box {
+	font-size: 18px;
+	line-height: 21px;
+	overflow-y: auto;
+  }
+  
+  &__card-hidden {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	border-radius: 22px;
+	width: 100%;
+	min-height: 100%;
+	max-height: 200%;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 500;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity $transition-default, visibility 0.3s ease;
+	
+	@include desktop {
+	  min-height: unset;
+	  max-height: unset;
+	  height: calc(200% + 20px);
+	  
+	  .section-myth__card:nth-child(1) & {
+		top: 0;
+	  }
+	  
+	  .section-myth__card:nth-child(2) & {
+		top: 0;
+	  }
+	  
+	  .section-myth__card:nth-child(3) & {
+		top: 0;
+	  }
+	  
+	  .section-myth__card:nth-child(4) & {
+		bottom: 0;
+	  }
+	  
+	  .section-myth__card:nth-child(5) & {
+		bottom: 0;
+	  }
+	  
+	  .section-myth__card:nth-child(6) & {
+		bottom: 0;
+	  }
+	  
+	  .section-myth__card:nth-child(7) & {
+		bottom: 0;
+	  }
+	}
+	
+	.section-myth__card:hover & {
+	  @include desktop {
+		visibility: visible;
+		opacity: 1;
+	  }
+	}
+	
+	.section-myth__card--active & {
+	  @media (max-width: 1023px) {
+		visibility: visible;
+		opacity: 1;
+		top: 0;
+		bottom: unset;
+	  }
+	}
+	
+	p:not(:last-child) {
+	  margin-bottom: 10px;
+	}
+	
+	ul {
+	  list-style-type: disc;
+	  list-style-position: inside;
+	}
+  }
+}
+
+// theme
+.theme-light {
+  .section-myth {
+	&__card-visible {
+	  background-image: radial-gradient(
+					  at top right,
+					  rgba(255, 255, 255, .5) 0%,
+					  transparent 100%
+	  ), linear-gradient(45deg, #F1633F, #EE2E22);
+	  color: #fff;
+	}
+	
+	&__card-num {
+	  color: $color-text;
+	  background-color: #fff;
+	}
+	
+	&__card-hidden {
+	  background-color: #fff;
+	  box-shadow: 0 0 0 4px #fff;
+	  
+	  .section-myth__card-num {
+		background-color: $color-primary;
+		color: #fff;
+	  }
+	}
+  }
+}
+
+.theme-dark {
+  .section-myth {
+	&__card-visible {
+	  background-image: radial-gradient(
+					  at top right,
+					  rgba(255, 255, 255, .5) 0%,
+					  transparent 100%
+	  ), linear-gradient(45deg, #3686A4, #007DAD);
+	  color: #fff;
+	}
+	
+	&__card-num {
+	  color: #0C0C0C;
+	  background-color: #fff;
+	}
+	
+	&__card-hidden {
+	  background-color: #26262B;
+	  box-shadow: 0 0 0 4px #26262B;
+	  
+	  .section-myth__card-num {
+		background-color: $color-primary;
+		color: #0C0C0C;
+	  }
+	}
+  }
+}
