@@ -4221,18 +4221,18 @@ a {
     border-radius: 22px;
     width: 100%;
     min-height: 100%;
+    max-height: 200%;
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
     visibility: hidden;
-    pointer-events: visible;
     opacity: 0;
     -webkit-transition: opacity 0.2s ease, visibility 0.3s ease;
     transition: opacity 0.2s ease, visibility 0.3s ease; }
     @media (min-width: 1024px) {
       .section-myth__card-hidden {
         min-height: unset;
-        pointer-events: all;
+        max-height: unset;
         height: calc(200% + 20px); }
         .section-myth__card:nth-child(1) .section-myth__card-hidden {
           top: 0; }
