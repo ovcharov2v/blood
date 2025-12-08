@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
       swiper = new Swiper('.section-myth__slider', {
         slidesPerView: 1.3,
         spaceBetween: 12,
+        slideToClickedSlide: true,
         on: {
           transitionStart: () => {
             slides.forEach((el) => {
@@ -41,11 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const slides = document.querySelectorAll('.section-myth__card')
 
   if(slides.length) {
-    slides.forEach((slide, index) => {
+    slides.forEach((slide) => {
       slide.addEventListener('click', () => {
-        if (swiper) {
-          swiper.slideTo(index);
-        }
         slides.forEach((el) => {
           if(el!==slide) {
             el.classList.remove('section-myth__card--active')
