@@ -1,3 +1,6 @@
+.myth-page-box {
+  overflow: hidden;
+}
 .section-myth {
   position: relative;
   padding-top: 30px;
@@ -113,6 +116,7 @@
 	font-size: 18px;
 	line-height: 21px;
 	overflow-y: auto;
+	touch-action: pan-y;
   }
   
   &__card-hidden {
@@ -213,7 +217,11 @@
 	
 	&__card-hidden {
 	  background-color: #fff;
-	  box-shadow: 0 0 0 4px #fff;
+	  box-shadow: 0 2px 8px rgba(#fff,.08);
+	  
+	  @include desktop {
+		box-shadow: 0 0 0 4px #fff;
+	  }
 	  
 	  .section-myth__card-num {
 		background-color: $color-primary;
@@ -241,7 +249,11 @@
 	
 	&__card-hidden {
 	  background-color: #26262B;
-	  box-shadow: 0 0 0 4px #26262B;
+	  box-shadow: 0 2px 8px rgba(#000,.08);
+	  
+	  @include desktop {
+		box-shadow: 0 0 0 4px #26262B;
+	  }
 	  
 	  .section-myth__card-num {
 		background-color: $color-primary;
