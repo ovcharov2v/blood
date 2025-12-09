@@ -22,4 +22,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 10);
     });
   });
+
+  // select
+  const selectList = document.querySelectorAll('.select[data-tabs]');
+  if(selectList.length) {
+    selectList.forEach((select) => {
+      const tabsId = select.dataset.tabs;
+      const tabs = document.getElementById(tabsId);
+      const selectItems = select.querySelectorAll('.select__list-item[data-content]');
+      if(selectItems.length) {
+        selectItems.forEach((item) => {
+          const tabBtn=tabs.querySelector(`.tabs__nav-btn[data-content=${item.dataset.content}]`);
+          if(tabBtn){
+            item.addEventListener('click', () => {
+              tabBtn.dispatchEvent(new Event('click', {}));
+            })
+          }
+        })
+      }
+  })}
 });

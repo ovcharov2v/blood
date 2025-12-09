@@ -5,6 +5,7 @@ append vars
   - var baseTheme = 'theme-dark'
 
 block content
+    +headerLk()
     .lk
         // navbar
         aside.lk__navbar
@@ -12,7 +13,10 @@ block content
                 picture
                     img.lk__logo.img-theme-light(src="./images/common/logo-theme-light.svg", alt="Служба Крови")
                     img.lk__logo.img-theme-dark(src="./images/common/logo-theme-dark.svg", alt="Служба Крови")
-            p.lk__navbar-title Личный кабинет
+            .lk__navbar-title
+                p Личный кабинет
+                button.button.button--round-corner.button--outline-gray.button--icon-only.button--md.lk__navbar-close(type="button", aria-label="Закрыть")
+                    +svg("close").button__icon
             .lk__navbar-panel-list
                 // panel
                 .lk__navbar-panel
@@ -61,6 +65,7 @@ block content
         section.lk__content
             // menu
             nav.lk__menu
+                p.lk__menu-title Навигация
                 ul.lk__menu-list
                     li.lk__menu-elem
                         a.lk__menu-link(href="#")
@@ -93,10 +98,23 @@ block content
 
             +breadcrumb(["Главная"], "Личный кабинет донора").lk__breadcrumbs
 
+            .lk__mobile-tabs
+                p.lk__mobile-tabs-title Навигация
+                .select(data-tabs="lk-tabs")
+                    .select__current-box
+                        input.select__input(type="hidden", value="Личные данные")
+                        p.select__current Личные данные
+                        +svg("chevron-down").select__drop-icon
+                    ul.select__list
+                        li.select__list-item.select__list-item--selected(data-content="content-1") Личные данные
+                        li.select__list-item(data-content="content-2") Привязка аккаунта
+                        li.select__list-item(data-content="content-3") Смена пароля
+                        li.select__list-item(data-content="content-4") Двухфакторная авторизация
+
             h1.lk__title Настройки профиля
 
-            .tabs.lk__tabs
-                .tabs__nav
+            #lk-tabs.tabs.lk__tabs
+                .tabs__nav.lk__tabs-nav
                     button.tabs__nav-btn.tabs__nav-btn--active(type="button", data-content="content-1") Личные данные
                     button.tabs__nav-btn(type="button", data-content="content-2") Привязка аккаунта
                     button.tabs__nav-btn(type="button", data-content="content-3") Смена пароля
@@ -147,10 +165,29 @@ block content
                                                 li.select__list-item kell+
                                                 li.select__list-item kell++
                                     span.form-group__note Ваш Kell-принадлежность
-                            button.button.button--red.button--round-corner(type="submit") Сохранить
+                            button.button.button--red.button--round-corner.lk__form-submit(type="submit") Сохранить
                     #content-2.tabs__content
                         p таб 2
                     #content-3.tabs__content
                         p таб 3
                     #content-4.tabs__content
                         p таб 4
+
+            .lk__bottom
+                .theme-switcher.lk__theme-swither
+                    button.theme-switcher__btn.js-set-theme(type="button", aria-label="Светлая тема", data-theme="light")
+                        +svg("brightness").theme-switcher__btn-icon
+                    button.theme-switcher__btn.js-set-theme(type="button", aria-label="Темная тема", data-theme="dark")
+                        +svg("moon").theme-switcher__btn-icon
+        .lk__mobile-bottom
+            a.lk__mobile-logo-link(href="./main.html", title="На главную")
+                picture
+                    img.lk__logo.img-theme-light(src="./images/common/logo-theme-light.svg", alt="Служба Крови")
+                    img.lk__logo.img-theme-dark(src="./images/common/logo-theme-dark.svg", alt="Служба Крови")
+            .lk__navbar-bottom
+                a.lk__navbar-link(href="#")
+                    +svg("lk-support").lk__navbar-link-icon
+                    | Поддержка
+                a.lk__navbar-link(href="#")
+                    +svg("lk-exit").lk__navbar-link-icon
+                    | Выход

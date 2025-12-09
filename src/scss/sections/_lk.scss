@@ -1,197 +1,383 @@
 .lk {
-  min-height: 100vh;
-
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 82px);
+  
+  @include desktop-xl {
+	display: block;
+	min-height: 100vh;
+  }
+  
   &__navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 100%;
-    padding: 15px 20px;
-    overflow-y: auto;
+	position: fixed;
+	z-index: 666;
+	top: 88px;
+	left: 24px;
+	right: 24px;
+	display: flex;
+	flex-direction: column;
+	height: calc(100% - 112px);
+	padding: 16px;
+	overflow-y: auto;
+	border-radius: 24px;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity $transition-default, visibility 0.3s ease;
+	
+	@include desktop-xl {
+	  visibility: visible;
+	  opacity: 1;
+	  top: 0;
+	  left: 0;
+	  width: 300px;
+	  height: 100%;
+	  padding: 15px 20px;
+	  border-radius: 0;
+	}
+	
+	.lk-nav-open & {
+	  visibility: visible;
+	  opacity: 1;
+	}
   }
-
+  
   &__logo-link {
-    display: inline-block;
-    margin-bottom: 50px;
+	display: none;
+	margin-bottom: 50px;
+	
+	@include desktop-xl {
+	  display: inline-block;
+	}
   }
-
+  
   &__logo {
-    display: block;
-    max-width: 100%;
+	display: block;
+	max-width: 100%;
   }
-
+  
   &__navbar-title {
-    margin-bottom: 40px;
-    font-size: 32px;
-    line-height: 38px;
-    font-weight: 500;
-    text-align: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 40px;
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 500;
+	
+	@include desktop-xl {
+	  margin-bottom: 40px;
+	  font-size: 32px;
+	  line-height: 38px;
+	  text-align: center;
+	}
   }
-
+  
+  &__navbar-close {
+	background-color: transparent;
+	
+	@include desktop-xl {
+	  display: none;
+	}
+  }
+  
   &__navbar-panel-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 60px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-bottom: 60px;
   }
-
+  
   &__navbar-panel {
-    padding: 17px 15px;
-    border-radius: 15px;
-    background-color: $color-bg;
+	padding: 17px 15px;
+	border-radius: 15px;
+	background-color: $color-bg;
   }
-
+  
   &__navbar-row-list {
-    display: flex;
-    flex-direction: column;
-    gap: 21px;
+	display: flex;
+	flex-direction: column;
+	gap: 21px;
   }
-
+  
   &__navbar-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    font-size: 16px;
-    line-height: 26px;
+	display: flex;
+	justify-content: space-between;
+	gap: 15px;
+	font-size: 16px;
+	line-height: 26px;
   }
-
+  
   &__navbar-row-key {
   }
-
+  
   &__navbar-row-value {
-    color: $color-primary;
+	color: $color-primary;
   }
-
+  
   &__navbar-note {
-    margin-top: 10px;
-    font-size: 12px;
-    line-height: 22px;
-    color: $color-primary;
-    text-align: center;
+	margin-top: 10px;
+	font-size: 12px;
+	line-height: 22px;
+	color: $color-primary;
+	text-align: center;
   }
-
+  
   &__navbar-panel-text {
-    margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 20px;
+	margin-bottom: 20px;
+	font-size: 16px;
+	line-height: 20px;
   }
-
+  
   &__navbar-bottom {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+	margin-top: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
   }
-
+  
   &__navbar-link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 16px;
-    line-height: 24px;
-    transition: color $transition-default;
-
-    &:hover {
-      color: $color-primary;
-    }
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 16px;
+	line-height: 24px;
+	transition: color $transition-default;
+	
+	&:hover {
+	  color: $color-primary;
+	}
   }
-
+  
   &__navbar-link-icon {
-    flex-shrink: 0;
-    display: block;
-    width: 24px;
-    height: 24px;
+	flex-shrink: 0;
+	display: block;
+	width: 24px;
+	height: 24px;
   }
-
+  
   &__content {
-    padding: 20px 40px 60px 325px;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	padding: 24px;
+	
+	@include desktop-xl {
+	  flex-grow: unset;
+	  min-height: 100%;
+	  padding: 20px 40px 24px 325px;
+	}
   }
-
+  
   &__menu {
-    margin-bottom: 60px;
+	position: fixed;
+	z-index: 555;
+	top: 88px;
+	left: 24px;
+	right: 24px;
+	display: inline-block;
+	align-self: flex-start;
+	padding: 30px 50px 24px;
+	border-radius: 16px;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity $transition-default, visibility 0.3s ease;
+	
+	@include desktop-xl {
+	  position: static;
+	  margin-bottom: 60px;
+	  padding: 20px 25px;
+	  visibility: visible;
+	  opacity: 1;
+	}
+	
+	.lk-menu-open & {
+	  visibility: visible;
+	  opacity: 1;
+	}
   }
-
+  
+  &__menu-title {
+	margin-bottom: 20px;
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 500;
+	color: $color-primary;
+	
+	@include desktop {
+	  display: none;
+	}
+  }
+  
   &__menu-list {
-    display: inline-flex;
-    justify-content: space-around;
-    gap: 14px;
-    padding: 20px 25px;
-    border-radius: 16px;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-around;
+	gap: 14px;
+	
+	@include desktop {
+	  flex-direction: row;
+	  justify-content: space-around;
+	}
   }
-
+  
   &__menu-elem {
   }
-
+  
   &__menu-link {
-    display: inline-flex;
-    gap: 8px;
-    align-items: center;
-    font-size: 14px;
-    line-height: 24px;
-    transition: color $transition-default;
-
-    &:hover {
-      color: $color-primary;
-    }
+	display: inline-flex;
+	gap: 8px;
+	align-items: center;
+	font-size: 14px;
+	line-height: 24px;
+	transition: color $transition-default;
+	
+	&:hover {
+	  color: $color-primary;
+	}
   }
-
+  
   &__menu-icon {
-    flex-shrink: 0;
-    display: block;
-    width: 22px;
-    height: 22px;
-    color: $color-primary;
+	flex-shrink: 0;
+	display: block;
+	width: 22px;
+	height: 22px;
+	color: $color-primary;
+	
+	@include desktop-xl {
+	  display: none;
+	}
+	
+	@include desktop-xxl {
+	  display: block;
+	}
   }
-
+  
   &__breadcrumbs {
-    max-width: 100%;
-    margin-bottom: 60px;
-    padding: 0;
+	max-width: 100%;
+	margin-bottom: 40px;
+	padding: 0;
+	
+	@include desktop {
+	  margin-bottom: 60px;
+	}
   }
-
+  
   &__title {
-    margin-bottom: 50px;
-    font-size: 30px;
-    line-height: 1;
+	margin-bottom: -25px;
+	font-size: 24px;
+	line-height: 28px;
+	
+	@include desktop-xl {
+	  margin-bottom: 50px;
+	  font-size: 30px;
+	  line-height: 1;
+	}
   }
-
+  
+  &__mobile-tabs {
+	margin-bottom: 20px;
+	
+	@include desktop-xl {
+	  display: none;
+	}
+  }
+  
+  &__mobile-tabs-title {
+	margin-bottom: 12px;
+	font-size: 24px;
+	line-height: 28px;
+  }
+  
   &__tabs {
   }
-
-  &__form {
-    max-width: 630px;
+  
+  &__tabs-nav {
+	display: none;
+	border-radius: 8px;
+	
+	@include desktop-xl {
+	  display: inline-flex;
+	}
   }
-
+  
+  &__form {
+	@include desktop-xl {
+	  max-width: 630px;
+	}
+  }
+  
   &__form-grid {
-    display: grid;
-    grid-template: auto / repeat(2,minmax(0,1fr));
-    grid-gap: 22px 48px;
-    margin-bottom: 32px;
+	display: grid;
+	grid-template: auto / 100%;
+	grid-gap: 22px 48px;
+	margin-bottom: 32px;
+	
+	@include desktop {
+	  grid-template: auto / repeat(2,minmax(0,1fr));
+	}
+  }
+  
+  &__form-submit {
+	width: 100%;
+	
+	@include desktop {
+	  width: auto;
+	}
+  }
+  
+  &__bottom {
+	display: none;
+	justify-content: flex-end;
+	width: 100%;
+	margin-top: auto;
+	padding-top: 32px;
+	
+	@include desktop-xl {
+	  display: flex;
+	}
+  }
+  
+  &__mobile-bottom {
+	padding: 15px 24px 20px;
+	@include desktop-xl {
+	  display: none;
+	}
+  }
+  
+  &__mobile-logo-link {
+	display: inline-block;
+	width: 100px;
+	margin-bottom: 20px;
   }
 }
 
 // theme
 .theme-light {
   .lk {
-    &__navbar {
-      background-color: #EDEEF1;
-    }
-    &__menu-list {
-      background-color: #EDEEF1;
-    }
+	&__navbar {
+	  background-color: #EDEEF1;
+	}
+	
+	&__menu {
+	  background-color: #EDEEF1;
+	}
+ 
+	&__mobile-bottom {
+	  background-color: #EDEEF1;}
   }
 }
 
 .theme-dark {
   .lk {
-    &__navbar {
-      background-color: #26262B;
-    }
-    &__menu-list {
-      background-color: #26262B;
-    }
+	&__navbar {
+	  background-color: #26262B;
+	}
+	
+	&__menu {
+	  background-color: #26262B;
+	}
+ 
+	&__mobile-bottom {
+	  background-color: #26262B;}
   }
 }

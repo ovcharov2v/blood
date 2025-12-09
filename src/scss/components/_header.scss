@@ -11,6 +11,12 @@
   .menu-open & {
     background-color: $color-bg;
   }
+  
+  &--lk {
+    @include desktop-xl {
+      display: none;
+    }
+  }
 
   &__container {
     position: relative;
@@ -62,6 +68,10 @@
     display: inline-flex;
     gap: 12px;
     margin-left: auto;
+    
+    .header--lk & {
+      margin: 0 auto;
+    }
   }
 
   &__phone-box-mobile {
@@ -254,5 +264,12 @@
         opacity: 1;
       }
     }
+  }
+  
+  &__lk-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
   }
 }

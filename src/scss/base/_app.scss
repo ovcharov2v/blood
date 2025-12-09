@@ -19,7 +19,7 @@ body {
 		padding-top: 148px;
 	}*/
 
-	&.menu-open {
+	&.menu-open, &.lk-menu-open, &.lk-nav-open {
 		overflow: hidden;
 	}
 }

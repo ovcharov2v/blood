@@ -90,6 +90,14 @@
   &--icon-only {
     padding: 13px;
     aspect-ratio: 1;
+    
+    &.button--sm {
+      padding: 5px;
+    }
+  
+    &.button--md {
+      padding: 7px;
+    }
   }
 
   &--with-icon {
@@ -116,6 +124,11 @@
     display: block;
     width: 20px;
     height: 20px;
+  
+    .button--sm & {
+      width: 14px;
+      height: 14px;
+    }
 
     &--color-red {
       color: $color-primary;

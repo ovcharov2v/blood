@@ -45,4 +45,23 @@ document.addEventListener('DOMContentLoaded', () => {
       cityModal.classList.remove('city-search--open')
     })
   }
+
+  // lk
+  const lkMenuBtn = document.querySelector('.header__lk-menu-btn');
+  const lkNavBtn = document.querySelector('.header__lk-nav-btn');
+  const lkNavClose = document.querySelector('.lk__navbar-close');
+
+  if(lkMenuBtn && lkNavBtn && lkNavClose) {
+    lkMenuBtn.addEventListener('click', () => {
+      document.body.classList.remove('lk-nav-open');
+      document.body.classList.toggle('lk-menu-open');
+    })
+    lkNavBtn.addEventListener('click', () => {
+      document.body.classList.remove('lk-menu-open');
+      document.body.classList.toggle('lk-nav-open');
+    })
+    lkNavClose.addEventListener('click', () => {
+      document.body.classList.remove('lk-nav-open');
+    })
+  }
 })

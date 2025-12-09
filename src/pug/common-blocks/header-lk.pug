@@ -1,0 +1,22 @@
+mixin headerLk()
+	// Header
+	header.header.header--lk
+		.container.header__container
+			.header__lk-row
+				a.header__logo-link(href="./main.html", title="На главную")
+					picture
+						img.header__logo.img-theme-light(src="./images/common/logo-theme-light.svg", alt="Служба Крови")
+						img.header__logo.img-theme-dark(src="./images/common/logo-theme-dark.svg", alt="Служба Крови")
+				.header__phone-box
+					a.header__phone-link(href="tel:88003333343") 8 (800) 333-33-43
+				.header__action-box
+					button.button.button--round-corner.button--outline-gray.button--icon-only.button--sm.header__lk-menu-btn(type="button", aria-label="Меню")
+						+svg("burger").button__icon.header__burger-icon.header__burger-icon--normal
+						+svg("close").button__icon.header__burger-icon.header__burger-icon--active
+					button.button.button--round-corner.button--outline-gray.button--icon-only.button--sm.header__lk-nav-btn(type="button", aria-label="Меню")
+						+svg("user").button__icon
+				.theme-switcher.header__theme-swither
+					button.theme-switcher__btn.js-set-theme(type="button", aria-label="Светлая тема", data-theme="light")
+						+svg("brightness").theme-switcher__btn-icon
+					button.theme-switcher__btn.js-set-theme(type="button", aria-label="Темная тема", data-theme="dark")
+						+svg("moon").theme-switcher__btn-icon
