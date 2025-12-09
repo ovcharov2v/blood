@@ -4096,6 +4096,9 @@ a {
       .section-library__card:nth-child(4n) img {
         margin: auto; } }
 
+.myth-page-box {
+  overflow-x: hidden; }
+
 .section-myth {
   position: relative;
   padding-top: 30px;
