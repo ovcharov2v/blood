@@ -4223,7 +4223,6 @@ a {
     border-radius: 22px;
     width: 100%;
     min-height: 100%;
-    max-height: 200%;
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
@@ -4234,7 +4233,6 @@ a {
     @media (min-width: 1024px) {
       .section-myth__card-hidden {
         min-height: unset;
-        max-height: unset;
         height: calc(200% + 20px); }
         .section-myth__card:nth-child(1) .section-myth__card-hidden {
           top: 0; }
@@ -4276,8 +4274,12 @@ a {
 
 .theme-light .section-myth__card-hidden {
   background-color: #fff;
-  -webkit-box-shadow: 0 0 0 4px #fff;
-          box-shadow: 0 0 0 4px #fff; }
+  -webkit-box-shadow: 0 2px 8px rgba(255, 255, 255, 0.08);
+          box-shadow: 0 2px 8px rgba(255, 255, 255, 0.08); }
+  @media (min-width: 1024px) {
+    .theme-light .section-myth__card-hidden {
+      -webkit-box-shadow: 0 0 0 4px #fff;
+              box-shadow: 0 0 0 4px #fff; } }
   .theme-light .section-myth__card-hidden .section-myth__card-num {
     background-color: var(--color-primary);
     color: #fff; }
@@ -4292,8 +4294,12 @@ a {
 
 .theme-dark .section-myth__card-hidden {
   background-color: #26262B;
-  -webkit-box-shadow: 0 0 0 4px #26262B;
-          box-shadow: 0 0 0 4px #26262B; }
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
+  @media (min-width: 1024px) {
+    .theme-dark .section-myth__card-hidden {
+      -webkit-box-shadow: 0 0 0 4px #26262B;
+              box-shadow: 0 0 0 4px #26262B; } }
   .theme-dark .section-myth__card-hidden .section-myth__card-num {
     background-color: var(--color-primary);
     color: #0C0C0C; }
