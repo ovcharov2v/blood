@@ -154,6 +154,24 @@ document.addEventListener('DOMContentLoaded', function () {
       cityModal.classList.remove('city-search--open');
     });
   }
+
+  // lk
+  var lkMenuBtn = document.querySelector('.header__lk-menu-btn');
+  var lkNavBtn = document.querySelector('.header__lk-nav-btn');
+  var lkNavClose = document.querySelector('.lk__navbar-close');
+  if (lkMenuBtn && lkNavBtn && lkNavClose) {
+    lkMenuBtn.addEventListener('click', function () {
+      document.body.classList.remove('lk-nav-open');
+      document.body.classList.toggle('lk-menu-open');
+    });
+    lkNavBtn.addEventListener('click', function () {
+      document.body.classList.remove('lk-menu-open');
+      document.body.classList.toggle('lk-nav-open');
+    });
+    lkNavClose.addEventListener('click', function () {
+      document.body.classList.remove('lk-nav-open');
+    });
+  }
 });
 
 /***/ }),
@@ -166,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /***/ (function(module, exports) {
 
 document.addEventListener('DOMContentLoaded', function () {
-  ymaps.ready(init);
+  if (typeof ymaps !== 'undefined') ymaps.ready(init);
   function init() {
     var mapElement = document.querySelector("#map-station");
     if (!mapElement) return;
@@ -261,10 +279,12 @@ document.addEventListener('DOMContentLoaded', function () {
 /***/ (function(module, exports) {
 
 document.addEventListener('DOMContentLoaded', function () {
+  var sliderEl = document.querySelector('.section-myth__slider');
+  if (!sliderEl) return;
   var swiper = null;
   var initSwiper = function initSwiper() {
     if (window.innerWidth < 1024 && !swiper) {
-      swiper = new Swiper('.section-myth__slider', {
+      swiper = new Swiper(sliderEl, {
         slidesPerView: 1.3,
         spaceBetween: 12,
         preventClicks: false,
@@ -385,11 +405,10 @@ document.addEventListener('DOMContentLoaded', function () {
     selectItems.forEach(function (item) {
       item.addEventListener('click', function () {
         current.innerHTML = item.innerHTML;
-        input.value = item.querySelector('.select__title').innerText;
+        input.value = item.innerText;
         var oldSelected = select.querySelector('.select__list-item--selected');
         oldSelected.classList.remove('select__list-item--selected');
         item.classList.add('select__list-item--selected');
-        closeAllSelect();
       });
     });
   });
@@ -436,6 +455,26 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 10);
     });
   });
+
+  // select
+  var selectList = document.querySelectorAll('.select[data-tabs]');
+  if (selectList.length) {
+    selectList.forEach(function (select) {
+      var tabsId = select.dataset.tabs;
+      var tabs = document.getElementById(tabsId);
+      var selectItems = select.querySelectorAll('.select__list-item[data-content]');
+      if (selectItems.length) {
+        selectItems.forEach(function (item) {
+          var tabBtn = tabs.querySelector(".tabs__nav-btn[data-content=".concat(item.dataset.content, "]"));
+          if (tabBtn) {
+            item.addEventListener('click', function () {
+              tabBtn.dispatchEvent(new Event('click', {}));
+            });
+          }
+        });
+      }
+    });
+  }
 });
 
 /***/ }),

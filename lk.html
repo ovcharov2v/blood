@@ -8,15 +8,58 @@
 		<title>Служба Крови</title>
 		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
-		<link rel="stylesheet" href="./css/main.css?v=1765275854977"/>
+		<link rel="stylesheet" href="./css/main.css?v=1765301149650"/>
 	</head>
 	<body>
 		<main class="main">
+			<!-- Header-->
+			<header class="header header--lk">
+				<div class="container header__container">
+					<div class="header__lk-row"><a class="header__logo-link" href="./main.html" title="На главную">
+							<picture><img class="header__logo img-theme-light" src="./images/common/logo-theme-light.svg" alt="Служба Крови"/><img class="header__logo img-theme-dark" src="./images/common/logo-theme-dark.svg" alt="Служба Крови"/></picture></a>
+						<div class="header__phone-box"><a class="header__phone-link" href="tel:88003333343">8 (800) 333-33-43</a></div>
+						<div class="header__action-box">
+							<button class="button button--round-corner button--outline-gray button--icon-only button--sm header__lk-menu-btn" type="button" aria-label="Меню">
+								<svg class="button__icon header__burger-icon header__burger-icon--normal">
+									<use xlink:href="#burger"></use>
+								</svg>
+								<svg class="button__icon header__burger-icon header__burger-icon--active">
+									<use xlink:href="#close"></use>
+								</svg>
+							</button>
+							<button class="button button--round-corner button--outline-gray button--icon-only button--sm header__lk-nav-btn" type="button" aria-label="Меню">
+								<svg class="button__icon">
+									<use xlink:href="#user"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="theme-switcher header__theme-swither">
+							<button class="theme-switcher__btn js-set-theme" type="button" aria-label="Светлая тема" data-theme="light">
+								<svg class="theme-switcher__btn-icon">
+									<use xlink:href="#brightness"></use>
+								</svg>
+							</button>
+							<button class="theme-switcher__btn js-set-theme" type="button" aria-label="Темная тема" data-theme="dark">
+								<svg class="theme-switcher__btn-icon">
+									<use xlink:href="#moon"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</header>
 			<div class="lk">
 				<!-- navbar-->
 				<aside class="lk__navbar"><a class="lk__logo-link" href="./main.html" title="На главную">
 						<picture><img class="lk__logo img-theme-light" src="./images/common/logo-theme-light.svg" alt="Служба Крови"/><img class="lk__logo img-theme-dark" src="./images/common/logo-theme-dark.svg" alt="Служба Крови"/></picture></a>
-					<p class="lk__navbar-title">Личный кабинет</p>
+					<div class="lk__navbar-title">
+						<p>Личный кабинет</p>
+						<button class="button button--round-corner button--outline-gray button--icon-only button--md lk__navbar-close" type="button" aria-label="Закрыть">
+							<svg class="button__icon">
+								<use xlink:href="#close"></use>
+							</svg>
+						</button>
+					</div>
 					<div class="lk__navbar-panel-list">
 						<!-- panel-->
 						<div class="lk__navbar-panel">
@@ -56,6 +99,7 @@
 				<section class="lk__content">
 					<!-- menu-->
 					<nav class="lk__menu">
+						<p class="lk__menu-title">Навигация</p>
 						<ul class="lk__menu-list">
 							<li class="lk__menu-elem"><a class="lk__menu-link" href="#">
 									<svg class="lk__menu-icon">
@@ -90,9 +134,27 @@
 					<!-- Breadcrumbs-->
 					<div class="container breadcrumb lk__breadcrumbs"><a class="breadcrumb__link" href="#" title="Главная">Главная</a><span class="breadcrumb__separator">/</span><span class="breadcrumb__current">Личный кабинет донора</span>
 					</div>
+					<div class="lk__mobile-tabs">
+						<p class="lk__mobile-tabs-title">Навигация</p>
+						<div class="select" data-tabs="lk-tabs">
+							<div class="select__current-box">
+								<input class="select__input" type="hidden" value="Личные данные"/>
+								<p class="select__current">Личные данные</p>
+								<svg class="select__drop-icon">
+									<use xlink:href="#chevron-down"></use>
+								</svg>
+							</div>
+							<ul class="select__list">
+								<li class="select__list-item select__list-item--selected" data-content="content-1">Личные данные</li>
+								<li class="select__list-item" data-content="content-2">Привязка аккаунта</li>
+								<li class="select__list-item" data-content="content-3">Смена пароля</li>
+								<li class="select__list-item" data-content="content-4">Двухфакторная авторизация</li>
+							</ul>
+						</div>
+					</div>
 					<h1 class="lk__title">Настройки профиля</h1>
-					<div class="tabs lk__tabs">
-						<div class="tabs__nav">
+					<div class="tabs lk__tabs" id="lk-tabs">
+						<div class="tabs__nav lk__tabs-nav">
 							<button class="tabs__nav-btn tabs__nav-btn--active" type="button" data-content="content-1">Личные данные</button>
 							<button class="tabs__nav-btn" type="button" data-content="content-2">Привязка аккаунта</button>
 							<button class="tabs__nav-btn" type="button" data-content="content-3">Смена пароля</button>
@@ -163,7 +225,7 @@
 											</div><span class="form-group__note">Ваш Kell-принадлежность</span>
 										</div>
 									</div>
-									<button class="button button--red button--round-corner" type="submit">Сохранить</button>
+									<button class="button button--red button--round-corner lk__form-submit" type="submit">Сохранить</button>
 								</form>
 							</div>
 							<div class="tabs__content" id="content-2">
@@ -177,10 +239,34 @@
 							</div>
 						</div>
 					</div>
+					<div class="lk__bottom">
+						<div class="theme-switcher lk__theme-swither">
+							<button class="theme-switcher__btn js-set-theme" type="button" aria-label="Светлая тема" data-theme="light">
+								<svg class="theme-switcher__btn-icon">
+									<use xlink:href="#brightness"></use>
+								</svg>
+							</button>
+							<button class="theme-switcher__btn js-set-theme" type="button" aria-label="Темная тема" data-theme="dark">
+								<svg class="theme-switcher__btn-icon">
+									<use xlink:href="#moon"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
 				</section>
+				<div class="lk__mobile-bottom"><a class="lk__mobile-logo-link" href="./main.html" title="На главную">
+						<picture><img class="lk__logo img-theme-light" src="./images/common/logo-theme-light.svg" alt="Служба Крови"/><img class="lk__logo img-theme-dark" src="./images/common/logo-theme-dark.svg" alt="Служба Крови"/></picture></a>
+					<div class="lk__navbar-bottom"><a class="lk__navbar-link" href="#">
+							<svg class="lk__navbar-link-icon">
+								<use xlink:href="#lk-support"></use>
+							</svg>Поддержка</a><a class="lk__navbar-link" href="#">
+							<svg class="lk__navbar-link-icon">
+								<use xlink:href="#lk-exit"></use>
+							</svg>Выход</a></div>
+				</div>
 			</div>
 		</main>
-		<script src="./js/main.js?v=1765275854978"></script><svg width="0" height="0" class="hidden">
+		<script src="./js/main.js?v=1765301149652"></script><svg width="0" height="0" class="hidden">
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="lk-blood">
         <path d="M12.3676 17.4702C11.474 18.2421 10.3685 18.7481 9.18406 18.9275C7.99964 19.1068 6.78679 18.9518 5.69146 18.4811C4.59614 18.0104 3.66499 17.244 3.01009 16.2742C2.35518 15.3044 2.00442 14.1725 2 13.0147C2 9.00983 4.07352 8.0086 8.22055 1C10.377 4.63446 11.9632 6.65694 13 8.30897" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
         <path d="M15 6C12.33 10.67 11 11.33 11 14C11 15.0609 11.4214 16.0783 12.1716 16.8284C12.9217 17.5786 13.9391 18 15 18C16.0609 18 17.0783 17.5786 17.8284 16.8284C18.5786 16.0783 19 15.0609 19 14C19 11.33 17.67 10.67 15 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
