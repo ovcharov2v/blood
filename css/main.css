@@ -4228,15 +4228,16 @@ a {
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
-    visibility: hidden;
     opacity: 0;
+    pointer-events: none;
     -webkit-transition: opacity 0.2s ease, visibility 0.3s ease;
     transition: opacity 0.2s ease, visibility 0.3s ease; }
     @media (min-width: 1024px) {
       .section-myth__card-hidden {
         min-height: unset;
         max-height: unset;
-        height: calc(200% + 20px); }
+        height: calc(200% + 20px);
+        pointer-events: all; }
         .section-myth__card:nth-child(1) .section-myth__card-hidden {
           top: 0; }
         .section-myth__card:nth-child(2) .section-myth__card-hidden {
@@ -4260,7 +4261,8 @@ a {
         visibility: visible;
         opacity: 1;
         top: 0;
-        bottom: unset; } }
+        bottom: unset;
+        pointer-events: all; } }
     .section-myth__card-hidden p:not(:last-child) {
       margin-bottom: 10px; }
     .section-myth__card-hidden ul {
