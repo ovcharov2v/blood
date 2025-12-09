@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const sliderEl = document.querySelector('.section-myth__slider');
+  if(!sliderEl) return;
+
   let swiper = null;
 
   const initSwiper = () => {
     if (window.innerWidth < 1024 && !swiper) {
-      swiper = new Swiper('.section-myth__slider', {
+      swiper = new Swiper(sliderEl, {
         slidesPerView: 1.3,
         spaceBetween: 12,preventClicks: false,
         preventClicksPropagation: false,

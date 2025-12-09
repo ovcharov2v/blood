@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  ymaps.ready(init);
+  if(typeof ymaps !== 'undefined') ymaps.ready(init);
   function init() {
     const mapElement = document.querySelector("#map-station");
     if (!mapElement) return;

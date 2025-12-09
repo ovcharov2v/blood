@@ -18,11 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
     selectItems.forEach((item)=>{
       item.addEventListener('click', () => {
         current.innerHTML = item.innerHTML
-        input.value = item.querySelector('.select__title').innerText
+        input.value = item.innerText
         const oldSelected = select.querySelector('.select__list-item--selected')
         oldSelected.classList.remove('select__list-item--selected')
         item.classList.add('select__list-item--selected')
-        closeAllSelect()
       })
     })
   })
