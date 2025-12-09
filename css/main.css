@@ -1361,8 +1361,7 @@ a {
   .hero-card__text-highlighted {
     color: #fff; }
   .hero-card__btn {
-    margin-top: auto;
-    min-width: 172px; }
+    margin-top: auto; }
 
 .slider-dots {
   display: -webkit-box;
@@ -3273,88 +3272,53 @@ a {
 
 .section-hero {
   position: relative;
-  padding-bottom: 10px; }
-  @media (min-width: 1024px) {
-    .section-hero {
-      padding-top: 40px;
-      padding-bottom: 100px; } }
+  padding-top: 40px;
+  padding-bottom: 100px; }
   .section-hero::before {
     position: absolute;
     z-index: -1;
     bottom: 0;
-    right: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     width: 1440px;
     height: 100%;
-    background-size: 113% 56%;
-    background-position: 88% bottom;
+    background-size: 100% 100%;
+    background-position: top center;
     background-repeat: no-repeat;
     pointer-events: none;
-    content: ""; }
-    @media (min-width: 1024px) {
-      .section-hero::before::before {
-        right: unset;
-        left: 50%;
-        background-size: 100% 100%;
-        background-position: top center;
-        -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-                transform: translateX(-50%);
-        -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(15%, white), color-stop(85%, white), to(transparent));
-        -webkit-mask-image: linear-gradient(to right, transparent 0%, white 15%, white 85%, transparent 100%);
-                mask-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(15%, white), color-stop(85%, white), to(transparent));
-                mask-image: linear-gradient(to right, transparent 0%, white 15%, white 85%, transparent 100%); } }
+    content: "";
+    -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(15%, white), color-stop(85%, white), to(transparent));
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, white 15%, white 85%, transparent 100%);
+            mask-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(15%, white), color-stop(85%, white), to(transparent));
+            mask-image: linear-gradient(to right, transparent 0%, white 15%, white 85%, transparent 100%); }
   @media (min-width: 1024px) {
     .section-hero::before {
       min-width: 1500px;
       height: calc(100% + 148px); } }
   .section-hero__header {
-    margin-bottom: 30px;
+    margin-bottom: 48px;
     text-align: center; }
-    @media (min-width: 1024px) {
-      .section-hero__header {
-        margin-bottom: 48px; } }
   .section-hero__title {
-    font-size: 32px;
-    line-height: 1.2;
+    margin-bottom: 20px;
+    font-size: 48px;
+    line-height: 52px;
     font-weight: 600; }
-    @media (min-width: 1024px) {
-      .section-hero__title {
-        margin-bottom: 20px;
-        font-size: 48px;
-        line-height: 52px; } }
   .section-hero__text {
-    display: none;
     font-size: 18px;
     line-height: 20px; }
-    @media (min-width: 1024px) {
-      .section-hero__text {
-        display: block; } }
   .section-hero__card-grid {
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: auto;
-    -ms-grid-columns: 100%;
-        grid-template: auto / 100%;
-    grid-gap: 20px;
-    padding-left: 34px;
-    padding-right: 34px; }
-    @media (min-width: 1024px) {
-      .section-hero__card-grid {
-        -ms-grid-rows: auto;
-        -ms-grid-columns: minmax(0, 1fr) 12px minmax(0, 1fr) 12px minmax(0, 1fr) 12px minmax(0, 1fr);
-            grid-template: auto/repeat(4, minmax(0, 1fr));
-        grid-gap: 12px;
-        padding-left: 0;
-        padding-right: 0; } }
-  .section-hero__card {
-    min-height: 414px; }
-    @media (min-width: 1024px) {
-      .section-hero__card {
-        min-height: unset; }
-        .section-hero__card:nth-child(2n) {
-          -webkit-transform: translateY(30px);
-              -ms-transform: translateY(30px);
-                  transform: translateY(30px); } }
+    -ms-grid-columns: minmax(0, 1fr) 12px minmax(0, 1fr) 12px minmax(0, 1fr) 12px minmax(0, 1fr);
+        grid-template: auto/repeat(4, minmax(0, 1fr));
+    grid-gap: 12px; }
+  .section-hero__card:nth-child(2n) {
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+            transform: translateY(30px); }
 
 .theme-light .section-hero::before {
   background-image: url("../images/main/hero-bg-theme-light.png"); }
