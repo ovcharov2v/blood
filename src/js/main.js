@@ -1,6 +1,7 @@
 import './components/theme-switcher'
 import './components/password-toggle'
 import './components/select'
+import './components/section-hero'
 import './components/section-slider'
 import './components/footer'
 import './components/header'

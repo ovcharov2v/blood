@@ -14,39 +14,81 @@ block content
 					span.color-primary 4 простых шага
 					br
 					|к Вашей первой донации
-				p.section-hero__text Простой путь становления донором
-			.section-hero__card-grid
-				// hero card
-				.hero-card.section-hero__card
-					span.hero-card__number 1
-					h2.hero-card__title Запланируйте донацию
-					p.hero-card__text Воспользуйтесь
-						|
-						|
-						span.hero-card__text-highlighted Поиском учреждений Службы крови,
-						|
-						|чтобы найти ближайший пункт сдачи крови и записаться на донацию.
-					a.button.button--white.button--round-corner.hero-card__btn(href="#") Найти учреждение
-				// hero card
-				.hero-card.section-hero__card
-					span.hero-card__number 2
-					h2.hero-card__title Подготовьтесь к донации
-					p.hero-card__text Изучите
-						|
-						|
-						span.hero-card__text-highlighted Требования допуска доноров к донации и  Рекомендации по питанию доноров
-						|
-						|перед совершением донации.
-				// hero card
-				.hero-card.section-hero__card
-					span.hero-card__number 3
-					h2.hero-card__title Пройдите обследование
-					p.hero-card__text В назначенный день посетите выбранное учреждение службы крови. Заполните анкету о состоянии здоровья и пройдите медицинское обследование для направления на донацию крови или ее компонентов.
-				// hero card
-				.hero-card.section-hero__card
-					span.hero-card__number 4
-					h2.hero-card__title Сдайте крови или ее компоненты
-					p.hero-card__text Текст
+
+			.section-hero__slider.swiper
+				.section-hero__card-grid.swiper-wrapper
+					.hero-card.section-hero__card-slide.swiper-slide
+						// hero card
+						.hero-card.section-hero__card
+							.hero-card__box
+								.hero-card__front
+									.hero-card__header
+										span.hero-card__number 1
+										h2.hero-card__title Запланируйте донацию
+									img.hero-card__img(src="./images/main/hero1.png", alt="")
+								.hero-card__back
+									.hero-card__header
+										span.hero-card__number 1
+										h2.hero-card__title Запланируйте донацию
+									p.hero-card__text Воспользуйтесь
+										|
+										|
+										span.hero-card__text-highlighted Поиском учреждений Службы крови,
+										|
+										|чтобы найти ближайший пункт сдачи крови и записаться на донацию.
+									a.button.button--white.button--round-corner.hero-card__btn(href="#") Найти учреждение
+					.hero-card.section-hero__card-slide.swiper-slide
+						// hero card
+						.hero-card.section-hero__card
+							.hero-card__box
+								.hero-card__front
+									.hero-card__header
+										span.hero-card__number 2
+										h2.hero-card__title Подготовьтесь к донации
+									img.hero-card__img(src="./images/main/hero2.png", alt="")
+								.hero-card__back
+									.hero-card__header
+										span.hero-card__number 2
+										h2.hero-card__title Подготовьтесь к донации
+									p.hero-card__text Изучите
+										|
+										|
+										span.hero-card__text-highlighted Требования допуска доноров к донации
+										|
+										| и
+										|
+										span.hero-card__text-highlighted Рекомендации по питанию доноров
+										|
+										| перед совершением донации.
+					.hero-card.section-hero__card-slide.swiper-slide
+						// hero card
+						.hero-card.section-hero__card
+							.hero-card__box
+								.hero-card__front
+									.hero-card__header
+										span.hero-card__number 3
+										h2.hero-card__title Пройдите обследование
+									img.hero-card__img(src="./images/main/hero3.png", alt="")
+								.hero-card__back
+									.hero-card__header
+										span.hero-card__number 3
+										h2.hero-card__title Пройдите обследование
+									p.hero-card__text В назначенный день посетите выбранное учреждение службы крови. Заполните анкету о состоянии здоровья и пройдите медицинское обследование для направления на донацию крови или ее компонентов.
+					.hero-card.section-hero__card-slide.swiper-slide
+						// hero card
+						.hero-card.section-hero__card
+							.hero-card__box
+								.hero-card__front
+									.hero-card__header
+										span.hero-card__number 4
+										h2.hero-card__title Сдайте крови или ее компоненты
+									img.hero-card__img(src="./images/main/hero4.png", alt="")
+								.hero-card__back
+									.hero-card__header
+										span.hero-card__number 4
+										h2.hero-card__title Сдайте крови или ее компоненты
+									p.hero-card__text Подкрепитесь в комнате отдыха доноров сладким чаем с печеньем. Сдайте кровь или ее компоненты. После донации получите денежную компенсацию и справку о донации. Не забудьте запланировать дату следующей донации.
+			.section-hero__slider-dots.slider-dots.slider-dots--color
 
 	// Section Donor Code
 	.section-donor-code.container
@@ -58,13 +100,12 @@ block content
 						// slide
 						.swiper-slide
 							.section-donor-code__slide
-								.section-donor-code__slide-content-box
-									img.section-donor-code__slide-logo(src="./images/main/donor-code-slide-logo.png", alt="")
-									.section-donor-code__slide-text-box
-										p.section-donor-code__slide-text Всероссийская акция конкурс
-										p.section-donor-code__slide-title Код донора
-											br
-											small защитники отечества
+								img.section-donor-code__slide-logo(src="./images/main/donor-code-slide-logo.png", alt="")
+								.section-donor-code__slide-text-box
+									p.section-donor-code__slide-text Всероссийская акция конкурс
+									p.section-donor-code__slide-title Код донора
+										br
+										small защитники отечества
 								.section-donor-code__slide-img-box
 									img.section-donor-code__slide-img(src="./images/main/donor-code-slide-img.png", alt="")
 						- count ++
@@ -96,53 +137,53 @@ block content
 	section.section-info.container
 		.section-info__grid
 			// card
-			a.section-info__card.section-info__card--red(href="#")
-				p.section-info__card-title О Службе крови
-				.section-info__card-img-box
-					img.section-info__card-img(src="./images/main/info-grid-img1.png", alt="")
-				span.button.button--icon-only.button--transparent-white.section-info__card-btn
+			a.section-info__card.color-card.color-card--red(href="#")
+				p.color-card__title О Службе крови
+				img.color-card__img(src="./images/main/info-grid-img1.png", alt="")
+				span.button.button--icon-only.button--transparent-white.color-card__btn
 					+svg("arrow-right").button__icon
 			// card
-			a.section-info__card.section-info__card--violet(href="#")
-				p.section-info__card-title Интервью
-				.section-info__card-img-box
-					img.section-info__card-img(src="./images/main/info-grid-img2.png", alt="")
-				span.button.button--icon-only.button--transparent-white.section-info__card-btn
+			a.section-info__card.color-card.color-card--violet(href="#")
+				p.color-card__title Интервью
+				.color-card__bottom-box
+					img.color-card__img(src="./images/main/info-grid-img2.png", alt="")
+					span.button.button--icon-only.button--transparent-white.color-card__btn
+						+svg("arrow-right").button__icon
+			// card
+			a.section-info__card.color-card.color-card--yellow(href="#")
+				p.color-card__title Противопоказания к донорству
+				.color-card__bottom-box
+					img.color-card__img(src="./images/main/info-grid-img3.png", alt="")
+					span.button.button--icon-only.button--transparent-white.color-card__btn
+						+svg("arrow-right").button__icon
+			// card
+			a.section-info__card.color-card.color-card--orange(href="#")
+				p.color-card__title Мифы о донорстве крови
+				img.color-card__img(src="./images/main/info-grid-img4.png", alt="")
+				span.button.button--icon-only.button--transparent-white.color-card__btn
 					+svg("arrow-right").button__icon
 			// card
-			a.section-info__card.section-info__card--yellow(href="#")
-				p.section-info__card-title Противопоказания к донорству
-				.section-info__card-img-box
-					img.section-info__card-img(src="./images/main/info-grid-img3.png", alt="")
-				span.button.button--icon-only.button--transparent-white.section-info__card-btn
-					+svg("arrow-right").button__icon
+			a.section-info__card.color-card.color-card--green(href="#")
+				p.color-card__title Рекомендации до и после донации
+				.color-card__bottom-box
+					img.color-card__img(src="./images/main/info-grid-img5.png", alt="")
+					span.button.button--icon-only.button--transparent-white.color-card__btn
+						+svg("arrow-right").button__icon
 			// card
-			a.section-info__card.section-info__card--orange(href="#")
-				p.section-info__card-title Мифы о донорстве крови
-				.section-info__card-img-box
-					img.section-info__card-img(src="./images/main/info-grid-img4.png", alt="")
-				span.button.button--icon-only.button--transparent-white.section-info__card-btn
-					+svg("arrow-right").button__icon
-			// card
-			a.section-info__card.section-info__card--green(href="#")
-				p.section-info__card-title Рекомендации до и после донации
-				.section-info__card-img-box
-					img.section-info__card-img(src="./images/main/info-grid-img5.png", alt="")
-				span.button.button--icon-only.button--transparent-white.section-info__card-btn
-					+svg("arrow-right").button__icon
-			// card
-			a.section-info__card.section-info__card--red(href="#")
-				p.section-info__card-title Здоровое питание донора
-				.section-info__card-img-box
-					img.section-info__card-img(src="./images/main/info-grid-img6.png", alt="")
-				span.button.button--icon-only.button--transparent-white.section-info__card-btn
-					+svg("arrow-right").button__icon
+			a.section-info__card.color-card.color-card--red(href="#")
+				p.color-card__title Здоровое питание донора
+				.color-card__bottom-box
+					img.color-card__img(src="./images/main/info-grid-img6.png", alt="")
+					span.button.button--icon-only.button--transparent-white.color-card__btn
+						+svg("arrow-right").button__icon
 		// bottom card
-		.section-info__bottom-card
-			.section-info__bottom-card-box
-				p.section-info__bottom-card-title Твой донорский гид
-				p.section-info__bottom-card-text Никаких лишних звонков. Только ясные ответы.
-			a.button.button--red.button--round-corner.section-info__bottom-card-btn(href="#") Задать вопрос
+		.guide-card.section-info__bottom-card
+			img.guide-card__img(src="./images/main/dude.png", alt="")
+			.guide-card__content-box
+				.guide-card__text-box
+					p.guide-card__title Твой донорский гид
+					p.guide-card__text Никаких лишних звонков. Только ясные ответы.
+				a.button.button--red.button--round-corner.guide-card__btn(href="#") Задать вопрос
 
 	+sectionNews().section-slider--main
 

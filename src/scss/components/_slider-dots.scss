@@ -3,24 +3,40 @@
   justify-content: center;
   gap: 10px;
   pointer-events: none;
-
+  
   &__el {
-    flex-shrink: 0;
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(#fff, .25);
-    cursor: pointer;
-    pointer-events: all;
-    transition: background-color $transition-default;
-
-    &:hover {
-      background-color: rgba(#fff, .50);
-    }
-
-    &--active {
-      background-color: #fff;
-    }
+	flex-shrink: 0;
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: rgba(#fff, .25);
+	cursor: pointer;
+	pointer-events: all;
+	transition: background-color $transition-default;
+	
+	@media (hover: hover) {
+	  &:hover {
+		background-color: rgba(#fff, .50);
+	  }
+	}
+	
+	&--active {
+	  background-color: #fff;
+	}
+	
+	.slider-dots--color & {
+	  background-color: color-mix(in srgb, #{$color-text} 25%, transparent);
+	  
+	  @media (hover: hover) {
+		&:hover {
+		  background-color: color-mix(in srgb, #{$color-primary} 50%, transparent);
+		}
+	  }
+	  
+	  &--active {
+		background-color: $color-primary;
+	  }
+	}
   }
 }

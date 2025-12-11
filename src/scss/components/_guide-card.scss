@@ -1,0 +1,75 @@
+.guide-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(#000, .08);
+  background-image: url('../images/common/apps-bg.svg'), cardGradient(#EE2E22, top);
+  background-repeat: no-repeat no-repeat;
+  background-size: auto 100%, auto;
+  background-position: 87% center, top right;
+  
+  @include desktop {
+	flex-direction: row;
+	align-items: unset;
+	gap: 12px;
+	padding: 17px 36px 30px;
+	border-radius: 28px;
+  }
+  
+  &__img {
+	flex-shrink: 0;
+	display: block;
+	max-width: 260px;
+  }
+  
+  &__content-box {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	
+	@include desktop {
+	  flex-direction: column-reverse;
+	  align-items: flex-start;
+	  justify-content: flex-end;
+	  padding-top: 27px;
+	}
+  }
+  
+  &__text-box {
+	text-align: center;
+	
+	@include desktop {
+	  text-align: left;
+	}
+  }
+  
+  &__title {
+	margin-bottom: 4px;
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 600;
+	
+	@include desktop {
+	  margin-bottom: 16px;
+	  font-size: 36px;
+	  line-height: 40px;
+	}
+  }
+  
+  &__text {
+	font-size: 18px;
+	line-height: 22px;
+	color: #9DA2A8;
+  }
+  
+  &__btn {
+	min-width: 100%;
+	
+	@include desktop {
+	  min-width: 180px;
+	}
+  }
+}

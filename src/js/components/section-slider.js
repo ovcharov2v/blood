@@ -2,9 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const sliderList = document.querySelectorAll('.section-slider__slider');
   if(!!sliderList.length) {
     sliderList.forEach(slider => {
-      const box = slider.closest('.section-slider__slider-box');
+      const box = slider.closest('.section-slider');
       const prevBtn = box.querySelector('.section-slider__slider-btn--prev');
       const nextBtn = box.querySelector('.section-slider__slider-btn--next');
+      const dots = box.querySelector('.section-slider__dots');
 
       let slidesInitial =  3;
 
@@ -22,6 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
         navigation: {
           nextEl: nextBtn,
           prevEl: prevBtn,
+        },
+        pagination: {
+          el: dots,
+          clickable: true,
+          bulletClass: 'slider-dots__el',
+          bulletActiveClass: 'slider-dots__el--active',
         },
         breakpoints: {
           768: {

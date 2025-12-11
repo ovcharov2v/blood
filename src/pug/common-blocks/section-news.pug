@@ -4,7 +4,7 @@ mixin sectionNews(showHeader = true)
         if showHeader
             .section__header
                 h2.section__title.h2 Новости
-                a.button.button--red.button--round-corner.section__header-btn(href="#") Все новости
+                a.button.button--red.button--round-corner.section__header-btn.section-slider__header-btn(href="#") Все новости
         .section-slider__slider-box
             .swiper.section-slider__slider.section-slider__slider--cols-3
                 .swiper-wrapper
@@ -17,3 +17,5 @@ mixin sectionNews(showHeader = true)
                     +svg("chevron-down").section-slider__slider-btn-icon
                 button.section-slider__slider-btn.section-slider__slider-btn--next(type="button", aria-label="Вперед")
                     +svg("chevron-down").section-slider__slider-btn-icon
+        .section-slider__dots.slider-dots.slider-dots--color
+        a.button.button--red.button--round-corner.section-slider__bottom-btn(href="#") Все новости
