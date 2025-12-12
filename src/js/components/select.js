@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     selectItems.forEach((item)=>{
       item.addEventListener('click', () => {
         current.innerHTML = item.innerHTML
+        current.classList.remove('select__current--placeholder')
         input.value = item.innerText
         const oldSelected = select.querySelector('.select__list-item--selected')
         oldSelected.classList.remove('select__list-item--selected')

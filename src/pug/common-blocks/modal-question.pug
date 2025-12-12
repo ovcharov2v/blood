@@ -1,0 +1,61 @@
+// modal question
+#modal-question.modal
+    .modal__container.container
+        .modal__window
+            .modal__header
+                p.modal__title Написать в службу крови
+                button.modal__close.js-close-modal(type="button", aria-label="Закрыть")
+                    +svg("modal-close").modal__close-icon
+            .modal__content-box
+                form.modal__question-form
+                    .modal__question-form-box
+                        .form-group
+                            p.form-group__label Ваш город
+                            .form-group__input-box
+                                // Select
+                                .select.form-group__select
+                                    .select__current-box
+                                        input.select__input(type="hidden", value="")
+                                        p.select__current.select__current--placeholder Выберите город
+                                        +svg("chevron-down").select__drop-icon
+                                    ul.select__list
+                                        li.select__list-item Москва
+                                        li.select__list-item Нижний Новгород
+                                        li.select__list-item Казань
+                        .form-group
+                            p.form-group__label Ваши полные ФИО
+                            .form-group__input-box
+                                input.input.form-group__input(type="text", placeholder="Иванов Иван Иванович")
+                        .form-group
+                            p.form-group__label Ваш e-mail
+                            .form-group__input-box
+                                input.input.form-group__input(type="email", placeholder="ivanov@mail.ru")
+                        .form-group
+                            p.form-group__label Ваш телефон
+                            .form-group__input-box
+                                input.input.form-group__input(type="tel", placeholder="+7 987 654-32-10")
+                    .modal__question-form-box
+                        .form-group
+                            p.form-group__label Тема обращения
+                            .form-group__input-box
+                                // Select
+                                .select.form-group__select
+                                    .select__current-box
+                                        input.select__input(type="hidden", value="")
+                                        p.select__current.select__current--placeholder Выберите тему обращения
+                                        +svg("chevron-down").select__drop-icon
+                                    ul.select__list
+                                        li.select__list-item Тема 1
+                                        li.select__list-item Тема 1
+                                        li.select__list-item Тема 1
+                        .modal__question-textarea.form-group
+                            p.form-group__label Обращение
+                            .form-group__input-box
+                                textarea.input.form-group__input(placeholder="Напишите сюда свое обращение")
+                    .modal__question-form-box
+                        button.button.button--red.button--lg(type="submit") Отправить
+                    .modal__question-form-box
+                        .modal__question-form-text-box
+                            p.modal__question-form-text Нажимая на кнопку «Отправить» я даю 
+                                a(href="#", target="_blank") согласие на обработку персональных данных
+                            p.modal__question-form-text.modal__question-form-text--red В случае предоставления недостоверных данных Служба крови не гарантирует ответа на Ваше обращение.

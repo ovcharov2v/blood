@@ -22,6 +22,10 @@
     &:hover {
       border-color: $color-primary-light !important;
     }
+    
+    &--placeholder {
+      color: #9DA2A8;
+    }
 
     .select--active & {
       border-color: $color-primary !important;

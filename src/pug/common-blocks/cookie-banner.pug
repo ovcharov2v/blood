@@ -1,0 +1,17 @@
+// cookie banner
+.cookie-banner(style="display:none")
+    .cookie-banner__container.container
+        .cookie-banner__text-box
+            p Пользуясь сайтом, вы даете согласие на обработку
+                |
+                |
+                a(href="#", target="_blank") cookie-файлов
+                |
+                |и соглашаетесь с
+                |
+                |
+                a(href="#", target="_blank") Политикой обработки персональных данных пользователей сайта
+        .cookie-banner__btn-box
+            button.button.button--red.button--round-corner.cookie-banner__accept-btn(type="button") Понимаю и принимаю
+            button.cookie-banner__close-btn(type="button", aria-label="Закрыть")
+                +svg("modal-close").cookie-banner__close-icon
