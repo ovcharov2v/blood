@@ -86,6 +86,36 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/components/cookie-banner.js":
+/*!********************************************!*\
+  !*** ./src/js/components/cookie-banner.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var cookieMessage = document.querySelector('.cookie-banner');
+  var cookieAcceptBtn = cookieMessage.querySelector('.cookie-banner__accept-btn');
+  var cookieCloseBtn = cookieMessage.querySelector('.cookie-banner__close-btn');
+  var accept_terms = sessionStorage.getItem('cookie__accept_terms');
+  if (cookieMessage && accept_terms !== 'true') {
+    cookieMessage.style.display = 'block';
+  }
+  if (cookieAcceptBtn) {
+    cookieAcceptBtn.addEventListener('click', function () {
+      sessionStorage.setItem('cookie__accept_terms', 'true');
+      cookieMessage.style.display = 'none';
+    });
+  }
+  if (cookieCloseBtn) {
+    cookieCloseBtn.addEventListener('click', function () {
+      cookieMessage.style.display = 'none';
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/components/footer.js":
 /*!*************************************!*\
   !*** ./src/js/components/footer.js ***!
@@ -206,6 +236,70 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     map.geoObjects.add(placemark);
   }
+});
+
+/***/ }),
+
+/***/ "./src/js/components/modal.js":
+/*!************************************!*\
+  !*** ./src/js/components/modal.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// Open modal
+var openModal = function openModal(modalId) {
+  var modal = document.querySelector(modalId);
+  if (!modal) {
+    console.warn("Modal ".concat(modalId, " does not exist!"));
+    return;
+  }
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  setTimeout(function () {
+    modal.classList.add('modal--show');
+  });
+};
+
+// Close modal
+var closeModal = function closeModal() {
+  var modal = document.querySelector('.modal--show');
+  if (!modal) return;
+  modal.classList.remove('modal--show');
+  document.body.style.overflow = '';
+  setTimeout(function () {
+    modal.style.display = '';
+  }, 350, modal);
+};
+document.addEventListener('DOMContentLoaded', function () {
+  var modalLinks = document.querySelectorAll('[data-modal]');
+  if (modalLinks.length) {
+    modalLinks.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        var modalId = "#modal-".concat(link.dataset.modal);
+        openModal(modalId);
+        return false;
+      });
+    });
+  }
+
+  // Close on Close btn click
+  var closeButtons = document.querySelectorAll('.js-close-modal');
+  if (closeButtons.length) {
+    closeButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        return closeModal();
+      });
+    });
+  }
+
+  // Close on Escape
+  document.body.addEventListener('keyup', function (e) {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  }, false);
 });
 
 /***/ }),
@@ -477,6 +571,7 @@ document.addEventListener('DOMContentLoaded', function () {
     selectItems.forEach(function (item) {
       item.addEventListener('click', function () {
         current.innerHTML = item.innerHTML;
+        current.classList.remove('select__current--placeholder');
         input.value = item.innerText;
         var oldSelected = select.querySelector('.select__list-item--selected');
         oldSelected.classList.remove('select__list-item--selected');
@@ -613,6 +708,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_map__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _components_section_myth__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/section-myth */ "./src/js/components/section-myth.js");
 /* harmony import */ var _components_section_myth__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_section_myth__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/modal */ "./src/js/components/modal.js");
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_modal__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _components_cookie_banner__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/cookie-banner */ "./src/js/components/cookie-banner.js");
+/* harmony import */ var _components_cookie_banner__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_components_cookie_banner__WEBPACK_IMPORTED_MODULE_12__);
+
+
 
 
 
