@@ -32,6 +32,14 @@
 	background-image: cardGradient(#8EDD11);
   }
   
+  &--navy {
+	background-image: cardGradient(#2FFC84);
+  }
+  
+  &--pink {
+	background-image: cardGradient(#F2A2F9);
+  }
+  
   &__title {
 	font-size: 28px;
 	line-height: 32px;

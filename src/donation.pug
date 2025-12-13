@@ -1,0 +1,70 @@
+extends pug/base
+
+prepend styles
+	link(rel="stylesheet" href=`./lib/swiper/swiper-bundle.css`)
+prepend scripts
+	script(src=`./lib/swiper/swiper-bundle.min.js`)
+
+block content
+	+breadcrumb(["Главная"], "О Донорстве") 
+	// Section Donation
+	.section-donation.container
+		h1.section-donation__title.h1 О Донорстве
+		.section-donation__grid
+			// card
+			a.color-card.color-card--red.section-donation__card(href="#")
+				p.color-card__title История донорства
+				img.color-card__img(src="./images/donation/img1.png", alt="")
+				span.button.button--icon-only.button--transparent-white.color-card__btn
+					+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--violet.section-donation__card(href="#")
+				p.color-card__title Любопытные факты
+				.color-card__bottom-box
+					img.color-card__img(src="./images/donation/img2.png", alt="")
+					span.button.button--icon-only.button--transparent-white.color-card__btn
+						+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--yellow.section-donation__card(href="#")
+				p.color-card__title Компоненты крови
+				.color-card__bottom-box
+					img.color-card__img(src="./images/donation/img3.png", alt="")
+					span.button.button--icon-only.button--transparent-white.color-card__btn
+						+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--orange.section-donation__card(href="#")
+				p.color-card__title Мифы о донорстве
+					br
+					|крови
+				img.color-card__img(src="./images/donation/img4.png", alt="")
+				span.button.button--icon-only.button--transparent-white.color-card__btn
+					+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--green.section-donation__card(href="#")
+				p.color-card__title Группы крови
+				.color-card__bottom-box
+					img.color-card__img(src="./images/donation/img5.png", alt="")
+					span.button.button--icon-only.button--transparent-white.color-card__btn
+						+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--navy.section-donation__card(href="#")
+				p.color-card__title Детям о донорстве
+				.color-card__bottom-box
+					img.color-card__img(src="./images/donation/img6.png", alt="")
+					span.button.button--icon-only.button--transparent-white.color-card__btn
+						+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--dark-red.section-donation__card(href="#")
+				p.color-card__title Любопытные факты
+				img.color-card__img(src="./images/donation/img7.png", alt="")
+				span.button.button--icon-only.button--transparent-white.color-card__btn
+					+svg("arrow-right").button__icon
+			// card
+			a.color-card.color-card--pink.section-donation__card(href="#")
+				p.color-card__title Донорство в мире
+				img.color-card__img(src="./images/donation/img8.png", alt="")
+				span.button.button--icon-only.button--transparent-white.color-card__btn
+					+svg("arrow-right").button__icon
+
+
+	+sectionNews(true)
