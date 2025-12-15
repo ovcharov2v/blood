@@ -1,0 +1,64 @@
+// modal chat
+#modal-chat.modal.modal--chat.modal--header-fixed
+    .modal__container.container
+        .modal__window
+            .modal__header
+                button.modal__close.js-close-modal(type="button", aria-label="Закрыть")
+                    +svg("modal-close").modal__close-icon
+            .modal__content-box
+                .modal__chat-hero
+                    img.modal__chat-hero-img(src="images/main/dude.png", alt="")
+                .modal__chat-main
+                    .modal__chat-messages
+                        .modal__chat-message.modal__chat-message--incoming
+                            .modal__chat-message-bubble
+                                p.modal__chat-message-text
+                                    | Привет, я робот
+                                    |
+                                    strong Макс
+                                    br
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus
+                                    |
+                                    |
+                                    a(href="#") ratione rem?
+
+                        .modal__chat-message.modal__chat-message--outgoing
+                            .modal__chat-message-bubble
+                                p.modal__chat-message-text
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus
+                                    |
+                                    |
+                                    a(href="#") ratione rem?
+
+                        .modal__chat-message.modal__chat-message--incoming
+                            .modal__chat-message-bubble
+                                p.modal__chat-message-text
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+
+                        .modal__chat-message.modal__chat-message--outgoing
+                            .modal__chat-message-bubble
+                                p.modal__chat-message-text
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
+
+                    form.modal__chat-form
+                        .modal__chat-input-box
+                            input.modal__chat-input(type="text", placeholder="Напишите сообщение...")
+                        button.button.button--red.button--icon-only.modal__chat-send(type="submit", aria-label="Отправить сообщение", title="Отправить сообщение")
+                            +svg("send").button__icon
