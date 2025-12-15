@@ -254,8 +254,11 @@ var openModal = function openModal(modalId) {
     console.warn("Modal ".concat(modalId, " does not exist!"));
     return;
   }
-  modal.style.display = 'flex';
+  if (modal.classList.contains('modal--header-fixed')) {
+    document.querySelector('.header').style.position = 'fixed';
+  }
   document.body.style.overflow = 'hidden';
+  modal.style.display = 'flex';
   setTimeout(function () {
     modal.classList.add('modal--show');
   });
@@ -265,6 +268,9 @@ var openModal = function openModal(modalId) {
 var closeModal = function closeModal() {
   var modal = document.querySelector('.modal--show');
   if (!modal) return;
+  if (modal.classList.contains('modal--header-fixed')) {
+    document.querySelector('.header').style.position = '';
+  }
   modal.classList.remove('modal--show');
   document.body.style.overflow = '';
   setTimeout(function () {
