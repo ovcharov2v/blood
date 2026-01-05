@@ -1,0 +1,45 @@
+extends pug/lk
+
+block content
+    +breadcrumb(["Главная"], "Сдадим кровь вместе").lk__breadcrumbs
+    .lk__bd
+        #lk-tabs.tabs.tabs--with-border
+            .lk__bd-tab-nav
+                .tabs__nav
+                    button.tabs__nav-btn.tabs__nav-btn--active(type="button", data-content="content-1") Вы инициатор
+                    button.tabs__nav-btn(type="button", data-content="content-2") Вы присоединились
+                button.button.button--red.button--round-corner(type="button") Создать встречу
+            .tabs__content-box
+                #content-1.tabs__content.tabs__content--active
+                    table.bd-table.lk__bd-table
+                        thead.bd-table__top
+                            th Дата и время
+                            th Наименование учреждения службы крови
+                            th Инициатор
+                            th Друзей
+                            th
+                        tbody
+                            - let i = 0
+                            while i < 2
+                                tr.bd-table__row
+                                    td(data-label="Дата и время")
+                                        .bd-table__cell
+                                            p 17.10.2025 / 9:15
+                                    td(data-label="Наименование учреждения службы крови")
+                                        .bd-table__cell
+                                            a(href="#") Центр крови ФМБА России
+                                    td(data-label="Инициатор")
+                                        .bd-table__cell
+                                            p Вы
+                                    td(data-label="Друзей")
+                                        .bd-table__cell
+                                            p 0
+                                    td
+                                        .bd-table__cell
+                                            button.bd-table__remove-btn
+                                                +svg("trash").bd-table__remove-btn-icon
+                                - i++
+
+                #content-2.tabs__content
+                    p таб 2
+

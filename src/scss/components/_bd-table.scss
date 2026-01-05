@@ -1,0 +1,169 @@
+.bd-table {
+  display: block;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 16px;
+  
+  @include tablet {
+	display: table;
+  }
+  
+  tbody {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	
+	@include tablet {
+	  display: table-row-group;
+	}
+  }
+  
+  &__top {
+	display: none;
+	
+	@include tablet {
+	  display: table-header-group;
+	}
+	
+	th {
+	  padding: 22px 8px;
+	  font-size: 16px;
+	  line-height: 19px;
+	  font-weight: 500;
+	  text-align: left;
+	  
+	  &:first-child {
+		padding-left: 20px;
+		white-space: nowrap;
+	  }
+	  
+	  &:last-child {
+		padding-right: 20px;
+	  }
+	}
+  }
+  
+  &__row {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding: 8px 16px;
+	border-radius: 22px;
+	font-size: 14px;
+	line-height: 26px;
+	box-shadow: 0 2px 8px color-mix(in srgb, #{$color-text} 8%, transparent);;
+	
+	@include tablet {
+	  display: table-row;
+	  padding: 0;
+	  border-radius: 0;
+	  border-bottom: 16px solid $color-bg;
+	  box-shadow: unset;
+	}
+	
+	td {
+	  &::before {
+		display: block;
+		margin: 10px 0 3px;
+		line-height: 1;
+		font-weight: 500;
+		opacity: .5;
+		content: attr(data-label);
+	  }
+	  
+	  @include tablet {
+		&::before {
+		  content: none;
+		}
+	  }
+	  
+	  &:first-child {
+		@include tablet {
+		  border-radius: 16px 0 0 16px;
+		  padding-left: 20px;
+		  white-space: nowrap;
+		}
+	  }
+	  
+	  &:nth-child(2) {
+		@include tablet {
+		  width: 100%;
+		}
+	  }
+	  
+	  &:last-child {
+		@include tablet {
+		  border-radius: 0 16px 16px 0;
+		  padding-right: 20px;
+		}
+	  }
+	}
+	
+	a {
+	  color: $color-primary;
+	  
+	  &:hover {
+		text-decoration: underline;
+	  }
+	}
+  }
+  
+  &__cell {
+	@include tablet {
+	  padding: 22px 8px;
+	}
+  }
+  
+  &__remove-btn {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 26px;
+	height: 26px;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	opacity: .1;
+	color: $color-text;
+	transition: color $transition-default, opacity $transition-default;
+	
+	&:hover {
+	  opacity: 1;
+	  color: $color-primary;
+	}
+	
+	@include tablet {
+	  position: static;
+	}
+  }
+  
+  &__remove-btn-icon {
+	display: block;
+	width: 16px;
+	height: 16px;
+  }
+}
+
+// theme
+.theme-light {
+  .bd-table {
+	td {
+	  @include tablet {
+		background-color: rgba(#26262B, .04);
+	  }
+	}
+  }
+}
+
+.theme-dark {
+  .bd-table {
+	td {
+	  @include tablet {
+		background-color: #26262B;
+	  }
+	}
+  }
+}

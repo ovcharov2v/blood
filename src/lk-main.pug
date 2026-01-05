@@ -1,0 +1,80 @@
+extends pug/lk
+
+block content
+    +breadcrumb(["Главная"], "Личный кабинет донора").lk__breadcrumbs
+
+    .lk__mobile-tabs
+        p.lk__mobile-tabs-title Навигация
+        .select(data-tabs="lk-tabs")
+            .select__current-box
+                input.select__input(type="hidden", value="Личные данные")
+                p.select__current Личные данные
+                +svg("chevron-down").select__drop-icon
+            ul.select__list
+                li.select__list-item.select__list-item--selected(data-content="content-1") Личные данные
+                li.select__list-item(data-content="content-2") Привязка аккаунта
+                li.select__list-item(data-content="content-3") Смена пароля
+                li.select__list-item(data-content="content-4") Двухфакторная авторизация
+
+    h1.lk__title Настройки профиля
+
+    #lk-tabs.tabs.lk__tabs
+        .tabs__nav.lk__tabs-nav
+            button.tabs__nav-btn.tabs__nav-btn--active(type="button", data-content="content-1") Личные данные
+            button.tabs__nav-btn(type="button", data-content="content-2") Привязка аккаунта
+            button.tabs__nav-btn(type="button", data-content="content-3") Смена пароля
+            button.tabs__nav-btn(type="button", data-content="content-4") Двухфакторная авторизация
+        .tabs__content-box
+            #content-1.tabs__content.tabs__content--active
+                form.lk__form
+                    .lk__form-grid
+                        .form-group
+                            p.form-group__label Группа крови
+                            .form-group__input-box
+                                // Select
+                                .select.form-group__select
+                                    .select__current-box
+                                        input.select__input(type="hidden", value="0 (I)")
+                                        p.select__current 0 (I)
+                                        +svg("chevron-down").select__drop-icon
+                                    ul.select__list
+                                        li.select__list-item.select__list-item--selected 0 (I)
+                                        li.select__list-item 0 (II)
+                                        li.select__list-item 0 (III)
+                            span.form-group__note Выберите вашу группу крови
+                        .form-group
+                            p.form-group__label Резус-принадлежность:
+                            .form-group__input-box
+                                // Select
+                                .select.form-group__select
+                                    .select__current-box
+                                        input.select__input(type="hidden", value="Rh+")
+                                        p.select__current Rh+
+                                        +svg("chevron-down").select__drop-icon
+                                    ul.select__list
+                                        li.select__list-item.select__list-item--selected Rh+
+                                        li.select__list-item Rh-
+                                        li.select__list-item Rh+-
+                            span.form-group__note Выберите ваш резус-принадлежность
+                        .form-group
+                            p.form-group__label Kell-принадлежность:
+                            .form-group__input-box
+                                // Select
+                                .select.form-group__select
+                                    .select__current-box
+                                        input.select__input(type="hidden", value="kell-")
+                                        p.select__current kell-
+                                        +svg("chevron-down").select__drop-icon
+                                    ul.select__list
+                                        li.select__list-item.select__list-item--selected kell-
+                                        li.select__list-item kell+
+                                        li.select__list-item kell++
+                            span.form-group__note Ваш Kell-принадлежность
+                    button.button.button--red.button--round-corner.lk__form-submit(type="submit") Сохранить
+            #content-2.tabs__content
+                p таб 2
+            #content-3.tabs__content
+                p таб 3
+            #content-4.tabs__content
+                p таб 4
+

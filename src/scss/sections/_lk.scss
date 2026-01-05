@@ -349,6 +349,32 @@
 	width: 100px;
 	margin-bottom: 20px;
   }
+  
+  // Сдадим вместе
+  &__bd {}
+  &__bd-tab-nav {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	
+	.tabs__nav-btn {
+	  flex-grow: 1;
+	}
+	
+	@include tablet {
+	  flex-direction: row;
+	  justify-content: space-between;
+	  align-items: center;
+	}
+  }
+  
+  &__bd-table {
+	padding: 0 8px;
+	
+	@include tablet {
+	  padding: 0;
+	}
+  }
 }
 
 // theme

@@ -1,0 +1,142 @@
+include mixins
+
+block vars
+	- var baseDir = './'
+	- var isListPage = 'false'
+	- var baseTheme = 'theme-light'
+
+doctype html(lang="ru")
+html(class=""+baseTheme)
+	head
+		block head-start
+		block meta
+			meta(charset='utf-8')
+			meta(http-equiv='X-UA-Compatible' content='IE=edge')
+			meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+			meta(name='description' content='Служба Крови')
+			title Служба Крови
+			link(rel='icon' type='image/png' href='favicon-32x32.png' sizes='32x32')
+			link(rel='icon' type='image/png' href='favicon-16x16.png' sizes='16x16')
+		block styles
+			link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+		block head-end
+	body
+		block body-start
+		+headerLk()
+		.lk
+			// navbar
+			aside.lk__navbar
+				a.lk__logo-link(href="./main.html", title="На главную")
+					picture
+						img.lk__logo.img-theme-light(src="./images/common/logo-theme-light.svg", alt="Служба Крови")
+						img.lk__logo.img-theme-dark(src="./images/common/logo-theme-dark.svg", alt="Служба Крови")
+				.lk__navbar-title
+					p Личный кабинет
+					button.button.button--round-corner.button--outline-gray.button--icon-only.button--md.lk__navbar-close(type="button", aria-label="Закрыть")
+						+svg("close").button__icon
+				.lk__navbar-panel-list
+					// panel
+					.lk__navbar-panel
+						.lk__navbar-row-list
+							.lk__navbar-row
+								span.lk__navbar-row-key Код донора:
+								span.lk__navbar-row-value 7701 3447 0536
+							.lk__navbar-row
+								span.lk__navbar-row-key Группа крови:
+								span.lk__navbar-row-value 0 (I)
+							.lk__navbar-row
+								span.lk__navbar-row-key Резус-принадлежность:
+								span.lk__navbar-row-value Rh+
+							.lk__navbar-row
+								span.lk__navbar-row-key Kell-принадлежность:
+								span.lk__navbar-row-value kell-
+					// panel
+					.lk__navbar-panel
+						.lk__navbar-row-list
+							.lk__navbar-row
+								span.lk__navbar-row-key Продвинутый
+								span.lk__navbar-row-value 5 донаций
+						p.lk__navbar-note 5 донаций до следующего уровня
+					// panel
+					.lk__navbar-panel
+						p.lk__navbar-panel-text Даты следующих возможных донаций
+						.lk__navbar-row-list
+							.lk__navbar-row
+								span.lk__navbar-row-key Цельная кровь:
+								span.lk__navbar-row-value 26 апреля
+							.lk__navbar-row
+								span.lk__navbar-row-key Плазма:
+								span.lk__navbar-row-value 26 апреля
+							.lk__navbar-row
+								span.lk__navbar-row-key Клетки крови:
+								span.lk__navbar-row-value 27 апреля
+				.lk__navbar-bottom
+					a.lk__navbar-link(href="#")
+						+svg("lk-support").lk__navbar-link-icon
+						| Поддержка
+					a.lk__navbar-link(href="#")
+						+svg("lk-exit").lk__navbar-link-icon
+						| Выход
+			// content
+			section.lk__content
+				// menu
+				nav.lk__menu
+					p.lk__menu-title Навигация
+					ul.lk__menu-list
+						li.lk__menu-elem
+							a.lk__menu-link(href="lk-main.html")
+								+svg("lk-user").lk__menu-icon
+								| Мой профиль
+						li.lk__menu-elem
+							a.lk__menu-link(href="#")
+								+svg("lk-blood-plus").lk__menu-icon
+								| Мои донации
+						li.lk__menu-elem
+							a.lk__menu-link(href="#")
+								+svg("lk-tube").lk__menu-icon
+								| Мои анализы
+						li.lk__menu-elem
+							a.lk__menu-link(href="lk-pd.html")
+								+svg("lk-medal").lk__menu-icon
+								| Почетный донер
+						li.lk__menu-elem
+							a.lk__menu-link(href="lk-bd.html")
+								+svg("lk-blood").lk__menu-icon
+								| Сдадим кровь вместе
+						li.lk__menu-elem
+							a.lk__menu-link(href="#")
+								+svg("lk-bell").lk__menu-icon
+								| Уведомления и новости
+						li.lk__menu-elem
+							a.lk__menu-link(href="#")
+								+svg("lk-sale").lk__menu-icon
+								| Мои акции
+
+
+				block content
+
+
+				.lk__bottom
+					.theme-switcher.lk__theme-swither
+						button.theme-switcher__btn.js-set-theme(type="button", aria-label="Светлая тема", data-theme="light")
+							+svg("brightness").theme-switcher__btn-icon
+						button.theme-switcher__btn.js-set-theme(type="button", aria-label="Темная тема", data-theme="dark")
+							+svg("moon").theme-switcher__btn-icon
+			.lk__mobile-bottom
+				a.lk__mobile-logo-link(href="./main.html", title="На главную")
+					picture
+						img.lk__logo.img-theme-light(src="./images/common/logo-theme-light.svg", alt="Служба Крови")
+						img.lk__logo.img-theme-dark(src="./images/common/logo-theme-dark.svg", alt="Служба Крови")
+				.lk__navbar-bottom
+					a.lk__navbar-link(href="#")
+						+svg("lk-support").lk__navbar-link-icon
+						| Поддержка
+					a.lk__navbar-link(href="#")
+						+svg("lk-exit").lk__navbar-link-icon
+						| Выход
+		include common-blocks/cookie-banner
+		block scripts
+			//-script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
+			script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
+		include ../images/sprite/sprite.svg
+		block body-end
