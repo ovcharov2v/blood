@@ -1,0 +1,26 @@
+.info-box {
+  display: inline-flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  border: 1px solid $color-primary;
+  border-radius: 8px;
+  
+  @include tablet {
+	border-radius: 48px;
+  }
+  
+  &__icon {
+	flex-shrink: 0;
+	display: block;
+	width: 20px;
+	height: 20px;
+	color: $color-primary;
+  }
+  
+  &__text {
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 500;
+  }
+}

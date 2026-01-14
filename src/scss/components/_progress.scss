@@ -1,0 +1,39 @@
+.progress {
+  position: relative;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #E8E8E8;
+  
+  &__track {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	border-radius: 10px;
+	
+	.progress--red & {
+	  background-color: #EE2E22;
+	}
+	
+	.progress--yellow & {
+	  background-color: #FCB736;
+	}
+	
+	.progress--green & {
+	  background-color: #92DE1C;
+	}
+  }
+}
+
+// theme
+.theme-light {
+  .progress {
+	background-color: #E8E8E8;
+  }
+}
+
+.theme-dark {
+  .progress {
+	background-color: #18181A;
+  }
+}

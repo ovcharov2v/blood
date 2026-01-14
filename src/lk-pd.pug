@@ -1,0 +1,66 @@
+extends pug/lk
+
+block content
+    +breadcrumb(["Главная"], "Почетный донор").lk__breadcrumbs
+
+    .lk-pd
+        #lk-tabs.tabs.tabs--with-border
+            .lk-pd__tab-nav
+                .tabs__nav
+                    button.tabs__nav-btn.tabs__nav-btn--active(type="button", data-content="content-1") России
+                    button.tabs__nav-btn(type="button", data-content="content-2") Москвы
+                button.button.button--red.button--round-corner(type="button") Добавить удостоверение
+
+        .info-box.lk-pd__info
+            +svg("info").info-box__icon
+            p.info-box__text Как рассчитать донации для получения статуса Почетного донора России?
+
+        h1.lk__title.lk-pd__title До почетного донора осталось
+
+        .tabs__content-box
+            #content-1.tabs__content.tabs__content--active
+                .lk-pd__grid
+                    .lk-pd__grid-col
+                        // card
+                        .lk-pd__card.lk-pd__card--red
+                            .lk-pd__card-grid
+                                .lk-pd__card-img-box(style="--height: 40%;")
+                                    img(src="./images/lk/back.png").lk-pd__card-img.lk-pd__card-img--back
+                                    img(src="./images/lk/front2.png").lk-pd__card-img.lk-pd__card-img--front
+                                .lk-pd__card-content
+                                    p.lk-pd__card-title Цельная кровь и клетки крови
+                                    .lk-pd__card-progress-box
+                                        span.lk-pd__card-progress-value 6 из 40
+                                        .lk-pd__card-progress.progress.progress--red
+                                            .progress__track(style="width:40%;")
+                    .lk-pd__grid-col
+                        // card
+                        .lk-pd__card.lk-pd__card--yellow
+                            .lk-pd__card-grid
+                                .lk-pd__card-img-box(style="--height: 25%;")
+                                    img(src="./images/lk/back.png").lk-pd__card-img.lk-pd__card-img--back
+                                    img(src="./images/lk/front3.png").lk-pd__card-img.lk-pd__card-img--front
+                                .lk-pd__card-content
+                                    p.lk-pd__card-title Плазма крови
+                                    .lk-pd__card-progress-box
+                                        span.lk-pd__card-progress-value 40 из 60
+                                        .lk-pd__card-progress.progress.progress--yellow
+                                            .progress__track(style="width:25%;")
+                    .lk-pd__grid-col.lk-pd__grid-col--double
+                        // card
+                        .lk-pd__card.lk-pd__card--green
+                            .lk-pd__card-grid
+                                .lk-pd__card-img-box(style="--height: 60%;")
+                                    img(src="./images/lk/back.png").lk-pd__card-img.lk-pd__card-img--back
+                                    img(src="./images/lk/front1.png").lk-pd__card-img.lk-pd__card-img--front
+                                .lk-pd__card-content
+                                    p.lk-pd__card-title Смешанные донации
+                                    .lk-pd__card-progress-box
+                                        span.lk-pd__card-progress-value 46 из 60/40
+                                            span.color-primary *
+                                        .lk-pd__card-progress.progress.progress--green
+                                            .progress__track(style="width:60%;")
+                        .lk-pd__note *Если донаций цельной крови и клеток крови будет ≥25
+
+            #content-2.tabs__content
+                p таб 2
