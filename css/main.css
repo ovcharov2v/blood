@@ -2192,6 +2192,56 @@ a {
   .theme-dark .bd-table td {
     background-color: #26262B; } }
 
+.progress {
+  position: relative;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #E8E8E8; }
+  .progress__track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 10px; }
+    .progress--red .progress__track {
+      background-color: #EE2E22; }
+    .progress--yellow .progress__track {
+      background-color: #FCB736; }
+    .progress--green .progress__track {
+      background-color: #92DE1C; }
+
+.theme-light .progress {
+  background-color: #E8E8E8; }
+
+.theme-dark .progress {
+  background-color: #18181A; }
+
+.info-box {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 8px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 14px 16px;
+  border: 1px solid var(--color-primary);
+  border-radius: 8px; }
+  @media (min-width: 768px) {
+    .info-box {
+      border-radius: 48px; } }
+  .info-box__icon {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: var(--color-primary); }
+  .info-box__text {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500; }
+
 .header {
   position: relative;
   z-index: 888;
@@ -4881,6 +4931,176 @@ a {
   background-color: #26262B; }
 
 .theme-dark .lk__mobile-bottom {
+  background-color: #26262B; }
+
+.lk-pd__tab-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  margin-bottom: 16px; }
+  .lk-pd__tab-nav .tabs__nav-btn {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  @media (min-width: 768px) {
+    .lk-pd__tab-nav {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+
+@media (min-width: 768px) {
+  .lk-pd__info {
+    margin-bottom: 24px; } }
+
+.lk-pd__title {
+  display: none;
+  margin-bottom: -16px; }
+  @media (min-width: 768px) {
+    .lk-pd__title {
+      display: block; } }
+
+.lk-pd__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: 100%;
+      grid-template: auto / 100%;
+  grid-gap: 20px; }
+  @media (min-width: 768px) {
+    .lk-pd__grid {
+      -ms-grid-rows: auto;
+      -ms-grid-columns: minmax(0, 1fr) 20px minmax(0, 1fr);
+          grid-template: auto/repeat(2, minmax(0, 1fr));
+      grid-gap: 76px 20px; } }
+
+.lk-pd__grid-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media (min-width: 768px) {
+    .lk-pd__grid-col--double {
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 2;
+      grid-column: 1/3; } }
+
+.lk-pd__card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border-radius: 20px;
+  overflow: hidden; }
+  @media (min-width: 1024px) {
+    .lk-pd__card {
+      padding: 32px; } }
+  .lk-pd__card::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    aspect-ratio: 1;
+    height: 140%;
+    content: "";
+    pointer-events: none; }
+  .lk-pd__card--red::before {
+    background-image: radial-gradient(circle farthest-side at bottom left, #E92C5B 0%, rgba(233, 44, 91, 0.6) 21%, rgba(233, 44, 91, 0.25) 43%, rgba(233, 44, 91, 0.1) 64%, rgba(233, 44, 91, 0) 85%); }
+  .lk-pd__card--yellow::before {
+    background-image: radial-gradient(circle farthest-side at bottom left, #FCB42F 0%, rgba(252, 180, 47, 0.6) 21%, rgba(252, 180, 47, 0.25) 43%, rgba(252, 180, 47, 0.1) 64%, rgba(252, 180, 47, 0) 85%); }
+  .lk-pd__card--green::before {
+    background-image: radial-gradient(circle farthest-side at bottom left, #8EDD11 0%, rgba(142, 221, 17, 0.6) 21%, rgba(142, 221, 17, 0.25) 43%, rgba(142, 221, 17, 0.1) 64%, rgba(142, 221, 17, 0) 85%); }
+
+.lk-pd__card-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: 80px 20px auto;
+      grid-template: auto / 80px auto;
+  grid-gap: 20px;
+  height: 100%; }
+  @media (min-width: 768px) {
+    .lk-pd__card-grid {
+      -ms-grid-rows: auto;
+      -ms-grid-columns: 120px 20px auto;
+          grid-template: auto / 120px auto; } }
+
+.lk-pd__card-img-box {
+  position: relative; }
+
+.lk-pd__card-img {
+  display: block;
+  width: 100%;
+  /*&--back {
+	  position: relative;
+	  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--height, 100%)), 0 calc(100% - var(--height, 100%)));
+	}*/ }
+  .lk-pd__card-img--front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 calc(100% - var(--height, 100%)), 100% calc(100% - var(--height, 100%)), 100% 100%, 0 100%); }
+
+.lk-pd__card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.lk-pd__card-title {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 500; }
+  @media (min-width: 1024px) {
+    .lk-pd__card-title {
+      font-size: 24px;
+      line-height: 1; } }
+
+.lk-pd__card-progress-value {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 500; }
+  @media (min-width: 1024px) {
+    .lk-pd__card-progress-value {
+      font-size: 40px;
+      line-height: 47px; } }
+
+.lk-pd__card-progress {
+  width: 100%; }
+
+.lk-pd__note {
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--color-primary); }
+
+.theme-light .lk-pd__card {
+  background-color: #F3F4F6; }
+
+.theme-dark .lk-pd__card {
   background-color: #26262B; }
 
 .section-station {
