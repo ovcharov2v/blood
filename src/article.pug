@@ -76,7 +76,7 @@ block content
 							a.button.button--round-corner.button--outline-white.section-article__news-card-link(href="#") Как стать волонтером?
 				.section-article__news-col-group
 					h3.section-article__news-title Наши события:
-					.swiper.section-article__news-slider
+					.swiper.section-article__news-slider.event-slider
 						.swiper-wrapper
 							- let i = 0
 							while i < 5
@@ -95,6 +95,6 @@ block content
 										.article-news__img-box
 											img.article-news__img(src="./images/article/article-news.png", alt="")
 								- i++
-					.section-article__news-dots.slider-dots.slider-dots--color
+					.event-slider__dots.slider-dots.slider-dots--color
 
 	+sectionNews(false)

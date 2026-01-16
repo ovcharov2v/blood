@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.querySelector('.section-article__news-slider');
+  const slider = document.querySelector('.event-slider');
   if(!!slider) {
     new Swiper(slider, {
       slidesPerView: 1,
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
       grabCursor: true,
       loop: true,
       pagination: {
-        el: '.section-article__news-dots.slider-dots',
+        el: '.event-slider__dots.slider-dots',
         clickable: true,
         bulletClass: 'slider-dots__el',
         bulletActiveClass: 'slider-dots__el--active',
