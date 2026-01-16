@@ -51,7 +51,7 @@
 	border-radius: 22px;
 	font-size: 14px;
 	line-height: 26px;
-	box-shadow: 0 2px 8px color-mix(in srgb, #{$color-text} 8%, transparent);;
+	box-shadow: 0 2px 8px color-mix(in srgb, #{$color-text} 8%, transparent);
 	
 	@include tablet {
 	  display: table-row;
