@@ -116,6 +116,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/components/event-slider.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/event-slider.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var slider = document.querySelector('.event-slider');
+  if (!!slider) {
+    new Swiper(slider, {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      grabCursor: true,
+      loop: true,
+      pagination: {
+        el: '.event-slider__dots.slider-dots',
+        clickable: true,
+        bulletClass: 'slider-dots__el',
+        bulletActiveClass: 'slider-dots__el--active'
+      }
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/components/footer.js":
 /*!*************************************!*\
   !*** ./src/js/components/footer.js ***!
@@ -608,6 +635,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var tabsContent = document.querySelectorAll('.tabs__content');
   tabsNavButtons.forEach(function (button) {
     button.addEventListener('click', function () {
+      var container = button.closest('.tabs__nav');
+      container.scrollLeft = button.offsetLeft - container.offsetHeight / 2 - 40;
       var targetContentId = button.getAttribute('data-content');
       var targetContent = document.getElementById(targetContentId);
 
@@ -718,6 +747,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_modal__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _components_cookie_banner__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/cookie-banner */ "./src/js/components/cookie-banner.js");
 /* harmony import */ var _components_cookie_banner__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_components_cookie_banner__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _components_event_slider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/event-slider */ "./src/js/components/event-slider.js");
+/* harmony import */ var _components_event_slider__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_components_event_slider__WEBPACK_IMPORTED_MODULE_13__);
+
 
 
 

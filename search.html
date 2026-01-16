@@ -9,7 +9,8 @@
 		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
 		<link rel="stylesheet" href="./lib/swiper/swiper-bundle.css"/>
-		<link rel="stylesheet" href="./css/main.css?v=1768576105305"/>
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=7d5e0e61-1da5-4f66-b0b1-ebb11b324bfe&amp;lang=ru_RU"></script>
+		<link rel="stylesheet" href="./css/main.css?v=1768576107200"/>
 	</head>
 	<body>
 		<!-- Header-->
@@ -482,34 +483,306 @@
 		</div>
 		<main class="main">
 			<!-- Breadcrumbs-->
-			<div class="container breadcrumb"><a class="breadcrumb__link" href="#" title="Главная">Главная</a><span class="breadcrumb__separator">/</span><span class="breadcrumb__current">Библиотека</span>
+			<div class="container breadcrumb"><a class="breadcrumb__link" href="#" title="Главная">Главная</a><span class="breadcrumb__separator">/</span><a class="breadcrumb__link" href="#" title="Учреждение службы крови">Учреждение службы крови</a><span class="breadcrumb__separator">/</span><span class="breadcrumb__current">Поиск учреждений Службы крови</span>
 			</div>
-			<!-- Section Library-->
-			<div class="section-library container">
-				<h1 class="section-library__title h1">Библиотека</h1>
-				<div class="section-library__grid">
-					<!-- card--><a class="color-card color-card--green section-library__card" href="#">
-						<p class="color-card__title">Информационные материалы</p><img class="color-card__img" src="./images/library/img1.png" alt=""/><span class="button button--icon-only button--transparent-white color-card__btn">
-							<svg class="button__icon">
-								<use xlink:href="#arrow-right"></use>
-							</svg></span></a>
-					<!-- card--><a class="color-card color-card--violet section-library__card" href="#">
-						<p class="color-card__title">Инфографика</p>
-						<div class="color-card__bottom-box"><img class="color-card__img" src="./images/library/img2.png" alt=""/><span class="button button--icon-only button--transparent-white color-card__btn">
-								<svg class="button__icon">
-									<use xlink:href="#arrow-right"></use>
-								</svg></span></div></a>
-					<!-- card--><a class="color-card color-card--yellow section-library__card" href="#">
-						<p class="color-card__title">Видеоролики</p>
-						<div class="color-card__bottom-box"><img class="color-card__img" src="./images/library/img3.png" alt=""/><span class="button button--icon-only button--transparent-white color-card__btn">
-								<svg class="button__icon">
-									<use xlink:href="#arrow-right"></use>
-								</svg></span></div></a>
-					<!-- card--><a class="color-card color-card--red section-library__card" href="#">
-						<p class="color-card__title">Личный кабинет</p><img class="color-card__img" src="./images/library/img4.png" alt=""/><span class="button button--icon-only button--transparent-white color-card__btn">
-							<svg class="button__icon">
-								<use xlink:href="#arrow-right"></use>
-							</svg></span></a>
+			<!-- Section article-->
+			<div class="section-search container">
+				<h1 class="section-search__title h1">Поиск учреждений Службы крови</h1>
+				<form class="section-search__filter">
+					<div class="section-search__filter-top">
+						<div class="tabs-radio">
+							<label class="tabs-radio__el">
+								<input class="tabs-radio__el-input" type="radio" name="filter" checked="checked"/><span class="tabs-radio__el-text">Учреждения службы крови</span>
+							</label>
+							<label class="tabs-radio__el">
+								<input class="tabs-radio__el-input" type="radio" name="filter"/><span class="tabs-radio__el-text">Некоммерческие организации</span>
+							</label>
+						</div>
+					</div>
+					<div class="section-search__filter-center">
+						<!-- Select-->
+						<div class="select">
+							<div class="select__current-box">
+								<input class="select__input" type="hidden" value=""/>
+								<p class="select__current">Москва</p>
+								<svg class="select__drop-icon">
+									<use xlink:href="#chevron-down"></use>
+								</svg>
+							</div>
+							<ul class="select__list">
+								<li class="select__list-item">Москва</li>
+								<li class="select__list-item">Казань</li>
+								<li class="select__list-item">Астрахань</li>
+							</ul>
+						</div>
+						<!-- Select-->
+						<div class="select">
+							<div class="select__current-box">
+								<input class="select__input" type="hidden" value=""/>
+								<p class="select__current select__current--placeholder">Все станции метро</p>
+								<svg class="select__drop-icon">
+									<use xlink:href="#chevron-down"></use>
+								</svg>
+							</div>
+							<ul class="select__list">
+								<li class="select__list-item">Станция Московская</li>
+								<li class="select__list-item">Станция 2</li>
+							</ul>
+						</div>
+						<div class="form-group">
+							<div class="form-group__input-box">
+								<input class="input form-group__input" type="text" placeholder="Поиск по названию"/>
+								<button class="form-group__btn" type="button" aria-label="Искать">
+									<svg class="form-group__btn-icon">
+										<use xlink:href="#search"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="section-search__filter-other">
+						<p class="section-search__filter-other-title">Дополнительно</p>
+						<div class="section-search__filter-other-list">
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox"/><span class="checkbox__text">Учреждения службы крови</span>
+							</label>
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox"/><span class="checkbox__text">Работает в ближайшую субботу</span>
+							</label>
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox"/><span class="checkbox__text">Выдает код донации</span>
+							</label>
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox"/><span class="checkbox__text">Осуществляет прием по онлайн-записи</span>
+							</label>
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox"/><span class="checkbox__text">Подходит для получения Почетного донора Москвы</span>
+							</label>
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox"/><span class="checkbox__text">Обязательна предварительная запись</span>
+							</label>
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox"/><span class="checkbox__text">Рекрутинговый центр для вступления в федеральный регистр</span>
+							</label>
+						</div>
+					</div>
+					<button class="button button--red section-search__filter-btn" type="reset">Сбросить</button>
+				</form>
+				<div class="section-search__map" id="map-station"></div>
+				<div class="section-search__grid">
+					<!-- content-->
+					<div class="section-search__content">
+						<div class="section-search__content-list">
+							<!-- clinic--><a class="section-search__clinic" href="#">
+								<svg class="section-search__clinic-icon">
+									<use xlink:href="#drop"></use>
+								</svg>
+								<div class="section-search__clinic-text">
+									<p class="section-search__clinic-name">Московский научно-исследовательский онкологический институт им. П.А. Герцена, отделение переливания крови</p><span class="section-search__clinic-note">Москва, 2-й Боткинский проезд, д. 3</span><span class="section-search__clinic-note">Режим работы: Пн-Пт с 8:00 до 10:00, донорские субботы с 8:30 до 12:00</span>
+								</div></a>
+							<!-- clinic--><a class="section-search__clinic" href="#">
+								<svg class="section-search__clinic-icon">
+									<use xlink:href="#drop"></use>
+								</svg>
+								<div class="section-search__clinic-text">
+									<p class="section-search__clinic-name">Московский научно-исследовательский онкологический институт им. П.А. Герцена, отделение переливания крови</p><span class="section-search__clinic-note">Москва, 2-й Боткинский проезд, д. 3</span><span class="section-search__clinic-note">Режим работы: Пн-Пт с 8:00 до 10:00, донорские субботы с 8:30 до 12:00</span>
+								</div></a>
+							<!-- clinic--><a class="section-search__clinic" href="#">
+								<svg class="section-search__clinic-icon">
+									<use xlink:href="#drop"></use>
+								</svg>
+								<div class="section-search__clinic-text">
+									<p class="section-search__clinic-name">Московский научно-исследовательский онкологический институт им. П.А. Герцена, отделение переливания крови</p><span class="section-search__clinic-note">Москва, 2-й Боткинский проезд, д. 3</span><span class="section-search__clinic-note">Режим работы: Пн-Пт с 8:00 до 10:00, донорские субботы с 8:30 до 12:00</span>
+								</div></a>
+							<!-- clinic--><a class="section-search__clinic" href="#">
+								<svg class="section-search__clinic-icon">
+									<use xlink:href="#drop"></use>
+								</svg>
+								<div class="section-search__clinic-text">
+									<p class="section-search__clinic-name">Московский научно-исследовательский онкологический институт им. П.А. Герцена, отделение переливания крови</p><span class="section-search__clinic-note">Москва, 2-й Боткинский проезд, д. 3</span><span class="section-search__clinic-note">Режим работы: Пн-Пт с 8:00 до 10:00, донорские субботы с 8:30 до 12:00</span>
+								</div></a>
+						</div>
+						<button class="button button--red section-search__content-btn" type="button">Показать ещё</button>
+					</div>
+					<!-- col-->
+					<div class="section-search__col">
+						<h3 class="section-search__news-title">Наши события:</h3>
+						<div class="swiper section-search__news-slider event-slider">
+							<div class="swiper-wrapper">
+								<!-- slide-->
+								<div class="swiper-slide"><a class="article-news" href="#">
+										<div class="article-news__info-box">
+											<div class="article-news__date">
+												<svg class="article-news__date-icon">
+													<use xlink:href="#calendar"></use>
+												</svg>
+												<time class="article-news__date-value">25 апреля</time>
+											</div>
+											<div class="article-news__place">
+												<svg class="article-news__place-icon">
+													<use xlink:href="#map-pin"></use>
+												</svg><span class="article-news__place-value">Москва</span>
+											</div>
+										</div>
+										<p class="article-news__title">Волонтерская помощь при работе с гражданами на донорских пунктах города москва</p>
+										<p class="article-news__description">В рамках проекта донорские акции МРО ВОП «Волонтеры-медики»</p>
+										<div class="article-news__img-box"><img class="article-news__img" src="./images/article/article-news.png" alt=""/></div></a><a class="article-news" href="#">
+										<div class="article-news__info-box">
+											<div class="article-news__date">
+												<svg class="article-news__date-icon">
+													<use xlink:href="#calendar"></use>
+												</svg>
+												<time class="article-news__date-value">25 апреля</time>
+											</div>
+											<div class="article-news__place">
+												<svg class="article-news__place-icon">
+													<use xlink:href="#map-pin"></use>
+												</svg><span class="article-news__place-value">Москва</span>
+											</div>
+										</div>
+										<p class="article-news__title">Волонтерская помощь при работе с гражданами на донорских пунктах города москва</p>
+										<p class="article-news__description">В рамках проекта донорские акции МРО ВОП «Волонтеры-медики»</p>
+										<div class="article-news__img-box"><img class="article-news__img" src="./images/article/article-news.png" alt=""/></div></a></div>
+								<!-- slide-->
+								<div class="swiper-slide"><a class="article-news" href="#">
+										<div class="article-news__info-box">
+											<div class="article-news__date">
+												<svg class="article-news__date-icon">
+													<use xlink:href="#calendar"></use>
+												</svg>
+												<time class="article-news__date-value">25 апреля</time>
+											</div>
+											<div class="article-news__place">
+												<svg class="article-news__place-icon">
+													<use xlink:href="#map-pin"></use>
+												</svg><span class="article-news__place-value">Москва</span>
+											</div>
+										</div>
+										<p class="article-news__title">Волонтерская помощь при работе с гражданами на донорских пунктах города москва</p>
+										<p class="article-news__description">В рамках проекта донорские акции МРО ВОП «Волонтеры-медики»</p>
+										<div class="article-news__img-box"><img class="article-news__img" src="./images/article/article-news.png" alt=""/></div></a><a class="article-news" href="#">
+										<div class="article-news__info-box">
+											<div class="article-news__date">
+												<svg class="article-news__date-icon">
+													<use xlink:href="#calendar"></use>
+												</svg>
+												<time class="article-news__date-value">25 апреля</time>
+											</div>
+											<div class="article-news__place">
+												<svg class="article-news__place-icon">
+													<use xlink:href="#map-pin"></use>
+												</svg><span class="article-news__place-value">Москва</span>
+											</div>
+										</div>
+										<p class="article-news__title">Волонтерская помощь при работе с гражданами на донорских пунктах города москва</p>
+										<p class="article-news__description">В рамках проекта донорские акции МРО ВОП «Волонтеры-медики»</p>
+										<div class="article-news__img-box"><img class="article-news__img" src="./images/article/article-news.png" alt=""/></div></a></div>
+								<!-- slide-->
+								<div class="swiper-slide"><a class="article-news" href="#">
+										<div class="article-news__info-box">
+											<div class="article-news__date">
+												<svg class="article-news__date-icon">
+													<use xlink:href="#calendar"></use>
+												</svg>
+												<time class="article-news__date-value">25 апреля</time>
+											</div>
+											<div class="article-news__place">
+												<svg class="article-news__place-icon">
+													<use xlink:href="#map-pin"></use>
+												</svg><span class="article-news__place-value">Москва</span>
+											</div>
+										</div>
+										<p class="article-news__title">Волонтерская помощь при работе с гражданами на донорских пунктах города москва</p>
+										<p class="article-news__description">В рамках проекта донорские акции МРО ВОП «Волонтеры-медики»</p>
+										<div class="article-news__img-box"><img class="article-news__img" src="./images/article/article-news.png" alt=""/></div></a><a class="article-news" href="#">
+										<div class="article-news__info-box">
+											<div class="article-news__date">
+												<svg class="article-news__date-icon">
+													<use xlink:href="#calendar"></use>
+												</svg>
+												<time class="article-news__date-value">25 апреля</time>
+											</div>
+											<div class="article-news__place">
+												<svg class="article-news__place-icon">
+													<use xlink:href="#map-pin"></use>
+												</svg><span class="article-news__place-value">Москва</span>
+											</div>
+										</div>
+										<p class="article-news__title">Волонтерская помощь при работе с гражданами на донорских пунктах города москва</p>
+										<p class="article-news__description">В рамках проекта донорские акции МРО ВОП «Волонтеры-медики»</p>
+										<div class="article-news__img-box"><img class="article-news__img" src="./images/article/article-news.png" alt=""/></div></a></div>
+								<!-- slide-->
+								<div class="swiper-slide"><a class="article-news" href="#">
+										<div class="article-news__info-box">
+											<div class="article-news__date">
+												<svg class="article-news__date-icon">
+													<use xlink:href="#calendar"></use>
+												</svg>
+												<time class="article-news__date-value">25 апреля</time>
+											</div>
+											<div class="article-news__place">
+												<svg class="article-news__place-icon">
+													<use xlink:href="#map-pin"></use>
+												</svg><span class="article-news__place-value">Москва</span>
+											</div>
+										</div>
+										<p class="article-news__title">Волонтерская помощь при работе с гражданами на донорских пунктах города москва</p>
+										<p class="article-news__description">В рамках проекта донорские акции МРО ВОП «Волонтеры-медики»</p>
+										<div class="article-news__img-box"><img class="article-news__img" src="./images/article/article-news.png" alt=""/></div></a><a class="article-news" href="#">
+										<div class="article-news__info-box">
+											<div class="article-news__date">
+												<svg class="article-news__date-icon">
+													<use xlink:href="#calendar"></use>
+												</svg>
+												<time class="article-news__date-value">25 апреля</time>
+											</div>
+											<div class="article-news__place">
+												<svg class="article-news__place-icon">
+													<use xlink:href="#map-pin"></use>
+												</svg><span class="article-news__place-value">Москва</span>
+											</div>
+										</div>
+										<p class="article-news__title">Волонтерская помощь при работе с гражданами на донорских пунктах города москва</p>
+										<p class="article-news__description">В рамках проекта донорские акции МРО ВОП «Волонтеры-медики»</p>
+										<div class="article-news__img-box"><img class="article-news__img" src="./images/article/article-news.png" alt=""/></div></a></div>
+								<!-- slide-->
+								<div class="swiper-slide"><a class="article-news" href="#">
+										<div class="article-news__info-box">
+											<div class="article-news__date">
+												<svg class="article-news__date-icon">
+													<use xlink:href="#calendar"></use>
+												</svg>
+												<time class="article-news__date-value">25 апреля</time>
+											</div>
+											<div class="article-news__place">
+												<svg class="article-news__place-icon">
+													<use xlink:href="#map-pin"></use>
+												</svg><span class="article-news__place-value">Москва</span>
+											</div>
+										</div>
+										<p class="article-news__title">Волонтерская помощь при работе с гражданами на донорских пунктах города москва</p>
+										<p class="article-news__description">В рамках проекта донорские акции МРО ВОП «Волонтеры-медики»</p>
+										<div class="article-news__img-box"><img class="article-news__img" src="./images/article/article-news.png" alt=""/></div></a><a class="article-news" href="#">
+										<div class="article-news__info-box">
+											<div class="article-news__date">
+												<svg class="article-news__date-icon">
+													<use xlink:href="#calendar"></use>
+												</svg>
+												<time class="article-news__date-value">25 апреля</time>
+											</div>
+											<div class="article-news__place">
+												<svg class="article-news__place-icon">
+													<use xlink:href="#map-pin"></use>
+												</svg><span class="article-news__place-value">Москва</span>
+											</div>
+										</div>
+										<p class="article-news__title">Волонтерская помощь при работе с гражданами на донорских пунктах города москва</p>
+										<p class="article-news__description">В рамках проекта донорские акции МРО ВОП «Волонтеры-медики»</p>
+										<div class="article-news__img-box"><img class="article-news__img" src="./images/article/article-news.png" alt=""/></div></a></div>
+							</div>
+						</div>
+						<div class="event-slider__dots slider-dots slider-dots--color"></div>
+					</div>
 				</div>
 			</div>
 			<!-- Section News-->
@@ -978,7 +1251,7 @@
 			</div>
 		</div>
 		<script src="./lib/swiper/swiper-bundle.min.js"></script>
-		<script src="./js/main.js?v=1768576105316"></script><svg width="0" height="0" class="hidden">
+		<script src="./js/main.js?v=1768576107208"></script><svg width="0" height="0" class="hidden">
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" id="map-pin">
         <path d="M6.64062 13.877C6.64062 13.877 6.64092 13.8772 6.99902 13.4167L7.35713 13.8772C7.14649 14.041 6.85127 14.0409 6.64062 13.877Z" fill="currentColor"></path>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M6.99935 3.5C5.71068 3.5 4.66602 4.54467 4.66602 5.83333C4.66602 7.12197 5.71068 8.16667 6.99935 8.16667C8.28799 8.16667 9.33268 7.12197 9.33268 5.83333C9.33268 4.54467 8.28799 3.5 6.99935 3.5ZM5.83268 5.83333C5.83268 5.189 6.355 4.66667 6.99935 4.66667C7.6437 4.66667 8.16602 5.189 8.16602 5.83333C8.16602 6.47768 7.6437 7 6.99935 7C6.355 7 5.83268 6.47768 5.83268 5.83333Z" fill="currentColor"></path>
