@@ -1,0 +1,130 @@
+extends pug/base
+
+prepend styles
+    link(rel="stylesheet" href=`./lib/swiper/swiper-bundle.css`)
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=7d5e0e61-1da5-4f66-b0b1-ebb11b324bfe&lang=ru_RU")
+prepend scripts
+    script(src=`./lib/swiper/swiper-bundle.min.js`)
+
+block content
+    +breadcrumb(["Главная", "Учреждение службы крови"], "Поиск учреждений Службы крови")
+    // Section article
+    .section-search.container
+        h1.section-search__title.h1 Поиск учреждений Службы крови
+        form.section-search__filter
+            .section-search__filter-top
+                .tabs-radio
+                    label.tabs-radio__el
+                        input.tabs-radio__el-input(type="radio", name="filter", checked)
+                        span.tabs-radio__el-text Учреждения службы крови
+                    label.tabs-radio__el
+                        input.tabs-radio__el-input(type="radio", name="filter")
+                        span.tabs-radio__el-text Некоммерческие организации
+            .section-search__filter-center
+                // Select
+                .select
+                    .select__current-box
+                        input.select__input(type="hidden", value="")
+                        p.select__current Москва
+                        +svg("chevron-down").select__drop-icon
+                    ul.select__list
+                        li.select__list-item Москва
+                        li.select__list-item Казань
+                        li.select__list-item Астрахань
+                // Select
+                .select
+                    .select__current-box
+                        input.select__input(type="hidden", value="")
+                        p.select__current.select__current--placeholder Все станции метро
+                        +svg("chevron-down").select__drop-icon
+                    ul.select__list
+                        li.select__list-item Станция Московская
+                        li.select__list-item Станция 2
+                .form-group
+                    .form-group__input-box
+                        input.input.form-group__input(
+                            type="text"
+                            placeholder="Поиск по названию"
+                        )
+                        button.form-group__btn(type="button", aria-label="Искать")
+                            +svg("search").form-group__btn-icon
+            .section-search__filter-other
+                p.section-search__filter-other-title Дополнительно
+                .section-search__filter-other-list
+                    label.checkbox
+                        input.checkbox__input(type="checkbox")
+                        span.checkbox__text Учреждения службы крови
+                    label.checkbox
+                        input.checkbox__input(type="checkbox")
+                        span.checkbox__text Работает в ближайшую субботу
+                    label.checkbox
+                        input.checkbox__input(type="checkbox")
+                        span.checkbox__text Выдает код донации
+                    label.checkbox
+                        input.checkbox__input(type="checkbox")
+                        span.checkbox__text Осуществляет прием по онлайн-записи
+                    label.checkbox
+                        input.checkbox__input(type="checkbox")
+                        span.checkbox__text Подходит для получения Почетного донора Москвы
+                    label.checkbox
+                        input.checkbox__input(type="checkbox")
+                        span.checkbox__text Обязательна предварительная запись
+                    label.checkbox
+                        input.checkbox__input(type="checkbox")
+                        span.checkbox__text Рекрутинговый центр для вступления в федеральный регистр
+            button.button.button--red.section-search__filter-btn(type="reset") Сбросить
+
+        #map-station.section-search__map
+
+        .section-search__grid
+            // content
+            .section-search__content
+                .section-search__content-list
+                    - let j = 0
+                    while j < 4
+                        // clinic
+                        a.section-search__clinic(href="#")
+                            +svg("drop").section-search__clinic-icon
+                            .section-search__clinic-text
+                                p.section-search__clinic-name Московский научно-исследовательский онкологический институт им. П.А. Герцена, отделение переливания крови
+                                span.section-search__clinic-note Москва, 2-й Боткинский проезд, д. 3
+                                span.section-search__clinic-note Режим работы: Пн-Пт с 8:00 до 10:00, донорские субботы с 8:30 до 12:00
+                        - j++
+                button.button.button--red.section-search__content-btn(type="button") Показать ещё
+            // col
+            .section-search__col
+                h3.section-search__news-title Наши события:
+                .swiper.section-search__news-slider.event-slider
+                    .swiper-wrapper
+                      - let i = 0
+                        while i < 5
+                            // slide
+                            .swiper-slide
+                                a.article-news(href="#")
+                                    .article-news__info-box
+                                        .article-news__date
+                                            +svg("calendar").article-news__date-icon
+                                            time.article-news__date-value 25 апреля
+                                        .article-news__place
+                                            +svg("map-pin").article-news__place-icon
+                                            span.article-news__place-value Москва
+                                    p.article-news__title Волонтерская помощь при работе с гражданами на донорских пунктах города москва
+                                    p.article-news__description В рамках проекта донорские акции МРО ВОП «Волонтеры-медики»
+                                    .article-news__img-box
+                                        img.article-news__img(src="./images/article/article-news.png", alt="")
+                                a.article-news(href="#")
+                                    .article-news__info-box
+                                        .article-news__date
+                                            +svg("calendar").article-news__date-icon
+                                            time.article-news__date-value 25 апреля
+                                        .article-news__place
+                                            +svg("map-pin").article-news__place-icon
+                                            span.article-news__place-value Москва
+                                    p.article-news__title Волонтерская помощь при работе с гражданами на донорских пунктах города москва
+                                    p.article-news__description В рамках проекта донорские акции МРО ВОП «Волонтеры-медики»
+                                    .article-news__img-box
+                                        img.article-news__img(src="./images/article/article-news.png", alt="")
+                            - i++
+                .event-slider__dots.slider-dots.slider-dots--color
+
+    +sectionNews()
