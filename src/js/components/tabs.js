@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   tabsNavButtons.forEach((button) => {
     button.addEventListener('click', () => {
+      const container = button.closest('.tabs__nav');
+      container.scrollLeft = button.offsetLeft  - container.offsetHeight/2 - 40;
+
       const targetContentId = button.getAttribute('data-content');
       const targetContent = document.getElementById(targetContentId);
 

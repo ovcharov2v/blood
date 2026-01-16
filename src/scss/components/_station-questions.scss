@@ -1,0 +1,71 @@
+.station-questions {
+  padding: 8px;
+  border-radius: 20px;
+  overflow: hidden;
+  
+  &__grid {
+	display: grid;
+	grid-template: auto / 100%;
+	grid-gap: 12px;
+	
+	@include desktop {
+	  grid-template: auto / repeat(2,minmax(0,1fr));
+	}
+  }
+  
+  &__text-col {
+  }
+  
+  &__el {
+	margin-bottom: 20px;
+	padding: 20px;
+	border-radius: 20px;
+	font-size: 20px;
+	line-height: 1;
+	box-shadow: 0 2px 8px color-mix(in srgb, #{$color-text} 8%, transparent);
+  }
+  
+  &__el-title {
+	margin-bottom: 4px;
+	font-weight: 600;
+	
+	.station-questions__el-text + & {
+	  margin-top: 12px;
+	}
+  }
+  
+  &__el-text {
+  }
+  
+  &__el-pagination {
+  }
+  
+  &__img-col {
+	display: flex;
+	gap: 30px;
+	align-items: flex-end;
+	background: radial-gradient(
+					ellipse at right top,
+					$color-primary 0%,
+					transparent 65%
+	) no-repeat right top;
+	background-size: 85% 170%;
+  }
+  
+  &__img-box {
+	width: 100%;
+	max-width: 333px;
+  }
+  
+  &__img {
+	display: block;
+	width: 100%;
+  }
+  
+  &__btn {
+	flex-shrink: 0;
+	width: 100%;
+	max-width: 186px;
+	margin-bottom: 20px;
+  }
+}

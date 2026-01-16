@@ -1,99 +1,106 @@
 .station-rating {
   display: grid;
-  grid-template: auto / minmax(0, 360px) auto;
+  grid-template: auto / 100%;
   grid-gap: 30px;
-
+  
+  @include desktop {
+	grid-template: auto / minmax(0, 360px) auto;
+  }
+  
   &__info-box {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
   }
-
+  
   &__title-box {
-    display: flex;
-    gap: 18px;
-    align-items: flex-end;
-    margin-bottom: 20px;
+	display: flex;
+	gap: 18px;
+	align-items: flex-end;
+	margin-bottom: 20px;
   }
-
+  
   &__title {
-    font-size: 36px;
-    line-height: 40px;
-    font-weight: 600;
+	font-size: 36px;
+	line-height: 40px;
+	font-weight: 600;
   }
-
+  
   &__counter {
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: 500;
-    color: $color-primary;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 500;
+	color: $color-primary;
   }
-
+  
   &__stars-box {
-    margin-bottom: 12px;
+	margin-bottom: 12px;
   }
-
+  
   &__stars-text {
-    margin-bottom: 8px;
-    font-size: 20px;
-    line-height: 1;
+	margin-bottom: 8px;
+	font-size: 20px;
+	line-height: 1;
   }
-
+  
   &__start-row {
-    display: flex;
-    gap: 4px;
+	display: flex;
+	gap: 4px;
   }
-
+  
   &__star {
-    display: block;
-    width: 24px;
-    height: 24px;
-    color: $color-primary
+	display: block;
+	width: 24px;
+	height: 24px;
+	color: $color-primary
   }
-
+  
   &__btn {
-    width: 100%;
-    max-width: 220px;
-    margin-top: auto;
+	width: 100%;
+	max-width: 220px;
+	margin-top: auto;
   }
-
+  
   &__review-box {
   }
-
+  
   &__review-title-box {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
   }
-
+  
   &__review {
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(#000, .08);
+	margin-bottom: 20px;
+	
+	@include desktop {
+	  padding: 20px;
+	  border-radius: 20px;
+	  box-shadow: 0 2px 8px rgba(#000, .08);
+	}
   }
-
+  
   &__review-title-box {
   }
-
+  
   &__review-top {
   }
-
+  
   &__review-stars-box {
-    display: flex;
-    gap: 4px;
-    align-items: center;
-    margin-bottom: 12px;
+	display: flex;
+	gap: 4px;
+	align-items: center;
+	margin-bottom: 12px;
   }
-
+  
   &__review-stars-text {
-    font-size: 20px;
-    line-height: 1;
-    font-weight: 500;
+	font-size: 20px;
+	line-height: 1;
+	font-weight: 500;
   }
-
+  
   &__review-text {
-    font-size: 20px;
-    line-height: 1;
+	font-size: 20px;
+	line-height: 1;
   }
-
+  
   &__review-nav {
   }
 }

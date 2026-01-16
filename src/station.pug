@@ -93,6 +93,7 @@ block content
 				button.tabs__nav-btn(type="button", data-content="content-3") Специалисты
 				button.tabs__nav-btn(type="button", data-content="content-4") Медиа
 				button.tabs__nav-btn(type="button", data-content="content-5") Рейтинг и отзывы
+				button.tabs__nav-btn(type="button", data-content="content-6") Ответы на вопросы
 			.tabs__content-box
 				// Tabs content
 				#content-1.tabs__content.tabs__content--active
@@ -306,4 +307,36 @@ block content
 
 
 
+				// Tabs content
+				#content-6.tabs__content
+					.station-questions
+						.station-questions__grid
+							.station-questions__text-col
+								.station-questions__el
+									.station-questions__el-title Вопрос:
+									.station-questions__el-text до какого возраста можно стать донором? может ли женщина вошедшая в менопаузу стать донором?
+									.station-questions__el-title Ответ:
+									.station-questions__el-text Официально верхнего возрастного порога для доноров нет. Однако врачи-трансфузиологи не советуют начинать донорскую карьеру в таком возрасте в связи с тем, что специалисты не могут с уверенностью сказать, не отразится ли негативным образом процедура донациина организме донора.
+								.pagination.station-questions__el-pagination
+									a.pagination__btn.pagination__btn--prev(href="#", title="Назад")
+										+svg("chevron-down").pagination__btn-icon
+									ul.pagination__list
+										li.pagination__el
+											span.pagination__link.pagination__link--active 1
+										li.pagination__el
+											a.pagination__link(href="#", title="Страница 2") 2
+										li.pagination__el
+											a.pagination__link(href="#", title="Страница 3") 3
+										li.pagination__el
+											a.pagination__link(href="#", title="Страница 4") 4
+										li.pagination__el
+											span.pagination__link.pagination__link--dots ...
+										li.pagination__el
+											a.pagination__link(href="#", title="Страница 12") 12
+									a.pagination__btn.pagination__btn--next(href="#", title="Вперед")
+										+svg("chevron-down").pagination__btn-icon
+							.station-questions__img-col
+								.station-questions__img-box
+									img.station-questions__img(src="./images/station/img4.png", alt="")
+								a.button.button--red.button--round-corner.station-questions__btn(href="#") Задать вопрос
 	+sectionNews(false)
