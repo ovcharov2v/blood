@@ -30,26 +30,22 @@ block content
 						+svg("search").form-group__btn-icon
 		h2.section-faq__subtitle.h2 Код донации
 		.section-faq__grid
-			- let j = 0
-			while j < 2
-				- let i = 0
-				.section-faq__grid-col
-					while i < 10
-						// item
-						.section-faq__item
-							.section-faq__item-question
-								.section-faq__item-question-wrap
-									p.section-faq__item-title Вопрос:
-									p.section-faq__item-question-text Где я могу получить код донации и что он дает?
-								button.section-faq__item-btn(aria-label="Показать")
-									+svg("chevron-down").section-faq__item-btn-icon
-							.section-faq__item-answer
-								p.section-faq__item-title Ответ:
-								.section-faq__item-answer-text
-									p Служба крови отвечает:
-										br
-										|Код донации - это уникальный 20-значный код, который формируется автоматизированной информационной системой трансфузиологии и содержащий в себе информацию о Вашей донации, отображенной в информационной базе.
-						- i++
-					- j++
+			- let i = 0
+			while i < 10
+				// item
+				.section-faq__item
+					.section-faq__item-question
+						.section-faq__item-question-wrap
+							p.section-faq__item-title Вопрос:
+							p.section-faq__item-question-text Где я могу получить код донации и что он дает?
+						button.section-faq__item-btn(aria-label="Показать")
+							+svg("chevron-down").section-faq__item-btn-icon
+					.section-faq__item-answer
+						p.section-faq__item-title Ответ:
+						.section-faq__item-answer-text
+							p Служба крови отвечает:
+								br
+								|Код донации - это уникальный 20-значный код, который формируется автоматизированной информационной системой трансфузиологии и содержащий в себе информацию о Вашей донации, отображенной в информационной базе.
+				- i++
 
 	+sectionNews(true)
