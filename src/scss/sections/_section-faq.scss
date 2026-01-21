@@ -41,6 +41,7 @@
 	border: 1px solid rgba(#9DA2A8, .5);
 	border-radius: 20px;
 	font-size: 20px;
+	break-inside: avoid-column;
 	overflow: hidden;
 	
 	&::before {
