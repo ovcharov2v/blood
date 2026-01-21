@@ -6208,6 +6208,9 @@ a {
     border: 1px solid rgba(157, 162, 168, 0.5);
     border-radius: 20px;
     font-size: 20px;
+    -webkit-column-break-inside: avoid;
+       -moz-column-break-inside: avoid;
+            break-inside: avoid-column;
     overflow: hidden; }
     .section-faq__item::before {
       position: absolute;
