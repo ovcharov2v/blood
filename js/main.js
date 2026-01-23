@@ -151,6 +151,32 @@ document.addEventListener('DOMContentLoaded', function () {
 /***/ (function(module, exports) {
 
 document.addEventListener('DOMContentLoaded', function () {
+  var grid = document.querySelector('.section-faq__grid');
+  if (!grid) return;
+  var items = grid.querySelectorAll('.section-faq__item');
+  if (items.length === 0) return;
+  var col1 = document.createElement('div');
+  var col2 = document.createElement('div');
+  col1.className = 'section-faq__col';
+  col2.className = 'section-faq__col';
+  var itemsCount = items.length;
+  var itemsPerCol = Math.ceil(itemsCount / 2);
+  var fragment1 = document.createDocumentFragment();
+  var fragment2 = document.createDocumentFragment();
+  Array.from(items).forEach(function (item, index) {
+    if (index < itemsPerCol) {
+      fragment1.appendChild(item.cloneNode(true));
+    } else {
+      fragment2.appendChild(item.cloneNode(true));
+    }
+  });
+  col1.appendChild(fragment1);
+  col2.appendChild(fragment2);
+  grid.innerHTML = '';
+  grid.appendChild(col1);
+  grid.appendChild(col2);
+});
+document.addEventListener('DOMContentLoaded', function () {
   var itemList = document.querySelectorAll('.section-faq__item');
   if (itemList.length) {
     itemList.forEach(function (item) {

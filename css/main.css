@@ -6192,25 +6192,35 @@ a {
       padding-bottom: 12px; }
   .section-faq__subtitle {
     margin-bottom: 30px; }
-  @media (min-width: 1024px) {
-    .section-faq__grid {
-      -webkit-columns: 2;
-         -moz-columns: 2;
-              columns: 2;
-      -webkit-column-gap: 32px;
-         -moz-column-gap: 32px;
-              column-gap: 32px; } }
+  .section-faq__grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 100%;
+        grid-template: auto / 100%;
+    grid-gap: 20px; }
+    @media (min-width: 1024px) {
+      .section-faq__grid {
+        -ms-grid-rows: auto;
+        -ms-grid-columns: minmax(0, 1fr) 30px minmax(0, 1fr);
+            grid-template: auto/repeat(2, minmax(0, 1fr));
+        grid-gap: 30px; } }
+  .section-faq__col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px; }
   .section-faq__item {
     position: relative;
     z-index: 0;
-    margin-bottom: 20px;
     padding: 20px;
     border: 1px solid rgba(157, 162, 168, 0.5);
     border-radius: 20px;
     font-size: 20px;
-    -webkit-column-break-inside: avoid;
-       -moz-column-break-inside: avoid;
-            break-inside: avoid-column;
     overflow: hidden; }
     .section-faq__item::before {
       position: absolute;
