@@ -1,0 +1,135 @@
+.event-date {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+  @include desktop {
+	padding-top: 40px;
+	padding-bottom: 40px;
+  }
+  
+  &__container {
+  }
+  
+  &__title {
+	margin-bottom: 40px;
+	font-size: 20px;
+	line-height: 31px;
+	text-align: center;
+	color: $evt-color1;
+	
+	@include desktop {
+	  margin-bottom: 40px;
+	  font-size: 48px;
+	  line-height: 1;
+	}
+  }
+  
+  &__list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 358px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	background-image: url("../images/event/balls-date-mobile.png");
+	background-size: 100% auto;
+	background-position: top center;
+	background-repeat: no-repeat;
+	
+	@include desktop {
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	  gap: unset;
+	  max-width: unset;
+	  margin: unset;
+	  padding-bottom: 0;
+	  background-image: url("../images/event/balls-date-4.png"), url("../images/event/balls-date-3.png");
+	  background-size: 100% auto, 75% auto;
+	  background-position: top center, bottom center;
+	}
+  }
+  
+  &__el {
+	width: 208px;
+	aspect-ratio: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	
+	&:nth-child(1) {
+	  transform: translateX(18%);
+	}
+	
+	&:nth-child(2) {
+	  transform: translateX(-35%);
+	}
+	
+	&:nth-child(3) {
+	  transform: translateX(38%);
+	}
+	
+	&:nth-child(4) {
+	  transform: translateX(-35%);
+	}
+	
+	&:nth-child(5) {
+	  transform: translateX(36%);
+	}
+	
+	&:nth-child(6) {
+	  transform: translateX(-35%);
+	}
+	
+	&:nth-child(7) {
+	  transform: translateX(18%);
+	}
+	
+	@include desktop {
+	  width: 25%;
+	  justify-content: unset;
+	  padding: 60px 16px 10px;
+	  transform: none !important;
+	}
+	
+	@include desktop-xl {
+	  padding: 87px 16px 10px;
+	}
+  }
+  
+  &__date {
+	font-size: 16px;
+	line-height: 20px;
+	color: $evt-color1;
+	
+	@include desktop {
+	  margin-bottom: 16px;
+	  font-size: 24px;
+	  line-height: 1;
+	}
+	
+	@include desktop-xl {
+	  font-size: 31px;
+	}
+  }
+  
+  &__text {
+	max-width: 160px;
+	font-size: 16px;
+	line-height: 20px;
+	color: $evt-text;
+	
+	@include desktop {
+	  max-width: unset;
+	  font-size: 18px;
+	  line-height: 22px;
+	}
+	
+	@include desktop-xl {
+	  font-size: 21px;
+	  line-height: 29px;
+	}
+  }
+}

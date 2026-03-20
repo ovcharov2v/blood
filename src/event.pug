@@ -1,0 +1,272 @@
+extends pug/base
+
+prepend styles
+	link(rel="stylesheet" href=`./lib/swiper/swiper-bundle.css`)
+prepend scripts
+	script(src=`./lib/swiper/swiper-bundle.min.js`)
+
+block content
+	+breadcrumb(["Главная"], "Акция")
+
+	.event
+
+		// Section Event hero
+		section.event-hero
+			.event-hero__container.container
+				.event-hero__banner
+					.event-hero__text-col
+						h1.event-hero__title
+							span.event-hero__title-l1 Кубок
+							span.event-hero__title-l2 Молодежного донорства:
+							span.event-hero__title-l3 ДОНОР ЕДИНОЙ СТРАНЫ
+						.event-hero__text-box
+							p Конкурс среди студентов и учебных заведений.
+								br
+								|Стань частью главного донорского движения страны!
+							p Даты проведения:
+								|
+								|
+								time 24 марта – 15 ноября
+								|
+								|
+								span.hidden-mobile 2026 года
+					.event-hero__img-col
+						img.event-hero__img(src="./images/event/hero-img.png", alt="")
+
+		// Section Event info
+		.event-info
+			.event-info__container.container
+				.event-info__grid
+					// card
+					.event-info__card.event-info__card--top
+						h3.event-info__card-title Что такое Кубок молодежного донорства?
+						.event-info__card-text
+							p Это масштабные конкурс, который объединяет студентов, учеников и преподавателей высших учебных заведений по всей России.
+							p Наша цель – популяризировать донорство крови и костного мозга, вовлечь молодежь в благородное дело спасения жизней и сформировать новое сообщество осознанных и активных граждан.
+							p Проект реализуется совместно Министерством науки и высшего образования РФ и Федерального медико-биологического агентства России
+					// card
+					.event-info__card
+						h3.event-info__card-title Кто может участвовать?
+						ul.event-info__card-list
+							li.event-info__card-el
+								+svg("star-round").event-info__card-el-icon
+								| ВУЗы и ССУЗы.
+							li.event-info__card-el
+								+svg("star-round").event-info__card-el-icon
+								| Студенты и учащиеся.
+							li.event-info__card-el
+								+svg("star-round").event-info__card-el-icon
+								| Молодежные организаторы.
+					// card
+					.event-info__card
+						h3.event-info__card-title Как проходит конкурс?
+						.event-info__card-text.event-info__card-text--justify
+							p Мы превращаем донорство в увлекательное соревнование. Всё просто: чем активнее ваше учебное заведение и вы лично, тем выше позиция в рейтинге.
+
+		// Section Event date
+		section.event-date
+			.event-date__container.container
+				h2.event-date__title Ключевые даты
+				ul.event-date__list
+					// el
+					li.event-date__el
+						time.event-date__date 15 марта
+						p.event-date__text Старт регистрации участников и организаторов.
+					// el
+					li.event-date__el
+						time.event-date__date 20 апреля
+						p.event-date__text Торжественные мероприятия в рамках Национального дня донора.
+					// el
+					li.event-date__el
+						time.event-date__date 14 июня
+						p.event-date__text Всемирный день донора крови.
+					// el
+					li.event-date__el
+						time.event-date__date 20 сентября
+						p.event-date__text  Всемирный день донора костного
+							br
+							|мозга.
+					// el
+					li.event-date__el
+						time.event-date__date 10 октября
+						p.event-date__text Окончание приема заявок на
+							br
+							| специальные номинации.
+					// el
+					li.event-date__el
+						time.event-date__date 1-25 ноября
+						p.event-date__text Подведение итогов.
+					// el
+					li.event-date__el
+						time.event-date__date 1 декабря
+						p.event-date__text Публикация итогов на сайте yadonor.ru.
+
+		// Section Event reward
+		section.event-reward
+			.event-reward__container.container
+				.event-reward__header
+					h2.event-reward__title За что можно получить награду?
+					p.event-reward__text Мы подготовили несколько номинаций, чтобы отметить самых активных, творческих и неравнодушных.
+				.event-reward__grid
+					//card
+					article.event-reward__card
+						span.event-reward__card-num 1
+						h3.event-reward__card-title Главный кубок молодежного донорства?
+						.event-reward__card-text-box
+							p Вручается ВУЗу или ССУЗу с наибольшим числом доноров крови и её компонентов, а также вступивших в регистр доноров костного мозга. Учебные заведения делятся на 3 категории по числу учащихся. Победитель определяется по Индексу донорской активности : (Количество донаций студентов и сотрудников / Общее число студентов) × 1000
+					//card
+					article.event-reward__card
+						span.event-reward__card-num 2
+						h3.event-reward__card-title Творческий донор?
+						.event-reward__card-text-box
+							p Для самых креативных! Оцениваются арт-объекты, видеоролики, квесты, квизы и любые другие визуальные или медиа-материалы, популяризирующие донорство.
+					//card
+					article.event-reward__card
+						span.event-reward__card-num 3
+						h3.event-reward__card-title Путь героя?
+						.event-reward__card-text-box
+							p Личный зачет для студентов-доноров. Чтобы стать героем, нужно:
+							ul
+								li Вступить в Федеральный регистр доноров костного мозга.
+								li Совершить не менее 3 донаций крови/компонентов.
+								li Опубликовать не менее 10 постов с хэштегами конкурса.
+					//card
+					article.event-reward__card
+						span.event-reward__card-num 4
+						h3.event-reward__card-title Специальные
+							br
+							|
+							|
+							|номинации:
+						.event-reward__card-text-box
+							p Самое масштабное мероприятие (по количеству участников).
+							ul
+								li Лучший флешмоб (онлайн или офлайн).
+								li Лучшая статья или информационный пост.
+								li Лучший организатор донорского движения (решение жюри).
+
+		// Section Event how
+		section.event-how
+			.event-how__container.container
+				h2.event-how__title Как принять участие?
+				.event-how__grid
+					p.event-how__top.event-how__top--left Для Вузов и учебных заведений
+					p.event-how__top.event-how__top--right Для Учащихся Вузов и учебных заведений
+					// card
+					.event-how__card.event-how__card--left
+						p Если ты представитель ВУЗ или учебное заведение:
+						ol
+							li Зарегистрируйся как организатор
+							li Рассылай ссылку и регистрируй участников среди студентов и учащихся
+							li Сдавайте кровь, компоненты или вступайте в федеральный регистр доноров костного мозга
+							li Проводите акции и мероприятия
+							li Рассказывайте о донорстве и информируйте в социальных сетях
+							li Создавай уникальные объекты, привлекающие внимание к тематике донорства
+							li Проводи флешмобы и массовые акции в поддержку донорского движения
+					// card
+					.event-how__card.event-how__card--right
+						p Если ты учишься или работаешь в ВУЗе или учебном заведении:
+						ol
+							li Зарегистрируйся Участником
+							li Принимай участие в мероприятиях в поддержку донорского движения организованного твоим Вузом или учебным заведением
+							li Сдавай кровь
+							li Вступай в федеральный регистр доноров костного мозга
+							li Публикуй фотоотчеты с мероприятий, акций или своих донорских акций
+							li Рассказывай о донорстве и информируй в социальных сетях
+							li Приглашай друзей к участию
+
+		// Section Event project
+		section.event-project
+			.event-project__container.container
+				.event-project__banner
+					.event-project__banner-text-col
+						h2.event-project__title
+							span.event-project__title-l1 Спецпроект
+							span.event-project__title-l2 #ДНК_единой_страны
+						p.event-project__text Стань главным героем
+							br
+							strong нашей
+							|
+							|
+							| карты историй!
+					.event-project__banner-img-col
+						img.event-project__banner-img(src="./images/event/hero-img.png" alt="")
+				p.event-project__text-block Мы запускаем специальный трек, посвященный донорству костного мозга.
+					br
+					|
+					|
+					|Вступая в Федеральный регистр, ты не просто делаешь важный шаг, но и становишься частью большого медийного проекта.
+				.event-project__grid
+					.event-project__card.event-project__card--img
+						img.event-project__card-img(src="https://placehold.co/600x400", alt="")
+					.event-project__card.event-project__card--text
+						p.event-project__card-text Присылай селфи-видео с призывом вступить в Федеральный регистр доноров костного мозга, сделанное на фоне достопримечательностей твоего города или с атрибутами национального костюма на почту
+							|
+							|
+							a(href="mailto:rossia.donorstvo@yandex.ru") rossia.donorstvo@yandex.ru.
+
+		// Section Event steps
+		section.event-steps
+			.event-steps__container.container
+				h2.event-steps__title Как принять участие
+				.event-steps__grid
+					// el
+					.event-steps__el
+						span.event-steps__el-num 1
+						p.event-steps__el-text Участвуй в «Кубке молодежного донорства».
+					// el
+					.event-steps__el
+						span.event-steps__el-num 2
+						p.event-steps__el-text Вступи в Федеральный регистр доноров костного мозга.
+					// el
+					.event-steps__el
+						span.event-steps__el-num 3
+						p.event-steps__el-text Сними и опубликуй свою креативную историю как ты решил стать донором костного мозга.
+				.event-steps__text
+					p Все участники спецпроекта получат памятные призы.
+					p Лучшие истории войдут в общую карту спасения жизней, где
+						|
+						|
+						strong ты
+						|
+						|
+						| станешь главным героем!
+
+		// Section Event res
+		section.event-res
+			.container.event-res__container
+				h2.event-res__title Полезные ресурсы и контакты
+				.event-res__grid
+					// card
+					.event-res__card
+						h3.event-res__card-title Полезные ссылки
+						ul.event-res__link-list
+							li.event-res__link-box
+								a.event-res__link(href="#" target="_blank")
+									+svg("star-round").event-res__link-icon
+									|Регистрация для организаторов
+							li.event-res__link-box
+								a.event-res__link(href="#" target="_blank")
+									+svg("star-round").event-res__link-icon
+									|Регистрация для участников
+					// card
+					.event-res__card
+						h3.event-res__card-title Узнать больше о донорстве
+						ul.event-res__link-list
+							li.event-res__link-box
+								a.event-res__link(href="#" target="_blank")
+									+svg("star-round").event-res__link-icon
+									|Всё о донорстве крови
+							li.event-res__link-box
+								a.event-res__link(href="#" target="_blank")
+									+svg("star-round").event-res__link-icon
+									|Всё о донорстве костного мозга
+				p.event-res__org-links Организаторы:
+					br
+					|
+					|
+					a(href="#" target="_blank") ФМБА России,
+					|
+					|
+					a(href="#" target="_blank") Минобрнауки РФ
+

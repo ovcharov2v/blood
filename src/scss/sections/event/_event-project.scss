@@ -1,0 +1,203 @@
+.event-project {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+  @include desktop {
+	padding-top: 40px;
+	padding-bottom: 40px;
+  }
+  
+  &__container {
+  }
+  
+  &__banner {
+	display: grid;
+	grid-template: auto / 100%;
+	grid-gap: 8px;
+	margin-bottom: 20px;
+	background-image: url("../images/event/dots-left.svg");
+	background-repeat: no-repeat;
+	background-position: 0 24%;
+	background-size: auto 240%;
+	background-color: $evt-color2;
+	border-radius: 16px;
+	color: $evt-text;
+	overflow: hidden;
+	
+	@include desktop {
+	  grid-template: auto / minmax(0,1.8fr) minmax(0, 1fr);
+	  background-image: url("../images/event/dots-left.svg"), url("../images/event/dots-right.svg");
+	  background-repeat: no-repeat, no-repeat;
+	  background-position: 0 29%, 100% 26%;
+	  background-size: auto 280%;
+	}
+  }
+  
+  &__banner-text-col {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 16px;
+	
+	@include desktop {
+	  padding: 60px 0 40px 56px;
+	}
+  }
+  
+  &__title {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30px;
+	font-size: 24px;
+	line-height: 33px;
+	
+	@include desktop {
+	  margin-bottom: 110px;
+	  font-size: 44px;
+	  line-height: 51px;
+	}
+  }
+  
+  &__title-l1 {
+  }
+  
+  &__title-l2 {
+	text-transform: uppercase;
+	color: $evt-color1;
+  }
+  
+  &__text {
+	display: none;
+	
+	@include desktop {
+	  display: block;
+	  margin-top: auto;
+	  gap: 16px;
+	  font-size: 48px;
+	  line-height: 58px;
+	  text-transform: uppercase;
+	}
+	
+	strong {
+	  color: $evt-color1;
+	}
+  }
+  
+  &__banner-img-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+  }
+  
+  &__banner-img {
+	display: block;
+	width: 100%;
+	max-width: 467px;
+	margin: 0 auto -187px;
+	transform-origin: top center;
+	
+	@include desktop {
+	  margin-bottom: -230px;
+	}
+	
+  }
+  
+  &__text-block {
+	@include eventShadow1;
+	margin-bottom: 18px;
+	padding: 13px 20px;
+	background-color: $evt-color2;
+	border-radius: 16px;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: left;
+	color: $evt-text;
+	
+	@include desktop {
+	  margin-bottom: 42px;
+	  padding: 13px 80px;
+	  border-radius: 100px;
+	  font-size: 17px;
+	  line-height: 27px;
+	  text-align: center;
+	  
+	  br {
+		display: none;
+	  }
+	}
+  }
+  
+  &__grid {
+	display: grid;
+	grid-gap: 16px;
+	
+	@include desktop {
+	  grid-template: auto / repeat(2, minmax(0,1fr));
+	  grid-gap: 42px;
+	}
+  }
+  
+  &__card {
+	border-radius: 16px;
+	
+	&--text {
+	  position: relative;
+	  @include eventShadow1;
+	  padding: 13px 20px;
+	  background-color: $evt-color2;
+	  
+	  &::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translate(-38%, -41%);
+		width: 190px;
+		height: 190px;
+		background-image: url("../images/event/star.svg");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	  }
+	  
+	  @include desktop {
+		padding: 46px 80px;
+		&::before {
+		  content: "";
+		}
+	  }
+	}
+	
+	&--img {
+	  display: none;
+	  position: relative;
+	  overflow: hidden;
+	  
+	  @include desktop {
+		display: block;
+	  }
+	}
+  }
+  
+  &__card-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+  
+  &__card-text {
+	font-size: 16px;
+	line-height: 20px;
+	color: $evt-text;
+	
+	@include desktop {
+	  font-size: 17px;
+	  line-height: 27px;
+	}
+	
+	a {
+	  color: $evt-color1;
+	}
+  }
+}

@@ -1,0 +1,7 @@
+@mixin eventShadow1() {
+  box-shadow: -3px -6px 0 0 $evt-color1;
+}
+
+@mixin eventShadow2() {
+  box-shadow: -3px -6px 0 0 $evt-color2;
+}

@@ -1,0 +1,149 @@
+.event-how {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+  @include desktop {
+	padding-top: 40px;
+	padding-bottom: 40px;
+  }
+  
+  &__container {
+  }
+  
+  &__title {
+	margin-bottom: 16px;
+	font-size: 20px;
+	line-height: 31px;
+	color: $evt-color1;
+	text-align: center;
+	
+	@include desktop {
+	  margin-bottom: 40px;
+	  font-size: 48px;
+	  line-height: 1;
+	}
+  }
+  
+  &__grid {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	color: $evt-text;
+	
+	@include desktop {
+	  display: grid;
+	  grid-template: auto / repeat(2, minmax(0,1fr));
+	  grid-gap: 16px 30px;
+	}
+  }
+  
+  &__top {
+	position: relative;
+	padding: 12px;
+	border-radius: 16px;
+	font-size: 16px;
+	line-height: 25px;
+	text-align: center;
+	
+	&::before {
+	  position: absolute;
+	  z-index: -1;
+	  top: 0;
+	  width: 70px;
+	  height: 100%;
+	  background-color: inherit;
+	  transform: skewX(-15deg);
+	}
+	
+	@include desktop {
+	  padding: 20px;
+	  font-size: 21px;
+	  line-height: 25px;
+	  &::before {
+		content: "";
+	  }
+	}
+	
+	&--left {
+	  background-color: $evt-color2;
+	  order: 0;
+	  
+	  @include desktop {
+		order: unset;
+	  }
+	  
+	  &::before {
+		left: calc(100% - 50px);
+	  }
+	}
+	
+	&--right {
+	  margin-top: 16px;
+	  background-color: $evt-color1;
+	  order: 1;
+	  
+	  @include desktop {
+		margin-top: 0;
+		order: unset;
+	  }
+	  
+	  &::before {
+		right: calc(100% - 50px);
+	  }
+	}
+  }
+  
+  &__card {
+	padding: 20px;
+	border-radius: 16px;
+	font-size: 16px;
+	line-height: 20px;
+	
+	@include desktop {
+	  font-size: 17px;
+	  line-height: 21px;
+	}
+	
+	&--left {
+	  background-color: $evt-color2;
+	  order: 0;
+	  
+	  @include desktop {
+		order: unset;
+	  }
+	}
+	
+	&--right {
+	  background-color: $evt-color1;
+	  order: 1;
+	  
+	  @include desktop {
+		order: unset;
+	  }
+	}
+	
+	p {
+	  margin-bottom: 16px;
+	}
+	
+	ol {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 8px;
+	  counter-reset: num;
+	}
+	
+	li {
+	  position: relative;
+	  padding-left: 20px;
+	  counter-increment: num;
+	  
+	  &::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: counter(num) ".";
+	  }
+	}
+  }
+}

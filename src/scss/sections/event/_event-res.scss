@@ -1,0 +1,138 @@
+.event-res {
+  padding-top: 20px;
+  padding-bottom: 24px;
+  
+  @include desktop {
+	padding-top: 60px;}
+  
+  &__container {
+  }
+  
+  &__title {
+	margin-bottom: 16px;
+	font-size: 20px;
+	line-height: 25px;
+	font-weight: 800;
+	text-align: center;
+	color: $evt-color1;
+	
+	@include desktop {
+	  margin-bottom: 32px;
+	  font-size: 36px;
+	}
+  }
+  
+  &__grid {
+	@include eventShadow1;
+	margin-bottom: 10px;
+	border-radius: 16px;
+	overflow: hidden;
+	
+	@include desktop {
+	  display: grid;
+	  grid-template: auto / repeat(2, minmax(0,1fr));
+	  grid-gap: 70px;
+	  margin-bottom: 140px;
+	  border-radius: unset;
+	  box-shadow: unset;
+	  overflow: unset;
+	}
+  }
+  
+  &__card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 9px 10px 0;
+	background-color: $evt-color2;
+	
+	&:last-child {
+	  padding-bottom: 16px;
+	}
+	
+	@include desktop {
+	  border-radius: 16px;
+	  padding: 30px 24px 50px;
+	  @include eventShadow1;
+	}
+  }
+  
+  &__card-title {
+	margin-bottom: 6px;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	color: $evt-color1;
+	
+	@include desktop {
+	  margin-bottom: 18px;
+	  font-size: 24px;
+	  line-height: 30px;
+	}
+  }
+  
+  &__link-list {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	color: $evt-text;
+	
+	@include  desktop {
+	  gap: 4px;}
+  }
+  
+  &__link-box {
+  }
+  
+  &__link {
+	display: inline-flex;
+	align-items: center;
+	gap: 16px;
+	font-size: 16px;
+	line-height: 20px;
+	text-decoration: underline;
+	
+	@include desktop {
+	  font-size: 24px;
+	  line-height: 30px;
+	}
+	
+	&:hover {
+	  text-decoration: none;
+	}
+  }
+  
+  &__link-icon {
+	flex-shrink: 0;
+	display: block;
+	width: 34px;
+	height: 34px;
+  }
+  
+  &__org-links {
+	font-size: 16px;
+	line-height: 20px;
+	color: $evt-color1;
+	text-align: center;
+	
+	@include desktop {
+	  font-size: 27px;
+	  line-height: 25px;
+	  text-align: right;
+	}
+	
+	br {
+	  @include desktop {
+		display: none;
+	  }
+	}
+	
+	a {
+	  text-decoration: underline;
+	  
+	  &:hover {
+		text-decoration: none;
+	  }
+	}
+  }
+}
