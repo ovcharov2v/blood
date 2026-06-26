@@ -378,6 +378,10 @@
 	&__reg-box {
 		width: 100%;
 		max-width: 814px;
+
+		@include desktop {
+			max-width: 814px;
+		}
 	}
 
 	&__reg {
@@ -409,7 +413,8 @@
 		gap: 10px;
 
 		@include desktop {
-		gap: 15px;}
+			gap: 15px;
+		}
 	}
 
 	&__reg-subtitle {
@@ -465,7 +470,7 @@
 
 		@include desktop {
 			grid-template-columns: minmax(0, 1fr) minmax(0, 1.75fr);
-		grid-gap: 20px;
+			grid-gap: 20px;
 		}
 	}
 
