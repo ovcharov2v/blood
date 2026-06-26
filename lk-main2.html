@@ -8,24 +8,29 @@
 		<title>Служба Крови</title>
 		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
-		<link rel="stylesheet" href="./lib/swiper/swiper-bundle.css"/>
-		<link rel="stylesheet" href="./css/main.css?v=1782496893855"/>
+		<link rel="stylesheet" href="./css/main.css?v=1782496896701"/>
 	</head>
 	<body>
 		<!-- Header-->
-		<header class="header">
+		<header class="header header--lk">
 			<div class="container header__container">
-				<!-- Header top-->
-				<div class="header__top">
-					<div class="header__city-box">
-						<button class="header__city" type="button">
-							<svg class="header__city-icon">
-								<use xlink:href="#navigation"></use>
-							</svg>Москва
+				<div class="header__lk-row"><a class="header__logo-link" href="./main.html" title="На главную">
+						<picture><img class="header__logo img-theme-light" src="./images/common/logo-theme-light.svg" alt="Служба Крови"/><img class="header__logo img-theme-dark" src="./images/common/logo-theme-dark.svg" alt="Служба Крови"/></picture></a>
+					<div class="header__phone-box"><a class="header__phone-link" href="tel:88003333343">8 (800) 333-33-43</a></div>
+					<div class="header__action-box">
+						<button class="button button--round-corner button--outline-gray button--icon-only button--sm header__lk-menu-btn" type="button" aria-label="Меню">
+							<svg class="button__icon header__burger-icon header__burger-icon--normal">
+								<use xlink:href="#burger"></use>
+							</svg>
+							<svg class="button__icon header__burger-icon header__burger-icon--active">
+								<use xlink:href="#close"></use>
+							</svg>
 						</button>
-					</div>
-					<div class="header__phone-box"><a class="header__phone-link" href="tel:88003333343">8 (800) 333-33-43</a>
-						<div class="header__phone-text-box"><span class="header__phone-name">Горячая линия</span><span class="header__phone-note">Бесплатно по РФ</span></div>
+						<button class="button button--round-corner button--outline-gray button--icon-only button--sm header__lk-nav-btn" type="button" aria-label="Меню">
+							<svg class="button__icon">
+								<use xlink:href="#user"></use>
+							</svg>
+						</button>
 					</div>
 					<div class="theme-switcher header__theme-swither">
 						<button class="theme-switcher__btn js-set-theme" type="button" aria-label="Светлая тема" data-theme="light">
@@ -39,1145 +44,341 @@
 							</svg>
 						</button>
 					</div>
-					<div class="header__lang-swither"><span class="header__lang header__lang--active">РУ</span><a class="header__lang" href="#">EN</a></div>
-				</div>
-				<!-- Header main-->
-				<div class="header__main"><a class="header__logo-link" href="./main.html" title="На главную">
-						<picture><img class="header__logo img-theme-light" src="./images/common/logo-theme-light.svg" alt="Служба Крови"/><img class="header__logo img-theme-dark" src="./images/common/logo-theme-dark.svg" alt="Служба Крови"/></picture></a>
-					<nav class="header__nav">
-						<ul class="header__nav-list">
-							<li class="header__nav-elem"><a class="header__nav-link" href="#" data-menu="donor">Я донор
-									<svg class="header__nav-link-arrow">
-										<use xlink:href="#chevron-down"></use>
-									</svg></a>
-								<!-- Menu-->
-								<div class="menu container header__menu menu--cols-4">
-									<div class="menu__box">
-										<div class="menu__group"><a class="menu__title-link" href="#">Стать донором</a>
-											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Противопоказания,  требования</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Где сдать кровь</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Безопасность донорства</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Сдать кровь вместе</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Процесс прохождения донации</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Как подготовиться к сдаче  крови? (Рекомендации до и после)</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Здоровое питание донора</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>https://будьдонором.рф/</a></li>
-											</ul>
-										</div>
-										<div class="menu__group"><a class="menu__title-link" href="#">О донорстве</a>
-											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>История донорства</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Донорство в мире</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Кодекс донора</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Детям о донорстве организации</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Мифы о донорстве</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Факты о донорстве</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Добровольность и  безвозмездность в донорстве</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Донорство плазмы  (Ковид + иммунная)</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>https://koddonora.ru/</a></li>
-											</ul>
-										</div>
-										<div class="menu__group"><a class="menu__title-link" href="#">Бонусы и привилегии</a>
-											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Почетный донор</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Льготы для доноров</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Программа лояльности  “Донор сапиенс”</a></li>
-											</ul>
-										</div>
-										<div class="menu__group"><a class="menu__title-link" href="#">О службе крови</a>
-											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Программа развития</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Новости</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Медиагалерея событий</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Виртуальный музей</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg></a></li>
-											</ul>
-										</div>
-										<div class="menu__group"><a class="menu__title-link" href="#">Часто задаваемые вопросы FAQ</a></div>
-										<div class="menu__group"><a class="menu__title-link" href="#">Донорство костного мозга</a></div>
-									</div>
-								</div>
-							</li>
-							<li class="header__nav-elem"><a class="header__nav-link" href="#" data-menu="donor">Я врач
-									<svg class="header__nav-link-arrow">
-										<use xlink:href="#chevron-down"></use>
-									</svg></a>
-								<!-- Menu-->
-								<div class="menu container header__menu menu--cols-3">
-									<div class="menu__box">
-										<div class="menu__group"><a class="menu__title-link" href="#">Стать доктором</a>
-											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Противопоказания,  требования</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Где сдать кровь</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Безопасность донорства</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Сдать кровь вместе</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Процесс прохождения донации</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Как подготовиться к сдаче  крови? (Рекомендации до и после)</a></li>
-											</ul>
-										</div>
-										<div class="menu__group"><a class="menu__title-link" href="#">О докторах</a>
-											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>История донорства</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Донорство в мире</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Кодекс донора</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Детям о донорстве организации</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Мифы о донорстве</a></li>
-											</ul>
-										</div>
-										<div class="menu__group"><a class="menu__title-link" href="#">Бонусы и привилегии</a>
-											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Почетный донор</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Льготы для доноров</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Программа лояльности  “Донор сапиенс”</a></li>
-											</ul>
-										</div>
-										<div class="menu__group"><a class="menu__title-link" href="#">Часто задаваемые вопросы FAQ</a></div>
-										<div class="menu__group"><a class="menu__title-link" href="#">Донорство костного мозга</a></div>
-									</div>
-								</div>
-							</li>
-							<li class="header__nav-elem"><a class="header__nav-link" href="#" data-menu="donor">Я партнёр
-									<svg class="header__nav-link-arrow">
-										<use xlink:href="#chevron-down"></use>
-									</svg></a>
-								<!-- Menu-->
-								<div class="menu container header__menu menu--cols-3">
-									<div class="menu__box">
-										<div class="menu__group"><a class="menu__title-link" href="#">Стать партнёром</a>
-											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Противопоказания,  требования</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Где сдать кровь</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Безопасность донорства</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Сдать кровь вместе</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Процесс прохождения донации</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Как подготовиться к сдаче  крови? (Рекомендации до и после)</a></li>
-											</ul>
-										</div>
-										<div class="menu__group"><a class="menu__title-link" href="#">О партнёрах</a>
-											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>История донорства</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Донорство в мире</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Кодекс донора</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Детям о донорстве организации</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Мифы о донорстве</a></li>
-											</ul>
-										</div>
-										<div class="menu__group"><a class="menu__title-link" href="#">Бонусы и привилегии</a>
-											<ul class="menu__list">
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Почетный донор</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Льготы для доноров</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Программа лояльности  “Донор сапиенс”</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Почетный донор</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Льготы для доноров</a></li>
-												<li class="menu__list-elem"><a class="menu__link" href="#">
-														<svg class="menu__link-icon">
-															<use xlink:href="#chevron-down"></use>
-														</svg>Программа лояльности  “Донор сапиенс”</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</nav>
-					<div class="header__phone-box-mobile"><a class="header__phone-link" href="tel:88003333343">8 (800) 333-33-43</a>
-						<button class="header__city" type="button" aria-label="Выберите город">
-							<svg class="header__city-icon">
-								<use xlink:href="#navigation"></use>
-							</svg>
-						</button>
-					</div>
-					<div class="header__action-box">
-						<button class="button button--round-corner button--outline-gray button--icon-only" type="button" aria-label="Поиск">
-							<svg class="button__icon">
-								<use xlink:href="#search"></use>
-							</svg>
-						</button>
-						<button class="button button--round-corner button--outline-gray button--icon-only header__action-mobile header__burger-btn" type="button" aria-label="Меню">
-							<svg class="button__icon header__burger-icon header__burger-icon--normal">
-								<use xlink:href="#burger"></use>
-							</svg>
-							<svg class="button__icon header__burger-icon header__burger-icon--active">
-								<use xlink:href="#close"></use>
-							</svg>
-						</button>
-						<button class="button button--round-corner button--outline-gray button--icon-only header__action-desktop" type="button" aria-label="Версия для слабовидящих">
-							<svg class="button__icon">
-								<use xlink:href="#circle-glasses"></use>
-							</svg>
-						</button><a class="button button--with-icon button--round-corner button--outline-red header__action-desktop" href="./lk.html">
-							<svg class="button__icon button__icon--color-red">
-								<use xlink:href="#bold-plus"></use>
-							</svg>Кабинет врача</a><a class="button button--with-icon button--round-corner button--red header__action-desktop" href="./lk.html">
-							<svg class="button__icon">
-								<use xlink:href="#user"></use>
-							</svg>Кабинет донора</a>
-					</div>
 				</div>
 			</div>
 		</header>
-		<!-- Mobile menu-->
-		<div class="mobile-menu">
-			<div class="mobile-menu__container container">
-				<div class="mobile-menu__box">
-					<ul class="mobile-menu__nav">
-						<li class="mobile-menu__nav-group mobile-menu__nav-group--open"><span class="mobile-menu__nav-group-link">Стать донором
-								<svg class="mobile-menu__nav-group-icon">
-									<use xlink:href="#chevron-down"></use>
-								</svg></span>
-							<ul class="mobile-menu__nav-list">
-								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link mobile-menu__nav-link--active" href="#">
-										<svg class="mobile-menu__nav-link-icon">
-											<use xlink:href="#chevron-down"></use>
-										</svg>Противопоказания,требования</a></li>
-								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
-										<svg class="mobile-menu__nav-link-icon">
-											<use xlink:href="#chevron-down"></use>
-										</svg>Где сдать кровь</a></li>
-								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
-										<svg class="mobile-menu__nav-link-icon">
-											<use xlink:href="#chevron-down"></use>
-										</svg>Безопасность донорства</a></li>
-								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
-										<svg class="mobile-menu__nav-link-icon">
-											<use xlink:href="#chevron-down"></use>
-										</svg>Сдать кровь вместе</a></li>
-								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
-										<svg class="mobile-menu__nav-link-icon">
-											<use xlink:href="#chevron-down"></use>
-										</svg>Процесс прохождения донации</a></li>
-							</ul>
-						</li>
-						<li class="mobile-menu__nav-group"><span class="mobile-menu__nav-group-link">О донорстве
-								<svg class="mobile-menu__nav-group-icon">
-									<use xlink:href="#chevron-down"></use>
-								</svg></span>
-							<ul class="mobile-menu__nav-list">
-								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
-										<svg class="mobile-menu__nav-link-icon">
-											<use xlink:href="#chevron-down"></use>
-										</svg>Противопоказания,требования</a></li>
-								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
-										<svg class="mobile-menu__nav-link-icon">
-											<use xlink:href="#chevron-down"></use>
-										</svg>Где сдать кровь</a></li>
-								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
-										<svg class="mobile-menu__nav-link-icon">
-											<use xlink:href="#chevron-down"></use>
-										</svg>Безопасность донорства</a></li>
-							</ul>
-						</li>
-						<li class="mobile-menu__nav-group"><span class="mobile-menu__nav-group-link">Бонусы и привилегии
-								<svg class="mobile-menu__nav-group-icon">
-									<use xlink:href="#chevron-down"></use>
-								</svg></span>
-							<ul class="mobile-menu__nav-list">
-								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
-										<svg class="mobile-menu__nav-link-icon">
-											<use xlink:href="#chevron-down"></use>
-										</svg>Противопоказания,требования</a></li>
-								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
-										<svg class="mobile-menu__nav-link-icon">
-											<use xlink:href="#chevron-down"></use>
-										</svg>Где сдать кровь</a></li>
-								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
-										<svg class="mobile-menu__nav-link-icon">
-											<use xlink:href="#chevron-down"></use>
-										</svg>Безопасность донорства</a></li>
-							</ul>
-						</li>
-						<li class="mobile-menu__nav-group"><span class="mobile-menu__nav-group-link">О службе крови
-								<svg class="mobile-menu__nav-group-icon">
-									<use xlink:href="#chevron-down"></use>
-								</svg></span>
-							<ul class="mobile-menu__nav-list">
-								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
-										<svg class="mobile-menu__nav-link-icon">
-											<use xlink:href="#chevron-down"></use>
-										</svg>Противопоказания,требования</a></li>
-								<li class="mobile-menu__nav-el"><a class="mobile-menu__nav-link" href="#">
-										<svg class="mobile-menu__nav-link-icon">
-											<use xlink:href="#chevron-down"></use>
-										</svg>Где сдать кровь</a></li>
-							</ul>
-						</li>
-						<li class="mobile-menu__nav-group"><a class="mobile-menu__nav-group-link" href="#">Часто задаваемые вопросы FAQ</a></li>
-						<li class="mobile-menu__nav-group"><a class="mobile-menu__nav-group-link" href="#">Донорство костного мозга</a></li>
-					</ul>
-					<div class="mobile-menu__btn-box"><a class="button button--with-icon button--round-corner button--outline-red mobile-menu__btn" href="./lk.html">
-							<svg class="button__icon button__icon--color-red">
-								<use xlink:href="#bold-plus"></use>
-							</svg>Кабинет врача</a><a class="button button--with-icon button--round-corner button--red mobile-menu__btn" href="./lk.html">
-							<svg class="button__icon">
-								<use xlink:href="#user"></use>
-							</svg>Кабинет донора</a></div>
+		<div class="lk">
+			<!-- navbar-->
+			<aside class="lk__navbar"><a class="lk__logo-link" href="./main.html" title="На главную">
+					<picture><img class="lk__logo img-theme-light" src="./images/common/logo-theme-light.svg" alt="Служба Крови"/><img class="lk__logo img-theme-dark" src="./images/common/logo-theme-dark.svg" alt="Служба Крови"/></picture></a>
+				<div class="lk__navbar-title">
+					<p>Личный кабинет</p>
+					<button class="button button--round-corner button--outline-gray button--icon-only button--md lk__navbar-close" type="button" aria-label="Закрыть">
+						<svg class="button__icon">
+							<use xlink:href="#close"></use>
+						</svg>
+					</button>
 				</div>
-			</div>
-		</div>
-		<main class="main">
-			<!-- Breadcrumbs-->
-			<div class="container breadcrumb"><a class="breadcrumb__link" href="#" title="Главная">Главная</a><span class="breadcrumb__separator">/</span><span class="breadcrumb__current">Учреждение службы крови</span>
-			</div>
-			<!-- Section HowTo-->
-			<div class="section-faq container">
-				<h1 class="section-faq__title h1">Часто задаваемые вопросы</h1>
-				<div class="section-faq__filter">
-					<div class="select">
+				<div class="lk__navbar-panel-list">
+					<!-- panel-->
+					<div class="lk__navbar-panel">
+						<div class="lk__navbar-row-list">
+							<div class="lk__navbar-row"><span class="lk__navbar-row-key">Код донора:</span><span class="lk__navbar-row-value">7701 3447 0536</span></div>
+							<div class="lk__navbar-row"><span class="lk__navbar-row-key">Группа крови:</span><span class="lk__navbar-row-value">0 (I)</span></div>
+							<div class="lk__navbar-row"><span class="lk__navbar-row-key">Резус-принадлежность:</span><span class="lk__navbar-row-value">Rh+</span></div>
+							<div class="lk__navbar-row"><span class="lk__navbar-row-key">Kell-принадлежность:</span><span class="lk__navbar-row-value">kell-</span></div>
+						</div>
+					</div>
+					<!-- panel-->
+					<div class="lk__navbar-panel">
+						<div class="lk__navbar-row-list">
+							<div class="lk__navbar-row"><span class="lk__navbar-row-key">Продвинутый</span><span class="lk__navbar-row-value">5 донаций</span></div>
+						</div>
+						<p class="lk__navbar-note">5 донаций до следующего уровня</p>
+					</div>
+					<!-- panel-->
+					<div class="lk__navbar-panel">
+						<p class="lk__navbar-panel-text">Даты следующих возможных донаций</p>
+						<div class="lk__navbar-row-list">
+							<div class="lk__navbar-row"><span class="lk__navbar-row-key">Цельная кровь:</span><span class="lk__navbar-row-value">26 апреля</span></div>
+							<div class="lk__navbar-row"><span class="lk__navbar-row-key">Плазма:</span><span class="lk__navbar-row-value">26 апреля</span></div>
+							<div class="lk__navbar-row"><span class="lk__navbar-row-key">Клетки крови:</span><span class="lk__navbar-row-value">27 апреля</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="lk__navbar-bottom"><a class="lk__navbar-link" href="#">
+						<svg class="lk__navbar-link-icon">
+							<use xlink:href="#lk-support"></use>
+						</svg>Поддержка</a><a class="lk__navbar-link" href="#">
+						<svg class="lk__navbar-link-icon">
+							<use xlink:href="#lk-exit"></use>
+						</svg>Выход</a></div>
+			</aside>
+			<!-- content-->
+			<section class="lk__content">
+				<!-- menu-->
+				<nav class="lk__menu">
+					<p class="lk__menu-title">Навигация</p>
+					<ul class="lk__menu-list">
+						<li class="lk__menu-elem"><a class="lk__menu-link" href="lk-main.html">
+								<svg class="lk__menu-icon">
+									<use xlink:href="#lk-user"></use>
+								</svg>Мой профиль</a></li>
+						<li class="lk__menu-elem"><a class="lk__menu-link" href="#">
+								<svg class="lk__menu-icon">
+									<use xlink:href="#lk-blood-plus"></use>
+								</svg>Мои донации</a></li>
+						<li class="lk__menu-elem"><a class="lk__menu-link" href="#">
+								<svg class="lk__menu-icon">
+									<use xlink:href="#lk-tube"></use>
+								</svg>Мои анализы</a></li>
+						<li class="lk__menu-elem"><a class="lk__menu-link" href="lk-pd.html">
+								<svg class="lk__menu-icon">
+									<use xlink:href="#lk-medal"></use>
+								</svg>Почетный донер</a></li>
+						<li class="lk__menu-elem"><a class="lk__menu-link" href="lk-bd.html">
+								<svg class="lk__menu-icon">
+									<use xlink:href="#lk-blood"></use>
+								</svg>Сдадим кровь вместе</a></li>
+						<li class="lk__menu-elem"><a class="lk__menu-link" href="#">
+								<svg class="lk__menu-icon">
+									<use xlink:href="#lk-bell"></use>
+								</svg>Уведомления и новости</a></li>
+						<li class="lk__menu-elem"><a class="lk__menu-link" href="#">
+								<svg class="lk__menu-icon">
+									<use xlink:href="#lk-sale"></use>
+								</svg>Мои акции</a></li>
+					</ul>
+				</nav>
+				<!-- Breadcrumbs-->
+				<div class="container breadcrumb lk__breadcrumbs"><a class="breadcrumb__link" href="#" title="Главная">Главная</a><span class="breadcrumb__separator">/</span><span class="breadcrumb__current">Личный кабинет донора</span>
+				</div>
+				<div class="lk__mobile-tabs">
+					<p class="lk__mobile-tabs-title">Навигация</p>
+					<div class="select" data-tabs="lk-tabs">
 						<div class="select__current-box">
-							<input class="select__input" type="hidden" value=""/>
-							<p class="select__current select__current--placeholder">Код донации</p>
+							<input class="select__input" type="hidden" value="Личные данные"/>
+							<p class="select__current">Личные данные</p>
 							<svg class="select__drop-icon">
 								<use xlink:href="#chevron-down"></use>
 							</svg>
 						</div>
 						<ul class="select__list">
-							<li class="select__list-item">Код донации 1</li>
-							<li class="select__list-item">Код донации 2</li>
-							<li class="select__list-item">Код донации 3</li>
+							<li class="select__list-item select__list-item--selected" data-content="content-1">Личные данные</li>
+							<li class="select__list-item" data-content="content-2">Привязка аккаунта</li>
+							<li class="select__list-item" data-content="content-3">Смена пароля</li>
+							<li class="select__list-item" data-content="content-4">Двухфакторная авторизация</li>
 						</ul>
 					</div>
-					<div class="form-group">
-						<div class="form-group__input-box">
-							<input class="input form-group__input" type="text" placeholder="Поиск по названию"/>
-							<button class="form-group__btn" type="button" aria-label="Искать">
-								<svg class="form-group__btn-icon">
-									<use xlink:href="#search"></use>
-								</svg>
-							</button>
+				</div>
+				<h1 class="lk__title">Настройки профиля</h1>
+				<div class="tabs lk__tabs" id="lk-tabs">
+					<div class="tabs__nav lk__tabs-nav">
+						<button class="tabs__nav-btn tabs__nav-btn--active" type="button" data-content="content-1">Личные данные</button>
+						<button class="tabs__nav-btn" type="button" data-content="content-3">Смена пароля</button>
+					</div>
+					<div class="tabs__content-box">
+						<div class="tabs__content tabs__content--active" id="content-1">
+							<div class="lk__reg-box">
+								<div class="event-hero__banner event-hero__banner--lk">
+									<div class="event-hero__text-col">
+										<h1 class="event-hero__title">
+											Кубок Молодежного донорства:
+											 
+											<span class="event-hero__title-l3">ДОНОР ЕДИНОЙ СТРАНЫ</span>
+										</h1>
+										<div class="event-hero__text-box">
+											<p>Конкурс среди студентов и учебных заведений.<br/>Стань частью главного донорского движения страны!</p>
+											<p>
+												Даты проведения:
+												
+												<time>24 марта – 15 ноября</time>
+												<span class="hidden-mobile">2026 года</span>
+											</p>
+										</div>
+									</div>
+									<div class="event-hero__img-col"><img class="event-hero__img" src="./images/event/hero-img.png" alt=""/></div>
+								</div>
+								<p class="lk__text">Твой университет может стать легендой донорского движения! <br/><a href="#">«Кубок Молодежного донорства»</a>
+									
+									— это всероссийский конкурс, где мы выясним, кто главный донор страны.
+								</p>
+								<form class="lk__reg">
+									<p class="lk__reg-title">Пройдите регистрацию для участия в конкурсе:</p>
+									<p class="lk__reg-subtitle">Личные данные</p>
+									<div class="lk__reg-grid"> 
+										<div class="lk__reg-form">                                
+											<div class="form-group">
+												<div class="form-group__input-box">
+													<input class="input form-group__input" type="text" placeholder="Фамилия" required="required"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-group__input-box">
+													<input class="input form-group__input" type="text" placeholder="Имя" required="required"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-group__input-box">
+													<input class="input form-group__input" type="text" placeholder="Отчество" required="required"/>
+												</div>
+											</div>
+										</div>
+										<div class="lk__reg-col">
+											<div class="lk__reg-panel">
+												<p class="lk__reg-panel-title"> 
+													<svg class="lk__reg-panel-title-icon">
+														<use xlink:href="#user-circle-red"></use>
+													</svg>Данные профиля
+												</p>
+												<ul class="lk__reg-list">
+													<li>— ФИО используется для идентификации участников конкурса;</li>
+													<li>— Изменение данных возможно в настрйках личного кабинета донора.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<p class="lk__reg-subtitle">Данные ВУЗа</p>
+									<div class="lk__reg-select-row"> 
+										<div class="form-group">
+											<div class="form-group__input-box">
+												<!-- Select-->
+												<div class="select form-group__select">
+													<div class="select__current-box">
+														<input class="select__input" type="hidden" value="Выберите регион"/>
+														<p class="select__current">Выберите регион</p>
+														<svg class="select__drop-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>
+													</div>
+													<ul class="select__list">
+														<li class="select__list-item select__list-item--selected">Выберите регион</li>
+														<li class="select__list-item">Регион 1</li>
+														<li class="select__list-item">Регион 2</li>
+														<li class="select__list-item">Регион 3</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="form-group__input-box">
+												<!-- Select-->
+												<div class="select form-group__select">
+													<div class="select__current-box">
+														<input class="select__input" type="hidden" value="Выберите ВУЗ"/>
+														<p class="select__current">Выберите ВУЗ</p>
+														<svg class="select__drop-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>
+													</div>
+													<ul class="select__list">
+														<li class="select__list-item select__list-item--selected">Выберите ВУЗ</li>
+														<li class="select__list-item">ВУЗ 1</li>
+														<li class="select__list-item">ВУЗ 2</li>
+														<li class="select__list-item">ВУЗ 3</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="lk__reg-panel">
+										<p class="lk__reg-panel-title"> 
+											<svg class="lk__reg-panel-title-icon">
+												<use xlink:href="#dna-red"></use>
+											</svg>Уже состоите в Федеральном регистре доноров костного мозга?
+										</p>
+										<div class="lk__reg-checkbox-box">
+											<label class="checkbox lk__reg-checkbox">
+												<input class="checkbox__input" type="checkbox"/><span class="checkbox__text">Да, состою</span>
+											</label>
+											<p class="lk__reg-checkbox-note">Эта информация поможет учитывать дополнительные достижения участников.</p>
+										</div>
+									</div>
+									<p class="lk__reg-missing">
+										Не нашли ВУЗ в списке? Сообщите об этом в 
+										<a href="#">техподдержку</a>
+									</p>
+									<button class="button button--red button--round-corner lk__reg-submit" type="submit">Принять участие</button>
+								</form>
+								<form class="lk__form">
+									<div class="lk__form-grid">
+										<div class="form-group">
+											<p class="form-group__label">Группа крови</p>
+											<div class="form-group__input-box">
+												<!-- Select-->
+												<div class="select form-group__select">
+													<div class="select__current-box">
+														<input class="select__input" type="hidden" value="Неизвестно"/>
+														<p class="select__current">Неизвестно</p>
+														<svg class="select__drop-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>
+													</div>
+													<ul class="select__list">
+														<li class="select__list-item select__list-item--selected">Неизвестно</li>
+														<li class="select__list-item">0 (I)</li>
+														<li class="select__list-item">0 (II)</li>
+														<li class="select__list-item">0 (III)</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<p class="form-group__label">Резус-принадлежность:</p>
+											<div class="form-group__input-box">
+												<!-- Select-->
+												<div class="select form-group__select">
+													<div class="select__current-box">
+														<input class="select__input" type="hidden" value="Неизвестно"/>
+														<p class="select__current">Неизвестно</p>
+														<svg class="select__drop-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>
+													</div>
+													<ul class="select__list">
+														<li class="select__list-item select__list-item--selected">Неизвестно</li>
+														<li class="select__list-item">Rh+</li>
+														<li class="select__list-item">Rh-</li>
+														<li class="select__list-item">Rh+-</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<p class="form-group__label">Kell-принадлежность:</p>
+											<div class="form-group__input-box">
+												<!-- Select-->
+												<div class="select form-group__select">
+													<div class="select__current-box">
+														<input class="select__input" type="hidden" value="Неизвестно"/>
+														<p class="select__current">Неизвестно</p>
+														<svg class="select__drop-icon">
+															<use xlink:href="#chevron-down"></use>
+														</svg>
+													</div>
+													<ul class="select__list">
+														<li class="select__list-item select__list-item--selected">Неизвестно</li>
+														<li class="select__list-item select__list-item--selected">kell-</li>
+														<li class="select__list-item">kell+</li>
+														<li class="select__list-item">kell++</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<button class="button button--red button--round-corner lk__reg-submit" type="submit">Сохранить</button>
+								</form>
+							</div>
+						</div>
+						<div class="tabs__content" id="content-3">
+							<p>таб 3</p>
 						</div>
 					</div>
 				</div>
-				<h2 class="section-faq__subtitle h2">Код донации</h2>
-				<div class="section-faq__grid">
-					<!-- item-->
-					<div class="section-faq__item">
-						<div class="section-faq__item-question">
-							<div class="section-faq__item-question-wrap">
-								<p class="section-faq__item-title">Вопрос:</p>
-								<p class="section-faq__item-question-text">Где я могу получить код донации и что он дает?</p>
-							</div>
-							<button class="section-faq__item-btn" aria-label="Показать">
-								<svg class="section-faq__item-btn-icon">
-									<use xlink:href="#chevron-down"></use>
-								</svg>
-							</button>
-						</div>
-						<div class="section-faq__item-answer">
-							<p class="section-faq__item-title">Ответ:</p>
-							<div class="section-faq__item-answer-text">
-								<p>Служба крови отвечает:<br/>Код донации - это уникальный 20-значный код, который формируется автоматизированной информационной системой трансфузиологии и содержащий в себе информацию о Вашей донации, отображенной в информационной базе.</p>
-							</div>
-						</div>
-					</div>
-					<!-- item-->
-					<div class="section-faq__item">
-						<div class="section-faq__item-question">
-							<div class="section-faq__item-question-wrap">
-								<p class="section-faq__item-title">Вопрос:</p>
-								<p class="section-faq__item-question-text">Где я могу получить код донации и что он дает?</p>
-							</div>
-							<button class="section-faq__item-btn" aria-label="Показать">
-								<svg class="section-faq__item-btn-icon">
-									<use xlink:href="#chevron-down"></use>
-								</svg>
-							</button>
-						</div>
-						<div class="section-faq__item-answer">
-							<p class="section-faq__item-title">Ответ:</p>
-							<div class="section-faq__item-answer-text">
-								<p>Служба крови отвечает:<br/>Код донации - это уникальный 20-значный код, который формируется автоматизированной информационной системой трансфузиологии и содержащий в себе информацию о Вашей донации, отображенной в информационной базе.</p>
-							</div>
-						</div>
-					</div>
-					<!-- item-->
-					<div class="section-faq__item">
-						<div class="section-faq__item-question">
-							<div class="section-faq__item-question-wrap">
-								<p class="section-faq__item-title">Вопрос:</p>
-								<p class="section-faq__item-question-text">Где я могу получить код донации и что он дает?</p>
-							</div>
-							<button class="section-faq__item-btn" aria-label="Показать">
-								<svg class="section-faq__item-btn-icon">
-									<use xlink:href="#chevron-down"></use>
-								</svg>
-							</button>
-						</div>
-						<div class="section-faq__item-answer">
-							<p class="section-faq__item-title">Ответ:</p>
-							<div class="section-faq__item-answer-text">
-								<p>Служба крови отвечает:<br/>Код донации - это уникальный 20-значный код, который формируется автоматизированной информационной системой трансфузиологии и содержащий в себе информацию о Вашей донации, отображенной в информационной базе.</p>
-							</div>
-						</div>
-					</div>
-					<!-- item-->
-					<div class="section-faq__item">
-						<div class="section-faq__item-question">
-							<div class="section-faq__item-question-wrap">
-								<p class="section-faq__item-title">Вопрос:</p>
-								<p class="section-faq__item-question-text">Где я могу получить код донации и что он дает?</p>
-							</div>
-							<button class="section-faq__item-btn" aria-label="Показать">
-								<svg class="section-faq__item-btn-icon">
-									<use xlink:href="#chevron-down"></use>
-								</svg>
-							</button>
-						</div>
-						<div class="section-faq__item-answer">
-							<p class="section-faq__item-title">Ответ:</p>
-							<div class="section-faq__item-answer-text">
-								<p>Служба крови отвечает:<br/>Код донации - это уникальный 20-значный код, который формируется автоматизированной информационной системой трансфузиологии и содержащий в себе информацию о Вашей донации, отображенной в информационной базе.</p>
-							</div>
-						</div>
-					</div>
-					<!-- item-->
-					<div class="section-faq__item">
-						<div class="section-faq__item-question">
-							<div class="section-faq__item-question-wrap">
-								<p class="section-faq__item-title">Вопрос:</p>
-								<p class="section-faq__item-question-text">Где я могу получить код донации и что он дает?</p>
-							</div>
-							<button class="section-faq__item-btn" aria-label="Показать">
-								<svg class="section-faq__item-btn-icon">
-									<use xlink:href="#chevron-down"></use>
-								</svg>
-							</button>
-						</div>
-						<div class="section-faq__item-answer">
-							<p class="section-faq__item-title">Ответ:</p>
-							<div class="section-faq__item-answer-text">
-								<p>Служба крови отвечает:<br/>Код донации - это уникальный 20-значный код, который формируется автоматизированной информационной системой трансфузиологии и содержащий в себе информацию о Вашей донации, отображенной в информационной базе.</p>
-							</div>
-						</div>
-					</div>
-					<!-- item-->
-					<div class="section-faq__item">
-						<div class="section-faq__item-question">
-							<div class="section-faq__item-question-wrap">
-								<p class="section-faq__item-title">Вопрос:</p>
-								<p class="section-faq__item-question-text">Где я могу получить код донации и что он дает?</p>
-							</div>
-							<button class="section-faq__item-btn" aria-label="Показать">
-								<svg class="section-faq__item-btn-icon">
-									<use xlink:href="#chevron-down"></use>
-								</svg>
-							</button>
-						</div>
-						<div class="section-faq__item-answer">
-							<p class="section-faq__item-title">Ответ:</p>
-							<div class="section-faq__item-answer-text">
-								<p>Служба крови отвечает:<br/>Код донации - это уникальный 20-значный код, который формируется автоматизированной информационной системой трансфузиологии и содержащий в себе информацию о Вашей донации, отображенной в информационной базе.</p>
-							</div>
-						</div>
-					</div>
-					<!-- item-->
-					<div class="section-faq__item">
-						<div class="section-faq__item-question">
-							<div class="section-faq__item-question-wrap">
-								<p class="section-faq__item-title">Вопрос:</p>
-								<p class="section-faq__item-question-text">Где я могу получить код донации и что он дает?</p>
-							</div>
-							<button class="section-faq__item-btn" aria-label="Показать">
-								<svg class="section-faq__item-btn-icon">
-									<use xlink:href="#chevron-down"></use>
-								</svg>
-							</button>
-						</div>
-						<div class="section-faq__item-answer">
-							<p class="section-faq__item-title">Ответ:</p>
-							<div class="section-faq__item-answer-text">
-								<p>Служба крови отвечает:<br/>Код донации - это уникальный 20-значный код, который формируется автоматизированной информационной системой трансфузиологии и содержащий в себе информацию о Вашей донации, отображенной в информационной базе.</p>
-							</div>
-						</div>
-					</div>
-					<!-- item-->
-					<div class="section-faq__item">
-						<div class="section-faq__item-question">
-							<div class="section-faq__item-question-wrap">
-								<p class="section-faq__item-title">Вопрос:</p>
-								<p class="section-faq__item-question-text">Где я могу получить код донации и что он дает?</p>
-							</div>
-							<button class="section-faq__item-btn" aria-label="Показать">
-								<svg class="section-faq__item-btn-icon">
-									<use xlink:href="#chevron-down"></use>
-								</svg>
-							</button>
-						</div>
-						<div class="section-faq__item-answer">
-							<p class="section-faq__item-title">Ответ:</p>
-							<div class="section-faq__item-answer-text">
-								<p>Служба крови отвечает:<br/>Код донации - это уникальный 20-значный код, который формируется автоматизированной информационной системой трансфузиологии и содержащий в себе информацию о Вашей донации, отображенной в информационной базе.</p>
-							</div>
-						</div>
-					</div>
-					<!-- item-->
-					<div class="section-faq__item">
-						<div class="section-faq__item-question">
-							<div class="section-faq__item-question-wrap">
-								<p class="section-faq__item-title">Вопрос:</p>
-								<p class="section-faq__item-question-text">Где я могу получить код донации и что он дает?</p>
-							</div>
-							<button class="section-faq__item-btn" aria-label="Показать">
-								<svg class="section-faq__item-btn-icon">
-									<use xlink:href="#chevron-down"></use>
-								</svg>
-							</button>
-						</div>
-						<div class="section-faq__item-answer">
-							<p class="section-faq__item-title">Ответ:</p>
-							<div class="section-faq__item-answer-text">
-								<p>Служба крови отвечает:<br/>Код донации - это уникальный 20-значный код, который формируется автоматизированной информационной системой трансфузиологии и содержащий в себе информацию о Вашей донации, отображенной в информационной базе.</p>
-							</div>
-						</div>
-					</div>
-					<!-- item-->
-					<div class="section-faq__item">
-						<div class="section-faq__item-question">
-							<div class="section-faq__item-question-wrap">
-								<p class="section-faq__item-title">Вопрос:</p>
-								<p class="section-faq__item-question-text">Где я могу получить код донации и что он дает?</p>
-							</div>
-							<button class="section-faq__item-btn" aria-label="Показать">
-								<svg class="section-faq__item-btn-icon">
-									<use xlink:href="#chevron-down"></use>
-								</svg>
-							</button>
-						</div>
-						<div class="section-faq__item-answer">
-							<p class="section-faq__item-title">Ответ:</p>
-							<div class="section-faq__item-answer-text">
-								<p>Служба крови отвечает:<br/>Код донации - это уникальный 20-значный код, который формируется автоматизированной информационной системой трансфузиологии и содержащий в себе информацию о Вашей донации, отображенной в информационной базе.</p>
-							</div>
-						</div>
-					</div>
-					<!-- item-->
-					<div class="section-faq__item">
-						<div class="section-faq__item-question">
-							<div class="section-faq__item-question-wrap">
-								<p class="section-faq__item-title">Вопрос:</p>
-								<p class="section-faq__item-question-text">Где я могу получить код донации и что он дает?</p>
-							</div>
-							<button class="section-faq__item-btn" aria-label="Показать">
-								<svg class="section-faq__item-btn-icon">
-									<use xlink:href="#chevron-down"></use>
-								</svg>
-							</button>
-						</div>
-						<div class="section-faq__item-answer">
-							<p class="section-faq__item-title">Ответ:</p>
-							<div class="section-faq__item-answer-text">
-								<p>Служба крови отвечает:<br/>Код донации - это уникальный 20-значный код, который формируется автоматизированной информационной системой трансфузиологии и содержащий в себе информацию о Вашей донации, отображенной в информационной базе.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Section News-->
-			<section class="section section-slider container">
-				<div class="section__header">
-					<h2 class="section__title h2">Новости</h2><a class="button button--red button--round-corner section__header-btn section-slider__header-btn" href="#">Все новости</a>
-				</div>
-				<div class="section-slider__slider-box">
-					<div class="swiper section-slider__slider section-slider__slider--cols-3">
-						<div class="swiper-wrapper">
-							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
-								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
-								<div class="news-card__content-box">
-									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
-										<time class="news-card__date">29 апреля 2025 г.</time>
-									</div>
-									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
-									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
-											<svg class="button__icon">
-												<use xlink:href="#arrow-right"></use>
-											</svg></span></div>
-								</div></a>
-							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
-								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
-								<div class="news-card__content-box">
-									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
-										<time class="news-card__date">29 апреля 2025 г.</time>
-									</div>
-									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
-									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
-											<svg class="button__icon">
-												<use xlink:href="#arrow-right"></use>
-											</svg></span></div>
-								</div></a>
-							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
-								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
-								<div class="news-card__content-box">
-									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
-										<time class="news-card__date">29 апреля 2025 г.</time>
-									</div>
-									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
-									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
-											<svg class="button__icon">
-												<use xlink:href="#arrow-right"></use>
-											</svg></span></div>
-								</div></a>
-							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
-								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
-								<div class="news-card__content-box">
-									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
-										<time class="news-card__date">29 апреля 2025 г.</time>
-									</div>
-									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
-									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
-											<svg class="button__icon">
-												<use xlink:href="#arrow-right"></use>
-											</svg></span></div>
-								</div></a>
-							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
-								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
-								<div class="news-card__content-box">
-									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
-										<time class="news-card__date">29 апреля 2025 г.</time>
-									</div>
-									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
-									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
-											<svg class="button__icon">
-												<use xlink:href="#arrow-right"></use>
-											</svg></span></div>
-								</div></a>
-							<!-- News card--><a class="news-card swiper-slide" href="./article.html">
-								<div class="news-card__img-box"><img class="news-card__img" src="./images/news/news-card.jpg" alt=""/></div>
-								<div class="news-card__content-box">
-									<div class="news-card__top"><span class="news-card__tag tag">Федеральная новость</span>
-										<time class="news-card__date">29 апреля 2025 г.</time>
-									</div>
-									<p class="news-card__title">В базе данных донорства крови и ее компонентов зарегистрирована 2 000 000 донация за 2025 год</p>
-									<div class="news-card__bottom-box"><span class="button button--red button--icon-only">
-											<svg class="button__icon">
-												<use xlink:href="#arrow-right"></use>
-											</svg></span></div>
-								</div></a>
-						</div>
-					</div>
-					<div class="section-slider__slider-nav">
-						<button class="section-slider__slider-btn section-slider__slider-btn--prev" type="button" aria-label="Назад">
-							<svg class="section-slider__slider-btn-icon">
-								<use xlink:href="#chevron-down"></use>
+				<div class="lk__bottom">
+					<div class="theme-switcher lk__theme-swither">
+						<button class="theme-switcher__btn js-set-theme" type="button" aria-label="Светлая тема" data-theme="light">
+							<svg class="theme-switcher__btn-icon">
+								<use xlink:href="#brightness"></use>
 							</svg>
 						</button>
-						<button class="section-slider__slider-btn section-slider__slider-btn--next" type="button" aria-label="Вперед">
-							<svg class="section-slider__slider-btn-icon">
-								<use xlink:href="#chevron-down"></use>
+						<button class="theme-switcher__btn js-set-theme" type="button" aria-label="Темная тема" data-theme="dark">
+							<svg class="theme-switcher__btn-icon">
+								<use xlink:href="#moon"></use>
 							</svg>
 						</button>
 					</div>
 				</div>
-				<div class="section-slider__dots slider-dots slider-dots--color"></div><a class="button button--red button--round-corner section-slider__bottom-btn" href="#">Все новости</a>
 			</section>
-		</main>
-		<!-- Footer-->
-		<footer class="footer">
-			<div class="footer__container container">
-				<!-- Footer top-->
-				<div class="footer__top">
-					<div class="footer__logo-box"><a class="footer__logo-link" href="./main.html" title="На главную">
-							<picture><img class="footer__logo img-theme-light" src="./images/common/logo-theme-light.svg" alt="Служба Крови"/><img class="footer__logo img-theme-dark" src="./images/common/logo-theme-dark.svg" alt="Служба Крови"/></picture></a>
-						<div class="footer__btn-box"><a class="button button--with-icon button--round-corner button--red footer__btn" href="./lk.html">
-								<svg class="button__icon">
-									<use xlink:href="#user"></use>
-								</svg>Кабинет донора</a><a class="button button--with-icon button--round-corner button--outline-red footer__btn" href="./lk.html">
-								<svg class="button__icon button__icon--color-red">
-									<use xlink:href="#bold-plus"></use>
-								</svg>Кабинет врача</a></div>
-						<div class="footer__phone-wrap">
-							<div class="footer__phone-box"><span class="footer__phone-description">Горячая линия (бесплатно по РФ)</span><a class="footer__phone-link" href="tel:88003333343">8 (800) 333-33-43</a></div>
-							<div class="footer__phone-box"><span class="footer__phone-description">Техническая поддержка ЕИБД</span><a class="footer__phone-link" href="tel:88007007606">8 (800) 700-76-06</a></div>
-						</div>
-						<ul class="footer__social-list footer__social-list--desktop social-list">
-							<li class="social-list__el"><a class="social-list__link social-list__link--max" href="#" target="_blank" title="Max">
-									<svg class="social-list__icon">
-										<use xlink:href="#social-max"></use>
-									</svg></a></li>
-							<li class="social-list__el"><a class="social-list__link social-list__link--telegram" href="#" target="_blank" title="Telegram">
-									<svg class="social-list__icon">
-										<use xlink:href="#social-telegram"></use>
-									</svg></a></li>
-							<li class="social-list__el"><a class="social-list__link social-list__link--vk" href="#" target="_blank" title="Вконтакте">
-									<svg class="social-list__icon">
-										<use xlink:href="#social-vk"></use>
-									</svg></a></li>
-							<li class="social-list__el"><a class="social-list__link social-list__link--ok" href="#" target="_blank" title="Одноклассники">
-									<svg class="social-list__icon">
-										<use xlink:href="#social-ok"></use>
-									</svg></a></li>
-						</ul>
-					</div>
-					<div class="footer__nav-box">
-						<div class="footer__nav">
-							<!-- Col-->
-							<div class="footer__nav-col">
-								<p class="footer__nav-title">Я донор
-									<svg class="footer__nav-title-arrow">
-										<use xlink:href="#chevron-down"></use>
-									</svg>
-								</p>
-								<ul class="footer__nav-list">
-									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Стать донором</a></li>
-									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">О донорстве</a></li>
-									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Бонусы и привилегии</a></li>
-									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">О службе крови</a></li>
-									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Часто задаваемые вопросы FAQ</a></li>
-									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Донорство костного мозга</a></li>
-								</ul>
-							</div>
-							<!-- Col-->
-							<div class="footer__nav-col">
-								<p class="footer__nav-title">Я врач
-									<svg class="footer__nav-title-arrow">
-										<use xlink:href="#chevron-down"></use>
-									</svg>
-								</p>
-								<ul class="footer__nav-list">
-									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Портал единой информационной базы данных доноров</a></li>
-								</ul>
-							</div>
-							<!-- Col-->
-							<div class="footer__nav-col">
-								<p class="footer__nav-title">Я партнёр
-									<svg class="footer__nav-title-arrow">
-										<use xlink:href="#chevron-down"></use>
-									</svg>
-								</p>
-								<ul class="footer__nav-list">
-									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Организация выездной акции</a></li>
-									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Коммерческие организации</a></li>
-									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Некоммерческие организации</a></li>
-									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Студенты</a></li>
-									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Экскурсии/Школьники</a></li>
-									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">СМИ</a></li>
-									<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Материалы для скачивания</a></li>
-								</ul>
-							</div>
-						</div>
-						<!-- Footer apps-->
-						<div class="footer__apps">
-							<div class="footer__apps-content-box">
-								<p class="footer__apps-title">Скачайте наше<br/>приложение</p>
-								<div class="footer__apps-links"><a class="button button--outline-white button--round-corner" href="#" target="_blank">Скачать на Android</a><a class="button button--outline-white button--round-corner" href="#" target="_blank">Скачать на iOS</a></div>
-							</div>
-							<div class="footer__apps-img-box">
-								<picture><img class="footer__apps-img img-theme-light" src="./images/common/phone-theme-light.svg" alt=""/><img class="footer__apps-img img-theme-dark" src="./images/common/phone-theme-dark.svg" alt=""/></picture>
-							</div>
-						</div>
-						<div class="footer__btn-box footer__btn-box--mobile"><a class="button button--round-corner button--outline-red footer__btn" href="#" target="_blank">Скачать на Android</a><a class="button button--round-corner button--outline-red footer__btn" href="#" target="_blank">Скачать на iOS</a></div>
-					</div>
-					<ul class="footer__social-list footer__social-list--mobile social-list">
-						<li class="social-list__el"><a class="social-list__link social-list__link--max" href="#" target="_blank" title="Max">
-								<svg class="social-list__icon">
-									<use xlink:href="#social-max"></use>
-								</svg></a></li>
-						<li class="social-list__el"><a class="social-list__link social-list__link--telegram" href="#" target="_blank" title="Telegram">
-								<svg class="social-list__icon">
-									<use xlink:href="#social-telegram"></use>
-								</svg></a></li>
-						<li class="social-list__el"><a class="social-list__link social-list__link--vk" href="#" target="_blank" title="Вконтакте">
-								<svg class="social-list__icon">
-									<use xlink:href="#social-vk"></use>
-								</svg></a></li>
-						<li class="social-list__el"><a class="social-list__link social-list__link--ok" href="#" target="_blank" title="Одноклассники">
-								<svg class="social-list__icon">
-									<use xlink:href="#social-ok"></use>
-								</svg></a></li>
-					</ul>
-				</div>
-				<!-- Footer bottom-->
-				<div class="footer__bottom">
-					<div class="footer__copyright-box">
-						<ul class="footer__link-list">
-							<li class="footer__link-elem"><a class="footer__link" href="#" target="_blank" title="Служба крови"><img class="footer__link-img" src="./images/common/logo-blood.svg" alt="Служба крови"/></a></li>
-							<li class="footer__link-elem"><a class="footer__link" href="#" target="_blank" title="ФМБА"><img class="footer__link-img" src="./images/common/logo-fmba.svg" alt="ФМБА"/></a></li>
-						</ul>
-						<p class="footer__copyright">© 2025 ФМБА России. Все права на материалы, находящиеся на сайте, охраняются в соответствии с законодательством РФ, в том числе об авторском праве и смежных правах.</p>
-					</div>
-					<ul class="footer__terms-list">
-						<li class="footer__terms-el"><a class="footer__terms-link" href="#" target="_blank">Политика в отношении обработки персональных данных</a></li>
-						<li class="footer__terms-el"><a class="footer__terms-link" href="#" target="_blank">Политика использования сookie-файлов</a></li>
-						<li class="footer__terms-el"><a class="footer__terms-link" href="#" target="_blank">Согласие на обработку персональных данных</a></li>
-					</ul>
-				</div>
-			</div>
-		</footer>
-		<!-- City search-->
-		<div class="city-search">
-			<div class="city-search__window">
-				<div class="city-search__header">
-					<p class="city-search__title">Выбор региона</p>
-					<button class="city-search__close" type="button" aria-label="Закрыть">
-						<svg class="city-search__close-icon">
-							<use xlink:href="#close"></use>
-						</svg>
-					</button>
-				</div>
-				<div class="city-search__input-box form-group">
-					<div class="form-group__input-box">
-						<input class="input form-group__input" type="text" placeholder="Регион или город"/>
-						<button class="form-group__btn" type="button" aria-label="Искать">
-							<svg class="form-group__btn-icon">
-								<use xlink:href="#search"></use>
-							</svg>
-						</button>
-					</div>
-				</div>
-				<ul class="city-search__list">
-					<li class="city-search__list-el">Московская область</li>
-					<li class="city-search__list-el">Магаданская область</li>
-					<li class="city-search__list-el">Нижегородская область</li>
-					<li class="city-search__list-el">Новгородская область</li>
-					<li class="city-search__list-el">Новосибирская область</li>
-					<li class="city-search__list-el">Омская область</li>
-					<li class="city-search__list-el">Оренбургская область</li>
-					<li class="city-search__list-el">Орловская область</li>
-					<li class="city-search__list-el">Пензенская область</li>
-					<li class="city-search__list-el">Московская область</li>
-					<li class="city-search__list-el">Магаданская область</li>
-					<li class="city-search__list-el">Нижегородская область</li>
-				</ul>
-				<button class="button button--red button--round-corner city-search__submit-btn" type="button">Выбрать</button>
-			</div>
-		</div>
-		<!-- modal question-->
-		<div class="modal" id="modal-question">
-			<div class="modal__container container">
-				<div class="modal__window">
-					<div class="modal__header">
-						<p class="modal__title">Написать в службу крови</p>
-						<button class="modal__close js-close-modal" type="button" aria-label="Закрыть">
-							<svg class="modal__close-icon">
-								<use xlink:href="#modal-close"></use>
-							</svg>
-						</button>
-					</div>
-					<div class="modal__content-box">
-						<form class="modal__question-form">
-							<div class="modal__question-form-box">
-								<div class="form-group">
-									<p class="form-group__label">Ваш город</p>
-									<div class="form-group__input-box">
-										<!-- Select-->
-										<div class="select form-group__select">
-											<div class="select__current-box">
-												<input class="select__input" type="hidden" value=""/>
-												<p class="select__current select__current--placeholder">Выберите город</p>
-												<svg class="select__drop-icon">
-													<use xlink:href="#chevron-down"></use>
-												</svg>
-											</div>
-											<ul class="select__list">
-												<li class="select__list-item">Москва</li>
-												<li class="select__list-item">Нижний Новгород</li>
-												<li class="select__list-item">Казань</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<p class="form-group__label">Ваши полные ФИО</p>
-									<div class="form-group__input-box">
-										<input class="input form-group__input" type="text" placeholder="Иванов Иван Иванович"/>
-									</div>
-								</div>
-								<div class="form-group">
-									<p class="form-group__label">Ваш e-mail</p>
-									<div class="form-group__input-box">
-										<input class="input form-group__input" type="email" placeholder="ivanov@mail.ru"/>
-									</div>
-								</div>
-								<div class="form-group">
-									<p class="form-group__label">Ваш телефон</p>
-									<div class="form-group__input-box">
-										<input class="input form-group__input" type="tel" placeholder="+7 987 654-32-10"/>
-									</div>
-								</div>
-							</div>
-							<div class="modal__question-form-box">
-								<div class="form-group">
-									<p class="form-group__label">Тема обращения</p>
-									<div class="form-group__input-box">
-										<!-- Select-->
-										<div class="select form-group__select">
-											<div class="select__current-box">
-												<input class="select__input" type="hidden" value=""/>
-												<p class="select__current select__current--placeholder">Выберите тему обращения</p>
-												<svg class="select__drop-icon">
-													<use xlink:href="#chevron-down"></use>
-												</svg>
-											</div>
-											<ul class="select__list">
-												<li class="select__list-item">Тема 1</li>
-												<li class="select__list-item">Тема 1</li>
-												<li class="select__list-item">Тема 1</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="modal__question-textarea form-group">
-									<p class="form-group__label">Обращение</p>
-									<div class="form-group__input-box">
-										<textarea class="input form-group__input" placeholder="Напишите сюда свое обращение"></textarea>
-									</div>
-								</div>
-							</div>
-							<div class="modal__question-form-box">
-								<button class="button button--red button--lg" type="submit">Отправить</button>
-							</div>
-							<div class="modal__question-form-box">
-								<div class="modal__question-form-text-box">
-									<p class="modal__question-form-text">Нажимая на кнопку «Отправить» я даю <a href="#" target="_blank">согласие на обработку персональных данных</a></p>
-									<p class="modal__question-form-text modal__question-form-text--red">В случае предоставления недостоверных данных Служба крови не гарантирует ответа на Ваше обращение.</p>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- modal chat-->
-		<div class="modal modal--chat modal--header-fixed" id="modal-chat">
-			<div class="modal__container container">
-				<div class="modal__window">
-					<div class="modal__header">
-						<button class="modal__close js-close-modal" type="button" aria-label="Закрыть">
-							<svg class="modal__close-icon">
-								<use xlink:href="#modal-close"></use>
-							</svg>
-						</button>
-					</div>
-					<div class="modal__content-box">
-						<div class="modal__chat-hero"><img class="modal__chat-hero-img" src="images/main/dude.png" alt=""/></div>
-						<div class="modal__chat-main">
-							<div class="modal__chat-messages">
-								<div class="modal__chat-message modal__chat-message--incoming">
-									<div class="modal__chat-message-bubble">
-										<p class="modal__chat-message-text">
-											Привет, я робот
-											<strong>Макс</strong><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus
-											
-											<a href="#">ratione rem?</a>
-										</p>
-									</div>
-								</div>
-								<div class="modal__chat-message modal__chat-message--outgoing">
-									<div class="modal__chat-message-bubble">
-										<p class="modal__chat-message-text">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus
-											
-											<a href="#">ratione rem?</a>
-										</p>
-									</div>
-								</div>
-								<div class="modal__chat-message modal__chat-message--incoming">
-									<div class="modal__chat-message-bubble">
-										<p class="modal__chat-message-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?</p>
-									</div>
-								</div>
-								<div class="modal__chat-message modal__chat-message--outgoing">
-									<div class="modal__chat-message-bubble">
-										<p class="modal__chat-message-text">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum exercitationem, inventore iste molestiae possimus ratione rem?
-										</p>
-									</div>
-								</div>
-							</div>
-							<form class="modal__chat-form">
-								<div class="modal__chat-input-box">
-									<input class="modal__chat-input" type="text" placeholder="Напишите сообщение..."/>
-								</div>
-								<button class="button button--red button--icon-only modal__chat-send" type="submit" aria-label="Отправить сообщение" title="Отправить сообщение">
-									<svg class="button__icon">
-										<use xlink:href="#send"></use>
-									</svg>
-								</button>
-							</form>
-						</div>
-					</div>
-				</div>
+			<div class="lk__mobile-bottom"><a class="lk__mobile-logo-link" href="./main.html" title="На главную">
+					<picture><img class="lk__logo img-theme-light" src="./images/common/logo-theme-light.svg" alt="Служба Крови"/><img class="lk__logo img-theme-dark" src="./images/common/logo-theme-dark.svg" alt="Служба Крови"/></picture></a>
+				<div class="lk__navbar-bottom"><a class="lk__navbar-link" href="#">
+						<svg class="lk__navbar-link-icon">
+							<use xlink:href="#lk-support"></use>
+						</svg>Поддержка</a><a class="lk__navbar-link" href="#">
+						<svg class="lk__navbar-link-icon">
+							<use xlink:href="#lk-exit"></use>
+						</svg>Выход</a></div>
 			</div>
 		</div>
 		<!-- cookie banner-->
@@ -1202,8 +403,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="./lib/swiper/swiper-bundle.min.js"></script>
-		<script src="./js/main.js?v=1782496893870"></script><svg width="0" height="0" class="hidden">
+		<script src="./js/main.js?v=1782496896702"></script><svg width="0" height="0" class="hidden">
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="lk-support">
     <path d="M20.6739 9.92079H20.6145V8.46534C20.6145 3.79007 16.8245 0 12.1491 0C7.47379 0 3.68378 3.79007 3.68378 8.46534V9.92079H3.32737C2.02042 9.92079 1.01054 11.0792 1.01054 12.4159V16.1287C0.97762 17.4242 2.00121 18.5011 3.29672 18.5341C3.30696 18.5343 3.31713 18.5345 3.32737 18.5346H5.52537C5.8367 18.52 6.07725 18.2557 6.06258 17.9444C6.06207 17.9332 6.06122 17.922 6.06002 17.9108V10.6336C6.06002 10.2772 5.85211 9.92073 5.52537 9.92073H4.8719V8.46529C4.8719 4.44621 8.13005 1.18806 12.1491 1.18806C16.1682 1.18806 19.4263 4.44621 19.4263 8.46529V9.92073H18.7729C18.4461 9.92073 18.2382 10.2771 18.2382 10.6336V17.9108C18.2051 18.2207 18.4294 18.4989 18.7393 18.532C18.7505 18.5332 18.7617 18.5341 18.7729 18.5346H19.456L19.3966 18.6237C18.5053 19.8082 17.1067 20.502 15.6243 20.4949C15.2998 18.9037 13.7467 17.8767 12.1554 18.2013C10.7947 18.4788 9.81353 19.6706 9.80256 21.0593C9.81882 22.6882 11.144 24 12.7729 23.9999C13.5792 23.9868 14.3478 23.6559 14.9115 23.0791C15.2917 22.6896 15.5409 22.1912 15.6243 21.6533C17.4807 21.6604 19.2314 20.7905 20.3471 19.3068L20.9115 18.4751C22.1887 18.386 22.9907 17.584 22.9907 16.4256V12.7127C22.9907 11.4356 22.0402 9.92079 20.6739 9.92079ZM4.8719 17.3465H3.32737C2.68777 17.3309 2.18189 16.7999 2.19746 16.1603C2.19775 16.1498 2.19815 16.1392 2.19866 16.1287V12.4158C2.19866 11.7326 2.6739 11.1089 3.32737 11.1089H4.8719V17.3465ZM14.0501 22.2475C13.7209 22.6044 13.2584 22.8088 12.7729 22.8119C11.8065 22.7965 11.0223 22.0254 10.9907 21.0594C10.9903 20.0915 11.7746 19.3066 12.7425 19.3062C13.7104 19.3058 14.4953 20.0901 14.4957 21.058C14.4957 21.0584 14.4957 21.0589 14.4957 21.0594C14.5204 21.5004 14.3587 21.9315 14.0501 22.2475ZM21.8026 16.4257C21.8026 17.2277 21.0303 17.3465 20.6739 17.3465H19.4263V11.1089H20.6739C21.3274 11.1089 21.8026 12.0297 21.8026 12.7129V16.4257Z" fill="currentColor"></path>
   </symbol>
