@@ -1,0 +1,184 @@
+extends pug/lk
+
+block content
+    +breadcrumb(["Главная"], "Личный кабинет донора").lk__breadcrumbs
+
+    .lk__mobile-tabs
+        p.lk__mobile-tabs-title Навигация
+        .select(data-tabs="lk-tabs")
+            .select__current-box
+                input.select__input(type="hidden", value="Личные данные")
+                p.select__current Личные данные
+                +svg("chevron-down").select__drop-icon
+            ul.select__list
+                li.select__list-item.select__list-item--selected(data-content="content-1") Личные данные
+                li.select__list-item(data-content="content-2") Привязка аккаунта
+                li.select__list-item(data-content="content-3") Смена пароля
+                li.select__list-item(data-content="content-4") Двухфакторная авторизация
+
+    h1.lk__title Настройки профиля
+
+    #lk-tabs.tabs.lk__tabs
+        .tabs__nav.lk__tabs-nav
+            button.tabs__nav-btn.tabs__nav-btn--active(type="button", data-content="content-1") Личные данные
+            button.tabs__nav-btn(type="button", data-content="content-3") Смена пароля
+        .tabs__content-box
+            #content-1.tabs__content.tabs__content--active
+                .lk__reg-box
+                    .event-hero__banner.event-hero__banner--lk
+                        .event-hero__text-col
+                            h1.event-hero__title
+                                | Кубок Молодежного донорства:
+                                | 
+                                |
+                                span.event-hero__title-l3 ДОНОР ЕДИНОЙ СТРАНЫ
+                            .event-hero__text-box
+                                p Конкурс среди студентов и учебных заведений.
+                                    br
+                                    |Стань частью главного донорского движения страны!
+                                p Даты проведения:
+                                    |
+                                    |
+                                    time 24 марта – 15 ноября
+                                    |
+                                    |
+                                    span.hidden-mobile 2026 года
+                        .event-hero__img-col
+                            img.event-hero__img(src="./images/event/hero-img.png", alt="")
+
+                    p.lk__text Твой университет может стать легендой донорского движения! 
+                        br
+                        a(href="#") «Кубок Молодежного донорства»
+                        |
+                        |
+                        | — это всероссийский конкурс, где мы выясним, кто главный донор страны.
+                    form.lk__reg
+                        p.lk__reg-title Пройдите регистрацию для участия в конкурсе:
+                        p.lk__reg-subtitle Личные данные
+                        .lk__reg-grid 
+                            .lk__reg-form                                 
+                                .form-group
+                                    .form-group__input-box
+                                        input.input.form-group__input(
+                                            type="text"
+                                            placeholder="Фамилия"
+                                            required
+                                        )
+                                .form-group
+                                    .form-group__input-box
+                                        input.input.form-group__input(
+                                            type="text"
+                                            placeholder="Имя"
+                                            required
+                                        )
+                                .form-group
+                                    .form-group__input-box
+                                        input.input.form-group__input(
+                                            type="text"
+                                            placeholder="Отчество"
+                                            required
+                                        )
+                            .lk__reg-col
+                                .lk__reg-panel
+                                    p.lk__reg-panel-title 
+                                        +svg("user-circle-red").lk__reg-panel-title-icon
+                                        |Данные профиля
+                                    ul.lk__reg-list
+                                        li — ФИО используется для идентификации участников конкурса;
+                                        li — Изменение данных возможно в настрйках личного кабинета донора.
+
+                        p.lk__reg-subtitle Данные ВУЗа
+                        .lk__reg-select-row 
+                            .form-group
+                                .form-group__input-box
+                                    // Select
+                                    .select.form-group__select
+                                        .select__current-box
+                                            input.select__input(type="hidden", value="Выберите регион")
+                                            p.select__current Выберите регион
+                                            +svg("chevron-down").select__drop-icon
+                                        ul.select__list
+                                            li.select__list-item.select__list-item--selected Выберите регион
+                                            li.select__list-item Регион 1
+                                            li.select__list-item Регион 2
+                                            li.select__list-item Регион 3
+                            .form-group
+                                .form-group__input-box
+                                    // Select
+                                    .select.form-group__select
+                                        .select__current-box
+                                            input.select__input(type="hidden", value="Выберите ВУЗ")
+                                            p.select__current Выберите ВУЗ
+                                            +svg("chevron-down").select__drop-icon
+                                        ul.select__list
+                                            li.select__list-item.select__list-item--selected Выберите ВУЗ
+                                            li.select__list-item ВУЗ 1
+                                            li.select__list-item ВУЗ 2
+                                            li.select__list-item ВУЗ 3
+                        .lk__reg-panel
+                            p.lk__reg-panel-title 
+                                +svg("dna-red").lk__reg-panel-title-icon 
+                                |Уже состоите в Федеральном регистре доноров костного мозга?
+                            .lk__reg-checkbox-box
+                                label.checkbox.lk__reg-checkbox
+                                    input.checkbox__input(type="checkbox")
+                                    span.checkbox__text Да, состою
+                                p.lk__reg-checkbox-note Эта информация поможет учитывать дополнительные достижения участников.
+                        p.lk__reg-missing Не нашли ВУЗ в списке? Сообщите об этом в 
+                            |
+                            |
+                            a(href="#") техподдержку
+                        button.button.button--red.button--round-corner.lk__reg-submit(type="submit") Принять участие
+
+
+
+                    form.lk__form
+                        .lk__form-grid
+                            .form-group
+                                p.form-group__label Группа крови
+                                .form-group__input-box
+                                    // Select
+                                    .select.form-group__select
+                                        .select__current-box
+                                            input.select__input(type="hidden", value="Неизвестно")
+                                            p.select__current Неизвестно
+                                            +svg("chevron-down").select__drop-icon
+                                        ul.select__list
+                                            li.select__list-item.select__list-item--selected Неизвестно
+                                            li.select__list-item 0 (I)
+                                            li.select__list-item 0 (II)
+                                            li.select__list-item 0 (III)
+                            .form-group
+                                p.form-group__label Резус-принадлежность:
+                                .form-group__input-box
+                                    // Select
+                                    .select.form-group__select
+                                        .select__current-box
+                                            input.select__input(type="hidden", value="Неизвестно")
+                                            p.select__current Неизвестно
+                                            +svg("chevron-down").select__drop-icon
+                                        ul.select__list
+                                            li.select__list-item.select__list-item--selected Неизвестно
+                                            li.select__list-item Rh+
+                                            li.select__list-item Rh-
+                                            li.select__list-item Rh+-
+                            .form-group
+                                p.form-group__label Kell-принадлежность:
+                                .form-group__input-box
+                                    // Select
+                                    .select.form-group__select
+                                        .select__current-box
+                                            input.select__input(type="hidden", value="Неизвестно")
+                                            p.select__current Неизвестно
+                                            +svg("chevron-down").select__drop-icon
+                                        ul.select__list
+                                            li.select__list-item.select__list-item--selected Неизвестно
+                                            li.select__list-item.select__list-item--selected kell-
+                                            li.select__list-item kell+
+                                            li.select__list-item kell++
+                        button.button.button--red.button--round-corner.lk__reg-submit(type="submit") Сохранить
+
+            #content-3.tabs__content
+                p таб 3
+
+
