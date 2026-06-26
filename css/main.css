@@ -5269,6 +5269,9 @@ a {
   .lk__reg-box {
     width: 100%;
     max-width: 814px; }
+    @media (min-width: 1024px) {
+      .lk__reg-box {
+        max-width: 814px; } }
   .lk__reg {
     margin-bottom: 50px; }
   .lk__reg-title {
